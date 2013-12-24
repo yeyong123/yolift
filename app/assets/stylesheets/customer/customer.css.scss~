@@ -1,0 +1,12 @@
+//自定修改了bootstrap的样式
+
+#customer-index-img {
+	border: 1px solid;
+	margin-top: 50px;
+
+}
+.bs-docs-example {
+	width: 830px;
+	padding: 0;
+}
+

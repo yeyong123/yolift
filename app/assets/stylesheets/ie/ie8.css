@@ -1,0 +1,27 @@
+.submenulist li {
+	line-height: 0;
+}
+.submenulist ul {
+	list-style: none;
+}
+.procate li {
+	line-height: 34px;
+}
+.center-index2 {
+	float: right;
+	height: 64px;
+	width: 320px;
+}
+.phone {
+	width: 308px;
+}
+.nav-bananer {
+	position: relative;
+}
+.nav-bananer .submenu {
+	position: absolute;
+	z-index: 2;
+}
+.cart-img {
+	float: right;
+}

@@ -1,0 +1,106 @@
+/* 放大镜功能的css */
+/* preview style */
+.preview{width:500px;}
+/* smallImg */
+/*.smallImg{position:relative;height:360px; padding:26px 5px; width:72px; overflow:hidden;float:left;}*/
+.smallImg {
+	position: relative;
+	height: 72px;
+	width: 500px;
+	padding: 26px 5px;
+	clear: both;
+}
+.smallImg li {
+	float: left;
+}
+.bigImg {
+	float: left;
+}
+.scrollbutton{
+	width:45px; 
+	height:10px; 
+	overflow:hidden; 
+	position:absolute; 
+	left:17px; 
+	cursor:pointer;
+	background:url(images/zoom.gif) no-repeat;
+}
+.scrollbutton.smallImgUp{
+	background-position:0 0; 
+	top:8px;
+}
+.scrollbutton.smallImgDown{
+	background-position:0 -11px; 
+	bottom:8px;
+}
+.scrollbutton.smallImgUp.disabled{
+	background-position:0 -22px;
+}
+.scrollbutton.smallImgDown.disabled{
+	background-position:0 -33px;
+}
+#imageMenu {
+	height:350px;
+	overflow:hidden; 
+	margin-top:4px;
+}
+#imageMenu li {
+	height:82px; 
+	width:72px; 
+	overflow:hidden;
+}
+#imageMenu li img{
+	padding:1px;
+	border:1px solid #E8E8E8; 
+	width:68px; 
+	height:68px;
+	cursor:pointer;
+}
+#imageMenu li#onlickImg img{
+	border:1px solid #990000;
+}
+/* bigImg */
+.bigImg{
+	position:relative;
+	float:right;
+	width:400px;
+	height:400px;
+	padding:5px;
+	border:1px solid #E4E4E4;
+	overflow:hidden;
+}
+.bigImg #midimg{
+	width:400px;
+	height:400px;
+}
+.bigImg #winSelector{
+	width:235px;
+	height:210px;
+}
+#winSelector{
+	position:absolute;
+	cursor:crosshair;
+	filter:alpha(opacity=15);
+	-moz-opacity:0.15;
+	opacity:0.15;
+	background-color:#000;
+	border:1px solid #fff;
+}
+/* bigView */
+#bigView{
+	position:absolute;
+	border: 1px solid black;
+	overflow: hidden;
+	width:470px;
+	height:420px;
+	top:300px;
+	left:540px;
+	z-index:999;
+}
+#bigView img{
+	position:absolute;
+	max-width:none;
+	height:auto;
+	vertical-align: none;
+	border-style: none;
+}

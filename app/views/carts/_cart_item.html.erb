@@ -1,0 +1,27 @@
+<% if @cart.line_items.empty? %>
+<div class="cart_items-drop2">
+	<p style="color: red">这个真没有</p>
+</div>
+<% else %>
+	<div class="cart_items-drop">
+	<table class="table">
+	<% @cart.line_items.each do |item| %>
+		<tr>
+			<td><% item.productnumbers.limit(1).each do |ph| %>
+				<%= link_to ph.number, product_path(item.product.id) %>
+				</td>
+			<% end %>
+			<td><%= link_to item.product.title, product_path(item.product.id) %></td>
+			<td><%= item.quantity %></td>
+			<td><%= link_to "删除", [item.product, item],method: :delete, confirm: "Are you sure?" %></td> 
+		</tr>
+	<% end %>
+</table>
+	<div class="cart_link">
+		<span>
+			<%= link_to '结算', cart_path, class: "btn btn-primary" %>
+		</span>
+	</div>
+</div>	
+
+<% end %>

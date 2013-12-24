@@ -1,0 +1,145 @@
+<div class="p-data">
+
+	<div class="data-gallery" style="position:relative;">
+
+		<div id="idViewer2" class="izViewer2"></div>
+
+		<div id="data-pic" class="data-pic" >
+
+			<img id="idImage2" class="izImage2" />		
+
+		</div>
+
+		<div class="thumbsPanel">
+
+			<a href="javascript:void(0);" class="prev"></a>
+
+			<div class="thumbsItems">
+
+				<ul id="pic-thumbs" class="thumbsList list">
+
+
+
+				</ul>
+
+			</div>
+
+			<a href="javascript:void(0);" class="next"></a>
+
+			<div id="idHandle3" class="handle2"></div>
+
+		</div>
+
+	</div>
+
+</div>
+<script>
+
+	$(function(){
+
+		//图片切换和放大的效果
+
+		var iz = new ImageZoom( "idImage2", "idViewer2", {
+
+			mode: "handle", handle: "idHandle3"
+
+		});
+
+		var arrPic = [], 
+
+		list = $$("pic-thumbs");
+
+		<% @product.photos.each do |pho| %>
+			arrPic.push({ smallPic: "<%= pho.image_url(:small) %>", originPic: "<%= pho.image_url(:thumb) %>", zoomPic: "<%= pho.image_url %>" });
+
+		<% end %>	
+
+		$$A.forEach(arrPic, function(o, i){
+
+			var li = list.appendChild(document.createElement("li"));
+
+			var img = li.appendChild(document.createElement("img"));
+
+			img.src = o.smallPic;
+
+			img.onmouseover = function(){
+
+				iz.reset({ originPic: o.originPic, zoomPic: o.zoomPic });
+
+				$$A.forEach(list.getElementsByTagName("img"), function(img){ img.className = ""; });
+
+				this.className = "on";
+
+			}
+
+			if(!i){ img.onmouseover(); }
+
+		});
+
+		//小图左右移动
+
+		var pic_obj = $("#pic-thumbs"),
+
+		obj = pic_obj.find('li');
+
+		$(".prev").addClass('disabled');
+
+		if(obj.length<=4){$(".next").addClass('disabled');}
+
+		$("body").data("eqindex", 0);
+
+		$(".prev").click(function(){
+
+			var eqindex = $("body").data("eqindex");
+
+			if(eqindex*4>0){
+
+				pic_obj.animate({left:"+="+(obj.width()+4)*4+"px"}, 500);
+
+				$("body").data("eqindex", eqindex-1);
+
+				$(".next").removeClass('disabled');
+
+				if((eqindex-1)==0){
+
+					$(this).addClass('disabled');
+
+				}
+
+			}
+
+		});
+
+		$(".next").click(function(){
+
+			var eqindex = $("body").data("eqindex");
+
+			if(eqindex*4<(obj.length-4)){						
+
+				pic_obj.animate({left:"-="+(obj.width()+4)*4+"px"}, 500);
+
+				$("body").data("eqindex", eqindex+1);
+
+				$(".prev").removeClass('disabled');
+
+				if((eqindex+1)==Math.ceil(obj.length/4)-1){
+
+					$(this).addClass('disabled');
+
+				}
+
+			}
+
+		});
+
+	});
+$('#data-pic').bind("focus mouseover",function(){
+		$('#idHandle3').show();
+		$('#idViewer2').show();
+		});
+$('*').click(function(){
+	$('#idHandle3').hide();
+	$('#idViewer2').hide();
+});
+
+</script>

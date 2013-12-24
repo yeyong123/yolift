@@ -1,0 +1,12 @@
+<div class="category">
+	<table class="table">
+		<% @categories.each do |cate| %>
+			<tr>
+				<td><%= cate.name %></td>
+				<td><%= link_to "查看", category_path(cate) %></td>
+				<td><%= link_to "edit", edit_category_path(cate) %></td>
+				<td><%= link_to "delete", cate, method: :delete, confirm: "Are you sure?" %></td>
+			</tr>
+		<% end %>
+	</table>
+</div>

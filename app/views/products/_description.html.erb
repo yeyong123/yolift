@@ -1,0 +1,33 @@
+<div class="product-description">
+	<div class="product-title">
+		<span><%= @product.title %></span>
+	</div>
+	<div class="product-text">
+		<span>
+		</span>
+		<br />
+		<%= raw @product.listtext %>
+	</div>
+	<div class="product-item">
+		<ul>
+			<li><a href="#"><img src="/assets/product/zixun.png"/></a></li>
+			<li> <a href="<%= @product.printpdf %>"><img src="/assets/product/print.png"/></a></li>
+			<li class="drop-list"> <a> <img src="/assets/product/commit.png"/></a></li>
+			<ul class="drop-list-toggle">
+				<span>选择货号:</span>
+				<%= form_for([@product,@line_item]) do |f| %>
+					<% @productnumbers.each do |ph| %>
+						<li><%= check_box_tag 'line_item[productnumber_ids][]', ph.id, @line_item.productnumbers.map(&:id).include?(ph.id) %>
+						<%= ph.number %>	
+						</li> 
+					<% end %>
+					<%= hidden_field_tag 'line_item[productnumber_ids][]', '' %>
+					<%= f.hidden_field :cart_id, value: @cart.id %>
+					<%= f.submit %>
+				<% end %>
+			</ul>
+			<li><a href="#"><img src="/assets/product/4.png"/></a></li>
+		</ul>
+	</div>
+</div>
+

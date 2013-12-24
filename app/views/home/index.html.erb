@@ -1,0 +1,26 @@
+<%= render 'products/nav_list' %>
+<div id="customer-index-img">
+	<div class="get-image-position">
+		<div id="myCarousel" class="carousel slide">
+			<ol class="carousel-indicators">
+				<% Bananer.all.each_with_index do |bananer,index| %>
+					<li data-target="#myCarousel" data-slide-to='<%= index %>'></li>
+				<% end %>
+			</ol>
+			<div class="carousel-inner">
+				<% Bananer.all.each do |bananer| %>
+					<div class="item">
+						<%= image_tag(bananer.image_url) %>
+						<div class="carousel-caption">
+							<h4><%= bananer.title %></h4>
+							<p><%= bananer.descript %></p>
+						</div>
+					</div>	
+				<% end %>
+			</div>
+		</div>
+	</div>
+</div>
+<%= render 'home/toggle_tab' %>
+
+

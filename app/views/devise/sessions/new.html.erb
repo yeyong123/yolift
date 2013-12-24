@@ -1,0 +1,20 @@
+<div class="sign-interface">
+<h2>用户登录</h2>
+
+<div class="sign-in" %>
+<%= form_for(resource, :as => resource_name, :url => session_path(resource_name)) do |f| %>
+  <div class="sign-input"><%= f.label :email, "邮箱：" %>
+  <%= f.email_field :email, :autofocus => true %></div>
+
+  <div class="sign-input"><%= f.label :password, "密码：" %>
+  <%= f.password_field :password %></div>
+
+  <% if devise_mapping.rememberable? -%>
+    <div class="sign-input1"><%= f.check_box :remember_me %> <%= f.label :remember_me, "记住我" %></div>
+  <% end -%>
+
+  <div class="button-btn"><%= f.submit "Sign in", class: "btn btn-primary btn-success"%></div>
+<% end %>
+</div>
+<%= render "devise/shared/links" %>
+</div>

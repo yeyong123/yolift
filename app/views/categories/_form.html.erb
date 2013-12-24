@@ -1,0 +1,19 @@
+<%= nested_form_for @category do |f| %>
+	<div class="field">
+		<%= f.label :name %>
+		<%= f.text_field :name %>
+	</div>
+	<div class="field">
+	<%= f.label :tags, "二级分类" %>
+	<%= f.fields_for :tags do |tag_form| %>
+		<%= tag_form.text_field :name %>
+		<%= tag_form.link_to_remove "删除" %>
+	<% end %>
+	<p>
+	<%= f.link_to_add "添加二级分类", :tags, class: "btn btn-primary" %>
+	</p>
+</div>
+	<div class="action">
+		<%= f.submit %>
+	</div>
+<% end %>

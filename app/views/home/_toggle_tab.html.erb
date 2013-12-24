@@ -1,0 +1,32 @@
+<div class="bs-doc-image nav-collapse collapse">
+	<% Category.all.each do |cate| %>
+		<ul id="myTab" class="nav nav-tabs">
+			<li class="tab-tag"><span><%= cate.name %></span></li>
+			<% cate.tags.each do |tag| %>
+				<li class=""><a href="#<%= tag.name %>" data-toggle="tab"><%= tag.name %></a></li>
+			<% end %>
+		</ul>
+		</li>
+	</ul>
+	<div id="myTabContent" class="tab-content">
+		<% cate.tags.each do |tag| %>
+
+			<div class="tab-pane fade in" id="<%= tag.name %>">
+				<ul class="thumbnails">
+				<li class="pending"><%= link_to "查看更多", products_path(t:tag) %></li>
+					<% tag.products.limit(4).each do |product| %>
+						<li class="span3">
+						<div class="thumbnail">
+							<%= link_to image_tag(product.photos.first.image_url), product %>
+							<h3><%= product.title %></h3>
+							<p>thumnaoil</p>
+						</div>
+						</li>
+					<% end %>
+				</ul>
+			</div>
+		<% end %>
+	</div>
+<% end %>
+	</div>
+	<%= render 'home/index_about' %>

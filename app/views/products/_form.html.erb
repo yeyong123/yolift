@@ -1,0 +1,71 @@
+<div class="form-form">
+<%= nested_form_for @product do |f| %>
+	<div class="select-cate">
+		<span>选择大类</span>
+		<%= collection_select(:tag, :category_id, Category.all, :id, :name) %><br />
+		<span>选择分类</span>
+		<%= grouped_collection_select(:product, :tag_id, Category.all, :tags, :id, :id, :name) %><br />
+		</div>
+	<div class="field">
+		<%= f.label :number, "货号" %>
+		<%= f.fields_for :productnumbers do |ph|%>
+			<%= ph.text_field :number %>
+			<%= ph.link_to_remove "删除" %>
+		<% end %>
+		<p>
+		<%= f.link_to_add "添加货号", :productnumbers, class: "btn btn-primary" %>
+		</p>
+	</div>
+	<div class="field">
+		<%= f.label :title, "标题" %>
+		<%= f.text_field :title %>
+	</div>
+	<div class="field select-image">
+		<%= f.label :color, "颜色"  %>
+		<% @productcolors.each do |pc| %>
+			<%= check_box_tag "product[productcolor_ids][]", pc.id, @product.productcolors.map(&:id).include?(pc.id) %>
+			<span style="background:<%= pc.color %>"><b style="visibility: hidden">qq</b> </span>
+		<% end %>
+		<%= hidden_field_tag 'product[productcolor_ids][]','' %>
+	</div>
+
+	<div class="field">
+		<%= f.fields_for :photos do |photo| %>
+			<%= photo.file_field :image %>
+			<br />
+			<%= photo.link_to_remove "删除", class: 'btn btn-mini btn-success' %>
+		<% end %>
+		<p><%= f.link_to_add "增加图片", :photos, class: 'btn btn-primary' %></p>
+	</div>
+
+	<div class="image-position">
+
+		<% @product.photos.each do |pho| %>
+			<%= image_tag(pho.image_url(:small)) %>
+		<% end %>
+
+	</div>
+<div class="field position-form">
+		<%= f.label :printpdf, "上传PDF" %>
+		<%= f.file_field :printpdf %>
+	</div>
+	<div class="field position-form">
+		<%= f.label :video, "上传视频" %>
+		<%= f.file_field :video %>
+	</div>
+
+	<div class="field" style="clear: both">
+		<%= f.label :listtext, "列表描述" %>
+		<%= f.cktext_area :listtext, ckeditor: {width: 900, height: 300, toolbar: 'mini',toolbarCanCollapse: true, toolbarStartupExpanded: false} %>
+	</div>
+	
+	<div class="field">
+		<%= f.label :techparams, "技术参数" %>
+		<%= f.cktext_area :techparams, ckeditor: {width: 900,height: 400, toolbarCanCollapse: true, toolbarStartupExpanded: false} %>
+	</div>
+	<div class="action">
+		<%= f.submit "保存",class: "btn btn-large btn-success"%>
+		<%= link_to "返回", products_path(@product), class: "btn btn-large btn-primary" %>
+	</div>
+<% end %>
+</div>

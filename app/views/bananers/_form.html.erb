@@ -1,0 +1,21 @@
+<%= form_for @bananer, html: { multipart: true} do |f| %>
+	<div class="field">
+		<%= f.label :title %>
+		<%= f.text_field :title %>
+	</div>
+	<div class="field">
+		<%= f.label :descript %>
+		<%= f.text_field :descript %>
+	</div>
+	<div class="field">
+		<%= f.label :button %>
+		<%= f.text_field :button %>
+	</div>
+	<div class="field"%>
+		<%= f.label :image %>
+		<%= f.file_field :image %>
+	</div>
+	<div class="action">
+		<%= f.submit %>
+	</div>
+<% end %>

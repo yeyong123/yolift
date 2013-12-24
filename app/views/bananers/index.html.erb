@@ -1,0 +1,13 @@
+<table class="table">
+	<% @bananers.each do |bananer| %>
+		<tr>
+		<td><%= bananer.title %></td>
+		<td><%= image_tag(bananer.image_url) %></td>
+		<td><%= link_to "show", bananer %></td>
+		<td><%= link_to "edit", edit_bananer_path(bananer) %></td>
+		<td><%= link_to "delete", bananer, method: :delete, confirm: "Are you sure" %>
+	</tr>
+<%end%>
+</table>
+<%= link_to "new", new_bananer_path %>
+

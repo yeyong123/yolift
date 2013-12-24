@@ -1,0 +1,26 @@
+<div class="nav-list">
+	<div class="nav-bananer">
+		<div class="submenu">
+			<h2>产品目录 >></h2>
+			<div id="js-menu" class="submenulist">
+				<ul>
+					<% Category.all.each do |cate| %>
+						<li>
+						<h3><%= link_to cate.name, category_path(cate) %></h3>
+						<div class="listbox hide">
+							<dl class="procate">
+								<dt>商品分类</dt>
+								<% cate.tags.each do |tag| %>
+									<dd><%= link_to tag.name, products_path(t:tag) %>	</dd>
+								<% end %>
+							</dl>
+						</div>
+						</li>
+					<% end %>
+				</ul>
+			</div>
+		</div>
+	</div>
+	<%= render 'home/navbar_list' %>
+</div>
+

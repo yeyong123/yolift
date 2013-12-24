@@ -1,0 +1,25 @@
+<table class="table">
+	<tr>
+		<th>货号</th>
+		<th>产品名称</th>
+		<th>产品颜色</th>
+		<th>产品图片</th>
+	</tr>
+	<tr>
+		<td>
+		<% @product.productnumbers.each do |pn| %>
+		<%= link_to pn.number, product_path(@product) %>
+	<% end %>
+</td>
+<td><%= link_to @product.title, product_path(@product) %></td>
+<td>
+	<% @product.productcolors.each do |pc| %>
+		<%= pc.color %>
+	<% end %>
+</td>
+<td>
+	<% @product.photos.each do |ph| %>
+		<%= link_to image_tag(ph.image_url(:small)), product_path(@product) %>
+	<% end %>
+	</tr>
+</table>	

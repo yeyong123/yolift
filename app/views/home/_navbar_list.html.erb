@@ -1,0 +1,46 @@
+<div class="list-nav">
+	<div class="navbar">
+		<div class="navbar-inner">
+			<a class="btn btn-navbar" data-toggle="collapse" data-target=".nav-collapse">
+				<span class="icon-bar"></span>
+				<span class="icon-bar"></span>
+				<span class="icon-bar"></span>
+			</a>
+			<div class="nav-collapse collapse">
+				<ul class="nav">
+					<li class="active"><%= link_to t('.index'), root_path %></li>
+					<li><%= link_to "产品中心", products_path %></li>
+					<li class="dropdown"><a href="#contact" class="dropdown-toggle" data-toggle="dropdown">联系我们<b class="caret"></b></a>
+					<ul class="dropdown-menu">
+						<li><%= link_to "联系我们", contact_path %></li>
+						<li><a href="#">Anthor</a></li>
+					</ul>
+
+
+					</li>
+					<li class="dropdown">
+					<a href="#" class="dropdown-toggle" data-toggle="dropdown">Dropdown <b class="caret"></b></a>
+					<ul class="dropdown-menu">
+						<li><a href="#">Action</a></li>
+						<li><a href="#">Another action</a></li>
+						<li><a href="#">Something else here</a></li>
+						<li class="divider"></li>
+						<li class="nav-header">Nav header</li>
+						<li><a href="#">Separated link</a></li>
+						<li><a href="#">One more separated link</a></li>
+					</ul>
+					</li>
+				</ul>
+				<form action="/search" method="get" class="navbar-form pull-right">
+					<input type="text" name="q" value="" class="serach-query" placeholder="输入产品名称或者货号">
+					<button type="submit" class="btn">搜素</button>
+					<span class="cart-img"><%= link_to image_tag("cart.png",alt: "购物车"), cart_path %></span>
+					<span class="number-cart"><img src="/assets/number.png"/><b><%= @cart.total_items %></b>
+					</span>
+					<%= render 'carts/cart_item' %>
+				</form>
+			</div><!--/.nav-collapse -->
+		</div>
+	</div>
+</div>
+

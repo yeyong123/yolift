@@ -1,0 +1,12 @@
+<%= render 'home/nav_list' %>
+
+<div class="show-product">
+	<div class="product">
+		<span>产品标题</span>
+		<%= link_to "edit", edit_product_path(@product) %>
+	</div>
+	<%= render 'products/imagezoom' %>
+	<%= render 'products/description' %>
+	<%= render 'products/product_info' %>
+</div>
+
