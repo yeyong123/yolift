@@ -5,7 +5,7 @@
 			<tr>
 				<td>
 					<% item.productnumbers.each do |ph| %>
-						<%= ph.number %>,
+						<%= link_to ph.number, product_path(item.product.id) %>
 					<% end %>
 					</td>
 				<td>

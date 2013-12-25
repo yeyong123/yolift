@@ -1,12 +1,28 @@
 class OrdersController < ApplicationController
+	
+	def index
+	end
 
-	def index 
-		@product = Product.find(params[:product_id])
+	def show
+	end
+
+	def new
+		if @cart.line_items.empty?
+			redirect_to error_path, notice: "还没有添加任何产品!"
+		return
+		end
+	@order = Order.new	
+	end
+
+	def edit
 	end
 
 	def create
-		@product = Product.find(params[:product_id])
-		@order = @product.orders.create(params[:order])
-		redirect_to product_orders_path
+	end
+
+	def update
+	end
+
+	def destroy
 	end
 end

@@ -13,6 +13,6 @@ class HomeController < ApplicationController
 	def about
 	end
 
-	def contact
+	def error
 	end
 end

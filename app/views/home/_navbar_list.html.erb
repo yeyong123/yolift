@@ -8,26 +8,47 @@
 			</a>
 			<div class="nav-collapse collapse">
 				<ul class="nav">
-					<li class="active"><%= link_to t('.index'), root_path %></li>
-					<li><%= link_to "产品中心", products_path %></li>
-					<li class="dropdown"><a href="#contact" class="dropdown-toggle" data-toggle="dropdown">联系我们<b class="caret"></b></a>
+					<li><span class="product-menu">产品目录</span></li>
+					<li class="active index"><%= link_to t('.index'), root_path %></li>
+					<li class="dropdown"><a href="#" class="dropdown-toggle" data-toggle="dropdown"><%= t('.about') %><b class="caret"></b></a>
 					<ul class="dropdown-menu">
-						<li><%= link_to "联系我们", contact_path %></li>
+						<li><a href="#">企业概</a></li>
+						<li><a href="#">企业概</a></li>
+						<li><a href="#">企业概</a></li>
+						<li><a href="#">企业概</a></li>
 						<li><a href="#">Anthor</a></li>
 					</ul>
-
-
 					</li>
-					<li class="dropdown">
-					<a href="#" class="dropdown-toggle" data-toggle="dropdown">Dropdown <b class="caret"></b></a>
+					<li class="dropdown"><a href="#" class="dropdown-toggle" data-toggle="dropdown"><%= t('.products') %><b class="caret"></b></a>
 					<ul class="dropdown-menu">
-						<li><a href="#">Action</a></li>
-						<li><a href="#">Another action</a></li>
-						<li><a href="#">Something else here</a></li>
-						<li class="divider"></li>
-						<li class="nav-header">Nav header</li>
-						<li><a href="#">Separated link</a></li>
-						<li><a href="#">One more separated link</a></li>
+						<li><%= link_to t('.product'), products_path %></li>
+						<li><a href="#">视频展示</a></li>
+
+					</ul>
+					</li>
+					<li class="dropdown"><a href="#" class="dropdown-toggle" data-toggle="dropdown"><%= t('.new') %><b class="caret"></b></a>
+					<ul class="dropdown-menu">
+						<li><a href="#">企业概</a></li>
+						<li><a href="#">企业概</a></li>
+						<li><a href="#">企业概</a></li>
+						<li><a href="#">企业概</a></li>
+						<li><a href="#">Anthor</a></li>
+					</ul>
+					</li>
+					<li class="dropdown"><a href="#" class="dropdown-toggle" data-toggle="dropdown"><%= t('.server') %><b class="caret"></b></a>
+					<ul class="dropdown-menu">
+						<li><a href="#">企业概</a></li>
+						<li><a href="#">企业概</a></li>
+						<li><a href="#">企业概</a></li>
+						<li><a href="#">企业概</a></li>
+						<li><a href="#">Anthor</a></li>
+					</ul>
+					</li>
+
+					<li class="dropdown"><a href="#" class="dropdown-toggle" data-toggle="dropdown"><%= t('.contact') %><b class="caret"></b></a>
+					<ul class="dropdown-menu">
+						<li><%= link_to "联系我们", "#" %></li>
+						<li><a href="#">Anthor</a></li>
 					</ul>
 					</li>
 				</ul>

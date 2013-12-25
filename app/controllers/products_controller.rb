@@ -13,9 +13,15 @@ class ProductsController < ApplicationController
 	end
 
 	def show
+		begin
 		@product = Product.find(params[:id])
 		@line_item = @product.line_items.build
 		@productnumbers = @product.productnumbers
+		rescue ActiveRecord::RecordNotFound
+			logger.error "访问无效的产品页面#{params[:id]}"
+			redirect_to error_path
+		end
+
 	end
 
 	def new

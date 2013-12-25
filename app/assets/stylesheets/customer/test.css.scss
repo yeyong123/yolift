@@ -37,7 +37,7 @@
 	filter:progid:DXImageTransform.Microsoft.Gradient(GradientType=0, EndColorStr='#00452a', StartColorStr='#628970');
 
 }
-.nav-list .navbar-inner {
+.list-nav .navbar-inner {
 	background-image: -webkit-gradient(linear, 0 0, 0 100%, from(#125237), to(#00452a));
 	background-image: -moz-linear-gradient(top, #125237, #00452a);
 	filter:progid:DXImageTransform.Microsoft.Gradient(GradientType=0, EndColorStr='#00452a', StartColorStr='#125237');
@@ -51,7 +51,7 @@
 	height: 29px;
 }
 .logo-index {
-	height: 122px;
+	height: 140px;
 }
 .top-index, .logo-index{
 	padding: 0;
@@ -103,12 +103,25 @@
 .logo-index1 .position-logo .logo-image {
 	float: left;
 }
+.logo-image b {
+	color: white;
+	margin-left: 25px;
+	line-height: 38px;
+	font-size: 24px;
+	letter-spacing: 3px;
+}
 .logo-index1 .line {
 	border-right: 2px solid #fff;
 	width: 1px;
 	height: 60px;
 	float: left;
 	margin-left: 8px;
+}
+.phone .desc-logo {
+	font-size: 18px;
+	margin-left: 60px;
+	line-height: 20px;
+	color: white;
 }
 .logo-index1 .phone {
 	float: left;
@@ -139,7 +152,7 @@
 	z-index: 9999;
 	padding: 0;
 	margin: 0;
-	margin-top: -28px;
+	//margin-top: -28px;
 }
 .nav-list .nav-bananer, .nav-list .list-nav {
 	float: left;
@@ -148,14 +161,49 @@
 	width: 19%;
 	height: 357px;
 }
+//产品导航栏2013年12月25日修改
+ .nav-list .list-nav {
+	 float: right;
+	margin-top: -15px;
+	width: 100%;
+	height: 35px;
+ }
+ .nav-list .list-nav .navbar {
+	 margin: 0;
+	 height: 35px;
+ }
+ .nav-list .list-nav .navbar-inner {
+	 padding-right: 0;
+	 background-repeat: no-repeat;
+	 min-height: 35px;
+	 background-color: #00452a;
+ }
+ // 产品目录
+ .product-menu {
+	 color: #ee8301;
+	 line-height: 30px;
+	 font-size: 18px;
+	 font-weight: bold;
+	 letter-spacing: 3px;
+ }
+ .nav-list .navbar .nav > li > a {
+	 padding:5px 10px 0px 10px;
+ }
+ .nav-list .navbar .nav .index
+ //.nav-list .navbar .nav .dropdown
+ {
+	 margin-left: 78px;
+ }
+
+//修改结束
 //.affix .nav-bananer {
 //	width: 22%;
 //}
-.nav-list .list-nav {
-	height: 27px;
-	width: 80%;
-	margin-bottom: 5px;
-}
+//.nav-list .list-nav {
+//	height: 27px;
+//	width: 80%;
+//	margin-bottom: 5px;
+//}
 .affix .list-nav {
 	width: 81%;
 }
@@ -165,26 +213,26 @@
 .affix .navbar .nav {
 	margin-top: 10px;
 }
-.navbar-inner{
-	height: 25px;
-	min-height: 0;
-	padding: 0;
-	background: none;
+//.navbar-inner{
+//	height: 25px;
+//	min-height: 0;
+//	padding: 0;
+//	background: none;
 
-}
-.navbar {
-	height: 27px;
-}
-.navbar .nav >li> a {
-	padding: 3px 15px 0;
-}
-.nav-list .list-nav ul {
-	margin-left: 0;
+//}
+//.navbar {
+//	height: 27px;
+//}
+//.navbar .nav >li> a {
+//	padding: 3px 15px 0;
+//}
+//.nav-list .list-nav ul {
+//	margin-left: 0;
 
-}
-.nav-list .active {
-	height: 27px;
-}
+//}
+//.nav-list .active {
+//	height: 27px;
+//}
 .nav-list .nav > .active > a, .nav-list .nav > .active > a:hover {
 	background: none;
 	color: white;
@@ -194,16 +242,17 @@
 	text-shadow: none;
 	color: white;
 }
-.nav-list form, {
-	height: 27px;
-}
-.affix form {
-	margin-top: 12px;
-}
+//.nav-list form, {
+//	height: 27px;
+//}
+//.affix form {
+//	margin-top: 12px;
+//}
 .nav-list .navbar-form input {
 	margin: 0;
 	padding: 0;
-	height: 24px;
+//	height: 24px;
+width: 180px;
 }
 .nav-list .search-query {
 	margin: 0;
@@ -222,7 +271,7 @@
 }
 .nav-list .navbar-form {
 	position: relative;
-	margin-right: 10px;
+	margin: 5px 10px 0 0;
 }
 .number-cart {
    position: absolute;
@@ -318,13 +367,16 @@
     background: #ffffff;
 }
 .drop-list-toggle li {
-    text-align: center;
+    text-align: left;
+	margin-left: 30px;
+	line-height: 28px;
 }
 .drop-list-toggle .btn {
-	margin: 5px 0 0 50px;
+	margin: 5px 0 0 30px;
 }
 .drop-list-toggle form {
 	padding: 5px;
+	border: 1px solid;
 }
 .drop-list-toggle span {
 	margin: 2px 0 0 5px;
@@ -457,3 +509,38 @@
 }
 
 //单个产品下拉菜单中css
+
+// 订单页面的表单
+.order-form {
+	margin-top: 10px;
+	border: 1px solid;
+	height: auto;
+	width: 500px;
+}
+.order-form1, .order-form .field {
+   clear: both;
+   }   
+ .order-form1 input{
+	 float: right;
+	 margin-right: 160px;
+ }
+ .order-form1 .field label {
+	 margin-right: 10px;
+ }
+.order-form1 .field label {
+	float: left;
+	margin-left: 40px;
+}
+.ordernumber {
+	margin-top: 10px;
+}
+.ordernumber label {
+	float: left;
+	margin: 3px 15px 0 20px;
+}
+.content-text {
+	margin-left: 40px;
+}
+.content-text textarea {
+	min-width: 380px;
+}

@@ -1,0 +1,44 @@
+<div class="order-form">
+<%= form_for(@order) do |f| %>
+
+	<div class="field ordernumber">
+		<%= f.label :ordernumber %>
+			<%= f.text_field :ordernumber, value: Time.now.strftime("%y%m%d%H%M%S"), readonly: true%>
+	</div>
+	<br />
+	<div class="order-form1">
+	<div class="field">
+		<%= f.label :email %>
+		<%= f.email_field :email %>
+	</div>
+	<br />
+
+	<div class="field">
+		<%= f.label :company %>
+		<%= f.text_field :company %>
+
+	<br />
+	</div>
+
+	<div class="field">
+		<%= f.label :name %>
+		<%= f.text_field :name %>
+	</div>
+	<div class="field">
+		<%= f.label :phone %>
+		<%= f.telephone_field :phone %>
+	</div>
+	<div class="field">
+		<%= f.label :address %>
+		<%= f.text_field :address %>
+	</div>
+</div>
+	<div class="field content-text">
+		<%= f.label :content %>
+		<%= f.text_area :content, rows: 5 %>
+	</div>
+	<div class="action">
+		<%= f.submit t('.saveorder'), class: "btn btn-success" %>
+	</div>
+<% end %>
+</div>

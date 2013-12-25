@@ -5,9 +5,9 @@ class Product < ActiveRecord::Base
 	mount_uploader :video, VideoUploader
 	accepts_nested_attributes_for :photos, allow_destroy: :true 
 	has_many :productnumbers
-	accepts_nested_attributes_for :productnumbers, allow_destroy: :true
+	accepts_nested_attributes_for :productnumbers, allow_destroy: :true,
+		reject_if: proc{ |attrs| attrs.all? {|k, v| v.blank? }}
 	has_many :productcolors
-	has_many :orders
 	has_many :line_items
 
 #	def add_product(line_item,product_id)

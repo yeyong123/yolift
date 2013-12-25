@@ -1,30 +1,32 @@
 Yolift::Application.routes.draw do
 	scope '(:locale)' do
+		mount RailsAdmin::Engine => '/manager', :as => 'rails_admin'
 		devise_for :admins
 		devise_for :users
 		mount Ckeditor::Engine => '/ckeditor'
-		match '/about', to: 'home#about'
-		match '/contact', to: 'home#contact'
 		resources :bananers
 		resources :products do 
 			resources :line_items
 		end
 		resources :categories
 		resource :cart
+		resources :orders
 		match '/search', to: "products#search"
+		match '/about', to: 'home#about'
+		match '/error', to: 'home#error'
 		root to: 'home#index'
 
 	end
-	  # The priority is based upon order of creation:
-  # first created -> highest priority.
+	# The priority is based upon order of creation:
+	# first created -> highest priority.
 
-  # Sample of regular route:
-  #   match 'products/:id' => 'catalog#view'
-  # Keep in mind you can assign values other than :controller and :action
+	# Sample of regular route:
+	#   match 'products/:id' => 'catalog#view'
+	# Keep in mind you can assign values other than :controller and :action
 
-  # Sample of named route:
-  #   match 'products/:id/purchase' => 'catalog#purchase', :as => :purchase
-  # This route can be invoked with purchase_url(:id => product.id)
+	# Sample of named route:
+	#   match 'products/:id/purchase' => 'catalog#purchase', :as => :purchase
+	# This route can be invoked with purchase_url(:id => product.id)
 
   # Sample resource route (maps HTTP verbs to controller actions automatically):
   #   resources :products

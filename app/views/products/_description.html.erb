@@ -17,13 +17,13 @@
 				<span>选择货号:</span>
 				<%= form_for([@product,@line_item]) do |f| %>
 					<% @productnumbers.each do |ph| %>
-						<li><%= check_box_tag 'line_item[productnumber_ids][]', ph.id, @line_item.productnumbers.map(&:id).include?(ph.id) %>
+						<li><%= radio_button_tag 'line_item[productnumber_ids][]', ph.id, @line_item.productnumbers.map(&:id).include?(ph.id) %>
 						<%= ph.number %>	
 						</li> 
 					<% end %>
 					<%= hidden_field_tag 'line_item[productnumber_ids][]', '' %>
 					<%= f.hidden_field :cart_id, value: @cart.id %>
-					<%= f.submit %>
+					<%= f.submit "加入购物车", class: "btn btn-success" %>
 				<% end %>
 			</ul>
 			<li><a href="#"><img src="/assets/product/4.png"/></a></li>

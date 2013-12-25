@@ -17,15 +17,15 @@
 }
 .get-image-position {
 	width: 81%;
-	height: 325px;
+	height: 357px;
 	padding: 0;
 	float: right;
 }
 #myCarousel {
-	height: 325px;
+	height: 357px;
 }
 .carousel-inner,.item {
-	height: 325px;
+	height: 357px;
 }
 .bs-doc-image {
 	//border: 1px solid;
@@ -85,7 +85,6 @@ float: left;
 height:30px;
 line-height:30px;
 overflow:hidden;
-color:#fff;
 padding: 5px 0 5px 0;
 text-indent:40px;
 font-size:20px;
@@ -319,220 +318,126 @@ margin: 0;
 图片放大镜
 */
 .p-data {
-
 	margin:0 0 10px 10px;
-
 }
-
 .data-gallery {
-
 	width: 380px;
-
 	float: left;
-
 	position:relative;
-
-
 }
 .data-gallery img {
 	max-width: none;
 }
 .data-pic {
-
 	height: 380px;
-
 	width: 380px;
-
 	border:1px solid;
-
 }
-
 .data-pic img {
-
 	width:380px;
 	height: 380px;
-
 }
-
 .thumbsPanel{
 	height: 70px;
 	margin:5px 0 0 0px;
 	overflow: hidden;
 	border: 1px solid;
-
 }
-
 .thumbsPanel .prev,.thumbsPanel .next{
 	float: left;
 	width: 15px;
 	height: 50px;
 	margin-top: 5px;
-
 }
-
 .thumbsPanel .prev{
-
 	background: url(../images/sprite.gif) no-repeat;
-
 	background-position: 0px -317px;
-
 }
-
 .thumbsPanel .prev:hover{
-
 	background-position: -32px -317px;
-
 }
 
 .thumbsPanel .prev.disabled,.thumbsPanel .prev.disabled:hover{
-
 	background-position: -16px -317px;
-
 }
-
 .thumbsPanel .next{
-
 	background: url(../images/sprite.gif) no-repeat;
-
 	background-position: -80px -317px;
-
 }
-
 .thumbsPanel .next:hover{
-
 	background-position: -48px -317px;
-
 }
-
 .thumbsPanel .next.disabled,.thumbsPanel .next.disabled:hover{
-
 	background-position: -64px -317px;
-
 }
-
 .thumbsItems {
-
 	height: 70px;
 	white-space: nowrap;
 	position: relative;
 	float: left;
 	width:330px;
-
 	margin:0 1px;
 	overflow: hidden;
 	display: inline;
 
 }
-
 .thumbsList{
-
 	position: absolute;
-
 	top:0;
-
 	left: 0;
-
 	height: 70px;
 	margin-left: 10px;
-
 }
-
 .thumbsList li {
-
 	float: left;
 	padding-top: 3px;
 	height: 80px;
-
 	width: 80px;
-
 	margin:0;
-
 	background: #FCFCFC;
-
 	overflow: hidden;
-
 	display: inline;
-
 	position: relative;
-
 }
-
-
-
 .thumbsItems img {
-
 	height:60px;
-
 	width:60px;
-
 	padding:1px;
-
 	border:1px solid #ddd;
-
 }
 
 /* 商品图片放大镜样式 start */
-
 .list img{ 
-
 	border:1px solid #d5d5d5; 
-
 	margin-right:5px;
-
 }
-
 .list img.on{
-
 	border:1px solid #ff6600;
-
 }
-
 .izImage2{
-
 	border:0;
-
 	width:250px; 
-
 	height:250px; 
-
 }
-
 .izViewer2{
-
 	width:450px;
-
 	height:400px;
-
 	position:absolute;
-
 	left:380px;
-
 	top:0px;
-
 	display:none; 
-
 	border:1px solid;
-
 	z-index:2;
-
 }
 
 .handle2{
-
 	display:none;
-
 	opacity:0.3;
-
 	filter:alpha(opacity=30);
-
 	background:#8b7b33; 
-
 	cursor:crosshair; 
-
 	border:1px solid #d5d5d5; 
-
 	position:absolute;
-
 }
 
 /* 商品图片放大镜样式 end */
@@ -589,6 +494,9 @@ margin: 0;
 }
 .list-nav {
 	float: left;
+	//width: 20%;
+}
+.footer-center .list-nav {
 	width: 20%;
 }
 .list-nav h4 {
@@ -597,8 +505,11 @@ margin: 0;
 }
 .list-nav ul {
 	list-style: none;
-	margin-left: 60px;
+	//margin-left: 60px;
 	text-align: left;
+}
+.footer-center .list-nav ul {
+	margin-left: 60px;
 }
 .list-nav ul li {
 	font-size: 14px;
