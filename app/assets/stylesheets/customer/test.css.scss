@@ -189,6 +189,12 @@
 	 padding: 0;
 	 border: 1px solid;
 	  }
+	.product-menu span{
+		line-height: 40px;
+		padding:0 30px;
+		font-size:20px;
+		color: white;
+	}	
  .nav-list .navbar .nav > li > a {
 	 padding:5px 10px 0px 10px;
  }
@@ -462,19 +468,31 @@ width: 180px;
 .sign-in {
 	width: 300px;
 }
+.sign-interface h2 {
+	font-size: 18px;
+	margin:0 0 30px 0;
+	background:#989898;
+	text-align: center;
+}
 .sign-input, .sign-input1 {
 	clear: both;
 	margin-top: 10px;
 }
 .sign-input label,
-.sign-input input,
 .sign-input1 label,
-.sign-input1 input{
+{
 	float: left;
+	margin-left: 10px;
+}
+.sign-input input, .sign-input1 input {
+	float: right;
+	margin-right: 20px;
 }
 .sign-interface {
-	width: 400px;
-	margin: auto;
+	width: 300px;
+	border: 1px solid #989898;
+	margin:  20px;
+	float: right;
 }
 .sign-input1 {
 	float: right;
