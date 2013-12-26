@@ -108,5 +108,4 @@ $.fn.linkSelect = function (num){
  $('.nav-tabs .tab-tag + li').addClass('active');
  $('.tab-content div:first-child').addClass('active');
  
-
 });

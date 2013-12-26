@@ -33,4 +33,13 @@ class LineItemsController < ApplicationController
 		@line_item.destroy
 		redirect_to :back
 	end
+
+	def update
+		@product = Product.find(params[:product_id])
+		@line_item = @product.line_items.find(params[:id])
+		if @line_item.update_attributes(params[:line_item])
+			redirect_to :back
+		return
+		end
+	end
 end

@@ -7,7 +7,7 @@ class CreateOrders < ActiveRecord::Migration
       t.string :address
       t.string :name
       t.text :content
-      t.integer :ordernumber
+      t.string :ordernumber
 
       t.timestamps
     end

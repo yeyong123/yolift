@@ -1,0 +1,4 @@
+<% @order.line_items.each do |line| %>
+	<%= line.product.title %>
+	<%= line.quantity %>
+<% end %>

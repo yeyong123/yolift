@@ -111,18 +111,6 @@ ActiveRecord::Schema.define(:version => 20131225081907) do
     t.integer  "order_id"
   end
 
-  create_table "orders", :force => true do |t|
-    t.string   "company"
-    t.string   "email"
-    t.string   "phone"
-    t.string   "address"
-    t.string   "name"
-    t.text     "content"
-    t.integer  "ordernumber"
-    t.datetime "created_at",  :null => false
-    t.datetime "updated_at",  :null => false
-  end
-
   create_table "photos", :force => true do |t|
     t.string   "image"
     t.integer  "product_id"

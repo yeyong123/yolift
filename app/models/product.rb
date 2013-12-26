@@ -9,6 +9,7 @@ class Product < ActiveRecord::Base
 		reject_if: proc{ |attrs| attrs.all? {|k, v| v.blank? }}
 	has_many :productcolors
 	has_many :line_items
+	has_many :orders, through: :line_items
 
 #	def add_product(line_item,product_id)
 #		current_item = line_items.find_by_product_id(product_id)

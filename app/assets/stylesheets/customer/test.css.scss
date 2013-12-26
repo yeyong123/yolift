@@ -45,6 +45,8 @@
 }
 .nav-list .nav-bananer {
 	background: #4f7951;
+	margin-top: 3px;
+
 }
 //最上面的头部
 .top-index {
@@ -164,7 +166,7 @@
 //产品导航栏2013年12月25日修改
  .nav-list .list-nav {
 	 float: right;
-	margin-top: -15px;
+	margin-top: -21px;
 	width: 100%;
 	height: 35px;
  }
@@ -180,19 +182,20 @@
  }
  // 产品目录
  .product-menu {
-	 color: #ee8301;
-	 line-height: 30px;
-	 font-size: 18px;
-	 font-weight: bold;
-	 letter-spacing: 3px;
- }
+	 width: 184px;
+	 height: 37px;
+	 background:#4f7951; 
+	 margin-left: -20px;
+	 padding: 0;
+	 border: 1px solid;
+	  }
  .nav-list .navbar .nav > li > a {
 	 padding:5px 10px 0px 10px;
  }
  .nav-list .navbar .nav .index
  //.nav-list .navbar .nav .dropdown
  {
-	 margin-left: 78px;
+	 //margin-left: 78px;
  }
 
 //修改结束
@@ -507,15 +510,23 @@ width: 180px;
 .product-cart .table input {
   width: 40px;
 }
+.product-cart .btn {
+	float: right;
+	margin-right: 40px;
+}
+.product-cart .btn-mini {
+	float: none;
+	margin-top: -10px;
+	padding: 0;
+}
 
 //单个产品下拉菜单中css
 
 // 订单页面的表单
 .order-form {
-	margin-top: 10px;
-	border: 1px solid;
+	margin:15px auto;
 	height: auto;
-	width: 500px;
+	width: 600px;
 }
 .order-form1, .order-form .field {
    clear: both;
@@ -529,18 +540,40 @@ width: 180px;
  }
 .order-form1 .field label {
 	float: left;
-	margin-left: 40px;
+	margin-left: 140px;
 }
 .ordernumber {
 	margin-top: 10px;
 }
 .ordernumber label {
 	float: left;
-	margin: 3px 15px 0 20px;
+	margin: 3px 15px 0 120px;
 }
 .content-text {
-	margin-left: 40px;
+	margin-left: 140px;
 }
 .content-text textarea {
 	min-width: 380px;
 }
+.number-order {
+	border: 1px solid;
+}
+.number-order input {
+	width: 40px;
+}
+.number-order tr {
+	max-height: 30px;
+}
+.number-order td {
+	padding: 2px 0 0 3px;
+}
+.number-order .fields {
+	height: 30px;
+}
+ //警告栏弹出栏
+ .alert p {
+	 text-align: center;
+	 margin: 0;
+	 padding: 0;
+	 font-size: 16px;
+ }

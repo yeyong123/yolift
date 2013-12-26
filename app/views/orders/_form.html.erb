@@ -1,6 +1,24 @@
 <div class="order-form">
-<%= form_for(@order) do |f| %>
-
+	<% @order.line_items.build %>
+<%= nested_form_for(@order) do |f| %>
+	<table class="table number-order">
+		<% @cart.line_items.each do |line| %>
+			<tr>
+			<td><%= line.product.title %></td>
+			<td>
+				<% line.productnumbers.each do |ph| %>
+					<%= ph.number %>
+				<% end %>
+			</td>
+			<td>
+				<%= line.quantity %>
+			</td>
+<td>
+	<%= link_to "删除", [line.product, line], method: :delete, confirm: "Are you sure?", class: "btn btn-mini btn-danger" %>
+</td>
+</tr>
+<% end %>
+</table>
 	<div class="field ordernumber">
 		<%= f.label :ordernumber %>
 			<%= f.text_field :ordernumber, value: Time.now.strftime("%y%m%d%H%M%S"), readonly: true%>

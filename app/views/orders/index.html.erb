@@ -1,25 +1,34 @@
 <table class="table">
 	<tr>
-		<th>货号</th>
-		<th>产品名称</th>
-		<th>产品颜色</th>
-		<th>产品图片</th>
+		<td>订单号</td>
+				<td>公司名称</td>
+		<td>地址</td>
+		<td>联系人</td>
 	</tr>
-	<tr>
-		<td>
-		<% @product.productnumbers.each do |pn| %>
-		<%= link_to pn.number, product_path(@product) %>
-	<% end %>
-</td>
-<td><%= link_to @product.title, product_path(@product) %></td>
-<td>
-	<% @product.productcolors.each do |pc| %>
-		<%= pc.color %>
-	<% end %>
-</td>
-<td>
-	<% @product.photos.each do |ph| %>
-		<%= link_to image_tag(ph.image_url(:small)), product_path(@product) %>
-	<% end %>
+	<% @orders.each do |order| %>
+		<tr>
+			<td><%= order.ordernumber %></td>
+		<tr>
+		<td>产品名称</td>
+		<td>货号</td>
+		<td>数量</td>
 	</tr>
+
+		<%order.line_items.each do |item| %>
+			<tr>
+				<td><%= item.product.title%></td>
+				<% item.productnumbers.each do |ph| %>
+					<td>
+						<%= ph.number %>
+					</td>
+				<% end %>
+				<td><%=item.quantity %></td>
+			</tr>
+			<% end %>
+			<td><%= order.company %></td>
+			<td><%= order.address %></td>
+			<td><%= order.name %></td>
+			<td><%= link_to "删除", order, method: :delete, confirm: "Are you sure?" %>
+		</tr>
+	<% end %>
 </table>	
