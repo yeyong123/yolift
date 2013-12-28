@@ -98,6 +98,11 @@ $.fn.linkSelect = function (num){
  $('#tag_tag_id').linkSelect();
  $('#product_tag_id').linkSelect();
 
+ //orders 地址的下拉城市选择
+ //
+ $('#order_city_id').linkSelect();
+ $('#order_district_id').linkSelect();
+
  // 首页展示图的js选择active
  //
  $('.carousel-indicators li:first').addClass('active');

@@ -1,1 +1,13 @@
-<%= @category.name %>
+<%= render 'home/nav_list' %>
+	<div class="product-index">
+		<ul class="thumbnails">
+<% @category.tags.each do |tag| %>
+			<% tag.products.each do |product| %>
+				<%= render partial: 'products/index', locals:{product: product} %>
+			<% end %>
+<% end %>
+		</ul>
+
+	<%= will_paginate @tag %>
+	</div>
+

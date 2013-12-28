@@ -19,7 +19,7 @@ class ProductsController < ApplicationController
 		@productnumbers = @product.productnumbers
 		rescue ActiveRecord::RecordNotFound
 			logger.error "访问无效的产品页面#{params[:id]}"
-			redirect_to error_path
+			redirect_to products_path
 		end
 
 	end
@@ -69,7 +69,7 @@ class ProductsController < ApplicationController
 			@products = Product.joins(:productnumbers).where("title like ? or productnumbers.number like ?",
 			'%'+params[:q]+'%', '%'+params[:q]+'%').uniq.order("id desc").paginate(page: params[:page], per_page: 12)
 			if @products.empty?
-				redirect_to products_path, notice: "nothing"
+				redirect_to products_path, notice: "没有找到相关，请重新搜索！"
 			else
 				render 'index'
 			end

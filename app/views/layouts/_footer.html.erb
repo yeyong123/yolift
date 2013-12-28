@@ -2,19 +2,15 @@
 	<div class="container">
 		<div class="footer-center">
 			<div class="list-nav">
-				<h4>市场策略</h4>
+				<h4>产品中心</h4>
 				<ul>
-					<li>产品体系</li>
-					<li>高端设计</li>
-					<li>品牌策略</li>
-					<li>直销模式</li>
-					<li>品牌优势</li>
-					<li>租赁业务</li>
-					<li>持续发展</li>
+					<% Category.limit(2).each do |cate| %>
+						<li><%= link_to cate.name, category_path(cate.id) %></li>
+					<% end %>
 				</ul>
 			</div>
 			<div class="list-nav">
-				<h4>产品展示</h4>
+				<h4>采购指南</h4>
 				<ul>
 					<li>产品关键字</li>
 					<li>下载专区</li>
@@ -23,7 +19,7 @@
 				</ul>
 			</div>
 			<div class="list-nav">
-				<h4>专业知识</h4>
+				<h4>支付方式</h4>
 				<ul>
 					<li>物料搬运知识</li>
 					<li>高空作业平台</li>
@@ -34,7 +30,7 @@
 				</ul>
 			</div>
 			<div class="list-nav">
-				<h4>服务中心</h4>
+				<h4>配送服务</h4>
 				<ul>
 					<li>服务概述</li>
 					<li>服务特点</li>
@@ -45,7 +41,7 @@
 				</ul>
 			</div>
 			<div class="list-nav">
-				<h4>应用案例</h4>
+				<h4>售后服务</h4>
 				<ul>
 					<li>精选案例</li>
 					<li>物流运输</li>
@@ -55,6 +51,18 @@
 					<li>加工制造</li>
 				</ul>
 			</div>
+	<div class="list-nav">
+				<h4>项目案例</h4>
+				<ul>
+					<li>精选案例</li>
+					<li>物流运输</li>
+					<li>服务行业</li>
+					<li>汽车行业</li>
+					<li>食品化工</li>
+					<li>加工制造</li>
+				</ul>
+			</div>
+
 		</div>
 		<div class="footer-link">
 			<ul>

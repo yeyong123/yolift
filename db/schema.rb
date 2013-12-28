@@ -11,7 +11,7 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20131225081907) do
+ActiveRecord::Schema.define(:version => 20131228021819) do
 
   create_table "admins", :force => true do |t|
     t.string   "email",                  :default => "", :null => false
@@ -112,15 +112,18 @@ ActiveRecord::Schema.define(:version => 20131225081907) do
   end
 
   create_table "orders", :force => true do |t|
+    t.string   "name"
     t.string   "company"
-    t.string   "email"
+    t.string   "ordernumber"
     t.string   "phone"
     t.string   "address"
-    t.string   "name"
+    t.string   "email"
     t.text     "content"
-    t.string   "ordernumber"
     t.datetime "created_at",  :null => false
     t.datetime "updated_at",  :null => false
+    t.integer  "city_id"
+    t.integer  "province_id"
+    t.integer  "district_id"
   end
 
   create_table "photos", :force => true do |t|
@@ -140,9 +143,10 @@ ActiveRecord::Schema.define(:version => 20131225081907) do
   create_table "productnumbers", :force => true do |t|
     t.string   "number"
     t.integer  "product_id"
-    t.datetime "created_at",   :null => false
-    t.datetime "updated_at",   :null => false
+    t.datetime "created_at",                  :null => false
+    t.datetime "updated_at",                  :null => false
     t.integer  "line_item_id"
+    t.integer  "quantity",     :default => 1
   end
 
   create_table "products", :force => true do |t|
@@ -150,6 +154,7 @@ ActiveRecord::Schema.define(:version => 20131225081907) do
     t.string   "number"
     t.string   "printpdf"
     t.string   "video"
+    t.string   "color"
     t.text     "listtext"
     t.text     "techparams"
     t.text     "detail"

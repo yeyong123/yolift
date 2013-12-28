@@ -1,0 +1,13 @@
+'zh-CN':
+  orders:
+    form: 
+      saveorder: "提交询价单"
+      ordernumber: "订单号："
+      email: "邮箱："
+      company: "公司名称："
+      name: "联系人："
+      phone: "手机："
+      address: "收货地址："
+      detail: "街/路/号："
+      content: "备注内容："
+      back: "返回继续购物"

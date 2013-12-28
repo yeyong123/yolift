@@ -1,0 +1,14 @@
+en:
+  orders: 
+    form:
+      saveorder: "Save"
+      ordernumber: "Number"
+      email: "Email"
+      company: "Company"
+      name: "Name"
+      phone: "Mobile"
+      address: "Address"
+      detail: "DetailAdd"
+      content: "Content"
+      back: "Back"
+

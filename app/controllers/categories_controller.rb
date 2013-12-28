@@ -7,11 +7,12 @@ class CategoriesController < ApplicationController
 
 	def show
 		@category = Category.find(params[:id])
+		@tag = @category.tags.paginate(page: params[:page], per_page: 2)
 	end
-
+		
 	def new
 		@category = Category.new
-	end
+		end
 
 	def edit
 		@category = Category.find(params[:id])

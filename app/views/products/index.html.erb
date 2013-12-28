@@ -2,19 +2,9 @@
 <div class="product-index">
 	<ul class="thumbnails">
 		<% @products.each do |product| %>
-			<li class="span3">
-			<div class="thumbnail">
-				<%= link_to image_tag(product.photos.first.image_url), product %>
-				<h5><%= product.title %></h5>
-				<span><% product.productcolors.each do |pc| %>
-						<%= pc.color %>
-					<% end %>
-					</span>
-				<p><%= link_to "delete", product, confirm: "Are you sure?", method: :delete %>
-			</div>
-			</li>
+			<%= render partial: 'products/index', locals: {product: product} %>
 		<% end %>
-	</ul>
+			</ul>
 	<%= link_to '新增产品',new_product_path, class: "btn btn-primary" %>
 	<%= will_paginate @products %>
 </div>

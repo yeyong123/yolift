@@ -2,7 +2,7 @@
 
 <div class="show-product">
 	<div class="product">
-		<span>产品标题</span>
+		<%= render_navigation(renderer: :breadcrumbs, join_with: '&nbsp / &nbsp') %>
 		<%= link_to "edit", edit_product_path(@product) %>
 	</div>
 	<%= render 'products/imagezoom' %>
