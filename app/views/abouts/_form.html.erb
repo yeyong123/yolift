@@ -1,0 +1,8 @@
+<div class="field">
+	<%= f.label :title %>
+	<%= f.text_field :title %>
+</div>
+<div class="field">
+	<%= f.label :content %>
+	<%= f.cktext_area :content, ckeditor: { width: 900, height: 300, toolbar: 'mini', toolbarCanCollapse: true, toolbarStartupExpanded: false} %>
+</div>

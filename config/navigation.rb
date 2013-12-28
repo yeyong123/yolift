@@ -46,6 +46,26 @@ SimpleNavigation::Configuration.run do |navigation|
 					end
 				end
 			end
+			home.item :abouts, "关于YOLIFT", abouts_path do |about|
+				About.all.each do |abo|
+					about.item :about, abo.title, about_path(abo.id)
+				end
+			end
+			home.item :servers, "新闻资讯", servers_path do |server|
+				Server.all.each do |ser|
+					server.item :server, ser.title, server_path(ser.id)
+				end
+			end
+			home.item :centers, "服务中心", centers_path do |center|
+				Center.all.each do |cen|
+					center.item :center, cen.title, center_path(cen.id) 
+				end
+			end
+			home.item :contacts, "联系我们", contacts_path do |contact|
+				Contact.all.each do |con|
+					contact.item :contact, contact_path(con.id)
+				end
+			end
 		end
     # Add an item to the primary navigation. The following params apply:
     # key - a symbol which uniquely defines your navigation item in the scope of the primary_navigation

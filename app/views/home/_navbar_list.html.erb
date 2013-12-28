@@ -12,11 +12,9 @@
 					<li class="active index"><%= link_to t('.index'), root_path %></li>
 					<li class="dropdown"><a href="#" class="dropdown-toggle" data-toggle="dropdown"><%= t('.about') %><b class="caret"></b></a>
 					<ul class="dropdown-menu">
-						<li><a href="#">企业概</a></li>
-						<li><a href="#">企业概</a></li>
-						<li><a href="#">企业概</a></li>
-						<li><a href="#">企业概</a></li>
-						<li><a href="#">Anthor</a></li>
+						<% About.limit(5).each do |about| %>
+							<li><%= link_to about.title, about_path(about.id) %></li>
+						<% end %>
 					</ul>
 					</li>
 					<li class="dropdown"><a href="#" class="dropdown-toggle" data-toggle="dropdown"><%= t('.products') %><b class="caret"></b></a>
@@ -28,20 +26,16 @@
 					</li>
 					<li class="dropdown"><a href="#" class="dropdown-toggle" data-toggle="dropdown"><%= t('.new') %><b class="caret"></b></a>
 					<ul class="dropdown-menu">
-						<li><a href="#">企业概</a></li>
-						<li><a href="#">企业概</a></li>
-						<li><a href="#">企业概</a></li>
-						<li><a href="#">企业概</a></li>
-						<li><a href="#">Anthor</a></li>
+						<% Server.limit(3).each do |server| %>
+							<li><%= link_to server.title, server_path(server.id) %></li>
+						<% end %>
 					</ul>
 					</li>
 					<li class="dropdown"><a href="#" class="dropdown-toggle" data-toggle="dropdown"><%= t('.server') %><b class="caret"></b></a>
 					<ul class="dropdown-menu">
-						<li><a href="#">企业概</a></li>
-						<li><a href="#">企业概</a></li>
-						<li><a href="#">企业概</a></li>
-						<li><a href="#">企业概</a></li>
-						<li><a href="#">Anthor</a></li>
+					<% Center.limit(4).each do |center| %>
+						<li><%= link_to center.title, center_path(center.id) %></li>
+					<% end %>
 					</ul>
 					</li>
 

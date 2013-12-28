@@ -1,0 +1,7 @@
+<%= form_for @about do |f| %>
+	<%= render partial: 'abouts/form', locals: {f: f} %>
+	<div class="about-action">
+		<%= f.submit "更新", class: "btn btn-success" %>
+		<%= link_to "返回", abouts_path %>
+	</div>
+<% end %>

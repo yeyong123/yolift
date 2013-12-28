@@ -302,7 +302,7 @@ width: 180px;
 .number-cart b{
 	position: absolute;
 	top: 1px;
-	left: 5px;
+	left: 8px;
 	padding: 0 3px;
 	color: white;
 }
@@ -625,3 +625,21 @@ width: 180px;
  }
  //分类中的css样式
  
+ //关于我们，联系我们， 服务中心的表单编辑页面的按钮的位置
+ .about-action {
+	 margin: 10px 0 0 20px;
+ }
+ .about-action .btn {
+	 margin-right: 30px;
+ }
+ //面包屑
+ .about-title h4 {
+	 float: left;
+ }
+ .breadcrumb {
+	 float: right;
+ }
+ .about-content {
+	 clear: both;
+ }
+

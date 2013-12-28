@@ -1,0 +1,17 @@
+<%= render 'home/nav_list' %>
+<div class="product-index">
+	<table class="table">
+		<% @abouts.each do |about| %>
+			<tr>
+				<td><%= link_to about.title, about_path(about) %></td>
+				<td><%= about.created_at.strftime("%Y-%m-%d") %>创建</td>
+				<td>更新:<%= about.updated_at.strftime("%Y-%m-%d:%H:%M:%S") %></td>
+				<td>阅读:<%= about.count %></td>
+				<td><%= link_to "编辑", edit_about_path(about) %></td>
+				<td><%= link_to "删除", about, method: :delete, confirm: "Are you sure?" %></td>
+				</tr>
+							<% end %>
+		</table>
+		<%= will_paginate @abouts %>
+		<%= link_to "new", new_about_path %>
+	</div>

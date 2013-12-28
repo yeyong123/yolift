@@ -1,0 +1,16 @@
+<%= render 'home/nav_list' %>
+<div class="product-index">
+	<table class="table">
+		<% @centers.each do |center| %>
+			<tr>
+				<td><%= center.title %></td>
+				<td><%= center.updated_at.strftime("%Y-%m-%d:%H:%M:%S") %></td>
+				<td><%= link_to "编辑", edit_center_path(center) %></td>
+				<td><%= link_to "删除", center, method: :delete, confirm: "Are you sure?" %></td>
+			</tr>
+		<% end %>
+	</table>
+	<%= will_paginate @centers %>
+	<%= link_to "新增服务", new_center_path, class: "btn btn-primary" %>
+</div>
+

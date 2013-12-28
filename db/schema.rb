@@ -11,7 +11,15 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20131228021819) do
+ActiveRecord::Schema.define(:version => 20131228050905) do
+
+  create_table "abouts", :force => true do |t|
+    t.string   "title"
+    t.text     "content"
+    t.datetime "created_at",                :null => false
+    t.datetime "updated_at",                :null => false
+    t.integer  "count",      :default => 0
+  end
 
   create_table "admins", :force => true do |t|
     t.string   "email",                  :default => "", :null => false
@@ -54,6 +62,13 @@ ActiveRecord::Schema.define(:version => 20131228021819) do
     t.datetime "updated_at", :null => false
   end
 
+  create_table "centers", :force => true do |t|
+    t.string   "title"
+    t.text     "content"
+    t.datetime "created_at", :null => false
+    t.datetime "updated_at", :null => false
+  end
+
   create_table "cities", :force => true do |t|
     t.string   "name"
     t.integer  "province_id"
@@ -87,6 +102,13 @@ ActiveRecord::Schema.define(:version => 20131228021819) do
 
   add_index "ckeditor_assets", ["assetable_type", "assetable_id"], :name => "idx_ckeditor_assetable"
   add_index "ckeditor_assets", ["assetable_type", "type", "assetable_id"], :name => "idx_ckeditor_assetable_type"
+
+  create_table "contacts", :force => true do |t|
+    t.string   "title"
+    t.text     "content"
+    t.datetime "created_at", :null => false
+    t.datetime "updated_at", :null => false
+  end
 
   create_table "districts", :force => true do |t|
     t.string   "name"
@@ -187,6 +209,13 @@ ActiveRecord::Schema.define(:version => 20131228021819) do
   end
 
   add_index "rails_admin_histories", ["item", "table", "month", "year"], :name => "index_rails_admin_histories"
+
+  create_table "servers", :force => true do |t|
+    t.string   "title"
+    t.text     "content"
+    t.datetime "created_at", :null => false
+    t.datetime "updated_at", :null => false
+  end
 
   create_table "tags", :force => true do |t|
     t.string   "name"

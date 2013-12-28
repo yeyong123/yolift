@@ -11,9 +11,13 @@ Yolift::Application.routes.draw do
 		resources :categories
 		resource :cart
 		resources :orders
+		resources :abouts
+		resources :servers
+		resources :centers
+		resources :contacts
 		match '/search', to: "products#search"
-		match '/about', to: 'home#about'
 		match '/error', to: 'home#error'
+
 		root to: 'home#index'
 
 	end
