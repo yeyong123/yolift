@@ -134,13 +134,13 @@ ActiveRecord::Schema.define(:version => 20131228050905) do
   end
 
   create_table "orders", :force => true do |t|
-    t.string   "name"
     t.string   "company"
-    t.string   "ordernumber"
+    t.string   "email"
     t.string   "phone"
     t.string   "address"
-    t.string   "email"
+    t.string   "name"
     t.text     "content"
+    t.string   "ordernumber"
     t.datetime "created_at",  :null => false
     t.datetime "updated_at",  :null => false
     t.integer  "city_id"
@@ -176,7 +176,6 @@ ActiveRecord::Schema.define(:version => 20131228050905) do
     t.string   "number"
     t.string   "printpdf"
     t.string   "video"
-    t.string   "color"
     t.text     "listtext"
     t.text     "techparams"
     t.text     "detail"
