@@ -35,7 +35,9 @@ class ImageUploader < CarrierWave::Uploader::Base
    version :thumb do
      process :resize_to_fit => [380, 380]
    end
-
+	version :narmail do
+		process :resize_to_fit => [220, 220]
+	end
    version :small, :from_version => :thumb do 
 	   process :resize_to_fill => [50, 50]
    end

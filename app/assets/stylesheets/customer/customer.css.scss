@@ -1,4 +1,13 @@
 //自定修改了bootstrap的样式
+//2014年加了jquery切换的样式
+.roundabout-holder{width:750px;height:496px;margin:0 auto;}
+
+.roundabout-moveable-item{width:646px;height:416px;cursor:pointer;border:3px solid #ccc;border:3px solid rgba(0, 0, 0, 0.08);border-radius:4px;-moz-border-radius:4px;-webkit-border-radius:4px;}
+
+.roundabout-moveable-item img{width:100%;}
+
+.roundabout-in-focus{border:3px solid rgba(0, 0, 0, 0.2);}
+//2014年修改
 body{
 	font-family: "经典黑体简","Helvetica Neue",Helvetica,Arial,sans-serif;
 	background: #d6dfd9;
@@ -57,9 +66,6 @@ body{
 }
 .bs-doc-image .nav-tabs > .active > a {
 	height: 22px;
-}
-.bs-doc-image .nav > li >a:hover {
-	height: 27px;
 }
 #myTab, #myTab li{
 	position: relative;

@@ -13,6 +13,15 @@ RailsAdmin.config do |config|
 
   # RailsAdmin may need a way to know who the current user is]
   config.current_user_method { current_admin } # auto-generated
+	config.model Product do
+		include_all_fields
+			field :listtext,:text do
+				ckeditor true
+		end
+			field :techparams,:text do 
+				ckeditor true
+			end
+	end
 
   # If you want to track changes on your models:
   # config.audit_with :history, 'Admin'

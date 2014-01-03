@@ -165,10 +165,9 @@ ActiveRecord::Schema.define(:version => 20131228050905) do
   create_table "productnumbers", :force => true do |t|
     t.string   "number"
     t.integer  "product_id"
-    t.datetime "created_at",                  :null => false
-    t.datetime "updated_at",                  :null => false
+    t.datetime "created_at",   :null => false
+    t.datetime "updated_at",   :null => false
     t.integer  "line_item_id"
-    t.integer  "quantity",     :default => 1
   end
 
   create_table "products", :force => true do |t|

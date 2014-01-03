@@ -433,7 +433,7 @@ width: 180px;
 	margin-left: 5px;
 }
 .product-index .span3 .thumbnail{
-	height: 220px;
+	height: 300px;
 }
 //.form表单中图片的大小
 .resize-image .fields {
@@ -565,6 +565,9 @@ width: 180px;
 //单个产品下拉菜单中css
 
 // 订单页面的表单
+.product-index2{
+	float: left;
+}
 .order-form {
 	margin:15px auto;
 	height: auto;
@@ -589,7 +592,7 @@ width: 180px;
 }
 .ordernumber label {
 	float: left;
-	margin: 3px 15px 0 120px;
+	margin: 3px 15px 0 140px;
 }
 .content-text {
 	margin-left: 140px;
@@ -598,8 +601,10 @@ width: 180px;
 	min-width: 380px;
 }
 .number-order {
-	border: 1px solid;
+	margin-left: 30px;
+	border-bottom: 1px solid #999;
 }
+
 .number-order input {
 	width: 40px;
 }
