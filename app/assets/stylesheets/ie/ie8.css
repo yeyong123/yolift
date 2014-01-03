@@ -25,3 +25,9 @@
 .cart-img {
 	float: right;
 }
+.pending {
+	margin-top: -35px;
+}
+.node-text {
+	width: 262px;
+}

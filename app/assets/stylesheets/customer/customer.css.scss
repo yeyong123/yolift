@@ -1,4 +1,7 @@
 //自定修改了bootstrap的样式
+body{
+	font-family: "经典黑体简","Helvetica Neue",Helvetica,Arial,sans-serif;
+}
 .container {
 
 	width: 980px;
@@ -61,12 +64,12 @@
 	position: relative;
 	height: 27px;
 }
-#myTab {
+.bs-doc-image #myTab {
 	background-image: -moz-linear-gradient(top, #eaeaea, #b2b2b2);
 	background-image: -webkit-gradient(linear, 0 0, 0 100%, from(#eaeaea), to(#b2b2b2));
 	filter:progid:DXImageTransform.Microsoft.Gradient(GradientType=0, EndColorStr='#b2b2b2', StartColorStr='#eaeaea');
 }
-#myTab li a {
+.bs-doc-image #myTab li a {
 	color: black;
 }
 #myTab .dropdown-menu li{
@@ -112,23 +115,30 @@ height:36px;
 line-height:34px;
 text-indent:15px;
 vertical-align:middle;
+border-bottom:1px solid #fff;
+
 }
 .submenulist li h3 a{
 position:relative;
 display:block;
 height:34px;
 color:#fff;
-text-indent: 30px;
+float: left;
+text-indent: 20px;
 font-size:16px;
 font-weight:400;
 //border-top:1px solid #D7ECFF;
-border-bottom:1px solid #fff;
 //background:#F1F9FF;
 z-index:1;
 overflow:hidden;
 }
-.submenulist li h3 a span {
-	margin-left: 30px;
+.submenulist li h3 span {
+	float: right;
+	color: white;
+	padding: 0;
+	font-size: 14px;
+	margin-right: 33px;
+
 }
 .submenulist li h3 a.on span {
 	display: none;
@@ -138,10 +148,10 @@ background:#fff;
 width:150px;
 height:32px;
 color:#f60;
-font-weight:700;
+font-weight:400;
 border:2px solid #F7C900;
 border-right:0 none;
-text-indent:25px;
+text-indent:20px;
 overflow:hidden;
 }
 .submenu .listbox{
@@ -522,6 +532,7 @@ margin: 0;
 .footer-link {
 	clear: both;
 	width: 100%;
+	padding: 5px;
 }
 .footer-link ul {
 	list-style: none;

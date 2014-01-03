@@ -3,7 +3,9 @@
 <div class="show-product">
 	<div class="product">
 		<%= render_navigation(renderer: :breadcrumbs, join_with: '&nbsp / &nbsp') %>
-		<%= link_to "edit", edit_product_path(@product) %>
+		<%= link_to edit_product_path(@product), class: "btn product-link" do%>
+			编辑  <i class="icon-pencil"></i>
+		<% end %>
 	</div>
 	<%= render 'products/imagezoom' %>
 	<%= render 'products/description' %>

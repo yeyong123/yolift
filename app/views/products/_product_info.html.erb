@@ -11,10 +11,8 @@
 			<%= raw @product.techparams %>
 				</div>
 	<div class="tab-pane fade" id="profile">
-		<% @product.photos.each do |pho| %>
-			<%= image_tag(pho.image_url) %><br />
-		<% end %>
-	</div>
+		<%= raw @product.detail %>
+			</div>
 		<div class="tab-pane fade" id="video">
 	<div class="video">
 	<object class id="clsid:D27CDB6E-AE6D-11cf-96B8-444553540000" codebase="http://download.macromedia.com/pub/shockwave/cabs/flash/swflash.cab#version=7,0,19,0" width="600" height="540">

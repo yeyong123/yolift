@@ -11,7 +11,7 @@
 			<% end %>
 			<li class="lange">
 			<div class="set_locale">
-				<%= link_to "中文版",controller: controller.controller_name,
+				<%= link_to "中文版", controller: controller.controller_name,
 					action: controller.action_name, locale: "zh-CN" %>
 					<%= link_to "English", controller: controller.controller_name, 
 						action: controller.action_name, locale: "en" %>
@@ -30,6 +30,8 @@
 								</div>
 				<div class="node-text">
 					<%= image_tag("logo/icon.png") %>
+					<br />
+					<%= image_tag("logo/text.png",alt: "text",class: "node1-text") %>
 												</div>
 						</div>
 		</div>
