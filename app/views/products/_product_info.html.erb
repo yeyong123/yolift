@@ -11,9 +11,7 @@
 			<%= raw @product.techparams %>
 				</div>
 	<div class="tab-pane fade" id="profile">
-		<% @product.photos.each do |pho| %>
-			<%= image_tag(pho.image_url) %><br />
-		<% end %>
+			<%=raw @product.detail %>
 	</div>
 		<div class="tab-pane fade" id="video">
 	<div class="video">

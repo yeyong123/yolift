@@ -60,6 +60,10 @@
 	</div>
 	
 	<div class="field">
+		<%= f.label :detail,"更多细节"%>
+		<%= f.cktext_area :detail, ckeditor:  {width: 900, height: 300, toolbar: 'mini',toolbarCanCollapse: true, toolbarStartupExpanded: false} %>
+	</div>
+	<div class="field">
 		<%= f.label :techparams, "技术参数" %>
 		<%= f.cktext_area :techparams, ckeditor: {width: 900,height: 400, toolbarCanCollapse: true, toolbarStartupExpanded: false} %>
 	</div>

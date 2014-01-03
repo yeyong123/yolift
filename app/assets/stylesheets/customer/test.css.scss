@@ -345,6 +345,8 @@ width: 180px;
 .product-description .product-title {
 	height: 27px;
 	background-image: -webkit-gradient(linear, 0 0, 0 100%, from(#628970), to(#00452a));
+	filter:progid:DXImageTransform.Microsoft.Gradient(GradientType=0, EndColorStr='#00452a', StartColorStr='#628970');
+
 }
 .product-description .product-title span {
 	color: white;
