@@ -5,7 +5,7 @@
 				<ul>
 					<% Category.all.each do |cate| %>
 						<li>
-						<h3><%= link_to cate.name, category_path(cate) %></h3>
+						<h3><%= link_to cate.name, category_path(cate) %><span>></span></h3>
 						<div class="listbox hide">
 							<dl class="procate">
 								<dt>商品分类</dt>

@@ -1,4 +1,9 @@
 //导航栏固定定位
+.position-none {
+	clear: both;
+	width: 100%;
+	height: 10px;
+}
 .affix {
 	position: fixed;
 	top: 29px;
@@ -68,7 +73,7 @@
 }
 .index-top li {
 	padding: 0;
-	margin-top: 3px;
+	margin-top: 5px;
 }
 .index-top .line-top {
 	border-right: 1px solid #fff;
@@ -127,28 +132,18 @@
 }
 .logo-index1 .phone {
 	float: left;
+	width: 359px;
+	height: 66px;
 }
 .logo-index1 .node-text {
 	float: left;
-	margin: 3px 0 0 180px;
+	margin: 3px 0 0 150px;
 }
-/*.text-image, .node-text .text {
-	float: left;
+.node1-text {
+	height: 16px;
+	width: 272px;
+	margin-left: -10px;
 }
-.node-text .text {
-	width: 150px;
-	margin: 2px 0 0 10px;
-}
-.node-text .text b {
-	color: white;
-	font-size: 16px;
-	letter-spacing: 2px;
-}
-.text1 {
-	clear: both;
-	color: yellow;
-}
-*/
 // 头部结束
 //导航栏和列表导航开始的位置
 .nav-list {
@@ -184,18 +179,18 @@
  }
  // 产品目录
  .product-menu {
-	 width: 184px;
-	 height: 37px;
+	 width: 186px;
+	 height: 39px;
 	 background:#4f7951; 
 	 margin-left: -20px;
 	 padding: 0;
-	 border: 1px solid;
+	 border: 1px solid none;
 	  }
 	.product-menu span{
 		line-height: 40px;
-		padding:0 30px;
-		font-size:20px;
-		color: white;
+		padding:0 20px;
+		font-size:18.5px;
+		color: yellow;
 	}	
  .nav-list .navbar .nav > li > a {
 	 padding:10px 10px 0px 10px;
@@ -328,8 +323,17 @@ width: 180px;
 	width: 80%;
 	height: auto;
 }
+.product {
+	margin-bottom: 15px;
+}
+.product-link {
+	float: right;
+	margin: -25px 20px 0 0;
+	 
+}
 .show-product .product {
 	text-indent: 10px;
+	margin-top: 10px;
 }
 .show-product .p-data {
 	width: 380px;
@@ -345,8 +349,8 @@ width: 180px;
 .product-description .product-title {
 	height: 27px;
 	background-image: -webkit-gradient(linear, 0 0, 0 100%, from(#628970), to(#00452a));
+	background-image: -moz-linear-gradient(top, #628970, #00452a);
 	filter:progid:DXImageTransform.Microsoft.Gradient(GradientType=0, EndColorStr='#00452a', StartColorStr='#628970');
-
 }
 .product-description .product-title span {
 	color: white;
@@ -356,6 +360,7 @@ width: 180px;
 }
 .product-description .product-text {
 	margin-top: 10px;
+	height: 290px;
 }
 .product-description .product-text span {
 	line-height: 170%;
@@ -365,7 +370,6 @@ width: 180px;
 .product-description .product-item {
 	margin-top: 10px;
 	width: 100%;
-
 }
 .product-description .product-item img{
 	float: left;
@@ -412,10 +416,15 @@ width: 180px;
 .product-info .info-title {
 	height: 27px;
 	width: 786px;
-   	background-image: -webkit-gradient(linear, 0 0, 0 100%, from(#628970), to(#00452a));
+	background-image: -webkit-gradient(linear, 0 0, 0 100%, from(#628970), to(#00452a));
+	background-image: -moz-linear-gradient(top, #628970, #00452a);
+	filter:progid:DXImageTransform.Microsoft.Gradient(GradientType=0, EndColorStr='#00452a', StartColorStr='#628970');
 }
-.product-info .info-title #myTab, .product-info .info-title #myTab li {
-	background-image: none;
+.product-info .info-title #myTab li a{
+	color: white;
+}
+.product-info .info-title #myTab li.active a {
+	color: black;
 }
 //产品展示的index界面css
 .product-index {
@@ -424,7 +433,7 @@ width: 180px;
 	margin-left: 5px;
 }
 .product-index .span3 .thumbnail{
-	height: 320px;
+	height: 220px;
 }
 //.form表单中图片的大小
 .resize-image .fields {

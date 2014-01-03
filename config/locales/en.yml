@@ -3,4 +3,11 @@
 
 en:
   home:
-    index: "index" 
+    navbar_list:
+      index: "Home" 
+      about: "About Us"
+      products: "Products"
+      new: "News"
+      server: "Server"
+      contact: "Contact"
+      product: "Yolift Product"

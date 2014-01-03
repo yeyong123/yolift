@@ -16,6 +16,7 @@ function subindexMenu(){
 			$(this).css("z-index","9999");
 
 			$(this).find("h3 a").addClass("on");
+			$(this).find("h3 span").hide();
 
 			$(this).find(".listbox").show();
 
@@ -24,7 +25,7 @@ function subindexMenu(){
 			$(this).removeAttr("style");
 
 			$(this).find("h3 a").removeClass("on");
-
+			$(this).find("h3 span").show();
 			$(this).find(".listbox").hide();
 
 			});
@@ -112,5 +113,7 @@ $.fn.linkSelect = function (num){
  //
  $('.nav-tabs .tab-tag + li').addClass('active');
  $('.tab-content div:first-child').addClass('active');
+ 
+
  
 });

@@ -11,11 +11,10 @@
 			<% end %>
 			<li class="lange">
 			<div class="set_locale">
-				<%= form_tag root_path, class: 'locale' do %>
-					<%= select_tag 'set_locale', options_for_select(LANGUAGES, I18n.locale.to_s),
-						onchange: 'this.form.submit()' %>
-						<%= javascript_tag "$$('.locale input').each(Element.hide)" %>
-					<% end %>
+				<%= link_to "中文版", controller: controller.controller_name,
+					action: controller.action_name, locale: "zh-CN" %>
+					<%= link_to "English", controller: controller.controller_name, 
+						action: controller.action_name, locale: "en" %>
 				</div>
 
 				</li>
@@ -31,6 +30,8 @@
 								</div>
 				<div class="node-text">
 					<%= image_tag("logo/icon.png") %>
+					<br />
+					<%= image_tag("logo/text.png",alt: "text",class: "node1-text") %>
 												</div>
 						</div>
 		</div>
