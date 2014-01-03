@@ -1,9 +1,10 @@
 //自定修改了bootstrap的样式
 body{
 	font-family: "经典黑体简","Helvetica Neue",Helvetica,Arial,sans-serif;
+	background: #d6dfd9;
 }
 .container {
-
+	background: white;
 	width: 980px;
 	clear: both;
 }
@@ -344,7 +345,7 @@ margin: 0;
 .data-pic {
 	height: 380px;
 	width: 380px;
-	border:1px solid;
+	border:1px solid #999;
 }
 .data-pic img {
 	width:380px;
@@ -354,7 +355,7 @@ margin: 0;
 	height: 70px;
 	margin:5px 0 0 0px;
 	overflow: hidden;
-	border: 1px solid;
+	border: 1px solid #999;
 }
 .thumbsPanel .prev,.thumbsPanel .next{
 	float: left;
@@ -502,6 +503,9 @@ margin: 0;
 	background: #e8e8e8;
 	margin-top: 10px;
 }
+.footer >.container {
+	background: #e8e8e8;
+}
 .footer-center {
 	width: 100%;
 }
@@ -533,11 +537,12 @@ margin: 0;
 	clear: both;
 	width: 100%;
 	padding: 5px;
+	margin: 0;
 }
 .footer-link ul {
 	list-style: none;
 	height: 18px;
-	width: 45%;
+	width: 50%;
 	margin: auto;
 	}
 .footer-link ul li {
@@ -547,10 +552,23 @@ margin: 0;
 .footer-link li a {
 	padding: 0 8px 0 2px;
 }
+.tese {
+	width: 810px;
+	height: 33px;
+}
+.tese img {
+	margin-top: 10px;
+}
+.footer-tese {
+	background: white;
+	height: 52px;
+	margin: 0;
+}
 
 /*产品关键字*/
 .category-list {
 	clear: both;
+	border-bottom: 1px solid #999;
 }
 .category-list span {
 	margin-right: 3px;
@@ -562,6 +580,9 @@ margin: 0;
 .footer-bottom {
 	text-align: center;
 	margin-bottom: 15px;
+}
+.category-list,.footer-bottom {
+	background: white;
 }
 // 首页展示图的中的查看更多
 .pending{

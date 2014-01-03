@@ -12,95 +12,95 @@
 			<div class="list-nav">
 				<h4>采购指南</h4>
 				<ul>
-					<li>产品关键字</li>
-					<li>下载专区</li>
-					<li>视频展示</li>
-					<li>产品目录</li>
+					<li><%= link_to "高空搬运设备", categories_path %></li>
+					<li><%= link_to "搬运设备", "#" %></li>
+					<li><%= link_to "清洁设备", "#" %></li>
+					<li><%= link_to "车间设备", "#" %></li>
+					<li><%= link_to "产品应用","#" %></li>
 				</ul>
 			</div>
 			<div class="list-nav">
 				<h4>支付方式</h4>
 				<ul>
-					<li>物料搬运知识</li>
-					<li>高空作业平台</li>
-					<li>起重吊运知识</li>
-					<li>环保节能产品</li>
-					<li>工业产品知识</li>
-					<li>售后保养知识</li>
+					<li><%= link_to "款到发货", "#" %></li>
+					<li><%= link_to "银行转账", "#" %></li>
+					<li><%= link_to "分期付款", "#" %></li>
+					<li><%= link_to "信用赊账", "#" %></li>
 				</ul>
 			</div>
 			<div class="list-nav">
 				<h4>配送服务</h4>
 				<ul>
-					<li>服务概述</li>
-					<li>服务特点</li>
-					<li>客户价值</li>
-					<li>售后服务</li>
-					<li>展厅及OEM基地</li>
-					<li>行业应用</li>
+					<li><%= link_to "上门自提", "#" %></li>
+					<li><%= link_to "免收运费", "#" %></li>
+					<li><%= link_to "代办运输", "#" %></li>
+					<li><%= link_to "交货期", "#" %></li>
+
 				</ul>
 			</div>
 			<div class="list-nav">
 				<h4>售后服务</h4>
 				<ul>
-					<li>精选案例</li>
-					<li>物流运输</li>
-					<li>服务行业</li>
-					<li>汽车行业</li>
-					<li>食品化工</li>
-					<li>加工制造</li>
+					<li><%= link_to "售后政策", "#" %></li>
+					<li><%= link_to "在线保修", "#" %></li>
+					<li><%= link_to "培训信息", "#" %></li>
+					<li><%= link_to "维修站查询", "#" %></li>
+					<li><%= link_to "发票", "#" %></li>
+					<li><%= link_to "退货与换货", "#" %></li>
+					<li><%= link_to "退款", "#" %></li>
 				</ul>
 			</div>
-	<div class="list-nav">
+			<div class="list-nav">
 				<h4>项目案例</h4>
 				<ul>
-					<li>精选案例</li>
-					<li>物流运输</li>
-					<li>服务行业</li>
-					<li>汽车行业</li>
-					<li>食品化工</li>
-					<li>加工制造</li>
+					<li><%= link_to "物流运输", "#" %></li>
+					<li><%= link_to "服务行业", "#" %></li>
+					<li><%= link_to "食品行业", "#" %></li>
+					<li><%= link_to "化工行业", "#" %></li>
+
 				</ul>
 			</div>
 
 		</div>
 	</div>
 </div>
-<div class="container">
-	<div class="tese">
+<div class="footer-tese">
+	<div class="tese container">
 		<%= image_tag("logo/tese.png", alt: "tese") %>
 	</div>
 </div>
 		<div class="footer-link footer">
 			<div class="container">
-			<ul>
-				<li><a href="#">联系我们</a></li>
-				<li><a href="#">产品中心</a></li>
-				<li><a href="#">新闻中心</a></li>
-				<li><a href="#">销售条款</a></li>
-				<li><a href="#">网站地图</a></li>
-			</ul>
+				<ul>
+					<li><%= link_to "关于我们", abouts_path %></li>
+					<li><%= link_to "站点地图", "#" %></li>
+					<li><%= link_to "友情链接", "#" %></li>
+					<li><%= link_to "帮助中心", "#" %></li>
+					<li><%= link_to "条款和条例", "#" %></li>
+					<li><%= link_to "联系我们", "#" %></li>
+				</ul>
 		</div>
 	</div>
 	</div>
-		<div class="category-list container">
+	<div class="category-list">
+		<div class="container">
 			<div class="list-tag">
 				<h5>产品关键字:</h5>
-				<span><a href="#">产品一</a></span>						<span><a href="#">产品一</a></span>
-<span><a href="#">产品一</a></span>
-<span><a href="#">产品一</a></span>
-<span><a href="#">产品一</a></span>
-<span><a href="#">产品一</a></span>
-<span><a href="#">产品一</a></span>
-
+				<% Category.all.each do |cate| %>
+					<span><%=  link_to cate.name, category_path(cate.id) %></span>	
+					<% cate.tags.each do |tag| %>
+						<span><%= link_to tag.name, products_path(t:tag) %></span>
+					<% end %>
+				<% end %>
 			</div>
 		</div>
+	</div>
 		<div class="footer-bottom">
+			<div class="container">
 			<span>版权所有：上海罗倍拓工业设备有限公司 高空作业平台 适用于中国客户的内容设计</span><br />
 			<span>地址：上海漕河泾开发区松江高科技园区</span><br />
 			<span>全国服务热线：4008-8826-918</span><br />
 			<span>法律通告,隐私条款 沪ICP备11004282号</span>
-
 		</div>
 	</div>
 </div>
