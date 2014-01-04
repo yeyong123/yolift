@@ -1,8 +1,8 @@
 //自定修改了bootstrap的样式
 //2014年加了jquery切换的样式
-.roundabout-holder{width:750px;height:496px;margin:0 auto;}
+.roundabout-holder{width:600px;height:325px;margin:0 auto;}
 
-.roundabout-moveable-item{width:646px;height:416px;cursor:pointer;border:3px solid #ccc;border:3px solid rgba(0, 0, 0, 0.08);border-radius:4px;-moz-border-radius:4px;-webkit-border-radius:4px;}
+.roundabout-moveable-item{width:530px;height:325px;cursor:pointer;border:3px solid #ccc;border:3px solid rgba(0, 0, 0, 0.08);border-radius:4px;-moz-border-radius:4px;-webkit-border-radius:4px;}
 
 .roundabout-moveable-item img{width:100%;}
 
@@ -24,8 +24,14 @@ body{
 	width: 980px;
 }
 #customer-index-img {
+	width: 785px;
+	margin-top:5px;
+	float:left;
 	//border: 1px solid;
-	height: 325px;
+	height: 351px;
+}
+#customer-index-img ul {
+	list-style:none;
 }
 .get-image-position {
 	width: 81%;
