@@ -130,6 +130,9 @@ GEM
       remotipart (~> 1.0)
       safe_yaml (~> 0.6)
       sass-rails (~> 3.1)
+    rails_kindeditor (0.4.4)
+      carrierwave
+      mini_magick
     railties (3.2.13)
       actionpack (= 3.2.13)
       activesupport (= 3.2.13)
@@ -189,6 +192,7 @@ DEPENDENCIES
   nested_form
   rails (= 3.2.13)
   rails_admin
+  rails_kindeditor
   sass-rails (~> 3.2.3)
   simple-navigation
   simple_form
