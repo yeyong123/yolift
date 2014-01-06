@@ -1,5 +1,5 @@
 class Product < ActiveRecord::Base
-	attr_accessible :detail, :listtext, :number, :printpdf, :techparams, :title, :video, :tag_id,:productcolor_ids, :productnumbers_attributes, :photos_attributes
+	attr_accessible :detail, :listtext, :number, :printpdf, :techparams, :title,:outline, :video, :tag_id,:productcolor_ids, :productnumbers_attributes, :photos_attributes
 	has_many :photos, dependent: :destroy
 	mount_uploader :printpdf, PrintpdfUploader
 	mount_uploader :video, VideoUploader

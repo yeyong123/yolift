@@ -8,7 +8,6 @@
 						<h3><%= link_to cate.name, category_path(cate) %><span>></span></h3>
 						<div class="listbox hide">
 							<dl class="procate">
-								<dt>商品分类</dt>
 								<% cate.tags.each do |tag| %>
 									<dd><%= link_to tag.name, products_path(t:tag) %>	</dd>
 								<% end %>

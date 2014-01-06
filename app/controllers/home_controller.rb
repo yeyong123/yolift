@@ -1,12 +1,11 @@
 class HomeController < ApplicationController
 	
 	def index
-    if params[:set_locale]
-      redirect_to root_path(locale: params[:set_locale])
-    else
-		@products = Product.all
+		@products= Product.all
+		@products.each do |product|
+			product.photos.build
+		end
 		@cart = find_cart
-	end
   end
 
 

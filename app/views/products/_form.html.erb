@@ -53,13 +53,16 @@
 		<%= f.label :video, "上传视频" %>
 		<%= f.file_field :video %>
 	</div>
-
-	<div class="field" style="clear: both">
+			<div class="field" style="clear:both">
+		<%= f.label :outline,"概述"%>
+		<%= f.cktext_area :outline, ckeditor:  {width: 800, height: 200, toolbar: 'mini',toolbarCanCollapse: true, toolbarStartupExpanded: false} %>
+	</div>
+	
+	<div class="field">
 		<%= f.label :listtext, "列表描述" %>
 		<%= f.cktext_area :listtext, ckeditor: {width: 900, height: 300, toolbar: 'mini',toolbarCanCollapse: true, toolbarStartupExpanded: false} %>
 	</div>
-		
-	
+
 	<div class="field">
 		<%= f.label :detail,"更多细节"%>
 		<%= f.cktext_area :detail, ckeditor:  {width: 900, height: 300, toolbar: 'mini',toolbarCanCollapse: true, toolbarStartupExpanded: false} %>

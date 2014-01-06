@@ -1,7 +1,5 @@
 <%= render 'products/nav_list' %>
 <div id="customer-index-img">
-<!--
-
 	<div class="get-image-position">
 		<div id="myCarousel" class="carousel slide">
 			<ol class="carousel-indicators">
@@ -13,54 +11,13 @@
 				<% Bananer.all.each do |bananer| %>
 					<div class="item">
 						<%= image_tag(bananer.image_url) %>
-						<div class="carousel-caption">
-							<h4><%= bananer.title %></h4>
-							<p><%= bananer.descript %></p>
-						</div>
 					</div>	
 				<% end %>
 			</div>
 		</div>
 	</div>
-
--->
-<ul class="roundabout" id="myroundabout"> 
-
-	<li><img src="/assets/slide1.jpg"></li> 
-
-	<li><img src="/assets/slide2.jpg"></li> 
-
-	<li><img src="/assets/slide3.jpg"></li> 
-
-	<li><img src="/assets/slide4.jpg"></li> 
-
-	<li><img src="/assets/slide5.jpg"></li> 
-
-</ul>
 </div>
+	<div class="position-none">
+	</div>
+	<%= render 'home/toggle_tab' %>
 
-<div class="position-none">
-</div>
-<%= render 'home/toggle_tab' %>
-
-<script type="text/javascript"> 
-
-$(document).ready(function() {
-
-	$('#myroundabout').roundabout({
-
-			autoplay: true,//自动播放
-
-					autoplayDuration: 3000,//时间
-
-							autoplayPauseOnHover: true,//自动鼠标移上停滞
-
-									shape: 'figure8',  //支持属性theJuggler、figure8、waterWheel、square、conveyorBeltLeft、conveyorBeltRight、goodbyeCruelWorld、diagonalRingLeft、diagonalRingRight、rollerCoaster、tearDrop、tickingClock、flurry、nowSlide、risingEssence随便换 
-
-											minOpacity: 1
-
-												});
-
-												});
-
-											</script>	

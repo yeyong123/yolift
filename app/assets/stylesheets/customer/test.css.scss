@@ -15,11 +15,8 @@
 //修改bootstrap的图片轮播的中的分页圆点的位置
 .carousel-indicators {
     bottom: 15px;
-    top: 300px;
+    top: 340px;
     right: 400px;
-}
-.thumbnails .span3 {
-	width: 230px;
 }
 .index-about .span4 {
 	width: 312px;
@@ -43,7 +40,7 @@
 
 }
 .list-nav .navbar-inner {
-	background-image: -webkit-gradient(linear, 0 0, 0 100%, from(#125237), to(#00452a));
+	background-image: -webkit-gradient(linear, 0 0, 0 100%, from(#125237), to(#014715));
 	background-image: -moz-linear-gradient(top, #125237, #00452a);
 	filter:progid:DXImageTransform.Microsoft.Gradient(GradientType=0, EndColorStr='#00452a', StartColorStr='#125237');
 	border-style: none;
@@ -78,11 +75,12 @@
 .index-top .line-top {
 	border-right: 1px solid #fff;
 	margin-left: 6px;
-	height: 5px;
+	height: 4px;
 	width: 1px;
 }
 .index-top li a {
 	color: white;
+	font-size: 12.5px;
 }
 .index-top .lange {
 	height: 24px;
@@ -189,9 +187,12 @@
 	.product-menu span{
 		line-height: 40px;
 		padding:0 20px;
-		font-size:18.5px;
+		font-size:15px;
 		color: yellow;
 	}	
+	.product-menu span span {
+		float: right;
+	}
  .nav-list .navbar .nav > li > a {
 	 padding:10px 10px 0px 10px;
  }
@@ -200,12 +201,14 @@
  {
 	 //margin-left: 78px;
  }
- .nav-list .open {
+  .nav-list .navbar .nav li.dropdown.open>.dropdown-toggle {
+	 padding-top: 5px;
 	 margin-top: 5px;
+	 background: none;
+	 height: 27px;
+	 color: white;
  }
- .nav >.open > a {
-	 padding-top: -5px;
- }
+
 
 //修改结束
 //.affix .nav-bananer {
@@ -264,7 +267,7 @@
 	margin: 0;
 	padding: 0;
 //	height: 24px;
-width: 180px;
+width: 250px;
 }
 .nav-list .search-query {
 	margin: 0;
@@ -276,7 +279,7 @@ width: 180px;
 }
 .nav-list .navbar-form .btn {
 	margin-top: 0;
-	height: 22px;
+	//height: 22px;
 	padding: 1px 12px;
 	background: #ee8301;
 	color: white;
@@ -315,7 +318,7 @@ width: 180px;
 }
 .index-about ul .about-title span {
 	padding-left: 10px;
-	font-size: 16px;
+	font-size: 14px;
 	}
 //单个产品展示放大镜
 .show-product {
@@ -422,9 +425,13 @@ width: 180px;
 }
 .product-info .info-title #myTab li a{
 	color: white;
+	background: none;
+	border-style: none;
 }
 .product-info .info-title #myTab li.active a {
-	color: black;
+	color: #ee8301;
+	background: none;
+	text-decoration: underline;
 }
 //产品展示的index界面css
 .product-index {
@@ -433,7 +440,53 @@ width: 180px;
 	margin-left: 5px;
 }
 .product-index .span3 .thumbnail{
-	height: 300px;
+	//height: 300px;
+}
+.product-image {
+	float: left;
+	width: 170px;
+
+}
+.product-image img {
+	width: 180px;
+	height: 170px;
+}
+.product-outline {
+	clear: both;
+	margin: 0;
+	height: 30px;
+
+}
+.product-outline p {
+	margin: 0;
+	padding: 0; 
+	line-height: 15px;
+	font-size: 11.5px;
+}
+.tab-pane .thumbnail, .product-index .thumbnail {
+	width: 170px;
+	float: left;
+}
+.tab-pane .thumbnails > li{
+	margin-left: 10px;
+margin-bottom: 5px;
+}
+.product-index .thumbnails > li {
+	margin-left: 20px;
+}
+.tab-pane .thumbnails .span3, .product-index .thumbnails .span3 {
+	width: 180px;
+	float: left;
+}
+.tab-pane .thumbnails, {
+	margin-left: 0;
+	}
+	.link-product a{
+		font-size: 11.5px;
+		color: #b90000;
+	}
+.footer-link a, .category-list a {
+	color: #966a08;
 }
 //.form表单中图片的大小
 .resize-image .fields {
