@@ -9,11 +9,20 @@
 		</li>
 	</ul>
 	<div id="myTabContent" class="tab-content">
+		<div class="tab-pane fade in">
+			<ul class="thumbnails">
+				<% cate.tags.each do |tag| %>
+					<%tag.products.limit(1).each do |product| %>
+						<%= render partial: "products/index", locals: {product: product} %>
+					<% end %>
+				<% end %>
+			</ul>
+		</div>
 		<% cate.tags.each do |tag| %>
 			<div class="tab-pane fade in" id="<%= tag.name %>">
 				<ul class="thumbnails">
 					<li class="pending link-product"><%= link_to "查看更多 >>", products_path(t:tag) %></li>
-					<% tag.products.limit(4).each do |product| %>
+					<% tag.products.limit(5).each do |product| %>
 						<%= render partial: "products/index", locals: {product: product} %>
 					<% end %>
 				</ul>
@@ -22,4 +31,4 @@
 	</div>
 <% end %>
 </div>
-	<%= render 'home/index_about' %>
+<%= render 'home/index_about' %>

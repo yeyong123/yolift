@@ -111,7 +111,7 @@ $.fn.linkSelect = function (num){
 
  //首页产品展示切换用的
  //
- $('.nav-tabs .tab-tag + li').addClass('active');
+ //$('.nav-tabs .tab-tag + li').addClass('active');
  $('.tab-content div:first-child').addClass('active');
  
 
