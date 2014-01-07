@@ -61,9 +61,15 @@ h6 {
 
 }
 .nav  .tab-tag span{
-	font-size: 14px;
 	padding-left: 35px;
 	line-height: 28px;
+	position: relative;
+}
+.nav .tab-tag span span {
+	position: absolute;
+	width: 15px;
+	left: 90px;
+	color: white;
 }
 .nav-tabs > li > a {
 	padding-top: 3px;
@@ -556,18 +562,28 @@ margin: 0;
 }
 .footer-center
 .list-nav h4 {
+	font-size: 15px;
+	font-family: "黑体";
 	text-align: center;
 }
 .list-nav ul {
 	list-style: none;
-	//margin-left: 60px;
+		//margin-left: 60px;
 	text-align: left;
 }
 .footer-center .list-nav ul {
-	margin-left: 40px;
+	margin-left: 50px;
+border-top: 1px solid;
+	margin-top: -8px;
+	padding-top: 5px;
+	width: 80px;
+
 }
 .list-nav ul li {
 	font-size: 14px;
+}
+.footer-center .list-nav ul li {
+	font-size: 12.5px;
 	line-height: 150%;
 }
 //2014年1月6日修改
@@ -637,6 +653,6 @@ margin: 0;
 // 首页展示图的中的查看更多
 .pending{
 	position: absolute;
-	right: 0;
+	right: 15px;
 	margin-top: -25px;
 }

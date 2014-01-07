@@ -21,6 +21,9 @@ RailsAdmin.config do |config|
 			field :techparams,:text do 
 				ckeditor true
 			end
+			field :detail, :text do 
+				ckeditor true
+			end
 	end
 
   # If you want to track changes on your models:

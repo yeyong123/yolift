@@ -413,4 +413,5 @@
     bootstrapIE6();
   });
 
+
 })(jQuery);

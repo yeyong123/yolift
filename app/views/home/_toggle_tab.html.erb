@@ -1,7 +1,7 @@
 <div class="bs-doc-image nav-collapse collapse">
 	<% Category.limit(2).each do |cate| %>
 		<ul id="myTab" class="nav nav-tabs">
-			<li class="tab-tag"><span><%= link_to cate.name, category_path(cate.id) %></span></li>
+			<li class="tab-tag"><span><%= link_to cate.name, category_path(cate.id) %> <span>>></span></span></li>
 			<% cate.tags.each do |tag| %>
 				<li class=""><a href="#<%= tag.name %>" data-toggle="tab"><%= tag.name %></a></li>
 			<% end %>

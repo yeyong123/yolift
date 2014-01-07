@@ -35,3 +35,6 @@
 	left: 0;
 	top: 0;
 }
+.product-description .product-title span {
+	line-height: 30px;
+}

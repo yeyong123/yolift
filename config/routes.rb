@@ -1,6 +1,4 @@
 Yolift::Application.routes.draw do
-  mount Ckeditor::Engine => '/ckeditor'
-
 	scope '(:locale)' do
 		mount RailsAdmin::Engine => '/manager', :as => 'rails_admin'
 		devise_for :admins
@@ -19,10 +17,9 @@ Yolift::Application.routes.draw do
 		resources :contacts
 		match '/search', to: "products#search"
 		match '/error', to: 'home#error'
-
 		root to: 'home#index'
-
 	end
+
 	# The priority is based upon order of creation:
 	# first created -> highest priority.
 

@@ -35,14 +35,14 @@
 }
 .logo-index {
 	background-image: -webkit-gradient(linear, 0 0, 0 100%, from(#48874e), to(#014715));
-	background-image: -moz-linear-gradient(top, #628970, #00452a);
-	filter:progid:DXImageTransform.Microsoft.Gradient(GradientType=0, EndColorStr='#00452a', StartColorStr='#628970');
+	background-image: -moz-linear-gradient(top, #48874e, #014715);
+	filter:progid:DXImageTransform.Microsoft.Gradient(GradientType=0, EndColorStr='#014715', StartColorStr='#48874e');
 
 }
 .list-nav .navbar-inner {
-	background-image: -webkit-gradient(linear, 0 0, 0 100%, from(#125237), to(#014715));
-	background-image: -moz-linear-gradient(top, #125237, #00452a);
-	filter:progid:DXImageTransform.Microsoft.Gradient(GradientType=0, EndColorStr='#00452a', StartColorStr='#125237');
+	background-image: -webkit-gradient(linear, 0 0, 0 100%, from(#145824), to(#014715));
+	background-image: -moz-linear-gradient(top, #145824, #014715);
+	filter:progid:DXImageTransform.Microsoft.Gradient(GradientType=0, EndColorStr='#014715', StartColorStr='#145824');
 	border-style: none;
 }
 .nav-list .nav-bananer {
@@ -280,6 +280,7 @@ width: 250px;
 .nav-list .navbar-form .btn {
 	margin-top: 0;
 	//height: 22px;
+	border-style: none;
 	padding: 1px 12px;
 	background: #ee8301;
 	color: white;
@@ -357,8 +358,9 @@ width: 250px;
 }
 .product-description .product-title span {
 	color: white;
-	font-size: 16px;
-	line-height: 25px;
+	font-size: 14px;
+	font-weight: bold;
+	line-height: 27px;
 	padding-left: 10px;
 }
 .product-description .product-text {
