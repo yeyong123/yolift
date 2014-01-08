@@ -55,21 +55,22 @@
 	</div>
 			<div class="field" style="clear:both">
 		<%= f.label :outline,"概述"%>
-		<%= f.cktext_area :outline, ckeditor:  {width: 800, height: 200, toolbar: 'mini',toolbarCanCollapse: true, toolbarStartupExpanded: false,fontSize_defaultLabel: '12.5px',startupFocus: false,forcePasteAsPlainText: false,colorButton_backStyle: true} %>
+		<%= f.kindeditor :outline, width: 700, height: 300 %>
 	</div>
 	
 	<div class="field">
 		<%= f.label :listtext, "列表描述" %>
-		<%= f.cktext_area :listtext, ckeditor: {width: 900, height: 300, toolbar: 'mini',toolbarCanCollapse: true, toolbarStartupExpanded: false} %>
+		<%= f.kindeditor :listtext,width: 900, height: 300 %>
 	</div>
 
 	<div class="field">
 		<%= f.label :detail,"更多细节"%>
-		<%= f.cktext_area :detail, ckeditor:  {width: 900, height: 300, toolbar: 'mini',toolbarCanCollapse: true, toolbarStartupExpanded: false} %>
+		<%= f.kindeditor :detail, width: 900, height: 300 %>
 	</div>
 	<div class="field">
 		<%= f.label :techparams, "技术参数" %>
-		<%= f.kindeditor :techparams,width:900, height: 300 %>
+		<%= f.kindeditor :techparams, width: 900, height: 300 %>
+		
 	</div>
 	<div class="action">
 		<%= f.submit "保存",class: "btn btn-large btn-success"%>

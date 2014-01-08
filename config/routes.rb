@@ -1,5 +1,5 @@
 Yolift::Application.routes.draw do
-	scope '(:locale)' do
+	#scope '(:locale)' do
 		mount RailsAdmin::Engine => '/manager', :as => 'rails_admin'
 		devise_for :admins
 		devise_for :users
@@ -18,9 +18,7 @@ Yolift::Application.routes.draw do
 		match '/search', to: "products#search"
 		match '/error', to: 'home#error'
 		root to: 'home#index'
-	end
-
-	# The priority is based upon order of creation:
+	#end
 	# first created -> highest priority.
 
 	# Sample of regular route:
@@ -75,5 +73,5 @@ Yolift::Application.routes.draw do
 
   # This is a legacy wild controller route that's not recommended for RESTful applications.
   # Note: This route will make all actions in every controller accessible via GET requests.
-  # match ':controller(/:action(/:id))(.:format)'
-end
+  #match ':controller(/:action(/:id))(.:format)'
+	end

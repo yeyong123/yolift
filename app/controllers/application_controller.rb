@@ -4,20 +4,20 @@ class ApplicationController < ActionController::Base
 	before_filter :find_cart
 
 	protected
-	def set_local_i18n
-		if params[:locale]
-			if I18n.available_locales.include?(params[:locale].to_sym)
-				I18n.locale = params[:locale]
-			else
-				flash.now[:notice] = "#{params[:locale]} 翻译不可用。"
-				logger.error flash.now[:notice]
+		def set_local_i18n
+			if params[:locale]
+				if I18n.available_locales.include?(params[:locale].to_sym)
+					I18n.locale = params[:locale]
+				else
+					flash.now[:notice] = "#{params[:locale]} 翻译不可用。"
+					logger.error flash.now[:notice]
+				end
 			end
 		end
-	end
-	
-	def default_url_options
-		{locale: I18n.locale}
-	end
+#		
+		#def default_url_options
+		#	{locale: I18n.locale}
+		#end
 
 	private
 
