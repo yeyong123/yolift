@@ -5,6 +5,10 @@ class Order < ActiveRecord::Base
 	belongs_to :city
 	belongs_to :district
 
+	
+	validates_presence_of :address, :company, :email, :phone
+	validates_numericality_of :phone
+	
 
 	def add_line_items_from_cart(cart)
 		cart.line_items.each do |item|

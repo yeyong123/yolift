@@ -1,5 +1,5 @@
 Yolift::Application.routes.draw do
-  mount RailsAdmin::Engine => '/admin', :as => 'rails_admin'
+  mount RailsAdmin::Engine => '/managers', :as => 'rails_admin'
 
 	#scope '(:locale)' do
 		

@@ -2,6 +2,7 @@
 <div class="order-form product-index2">
 	<% @order.line_items.build %>
 <%= nested_form_for(@order) do |f| %>
+	<%= render 'home/error_message', object: f.object %>
 	<table class="table number-order">
 		<% @cart.line_items.each do |line| %>
 			<tr>

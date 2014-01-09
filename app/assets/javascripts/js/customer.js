@@ -9,54 +9,51 @@ $(document).ready(function(){
 	//左侧导航
 	//
 
-function subindexMenu(){
-
-	$("#js-menu").find("li").hover(function(){
-
+	function subindexMenu(){
+		$("#js-menu").find("li").hover(function(){
 			$(this).css("z-index","9999");
-
 			$(this).find("h3 a").addClass("on");
 			$(this).find("h3 span").hide();
-
 			$(this).find(".listbox").show();
-
-			},function(){
-
+		},function(){
 			$(this).removeAttr("style");
-
 			$(this).find("h3 a").removeClass("on");
 			$(this).find("h3 span").show();
 			$(this).find(".listbox").hide();
-
-			});
-
-}
-
-$(function(){
-
-		subindexMenu();
-
 		});
+	}
+	$(function(){
+		subindexMenu();
+	});
 
 // 购物车的下拉鼠标经过下拉菜单
 //
-	$('.cart-img,.cart_items-drop').mouseover(function(){
-				$('.cart_items-drop').show();
-				});	
-			$('.cart_items-drop').mouseout(function(){
-			$('.cart_items-drop').hide();
-				});
+$('.cart-img,.cart_items-drop').mouseover(function(){
+	$('.cart_items-drop').show();
+});	
+$('.cart_items-drop').mouseout(function(){
+	$('.cart_items-drop').hide();
+});
 
+//
+//
+$('.dropdown-toggle .dropdown-menu').mouseover(function(){
+});
+$('.dropdown-menu').mouseout(function(){
+
+});
+
+//
 var footerbottom = $('.footer-center').outerHeight(true) + 10;
 // 导航栏附加导航固定定位
-	$('#myaffix').affix({
-		offset: {
-			top: 112
-			,bottom: function(){
-				return (this.bottom = $('.footer').outerHeight(true))
-			}
-		}	
-	});
+$('#myaffix').affix({
+	offset: {
+		top: 112
+	,bottom: function(){
+		return (this.bottom = $('.footer').outerHeight(true))
+	}
+	}	
+});
 
 //选择下拉菜单切换
 
@@ -136,4 +133,22 @@ $.fn.linkSelect = function (num){
 function placeholderSupport() {
 	return 'placeholder' in document.createElement('input');
 }
+
+//选择产品货号验证
+//
+$('.drop-list-toggle .error').hide();
+$('.drop-list-toggle .btn').click(
+		function(event){
+			var count = $('input:checked').length;
+			if (count == 0)
+			{
+				$('.drop-list-toggle .error').show();
+				event.preventDefault();
+			}
+
+			else
+			{
+				$('.drop-list-toggle .error').hide();
+			}
+	});
 });

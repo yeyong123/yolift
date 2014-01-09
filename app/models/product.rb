@@ -5,13 +5,14 @@ class Product < ActiveRecord::Base
 	mount_uploader :printpdf, PrintpdfUploader
 	mount_uploader :video, VideoUploader
 	accepts_nested_attributes_for :photos, allow_destroy: :true 
-	has_many :productnumbers
+	has_many :productnumbers, dependent: :destroy
 	accepts_nested_attributes_for :productnumbers, allow_destroy: :true,
 		reject_if: proc{ |attrs| attrs.all? {|k, v| v.blank? }}
 	has_many :productcolors
 	has_many :line_items
 	has_many :orders, through: :line_items
 
+	validates_presence_of :title, :photos, :productnumbers
 #	def add_product(line_item,product_id)
 #		current_item = line_items.find_by_product_id(product_id)
 #		if current_item

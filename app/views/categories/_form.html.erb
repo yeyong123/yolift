@@ -1,7 +1,12 @@
 <%= nested_form_for @category do |f| %>
+	<%= render 'home/error_message', object: f.object %>
 	<div class="field">
 		<%= f.label :name %>
 		<%= f.text_field :name %>
+	</div>
+	<div class="field">
+		<%= f.label :image, "插入图标" %>
+		<%= f.file_field :image %>	
 	</div>
 	<div class="field">
 	<%= f.label :tags, "二级分类" %>

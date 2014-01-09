@@ -1,6 +1,6 @@
 <% if @cart.line_items.empty? %>
 <div class="cart_items-drop2">
-	<p style="color: red">这个真没有</p>
+	<p style="color: red">你还没有添加产品到购物车</p>
 </div>
 <% else %>
 	<div class="cart_items-drop">
@@ -19,7 +19,7 @@
 </table>
 	<div class="cart_link">
 		<span>
-			<%= link_to '结算', cart_path, class: "btn btn-primary" %>
+			<%= link_to '结算', new_order_path, class: "btn btn-primary" %>
 		</span>
 	</div>
 </div>	

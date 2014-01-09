@@ -6,7 +6,7 @@
 		<span>
 		</span>
 		<br />
-		<%= raw @product.listtext %>
+		<%= sanitize @product.listtext %>
 	</div>
 	<div class="product-item">
 		<ul>
@@ -21,6 +21,7 @@
 						<%= ph.number %>	
 						</li> 
 					<% end %>
+					<p class="error">请选择一个产品货号</p>
 					<%= hidden_field_tag 'line_item[productnumber_ids][]', '' %>
 					<%= f.hidden_field :cart_id, value: @cart.id %>
 					<%= f.submit "加入购物车", class: "btn btn-success" %>

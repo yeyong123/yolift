@@ -157,18 +157,18 @@ border-bottom:1px solid #fff;
 }
 .submenulist li img {
 	float: left;
-	width: 50px;
-	padding: 2px;
+	padding: 3px;
+}
+.submenulist li i {
+	float: right;
 }
 .submenulist li h3 a{
 position:relative;
 display:block;
 height:34px;
-//width:184px;
 color:#fff;
 float: left;
-padding-top: 3px;
-text-indent: 20px;
+//text-indent: 20px;
 font-size:14px;
 font-weight:400;
 //border-top:1px solid #D7ECFF;

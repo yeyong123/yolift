@@ -194,7 +194,7 @@
 		float: right;
 	}
  .nav-list .navbar .nav > li > a {
-	 padding:10px 10px 0px 10px;
+	 padding:12px 10px 0px 10px;
  }
  .nav-list .navbar .nav .index
  //.nav-list .navbar .nav .dropdown
@@ -202,11 +202,12 @@
 	 //margin-left: 78px;
  }
   .nav-list .navbar .nav li.dropdown.open>.dropdown-toggle {
-	 padding-top: 5px;
+	 padding-top: 7px;
 	 margin-top: 5px;
 	 background: none;
 	 height: 27px;
 	 color: white;
+	 border-style: none;
  }
 
 
@@ -257,6 +258,12 @@
 	text-shadow: none;
 	color: white;
 }
+.nav-list .navbar .nav > li>a:focus, .nav-list .navbar .nav>li>a:hover {
+	color: yellow;
+	text-decoration: underline;
+	background: none;
+	border-style: none;
+}
 //.nav-list form, {
 //	height: 27px;
 //}
@@ -266,8 +273,8 @@
 .nav-list .navbar-form input {
 	margin: 0;
 	padding: 0;
-//	height: 24px;
-width: 250px;
+	height: 28px;
+	width: 250px;
 }
 .nav-list .search-query {
 	margin: 0;
@@ -279,15 +286,16 @@ width: 250px;
 }
 .nav-list .navbar-form .btn {
 	margin-top: 0;
-	//height: 22px;
+	//height: 28px;
 	border-style: none;
-	padding: 1px 12px;
+	//padding: 1px 12px;
 	background: #ee8301;
+	font-size: 16px;
 	color: white;
 }
 .nav-list .navbar-form {
 	position: relative;
-	margin: 10px 10px 0 0;
+	margin: 5px 10px 0 0;
 }
 .number-cart {
    position: absolute;
@@ -368,9 +376,9 @@ width: 250px;
 	height: 290px;
 }
 .product-description .product-text span {
-	line-height: 170%;
+	//line-height: 170%;
 	letter-spacing: 1px;
-	font-size: 14px;
+	font-size: 12px;
 }
 .product-description .product-item {
 	margin-top: 10px;
@@ -414,6 +422,11 @@ width: 250px;
 .drop-list-toggle span {
 	margin: 2px 0 0 5px;
 }
+.drop-list-toggle .error {
+	background-color: #fcf8e3;
+	padding: 5px 0 5px 20px;
+	color: red;
+}
 //产品介绍
 .product-info {
 	clear: both;
@@ -439,7 +452,7 @@ width: 250px;
 .product-index {
 	float: right;
 	width: 80%;
-	margin-left: 5px;
+	margin: 5px 0 0 5px;
 }
 .product-index .span3 .thumbnail{
 	//height: 300px;

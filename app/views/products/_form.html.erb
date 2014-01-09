@@ -1,5 +1,6 @@
 <div class="form-form">
 <%= nested_form_for @product do |f| %>
+	<%= render 'home/error_message', object: f.object %>
 	<div class="select-cate">
 		<span>选择大类</span>
 		<%= collection_select(:tag, :category_id, Category.all, :id, :name) %><br />
@@ -22,7 +23,7 @@
 	</div>
 	<div class="field select-image">
 		<%= f.label :color, "颜色"  %>
-		<% @productcolors.each do |pc| %>
+		<% Productcolor.all.each do |pc| %>
 			<%= check_box_tag "product[productcolor_ids][]", pc.id, @product.productcolors.map(&:id).include?(pc.id) %>
 			<span style="background:<%= pc.color %>"><b style="visibility: hidden">qq</b> </span>
 		<% end %>
