@@ -28,11 +28,11 @@ $(document).ready(function(){
 
 // 购物车的下拉鼠标经过下拉菜单
 //
-$('.cart-img,.cart_items-drop').mouseover(function(){
-	$('.cart_items-drop').show();
+$('.cart-img,.cart_items-drop, .cart_items-drop2').mouseover(function(){
+	$('.cart_items-drop, .cart_items-drop2').show();
 });	
-$('.cart_items-drop').mouseout(function(){
-	$('.cart_items-drop').hide();
+$('.cart_items-drop, .cart_items-drop2').mouseout(function(){
+	$('.cart_items-drop, .cart_items-drop2').hide();
 });
 
 //
@@ -150,4 +150,16 @@ $('.drop-list-toggle .btn').click(
 				$('.drop-list-toggle .error').hide();
 			}
 	});
+$('.cart-img').click(
+function(event){
+	var count = $('.cart-items-drop').length;
+		if (count == 0)
+		{
+			event.preventDefault();
+}
+});
+
+//为了IE去除最后一个link的边框
+//
+$('.lange a:last').addClass("lastitem");
 });

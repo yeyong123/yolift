@@ -15,3 +15,17 @@
 //= require kindeditor
 //= require jquery_nested_form
 //= require ckeditor/ckeditor
+//收藏页面
+//
+function addfavorite() 
+{ 
+if (document.all) 
+{ 
+window.external.addFavorite('http://www.yolift.com','力形科技'); 
+} 
+else if (window.sidebar) 
+{ 
+window.sidebar.addPanel('力形科技', 'www.yolift.com', ""); 
+} 
+}
+

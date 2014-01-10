@@ -19,6 +19,7 @@ Yolift::Application.routes.draw do
 		resources :contacts
 		match '/search', to: "products#search"
 		match '/error', to: 'home#error'
+		match '/dashboard', to: "home#dashboard"
 		root to: 'home#index'
 	#end
 	# first created -> highest priority.

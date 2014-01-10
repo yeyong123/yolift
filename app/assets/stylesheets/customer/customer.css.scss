@@ -9,7 +9,7 @@
 .roundabout-in-focus{border:3px solid rgba(0, 0, 0, 0.2);}
 //2014年修改
 body{
-	font-family: "Helvetica Neue",Helvetica,Arial,sans-serif,"宋体","新宋体", "经典黑体简";
+	font-family: "Microsoft yahei","经典黑体简","黑体",SimSun,Helvetica,Arial,sans-serif,"宋体","新宋体";
 	background: #d6dfd9;
 }
 h6 {
@@ -149,7 +149,7 @@ line-height: 0;
 }
 .submenulist li{
 position:relative;
-height:43px;
+height:38px;
 line-height:34px;
 text-indent:15px;
 vertical-align:middle;
@@ -157,14 +157,14 @@ border-bottom:1px solid #fff;
 }
 .submenulist li img {
 	float: left;
-	width: 40px;
-	//padding: 2px;
+	width: 30px;
+	padding-left: 3px;
 }
 .submenulist li h3 a{
 position:relative;
 display:block;
-height:40px;
-width:144px;
+height:36px;
+width:142px;
 color:#fff;
 float: left;
 padding-top: 3px;
@@ -190,7 +190,7 @@ overflow:hidden;
 .submenulist li h3 a.on{
 background:#fff;
 width:184px;
-height:38px;
+height:33px;
 color:#f60;
 padding-top: 3px;
 font-weight:400;
@@ -510,7 +510,7 @@ margin: 0;
 }
 .index-top ul li {
 	float: left;
-	margin-right: 10px;
+	margin-right: 8px;
 
 }
 .index-top ul .lange {
@@ -557,6 +557,8 @@ margin: 0;
 }
 .sixicon {
 	position: absolute;
+	left: 0;
+	top: 0;
 }
 .list-nav {
 	float: left;

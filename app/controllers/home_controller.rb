@@ -4,7 +4,7 @@ class HomeController < ApplicationController
   end
 
 
-	def about
+	def dashboard
 	end
 
 	def error

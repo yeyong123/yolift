@@ -1,17 +1,17 @@
 <div class="top-index">
 	<div class="index-top">
 		<ul>
-			<li><a href="#">收藏</a><span class="line-top"></span></li>
+			<li><a href="#" onclick="addfavorite()">收藏</a></li>
 			<% if current_user %>
-				<li><%= link_to "注销", destroy_user_session_path, method: :delete %><span class="line-top"></span></li>
+				<li><%= link_to "注销", destroy_user_session_path, method: :delete %></li>
 				<li><%= link_to current_user.email, "#" %></li>
 			<% else %>
-				<li><%= link_to "登录", new_session_path(:user) %><span class="line-top"></span></li>
-				<li><%= link_to "注册", new_registration_path(:user) %></li>
+				<li><%= link_to "登录", new_session_path(:user) %></li>
+				<li class="font-border"><%= link_to "注册", new_registration_path(:user) %></li>
 			<% end %>
 			<li class="lange">
 			<div class="set_locale">
-				<%= link_to "中文版", controller: controller.controller_name,
+				<%= link_to "中文", controller: controller.controller_name,
 					action: controller.action_name, locale: "zh-CN" %>
 					<%= link_to "English", controller: controller.controller_name, 
 						action: controller.action_name, locale: "en" %>
@@ -26,10 +26,10 @@
 			<div class="position-logo">
 				<span class="logo-image"><a href="/"><%=image_tag "logo/logo.png", alt: "yolift" %></a></span>
 							<div class="phone">
-									<img src="/assets/logo/phonenumber.png" alt="400-8826-918"/>
+									<img src="/assets/logo/yolift.png" alt="中国工业品自动化领导者"/>
 								</div>
 				<div class="node-text">
-					<%= image_tag("logo/icon.png") %>
+					<%= image_tag("logo/number.png") %>
 					<br />
 																</div>
 						</div>

@@ -72,25 +72,21 @@
 	padding: 0;
 	margin-top: 5px;
 }
-.index-top .line-top {
-	border-right: 1px solid #fff;
-	margin-left: 6px;
-	height: 4px;
-	width: 1px;
-}
 .index-top li a {
 	color: white;
+	padding-right: 8px;
 	font-size: 12.5px;
+	border-right: 1px solid #fff;
+}
+.lange .lastitem {
+	border-right: none;
+	margin-left: 5px;
+}
+li.font-border a {
+	border: none;
 }
 .index-top .lange {
 	height: 24px;
-}
-.index-top .lange select {
-	height: 24px;
-	margin: 0;
-}
-.index-top .lange select option {
-	padding: 0;
 }
 .logo-index1 {
 	width: 980px;
@@ -101,41 +97,26 @@
 }
 .logo-index1 .position-logo  {
 	padding: 0;
-	position: absolute;
+	//position: absolute;
 	top: 20px;
 	left: 0px;
+	//margin-top: 30px;
 }
-.logo-index1 .position-logo .logo-image {
+.logo-image, .phone, .node-text {
+	margin-top: 20px;
+}
+.logo-image {
 	float: left;
-}
-.logo-image b {
-	color: white;
-	margin-left: 25px;
-	line-height: 38px;
-	font-size: 24px;
-	letter-spacing: 3px;
-}
-.logo-index1 .line {
-	border-right: 2px solid #fff;
-	width: 1px;
-	height: 60px;
-	float: left;
-	margin-left: 8px;
-}
-.phone .desc-logo {
-	font-size: 18px;
-	margin-left: 60px;
-	line-height: 20px;
-	color: white;
 }
 .logo-index1 .phone {
 	float: left;
-	width: 359px;
+	margin-left: 8px;
+	width: 331px;
 	height: 66px;
 }
-.logo-index1 .node-text {
-	float: left;
-	margin: 3px 0 0 150px;
+.node-text{
+	float: right;
+
 }
 .node1-text {
 	height: 16px;
@@ -161,41 +142,44 @@
 //产品导航栏2013年12月25日修改
  .nav-list .list-nav {
 	 float: right;
-	margin-top: -21px;
+	margin-top: -17px;
 	width: 100%;
-	height: 35px;
+	height: 32px;
  }
  .nav-list .list-nav .navbar {
 	 margin: 0;
-	 height: 35px;
+	 height: 30px;
  }
  .nav-list .list-nav .navbar-inner {
 	 padding-right: 0;
 	 background-repeat: no-repeat;
-	 min-height: 35px;
+	 min-height: 32px;
 	 background-color: #00452a;
  }
  // 产品目录
  .product-menu {
 	 width: 186px;
-	 height: 39px;
-	 background:#4f7951; 
+	 height: 32px;
+	 margin-top: 3px;
+	 background:#fda100; 
 	 margin-left: -20px;
 	 padding: 0;
 	 //border: 1px solid none;
 	  }
 	.product-menu span{
-		line-height: 40px;
-		padding:0 0 0 65px;
+		line-height: 35px;
+		padding:0 0 0 55px;
 		font-size:15px;
-		color: yellow;
+		font-weight: bold;
+		color: black;
 	}	
 	.product-menu span span {
 		//float: right;
-		padding-left: 30px;
+		padding-left: 40px;
+		font-weight: normal;
 	}
  .nav-list .navbar .nav > li > a {
-	 padding:12px 10px 0px 10px;
+	 padding:10px 10px 0px 10px;
  }
  .nav-list .navbar .nav .index
  //.nav-list .navbar .nav .dropdown
@@ -204,22 +188,21 @@
  }
   .nav-list .navbar .nav li.dropdown.open>.dropdown-toggle {
 	 padding-top: 7px;
-	 margin-top: 0px;
+	 margin-top: 5px;
 	 background: none;
-	 height: 27px;
+	 height: 32px;
 	 color: white;
 	 border-style: none;
  }
-
-
- //2014年1月10日修改导航栏鼠标经过显示下拉菜单
  
- .dropdown:hover >.dropdown-menu {
-	 display: block;
- }
- .dropdown-menu {
-	 margin:0;
- }
+//2014年1月10日修改
+.dropdown:hover >.dropdown-menu {
+	display: block;
+}
+.dropdown-menu {
+	margin: 0;
+}
+
 //修改结束
 //.affix .nav-bananer {
 //	width: 22%;
@@ -233,7 +216,7 @@
 	width: 81%;
 }
 .affix .navbar-inner {
-	height: 43px;
+	height: 32px;
 }
 .affix .navbar .nav {
 	margin-top: 10px;
@@ -282,8 +265,9 @@
 .nav-list .navbar-form input {
 	margin: 0;
 	padding: 0;
-	height: 28px;
-	width: 250px;
+	height: 25px;
+	width: 180px;
+	border-radius: 0px;
 }
 .nav-list .search-query {
 	margin: 0;
@@ -291,30 +275,32 @@
 }
 .nav-list .navbar-form input[type="text"] {
 	padding: 0;
-	margin: 0;
+	margin: auto;
 }
 .nav-list .navbar-form .btn {
-	margin-top: 0;
-	//height: 28px;
+	margin: 2px 0 0 -5px;
 	border-style: none;
 	//padding: 1px 12px;
-	background: #ee8301;
-	font-size: 16px;
-	color: white;
+	background: #fda100;
+	font-size: 14px;
+	color: black;
+	text-shadow: none;
+	font-family: "经典黑体简", "微软雅黑", "黑体"
 }
 .nav-list .navbar-form {
 	position: relative;
-	margin: 5px 10px 0 0;
+	margin: 2px 0 0 0;
 }
 .number-cart {
    position: absolute;
 	top: -15px;
-	right: -8px;
+	right: 37px;
+
 }	
 .number-cart img {
 	min-width: 30px;
 	width: auto;
-}
+	}
 .number-cart b{
 	position: absolute;
 	top: 1px;
@@ -604,7 +590,7 @@ margin-bottom: 5px;
 	margin-left: 120px;
 }
 //购物车首页下拉菜单
-.cart_items-drop {
+.cart_items-drop, .cart_items-drop2{
 	z-index: 99999;
 	right: 0;
 	position: absolute;
@@ -622,9 +608,14 @@ margin-bottom: 5px;
 	float: right;
 	margin: 0 12px 5px 0;
 }
-.cart_items-drop2 {
-	display: none;
+.cart_link .btn {
 }
+.cart_items-drop2 {
+	width: 220px;
+	}
+	.cart_items-drop2 p {
+		padding: 10px;
+	}
 //购物车中可变编辑的数字的css代码
 .product-cart .table input {
   width: 40px;

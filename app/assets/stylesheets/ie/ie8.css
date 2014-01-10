@@ -24,6 +24,8 @@
 }
 .cart-img {
 	float: right;
+	margin-top: 0;
+	margin-left: 5px;
 }
 .pending {
 	margin-top: -35px;
@@ -37,4 +39,10 @@
 }
 .product-description .product-title span {
 	line-height: 30px;
+}
+.nav-list .navbar-form .btn {
+	margin-top: 0;
+}
+.index-top li a {
+	height: 1em;
 }

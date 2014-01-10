@@ -49,7 +49,7 @@
 				<form action="/search" method="get" class="navbar-form pull-right">
 					<input type="text" name="q" value="" class="serach-query" placeholder="输入产品名称或者货号">
 					<button type="submit" class="btn">搜索</button>
-					<span class="cart-img"><%= link_to image_tag("cart.png",alt: "购物车"), cart_path %></span>
+					<span class="cart-img"><%= image_tag("logo/cart.png",alt: "购物车")%></span>
 					<span class="number-cart"><img src="/assets/number.png"/><b><%= @cart.total_items %></b>
 					</span>
 					<%= render 'carts/cart_item' %>
