@@ -182,16 +182,17 @@
 	 background:#4f7951; 
 	 margin-left: -20px;
 	 padding: 0;
-	 border: 1px solid none;
+	 //border: 1px solid none;
 	  }
 	.product-menu span{
 		line-height: 40px;
-		padding:0 20px;
+		padding:0 0 0 65px;
 		font-size:15px;
 		color: yellow;
 	}	
 	.product-menu span span {
-		float: right;
+		//float: right;
+		padding-left: 30px;
 	}
  .nav-list .navbar .nav > li > a {
 	 padding:12px 10px 0px 10px;
@@ -203,7 +204,7 @@
  }
   .nav-list .navbar .nav li.dropdown.open>.dropdown-toggle {
 	 padding-top: 7px;
-	 margin-top: 5px;
+	 margin-top: 0px;
 	 background: none;
 	 height: 27px;
 	 color: white;
@@ -211,6 +212,14 @@
  }
 
 
+ //2014年1月10日修改导航栏鼠标经过显示下拉菜单
+ 
+ .dropdown:hover >.dropdown-menu {
+	 display: block;
+ }
+ .dropdown-menu {
+	 margin:0;
+ }
 //修改结束
 //.affix .nav-bananer {
 //	width: 22%;

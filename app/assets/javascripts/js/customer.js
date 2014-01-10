@@ -37,11 +37,10 @@ $('.cart_items-drop').mouseout(function(){
 
 //
 //
-$('.dropdown-toggle .dropdown-menu').mouseover(function(){
-});
-$('.dropdown-menu').mouseout(function(){
-
-});
+//$('.dropdown-toggle, .dropdown-menu').hover(
+//		function(){ $('.dropdown').addClass("open");},
+//		function(){ $('.dropdown').removeClass("open");}
+//		);
 
 //
 var footerbottom = $('.footer-center').outerHeight(true) + 10;

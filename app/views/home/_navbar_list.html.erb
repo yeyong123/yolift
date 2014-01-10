@@ -10,28 +10,28 @@
 				<ul class="nav">
 					<li class="product-menu"><span>产品目录<span>&gt&gt</span></span></li>
 					<li class="active index"><%= link_to t('.index'), root_path %></li>
-					<li class="dropdown"><a href="/abouts" class="dropdown-toggle" data-toggle="dropdown"><%= t('.about') %></a>
+					<li class="dropdown"><a href="/abouts" class="dropdown-toggle"><%= t('.about') %></a>
 					<ul class="dropdown-menu">
 						<% About.limit(5).each do |about| %>
 							<li><%= link_to about.title, about_path(about.id) %></li>
 						<% end %>
 					</ul>
 					</li>
-					<li class="dropdown"><a href="/products" class="dropdown-toggle" data-toggle="dropdown"><%= t('.products') %></a>
+					<li class="dropdown"><a href="/products" class="dropdown-toggle"><%= t('.products') %></a>
 					<ul class="dropdown-menu">
 						<li><%= link_to t('.product'), products_path %></li>
 						<li><a href="#">视频展示</a></li>
 
 					</ul>
 					</li>
-					<li class="dropdown"><a href="/servers" class="dropdown-toggle" data-toggle="dropdown"><%= t('.new') %></a>
+					<li class="dropdown"><a href="/servers" class="dropdown-toggle"><%= t('.new') %></a>
 					<ul class="dropdown-menu">
 						<% Server.limit(3).each do |server| %>
 							<li><%= link_to server.title, server_path(server.id) %></li>
 						<% end %>
 					</ul>
 					</li>
-					<li class="dropdown"><a href="/centers" class="dropdown-toggle" data-toggle="dropdown"><%= t('.server') %></a>
+					<li class="dropdown"><a href="/centers" class="dropdown-toggle"><%= t('.server') %></a>
 					<ul class="dropdown-menu">
 					<% Center.limit(4).each do |center| %>
 						<li><%= link_to center.title, center_path(center.id) %></li>
@@ -39,7 +39,7 @@
 					</ul>
 					</li>
 
-					<li class="dropdown"><a href="#" class="dropdown-toggle" data-toggle="dropdown"><%= t('.contact') %></a>
+					<li class="dropdown"><a href="#" class="dropdown-toggle"><%= t('.contact') %></a>
 					<ul class="dropdown-menu">
 						<li><%= link_to "联系我们", "#" %></li>
 						<li><a href="#">Anthor</a></li>

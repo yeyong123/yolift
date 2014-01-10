@@ -149,7 +149,7 @@ line-height: 0;
 }
 .submenulist li{
 position:relative;
-height:40px;
+height:43px;
 line-height:34px;
 text-indent:15px;
 vertical-align:middle;
@@ -157,14 +157,14 @@ border-bottom:1px solid #fff;
 }
 .submenulist li img {
 	float: left;
-	width: 50px;
-	padding: 2px;
+	width: 40px;
+	//padding: 2px;
 }
 .submenulist li h3 a{
 position:relative;
 display:block;
-height:34px;
-//width:184px;
+height:40px;
+width:144px;
 color:#fff;
 float: left;
 padding-top: 3px;
@@ -181,7 +181,7 @@ overflow:hidden;
 	color: white;
 	padding: 0;
 	font-size: 14px;
-	margin-right: 20px;
+	margin-right: 10px;
 
 }
 .submenulist li h3 a.on span {
@@ -190,8 +190,9 @@ overflow:hidden;
 .submenulist li h3 a.on{
 background:#fff;
 width:184px;
-height:32px;
+height:38px;
 color:#f60;
+padding-top: 3px;
 font-weight:400;
 border:2px solid #bfd3a9;
 border-right:0 none;
