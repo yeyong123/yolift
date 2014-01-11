@@ -9,7 +9,7 @@
 .roundabout-in-focus{border:3px solid rgba(0, 0, 0, 0.2);}
 //2014年修改
 body{
-	font-family: "Microsoft yahei","经典黑体简","黑体",SimSun,Helvetica,Arial,sans-serif,"宋体","新宋体";
+	font-family: "Microsoft yahei",Helvetica,Arial,sans-serif,"宋体","新宋体";
 	background: #d6dfd9;
 }
 h6 {
@@ -479,13 +479,13 @@ margin: 0;
 	height:250px; 
 }
 .izViewer2{
-	width:450px;
-	height:400px;
+	width:405px;
+	height:380px;
 	position:absolute;
 	left:380px;
 	top:0px;
 	display:none; 
-	border:1px solid;
+	//border:1px solid;
 	z-index:2;
 }
 
@@ -665,4 +665,9 @@ border-top: 1px solid;
 	position: absolute;
 	right: 15px;
 	margin-top: -25px;
+}
+//单个产品展示的描述
+.product-info .tab-content {
+	width: 750px;
+	margin: auto;
 }

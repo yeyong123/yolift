@@ -1,4 +1,4 @@
-# RailsAdmin config file. Generated on January 08, 2014 16:53
+# RailsAdmin config file. Generated on January 11, 2014 15:39
 # See github.com/sferik/rails_admin for more informations
 
 RailsAdmin.config do |config|
@@ -259,6 +259,7 @@ RailsAdmin.config do |config|
   #     configure :name, :string 
   #     configure :created_at, :datetime 
   #     configure :updated_at, :datetime 
+  #     configure :image, :carrierwave 
 
   #   # Cross-section configuration:
 

@@ -2,12 +2,12 @@ class CategoriesController < ApplicationController
 
 
 	def index
-		@categories = Category.order("id desc").paginate(page: params[:page], per_page: 12)
+		@categories = Category.order("id desc").paginate(page: params[:page], per_page: 8)
 	end
 
 	def show
 		@category = Category.find(params[:id])
-		@products = @category.products.paginate(page: params[:page], per_page: 2)
+		@products = @category.products.paginate(page: params[:page], per_page: 8)
 	end
 		
 	def new

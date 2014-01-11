@@ -369,14 +369,16 @@ li.font-border a {
 .product-description .product-text {
 	margin-top: 10px;
 	height: 290px;
+	font-size: 12px;
+	font-family: "宋体";
 }
 .product-description .product-text span {
 	//line-height: 170%;
 	letter-spacing: 1px;
-	font-size: 12px;
+	font-size: 11.5px;
 }
 .product-description .product-item {
-	margin-top: 10px;
+	margin-top: 60px;
 	width: 100%;
 }
 .product-description .product-item img{
@@ -425,6 +427,11 @@ li.font-border a {
 //产品介绍
 .product-info {
 	clear: both;
+	font-size: 12px;
+	font-family: "宋体";
+}
+.product-info table, .product-info table tr td {
+	border: 1px solid;
 }
 .product-info .info-title {
 	height: 27px;
@@ -465,6 +472,11 @@ li.font-border a {
 	clear: both;
 	margin: 0;
 	height: 30px;
+	padding: 0;
+	line-height: 15px;
+	font-size: 11.5px;
+	font-family: "宋体";
+	font-weight: normal;
 
 }
 .product-outline p {
@@ -504,12 +516,20 @@ margin-bottom: 5px;
 	float: left;
 	margin-bottom: 10px;
 }
-.resize-image .image-position, .resize-image p {
+.resize-image p {
 	clear: both;
 }
+.image-position-find{
+	position: relative;
+	height: auto;
+}
 .image-position {
-	height: 55px;
-	width: auto;
+	position: absolute;
+	left: 120px;
+	top: 0;
+	}
+.image-position ul {
+	list-style: none;
 }
 .resize-image img {
 	float: left;

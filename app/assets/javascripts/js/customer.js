@@ -162,4 +162,7 @@ function(event){
 //为了IE去除最后一个link的边框
 //
 $('.lange a:last').addClass("lastitem");
+
+
+//产品编辑页面的图片编辑
 });

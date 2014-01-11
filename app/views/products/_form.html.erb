@@ -1,5 +1,5 @@
 <div class="form-form">
-<%= nested_form_for @product do |f| %>
+	<%= nested_form_for @product, html: { multipart: true} do |f| %>
 	<%= render 'home/error_message', object: f.object %>
 	<div class="select-cate">
 		<span>选择大类</span>
@@ -30,22 +30,22 @@
 		<%= hidden_field_tag 'product[productcolor_ids][]','' %>
 	</div>
 
-	<div class="field">
-		<%= f.fields_for :photos do |photo| %>
+	<div class="field image-position-find">
+<%= f.fields_for :photos do |photo| %>
 			<%= photo.file_field :image %>
 			<br />
 			<%= photo.link_to_remove "删除", class: 'btn btn-mini btn-success' %>
 		<% end %>
 		<p><%= f.link_to_add "增加图片", :photos, class: 'btn btn-primary' %></p>
-	</div>
 
 	<div class="image-position">
-
 		<% @product.photos.each do |pho| %>
-			<%= image_tag(pho.image_url(:small)) %>
+			<ul>
+				<li><%= image_tag(pho.image_url(:small)) if pho.image? %></li>
+			</ul>
 		<% end %>
-
 	</div>
+</div>
 <div class="field position-form">
 		<%= f.label :printpdf, "上传PDF" %>
 		<%= f.file_field :printpdf %>
@@ -75,7 +75,7 @@
 	</div>
 	<div class="action">
 		<%= f.submit "保存",class: "btn btn-large btn-success"%>
-		<%= link_to "返回", products_path(@product), class: "btn btn-large btn-primary" %>
+		<%= link_to "返回", products_path, class: "btn btn-large btn-primary" %>
 	</div>
 <% end %>
 </div>
