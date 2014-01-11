@@ -76,7 +76,11 @@
 	color: white;
 	padding-right: 8px;
 	font-size: 12.5px;
-	border-right: 1px solid #fff;
+	//border-right: 1px solid #fff;
+}
+.index-top li span {
+	color: white;
+	height: 1em;
 }
 .lange .lastitem {
 	border-right: none;
@@ -444,6 +448,17 @@ li.font-border a {
 	color: white;
 	background: none;
 	border-style: none;
+	float: left;
+	font-size: 14px;
+	padding: 3px 5px;
+}
+.product-info #myTab li span {
+	float: left;
+	color: white;
+	margin: 5px 2px 0 0;
+	width: 2px;
+	height: 16px;
+	border-right: 1px solid;
 }
 .product-info .info-title #myTab li.active a {
 	color: #ee8301;

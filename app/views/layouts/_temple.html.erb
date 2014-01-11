@@ -1,18 +1,18 @@
 <div class="top-index">
 	<div class="index-top">
 		<ul>
-			<li><a href="#" onclick="addfavorite()">收藏</a></li>
+			<li><a href="#" onclick="addfavorite()">收藏</a><span>|</span></li>
 			<% if current_user %>
-				<li><%= link_to "注销", destroy_user_session_path, method: :delete %></li>
+				<li><%= link_to "注销", destroy_user_session_path, method: :delete %><span>|</span></li>
 				<li><%= link_to current_user.email, "#" %></li>
 			<% else %>
-				<li><%= link_to "登录", new_session_path(:user) %></li>
+				<li><%= link_to "登录", new_session_path(:user) %><span>|</span></li>
 				<li class="font-border"><%= link_to "注册", new_registration_path(:user) %></li>
 			<% end %>
 			<li class="lange">
 			<div class="set_locale">
 				<%= link_to "中文", controller: controller.controller_name,
-					action: controller.action_name, locale: "zh-CN" %>
+					action: controller.action_name, locale: "zh-CN" %><span>|</span>
 					<%= link_to "English", controller: controller.controller_name, 
 						action: controller.action_name, locale: "en" %>
 				</div>

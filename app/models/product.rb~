@@ -4,8 +4,7 @@ class Product < ActiveRecord::Base
 	has_many_kindeditor_assets :attachments, dependent: :destroy
 	mount_uploader :printpdf, PrintpdfUploader
 	mount_uploader :video, VideoUploader
-	accepts_nested_attributes_for :photos, allow_destroy: :true,
-		reject_if: proc{ |attrs| attrs.all? {|k, v| v.blank? }}
+	accepts_nested_attributes_for :photos, allow_destroy: :true 
 	has_many :productnumbers, dependent: :destroy
 	accepts_nested_attributes_for :productnumbers, allow_destroy: :true,
 		reject_if: proc{ |attrs| attrs.all? {|k, v| v.blank? }}
