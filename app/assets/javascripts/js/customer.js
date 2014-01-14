@@ -5,6 +5,16 @@ $(document).ready(function(){
 	$('.drop-list').click(function(){
 			$('.drop-list-toggle').toggle();
 		});
+//产品页面下拉选择货号
+$('.drop-list,.drop-list-toggle').mouseout(function(){
+	$('.drop-list-toggle').show();
+});
+//放大镜
+//
+$('#idHandle3').mouseout(function(){
+	$('#idHandle3').hide();
+	
+});
 
 	//左侧导航
 	//
@@ -164,5 +174,12 @@ function(event){
 $('.lange a:last').addClass("lastitem");
 
 
-//产品编辑页面的图片编辑
+//搜索框不能为空
+$('.nav-list .navbar-form .btn').click(function(event){
+	var count = $('.serach-query');
+	if (count.val() == "")
+{
+	event.preventDefault();
+	}
+});
 });

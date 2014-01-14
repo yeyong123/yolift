@@ -7,4 +7,8 @@ class Category < ActiveRecord::Base
 	validates_uniqueness_of :name
 	validates_presence_of :name
 	mount_uploader :image, ImageUploader
+	
+	def name_with_initial
+		"#{name}"
+	end
 end

@@ -27,12 +27,14 @@ class ProductsController < ApplicationController
 	def new
 		@product = Product.new
 		@productcolors = Productcolor.all
-	end
+		@category = Category.joins(:products).where(params[:id])
+		end
 
 	def edit
 		@product = Product.find(params[:id])
 		@productcolors = Productcolor.all
-	end
+		@categories = Category.all 
+			end
 
 	def create
 		@product = Product.new(params[:product])
