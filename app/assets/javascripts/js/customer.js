@@ -6,9 +6,6 @@ $(document).ready(function(){
 			$('.drop-list-toggle').toggle();
 		});
 //产品页面下拉选择货号
-$('.drop-list,.drop-list-toggle').mouseout(function(){
-	$('.drop-list-toggle').show();
-});
 //放大镜
 //
 $('#idHandle3').mouseout(function(){

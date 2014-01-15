@@ -32,7 +32,7 @@ SimpleNavigation::Configuration.run do |navigation|
 
   # Define the primary navigation
   navigation.items do |primary|
-		primary.item :home, 'Home', root_path, :highlights_on => /(^\/$|^\/home)/ do |home|
+		primary.item :home, '首页', root_path, :highlights_on => /(^\/$|^\/home)/ do |home|
 			home.item :products, "产品中心", products_path do |pro|
 				Category.all.each do |cate|
 					pro.item :cate, cate.name, category_path(cate.id) do |category|
@@ -46,7 +46,7 @@ SimpleNavigation::Configuration.run do |navigation|
 					end
 				end
 			end
-			home.item :abouts, "关于YOLIFT", abouts_path do |about|
+			home.item :abouts, "关于我们", abouts_path do |about|
 				About.all.each do |abo|
 					about.item :about, abo.title, about_path(abo.id)
 				end

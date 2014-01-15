@@ -1,6 +1,7 @@
 <% provide(:title, @category.name) %>
 <%= render 'home/nav_list' %>
 	<div class="product-index">
+		<%= render_navigation(renderer: :breadcrumbs, join_with: '&nbsp / &nbsp') %> 
 		<ul class="thumbnails">
 			<% @products.each do |product| %>
 				<%= render partial: 'products/index', locals:{product: product} %>
