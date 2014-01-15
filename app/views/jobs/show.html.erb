@@ -1,0 +1,19 @@
+<%= render 'home/nav_list' %>
+<div class="product-index">
+	<h4>职位详细信息</h4>
+	<%= link_to edit_job_path(@job), class: "btn product-link" do %>
+		编辑<I class="icon-pencil"></i>
+	<% end %>
+	<div class="job-title">
+		<%= @job.title %>
+	</div>
+	<div class="job-address">
+		<%= @job.address %>
+	</div>
+	<div class="job-dapart">
+		<%= @job.department %>
+	</div>
+	<div class="job-content">
+		<%= raw @job.content %>
+	</div>
+</div>

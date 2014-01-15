@@ -21,6 +21,7 @@ Yolift::Application.routes.draw do
 		resources :servers
 		resources :centers
 		resources :contacts
+		resources :jobs
 		match '/search', to: "products#search"
 		match '/error', to: 'home#error'
 		match '/dashboard', to: "home#dashboard"

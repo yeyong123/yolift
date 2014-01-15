@@ -6,6 +6,7 @@ class AboutsController < ApplicationController
 
 	def show
 		@about.increment!(:count)
+		@jobs = Job.all
 	end
 
 	def edit

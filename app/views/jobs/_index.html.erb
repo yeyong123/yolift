@@ -1,0 +1,18 @@
+<table class="table">
+	<tr>
+		<td>职位名称</td>
+		<td>工作地点</td>
+		<td>部门</td>
+		<td>发布时间</td>
+	</tr>
+	<% @jobs.each do |job| %>
+
+	<tr>
+				<td><%= link_to job.title, job_path(job) %></td>
+			<td><%= job.address %></td>
+			<td><%= job.department %></td>
+			<td><%= job.created_at.strftime("%Y-%m-%d") %></td>
+	</tr>
+
+		<% end %>
+</table>

@@ -1,0 +1,22 @@
+<% provide(:title, @contact.title) %>
+<%= render 'home/nav_list' %>
+<div class="product-index">
+	<div class="about-title">
+		<h4><%= @contact.title %></h4>
+		<div class="breadcrumb">
+			<%= render_navigation(renderer: :breadcrumbs, join_with: '&nbsp / &nbsp') %>
+		</div>
+	</div>
+	<div class="about-content">
+		<%= raw @contact.content %>
+		<% if @contact.id == 2 %>
+			<div class="contact-join">
+				诚邀合作的表格
+			</div>
+		<% elsif  @contact.id == 3 %>
+			<div class="contact-contact">
+				联系我们的表单
+			</div>
+		<% end %>
+	</div>
+</div>

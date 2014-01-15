@@ -1,0 +1,7 @@
+<%= form_for @job do |f| %>
+	<%= render partial: 'jobs/form', locals: {f: f} %>
+	<div class="about-action">
+		<%= f.submit "更新", class: "btn btn-success" %>
+		<%= link_to "返回", jobs_path %>
+	</div>
+<% end %>

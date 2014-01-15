@@ -1,0 +1,14 @@
+<% provide(:title, "联系我们") %>
+<%= render 'home/nav_list' %>
+<div class="product-index">
+	<table class="table">
+		<% @contacts.each do |contact| %>
+			<tr>
+				<td><%= link_to contact.title, contact_path(contact) %></td>
+				<td><%= contact.created_at.strftime("%Y-%m-%d") %>创建</td>
+				<td><%= link_to "编辑", edit_contact_path(contact) %></td>
+				<td><%= link_to "删除", contact, method: :delete, confirm: "Are you sure" %></td>
+			</tr>
+		<% end %>
+	</table>
+	<%= link_to "新增联系", new_contact_path, class: "btn btn-primary"%>

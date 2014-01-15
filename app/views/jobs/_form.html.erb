@@ -1,0 +1,17 @@
+<%= render 'home/error_message', object: f.object %>
+<div class="field">
+	<%= f.label :title, "招聘职位" %>
+	<%= f.text_field :title %>
+</div>
+<div class="field">
+	<%= f.label :address, "工作地点" %>
+	<%= f.text_field :address %>
+</div>
+<div class="field">
+	<%= f.label :department, "部门" %>
+	<%= f.text_field :department %>
+</div>
+<div class="field">
+	<%= f.label :content, "招聘条件" %>
+	<%= f.kindeditor :content, width: 784, height: 300 %>
+</div>

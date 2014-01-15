@@ -63,7 +63,7 @@ SimpleNavigation::Configuration.run do |navigation|
 			end
 			home.item :contacts, "联系我们", contacts_path do |contact|
 				Contact.all.each do |con|
-					contact.item :contact, contact_path(con.id)
+					contact.item :contact, con.title,contact_path(con.id)
 				end
 			end
 		end

@@ -39,10 +39,11 @@
 					</ul>
 					</li>
 
-					<li class="dropdown"><a href="#" class="dropdown-toggle"><%= t('.contact') %></a>
+					<li class="dropdown"><a href="/contacts" class="dropdown-toggle"><%= t('.contact') %></a>
 					<ul class="dropdown-menu">
-						<li><%= link_to "联系我们", "#" %></li>
-						<li><a href="#">Anthor</a></li>
+						<% Contact.limit(3).each do |contact| %>
+							<li><%= link_to contact.title, contact_path(contact) %></li>
+						<% end %>
 					</ul>
 					</li>
 				</ul>

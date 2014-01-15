@@ -8,6 +8,9 @@
 </div>
 	</div>
 	<div class="about-content">
-		<%= sanitize @about.content %>
+		<%= raw @about.content %>
+		<% if @about.id == 4 %>
+			<%= render 'jobs/index' %>
+		<% end %>
 	</div>
 </div>
