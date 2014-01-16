@@ -5,6 +5,7 @@ class ContactsController < ApplicationController
 	end
 
 	def show
+		@affiliate = Affiliate.new
 	end
 
 	def edit

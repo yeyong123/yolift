@@ -1,0 +1,126 @@
+<div class="affiliate-form">
+	<%= form_for @affiliate do |f| %>
+		<%= render 'home/error_message', object: f.object %>
+		<div class="field">
+			<%= f.label :company, "公司名称:" %>
+			<%= f.text_field :company %>
+		</div>
+		<div class="field">
+			<%= f.label "申请时间:" %>
+			<input value=<%= Time.now.strftime("%Y-%m-%d:%H:%M:%S")%> type="text">
+		</div>
+		<div class="field">
+			<%= f.label :ownship, "公司性质:" %>
+			<%= f.text_field :ownship %>
+		</div>
+		<div class="field">
+			<%= f.label :person, "法人代表:" %>
+			<%= f.text_field :person %>
+		</div>
+		<div class="field">
+			<%= f.label :capital, "注册资本:" %>
+			<%= f.text_field :capital %>
+		</div>
+		<div class="field">
+			<%= f.label :contact, "联系人:" %>
+			<%= f.text_field :contact %>
+		</div>
+		<div class="field">
+			<%= f.label :founded, "成立时间:" %>
+			<%= f.text_field :founded %>
+		</div>
+		<div class="field">
+			<%= f.label :telephone, "联系电话:" %>
+			<%= f.telephone_field :telephone %>
+		</div>
+		<div class="field">
+			<%= f.label :employees, "员工人数" %>
+			<%= f.number_field :employees %>
+		</div>
+		<div class="field">
+			<%= f.label :email, "联系人邮箱:" %>
+			<%= f.email_field :email %>
+		</div>
+		<div class="field-address">
+		<div class="field">
+			<%= f.label :address, "公司地址:" %>
+			<%= f.text_field :address %>
+		</div>
+		<div class="field">
+			<%= f.label :business, "公司主营业务:" %>
+			<%= f.text_field :business %>
+		</div>
+		<div class="field">
+			<%= f.label :distribution, "申请经销区域:" %>
+			<%= f.text_field :distribution %>
+		</div>
+		<div class="field field-apply">
+			<%= f.label :apply, "公司营业业绩及预测:" %>
+			<%= f.text_area :apply %>
+		</div>
+	</div>
+	<div class="field">
+		<%= f.label :sales, "去年销售额:" %>
+		<%= f.text_field :sales %>
+	</div>
+	<div class="field">
+		<%= f.label :commitsales, "承诺年销售额:" %>
+		<%= f.text_field :commitsales %>
+	</div>
+			<h5>申请经销商经营地:</h5>
+	<div class="field">
+		<%= f.label :store, "销售门店(平方米):" %>
+		<%= f.text_field :store %>
+	</div>
+	<div class="field radio-field">
+		<%= f.label :owned, "自有" %>
+		<%= f.radio_button :owned,"自有" %>
+		<%= f.label :owned, "租用" %>
+		<%= f.radio_button :owned, "租用" %>
+	</div>
+	<div class="field" style="clear: both">
+		<%= f.label :warehouse, "仓库(平方米)" %>
+		<%= f.text_field :warehouse %>
+	</div>
+	<div class="field radio-field">
+		<%= f.label :rented, "自有" %>
+		<%= f.radio_button :rented, "自有" %>
+		<%= f.label :rented, "租用" %>
+		<%= f.radio_button :rented, "租用" %>
+	</div>
+	<h5>公司资源:</h5>
+	<div class="field" style="clear: both">
+		<%= f.label :salestaff, "销售人员(人):" %>
+		<%= f.text_field :salesstaff %>
+	</div>
+	<div class="field">
+		<%= f.label :servicestaff, "售后服务(人):" %>
+		<%= f.text_field :servicestaff %>
+	</div>
+	<div class="field">
+		<%= f.label :affiliated, "下属经销商数量:" %>
+		<%= f.number_field :affiliated %>
+	</div>	
+	<div class="field-address">
+	<div class="field field-apply" style="clear: both">
+		<%= f.label :currently, "曾经或目前代理的相关品牌:" %>
+		<%= f.text_area :currently %>
+	</div>
+</div>
+<div class="field" style="width: 100px">
+	<%= f.label :intention, "意向代理产品:" %>
+</div>
+<div class="field intention-field">
+	<%= f.label :intention, "高空作业" %>
+	<%= f.radio_button :intention, "高空作业" %>
+	<%= f.label :intention, "搬运设备" %>
+	<%= f.radio_button :intention, "搬运设备" %>
+	<%= f.label :intention, "所有产品" %>
+	<%= f.radio_button :intention, "所以产品" %>
+</div>
+<div class="action" style="clear: both">
+	<%= f.submit "提交", class: "btn btn-primary" %>
+	<%= f.submit "重置", type: "reset",class: "btn btn-success" %>
+</div>
+<% end %>
+</div>

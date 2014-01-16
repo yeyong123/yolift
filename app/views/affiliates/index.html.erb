@@ -1,0 +1,25 @@
+<%= render 'home/nav_list' %>
+<div class="product-index">
+<h4>申请公司列表</h4>
+	<table class="table">
+		<tr>
+			<td>公司名称</td>
+			<td>联系人</td>
+			<td>联系电话</td>
+			<td>公司地址</td>
+			<td>申请区域</td>
+			<td>申请时间</td>
+		</tr>
+		<% @affiliates.each do |aff| %>
+			<tr>
+				<td><%= link_to aff.company, affiliate_path(aff) %></td>
+				<td><%= aff.contact %></td>
+				<td><%= aff.telephone %></td>
+				<td><%= aff.address %></td>
+				<td><%= aff.distribution %></td>
+				<td><%= aff.created_at.strftime("%Y-%m-%d") %></td>
+			</tr>
+		<% end %>
+	</table>
+	<%= will_paginate @affiliates %>
+</div>

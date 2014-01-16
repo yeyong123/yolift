@@ -1,0 +1,51 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/Fixtures.html
+
+one:
+  company: MyString
+  ownship: MyString
+  capital: MyString
+  contact: MyString
+  founded: 
+  telephone: MyString
+  employees: MyString
+  email: MyString
+  address: MyString
+  business: MyString
+  distribution: MyString
+  apply: MyText
+  sales: MyString
+  commitsales: MyString
+  store: MyString
+  owned: MyString
+  warehouse: MyString
+  rented: MyString
+  salesstaff: MyString
+  servicestaff: MyString
+  affiliated: MyString
+  currently: MyText
+  intention: MyString
+
+two:
+  company: MyString
+  ownship: MyString
+  capital: MyString
+  contact: MyString
+  founded: 
+  telephone: MyString
+  employees: MyString
+  email: MyString
+  address: MyString
+  business: MyString
+  distribution: MyString
+  apply: MyText
+  sales: MyString
+  commitsales: MyString
+  store: MyString
+  owned: MyString
+  warehouse: MyString
+  rented: MyString
+  salesstaff: MyString
+  servicestaff: MyString
+  affiliated: MyString
+  currently: MyText
+  intention: MyString

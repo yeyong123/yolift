@@ -11,7 +11,7 @@
 		<%= raw @contact.content %>
 		<% if @contact.id == 2 %>
 			<div class="contact-join">
-				诚邀合作的表格
+				<%= render 'affiliates/form' %>
 			</div>
 		<% elsif  @contact.id == 3 %>
 			<div class="contact-contact">

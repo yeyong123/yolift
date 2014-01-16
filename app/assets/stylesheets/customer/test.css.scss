@@ -765,3 +765,68 @@ margin-bottom: 5px;
 a {
 	color: black;
 }
+//诚邀合作的表单
+.affiliate-form {
+	width: 780px;
+	height: auto;
+	//border: 1px solid;
+}
+.affiliate-form .field label{
+	float: left;
+	width: 88px;
+}
+
+.affiliate-form .field input {
+	float: right;
+	margin-right: 20px;
+}
+.affiliate-form .field {
+	//border: 1px solid;
+	width: 45%;
+	margin-left: 20px;
+	float: left;
+}
+.field-address .field {
+	width: 93%;
+}
+.field-address input {
+	width: 80%;
+	float: left;
+}
+.field-address .field-apply label {
+	width: 88px;
+	margin-top: 30px;
+}
+.field-address textarea {
+	float: right;
+	width: 80%;
+	margin-right: 20px;
+	height: 120px;
+}
+.affiliate-form h5 {
+	clear:both;
+}
+.affiliate-form .radio-field {
+	margin-top: 5px;
+	width: 140px;
+	}
+.affiliate-form .radio-field label {
+width: 30px;
+}
+.affiliate-form .radio-field input {
+	float: left;
+}
+.affiliate-form .intention-field {
+	width:400px;
+	float: left;
+}
+.affiliate-form .intention-field input {
+	float: left;
+}
+.affiliate-form .intention-field label {
+	width: 60px;
+}
+.affiliate-form .action {
+	float: right;
+	margin: 5px 150px 20px 0;
+}
