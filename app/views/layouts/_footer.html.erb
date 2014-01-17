@@ -17,14 +17,12 @@
 			<div class="list-nav">
 				<h4>采购指南</h4>
 				<ul>
-					<li><%= link_to "高空搬运设备", categories_path %></li>
-					<li><%= link_to "搬运设备", "#" %></li>
-					<li><%= link_to "清洁设备", "#" %></li>
-					<li><%= link_to "车间设备", "#" %></li>
-					<li><%= link_to "产品应用","#" %></li>
-				</ul>
-			</div>
-			<div class="list-nav">
+					<% List.all.each do |list| %>
+						<li><%= link_to list.title, list_path(list) %></li>
+					<% end %>
+					</ul>
+				</div>
+				<div class="list-nav">
 				<h4>支付方式</h4>
 				<ul>
 					<li><%= link_to "款到发货", "#" %></li>

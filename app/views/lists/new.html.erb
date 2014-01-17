@@ -1,0 +1,10 @@
+<%= render 'home/nav_list' %>
+<div class="product-index">
+	<%= form_for @list do |f| %>
+	<%= render partial: 'lists/form', locals: {f: f} %> 
+	<div class="about-action">
+		<%= f.submit "保存",class: "btn btn-success" %>
+		<%= link_to "返回", lists_path %>
+	</div>
+<% end %>
+</div>

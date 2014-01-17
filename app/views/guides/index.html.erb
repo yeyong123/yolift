@@ -1,0 +1,14 @@
+<% provide(:title, "采购指南") %>
+<%= render 'home/nav_list' %>
+<div class="product-index">
+	<table class="table">
+		<% @guides.each do |guide| %>
+			<tr>
+				<td><%= link_to guide.title, guide_path(guide) %></td>
+				<td><%= link_to "删除", guide,method: :delete, confirm: "Are you sure?" %>
+				</tr>
+			<% end %>
+		</table>
+		<%= link_to "增加分类指南", new_guide_path, class: "btn btn-primary" %>
+	</div>
+

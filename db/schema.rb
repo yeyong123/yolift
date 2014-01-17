@@ -11,7 +11,7 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20140116081303) do
+ActiveRecord::Schema.define(:version => 20140117041643) do
 
   create_table "abouts", :force => true do |t|
     t.string   "title"
@@ -154,6 +154,14 @@ ActiveRecord::Schema.define(:version => 20140116081303) do
   add_index "districts", ["pinyin"], :name => "index_districts_on_pinyin"
   add_index "districts", ["pinyin_abbr"], :name => "index_districts_on_pinyin_abbr"
 
+  create_table "guides", :force => true do |t|
+    t.string   "title"
+    t.text     "content"
+    t.integer  "list_id"
+    t.datetime "created_at", :null => false
+    t.datetime "updated_at", :null => false
+  end
+
   create_table "jobs", :force => true do |t|
     t.string   "title"
     t.string   "address"
@@ -180,6 +188,12 @@ ActiveRecord::Schema.define(:version => 20140116081303) do
     t.datetime "updated_at",                :null => false
     t.integer  "quantity",   :default => 1
     t.integer  "order_id"
+  end
+
+  create_table "lists", :force => true do |t|
+    t.string   "title"
+    t.datetime "created_at", :null => false
+    t.datetime "updated_at", :null => false
   end
 
   create_table "orders", :force => true do |t|

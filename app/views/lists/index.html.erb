@@ -1,0 +1,13 @@
+<%= render 'home/nav_list' %>
+<div class="product-index">
+	<h5>采购指南</h5>
+	<table class="table">
+		<% @lists.each do |list| %>
+		<tr>
+			<td><%= link_to list.title,list_path(list) %></td>
+			<td><%= link_to "删除", list, method: :delete, confirm: "Are you sure" %></td>
+		</tr>
+	<% end %>
+	</table>
+	<%= link_to "新增采购指南", new_list_path, class: "btn btn-primary" %>
+</div>

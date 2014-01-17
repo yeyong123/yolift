@@ -1,0 +1,13 @@
+<% provide(:title, @guide.title) %>
+<%= render 'home/nav_list' %>
+<div class="product-index">
+	<div class="about-title">
+		<h4><%= @guide.title %></h4>
+		<div class="breadcrumb">
+			<%= render_navigation(renderer: :breadcrumbs, join_with: '&nbsp / &nbsp') %>
+		</div>
+	</div>
+		<div class="about-content">
+			<%= raw @guide.content %>
+		</div>
+	</div>
