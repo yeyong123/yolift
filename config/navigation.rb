@@ -66,6 +66,15 @@ SimpleNavigation::Configuration.run do |navigation|
 					contact.item :contact, con.title,contact_path(con.id)
 				end
 			end
+			home.item :lists, "采购指南", lists_path do |list|
+				List.all.each do |li|
+					list.item :list, li.title, list_path(li.id) do |guide|
+						li.guides.each do |gui|
+							guide.item :guide, gui.title, guide_path(gui.id)
+						end
+					end
+				end
+			end
 		end
     # Add an item to the primary navigation. The following params apply:
     # key - a symbol which uniquely defines your navigation item in the scope of the primary_navigation
