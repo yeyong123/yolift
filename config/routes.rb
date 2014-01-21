@@ -23,6 +23,7 @@ Yolift::Application.routes.draw do
 		resources :contacts
 		resources :jobs
 		resources :affiliates
+		resources :messages
 		resources :lists
 		resources :guides
 		match '/search', to: "products#search"
