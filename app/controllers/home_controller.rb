@@ -15,6 +15,8 @@ class HomeController < ApplicationController
 		@orders = Order.order("created_at desc").paginate(page: params[:page], per_page: 10)
 		@affiliates = Affiliate.order("created_at desc").paginate(page: params[:page], per_page: 10)
 	 	@abouts = About.order("id desc").paginate(page: params[:page], per_page: 10)	
+		@bananers = Bananer.order("id desc").paginate(page: params[:page],per_page: 10)
+		@jobs = Job.order("id desc").paginate(page: params[:page], per_page: 10)
 	end
 
 	def error

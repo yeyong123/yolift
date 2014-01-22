@@ -1,5 +1,14 @@
 <% provide(:title, @center.title) %>
-<%= render 'home/nav_list' %>
+<div class="edge-position">
+	<%= render 'home/nav_list' %>
+	<div class="edge-from">
+		<% Center.all.each do |center| %>
+			<ul>
+				<li><%= link_to center.title, center_path(center.id) %></li>
+			</ul>
+		<% end %>
+	</div>
+</div>
 <div class="product-index">
 	<div class="about-title">
 		<h4><%= @center.title %></h4>

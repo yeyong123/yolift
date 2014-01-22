@@ -10,36 +10,43 @@
 				<ul class="nav">
 					<li class="product-menu"><span>产品目录<span>&gt&gt</span></span></li>
 					<li class="active index"><%= link_to t('.index'), root_path %></li>
-					<li class="dropdown"><a href="/abouts" class="dropdown-toggle"><%= t('.about') %></a>
+					<% About.limit(1).each do |about| %>
+					<li class="dropdown"><%= link_to t('.about'), about_path(about.id), class: "dropdown-toggle" %>
+				<% end %>
 					<ul class="dropdown-menu">
 						<% About.limit(5).each do |about| %>
 							<li><%= link_to about.title, about_path(about.id) %></li>
 						<% end %>
 					</ul>
 					</li>
-					<li class="dropdown"><a href="/products" class="dropdown-toggle"><%= t('.products') %></a>
+					<li class="dropdown"><%= link_to t('.products'),products_path, class: "dropdown-toggle" %>
 					<ul class="dropdown-menu">
 						<li><%= link_to t('.product'), products_path %></li>
 						<li><a href="#">视频展示</a></li>
 
 					</ul>
 					</li>
-					<li class="dropdown"><a href="/servers" class="dropdown-toggle"><%= t('.new') %></a>
+					<% Server.limit(1).each do |server| %>
+						<li class="dropdown"><%= link_to t('.new'), server_path(server.id), class: "dropdown-toggle" %>
+					<% end %>
 					<ul class="dropdown-menu">
 						<% Server.limit(3).each do |server| %>
 							<li><%= link_to server.title, server_path(server.id) %></li>
 						<% end %>
 					</ul>
 					</li>
-					<li class="dropdown"><a href="/centers" class="dropdown-toggle"><%= t('.server') %></a>
+					<% Center.limit(1).each do |center| %>
+					<li class="dropdown"><%= link_to t('.server'), center_path(center.id), class: "dropdown-toggle" %>
+				<% end %>
 					<ul class="dropdown-menu">
 					<% Center.limit(4).each do |center| %>
 						<li><%= link_to center.title, center_path(center.id) %></li>
 					<% end %>
 					</ul>
 					</li>
-
-					<li class="dropdown"><a href="/contacts" class="dropdown-toggle"><%= t('.contact') %></a>
+					<% Contact.limit(1).each do |contact| %>
+					<li class="dropdown"><%= link_to t('.contact'), contact_path(contact.id), class: "dropdown-toggle" %>
+				<% end %>
 					<ul class="dropdown-menu">
 						<% Contact.limit(3).each do |contact| %>
 							<li><%= link_to contact.title, contact_path(contact) %></li>

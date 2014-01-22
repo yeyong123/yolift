@@ -879,4 +879,28 @@ width: 30px;
 	width: 784px;
 }
 //结束在这里
-
+//边栏的位置
+.edge-position {
+	width: 182px;
+	float: left;
+}
+.edge-position .nav-list .nav-bananer {
+	background: none;
+	height: 275px;
+}
+.edge-from {
+	clear: both;
+	background: #4f7951;
+}
+.edge-from ul {
+	list-style: none;
+	margin: 0;
+}
+.edge-from ul li {
+	border-bottom: 1px solid #fff;
+	padding: 5px 0;
+	text-indent: 50px;
+}
+.edge-from ul li a {
+	color: white;
+}
