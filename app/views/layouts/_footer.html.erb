@@ -75,12 +75,20 @@
 		<div class="footer-link footer">
 			<div class="container">
 				<ul>
-					<li><%= link_to "关于我们", abouts_path %></li>
-					<li><%= link_to "站点地图", "#" %></li>
-					<li><%= link_to "友情链接", "#" %></li>
-					<li><%= link_to "帮助中心", "#" %></li>
-					<li><%= link_to "条款和条例", "#" %></li>
-					<li><%= link_to "联系我们", "#" %></li>
+					<% About.limit(1).each do |about| %>
+						<li><%= link_to "关于我们", about_path(about.id) %></li>
+					<% end %>
+					<li><%= link_to "站点地图", sitemap_path %></li>
+					<li><%= link_to "友情链接", link_path %></li>
+					<% Center.offset(3).each do |center| %>
+						<li><%= link_to "帮助中心", center_path(center.id) %></li>
+					<% end %>
+					<% Center.limit(1).each do |center| %>
+						<li><%= link_to "条款和条例", center_path(center.id) %></li>
+					<% end %>
+					<% Contact.limit(1).each do |contact| %>
+						<li><%= link_to "联系我们", contact_path(contact.id) %></li>
+					<% end %>
 				</ul>
 		</div>
 	</div>

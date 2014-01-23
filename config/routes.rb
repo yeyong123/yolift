@@ -27,6 +27,8 @@ Yolift::Application.routes.draw do
 		resources :lists
 		resources :guides
 		match '/search', to: "products#search"
+		match '/sitemap', to: "home#sitemap"
+		match '/link', to: "home#link"
 		match '/error', to: 'home#error'
 		match '/dashboard', to: "home#dashboard"
 		root to: 'home#index'

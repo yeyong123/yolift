@@ -2,7 +2,12 @@ class HomeController < ApplicationController
 	before_filter :authenticate_admin!, only: [:dashboard] 
 	def index
   end
+	
+	def sitemap
+	end
 
+	def link
+	end
 
 	def dashboard
 		#控制台，后台的定义，这个控制器没有定义数据库，而是把所有的模型
