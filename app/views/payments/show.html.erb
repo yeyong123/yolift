@@ -1,0 +1,25 @@
+<% provide(:title, @payment.title) %>
+<div class="edge-position">
+	<%= render 'home/nav_list' %>
+	<div class="edge-from">
+					<ul>
+<% Payment.all.each do |payment| %>
+
+				<li><%= link_to payment.title, payment_path(payment.id) %></li>
+			<% end %>
+			</ul>
+	</div>
+</div>
+<div class="product-index">
+	<div class="about-title">
+		<h4><%= @payment.title %></h4>
+		<div class="breadcrumb">
+			<%= render_navigation(renderer: :breadcrumbs,join_with: '&nbsp / &nbsp') %>
+		</div>
+	</div>
+		<div class="about-content">
+			<%= raw @payment.content %>
+		</div>
+	</div>
+</div>
+

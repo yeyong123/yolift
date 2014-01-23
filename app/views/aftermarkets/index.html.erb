@@ -1,0 +1,16 @@
+<%= render 'home/nav_list' %>
+<div class="product-index">
+	<table class="table">
+		<% @aftermarkets.each do |after| %>
+			<tr>
+				<td><%= link_to after.title, aftermarket_path(after.id)%></td>
+				<% if admin_signed_in? %>
+				<td><%= link_to "编辑", edit_aftermarket_path(after) %></td>
+				<td><%= link_to "删除", after, method: :delete, confirm: "确认删除"%></td>
+			<% end %>
+			</tr>
+					<% end %>
+	</table>
+	<%= will_paginate @aftermarkets %>
+	<%= link_to "增加售后服务", new_aftermarket_path, class: "btn btn-primary" %>
+</div>

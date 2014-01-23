@@ -1,0 +1,17 @@
+<%= render 'home/nav_list' %>
+<div class="product-index">
+	<table class="table">
+		<% @cases.each do |ca| %>
+			<tr>
+				<td><%= image_tag(ca.image_url(:small)) %></td>
+				<td><%= link_to ca.title, case_path(ca.id) %></td>
+				<% if admin_signed_in? %>
+					<td><%= link_to "编辑", edit_case_path(ca.id) %></td>
+					<td><%= link_to "删除", ca, method: :delete, confirm: "确认删除"  %></td>
+				<% end %>
+			</tr>
+		<% end %>
+	</table>
+	<%= will_paginate @cases %>
+	<%= link_to "增加公司案例", new_case_path, class: "btn btn-primary" %>
+</div>

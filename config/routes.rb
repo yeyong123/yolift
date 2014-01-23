@@ -26,6 +26,11 @@ Yolift::Application.routes.draw do
 		resources :messages
 		resources :lists
 		resources :guides
+		resources :payments
+		resources :items
+		resources :ships
+		resources :aftermarkets
+		resources :cases
 		match '/search', to: "products#search"
 		match '/sitemap', to: "home#sitemap"
 		match '/link', to: "home#link"

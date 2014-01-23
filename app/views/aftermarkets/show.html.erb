@@ -1,0 +1,25 @@
+<% provide(:title, @aftermarket.title) %>
+<div class="edge-position">
+	<%= render 'home/nav_list' %>
+	<div class="edge-from">
+		<ul>
+			<% Aftermarket.all.each do |after| %>
+				<li><%= link_to after.title, aftermarket_path(after.id) %></li>
+			<% end %>
+			</ul>
+		</div>
+	</div>
+	<div class="product-index">
+		<div class="about-title">
+			<h4><%= @aftermarket.title %></h4>
+			<div class="breadcrumb">
+				<%= render_navigation(renderer: :breadcrumbs, join_with: '&nbsp /&nbsp') %>
+			</div>
+		</div>
+		<div class="about-content">
+			<%= raw @aftermarket.content %>
+			<% if @aftermarket.id == 2 %>
+				准备的报修表单房子这里
+			<% end %>
+		</div>
+	</div>

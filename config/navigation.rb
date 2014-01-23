@@ -75,6 +75,26 @@ SimpleNavigation::Configuration.run do |navigation|
 					end
 				end
 			end
+			home.item :items, "项目案例", items_path do |it|
+				Case.all.each do |cas|
+					it.item :case, cas.title, case_path(cas.id)
+				end
+			end
+			home.item :payments, "支付方式", payments_path do |pay|
+				Payment.all.each do |payment|
+					pay.item :payment, payment.title, payment_path(payment.id)
+				end
+			end
+			home.item :ships, "配送服务", ships_path do |ship|
+				Ship.all.each do |sh|
+					ship.item :ship, sh.title, ship_path(sh.id) 
+				end
+			end
+			home.item :aftermarkets, "售后服务", aftermarkets_path do |market|
+				Aftermarket.all.each do |after|
+					market.item :aftermarket, after.title, aftermarket_path(after.id)
+				end
+			end
 		end
     # Add an item to the primary navigation. The following params apply:
     # key - a symbol which uniquely defines your navigation item in the scope of the primary_navigation

@@ -1,0 +1,11 @@
+<%= render 'home/nav_list' %>
+<div class="product-index">
+	<table class="table">
+		<% @ships.each do |ship| %>
+			<%= render partial: "payments/index", locals: {payment: ship} %>
+		<% end %>
+	</table>
+	<%= will_paginate @ships %>
+	<%= link_to "新增配送服务", new_ship_path, class: "btn btn-primary" %>
+</div>
+			

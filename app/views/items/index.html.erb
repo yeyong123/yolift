@@ -1,0 +1,17 @@
+<% provide(:title, "项目案例") %>
+<%= render 'home/nav_list' %>
+<div class="product-index">
+	<table class="table">
+		<% @items.each do |item| %>
+			<tr>
+				<td><%= link_to item.title, item_path(item) %></td>
+				<% if admin_signed_in? %>
+					<td><%= link_to "编辑", edit_item_path(item) %></td>
+					<td><%= link_to "删除", item, method: :delete, confirm: "确认删除" %></td>
+				<% end %>
+			</tr>
+		<% end %>
+	</table>
+	<%= will_paginate @items %>
+	<%= link_to "增加项目案例", new_item_path, class: "btn btn-primary" %>
+</div>

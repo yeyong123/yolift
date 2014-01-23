@@ -1,0 +1,10 @@
+<%= render 'home/nav_list' %>
+<div class="product-index">
+	<table class="table">
+		<% @payments.each do |payment| %>
+			<%= render partial: "payments/index", locals: {payment: payment} %>
+		<% end %>
+	</table>
+	<%= will_paginate @payments %>
+	<%= link_to '新增支付方式', new_payment_path, class: "btn btn-primary" %>
+</div>

@@ -25,42 +25,33 @@
 				<div class="list-nav">
 				<h4>支付方式</h4>
 				<ul>
-					<li><%= link_to "款到发货", "#" %></li>
-					<li><%= link_to "银行转账", "#" %></li>
-					<li><%= link_to "分期付款", "#" %></li>
-					<li><%= link_to "信用赊账", "#" %></li>
+					<% Payment.all.each do |payment| %>
+					<li><%= link_to payment.title, payment_path(payment.id) %></li>
+				<% end %>
 				</ul>
 			</div>
 			<div class="list-nav">
 				<h4>配送服务</h4>
 				<ul>
-					<li><%= link_to "上门自提", "#" %></li>
-					<li><%= link_to "免收运费", "#" %></li>
-					<li><%= link_to "代办运输", "#" %></li>
-					<li><%= link_to "交货期", "#" %></li>
-
+					<% Ship.all.each do |ship| %>
+					<li><%= link_to ship.title, ship_path(ship.id) %></li>
+				<% end %>
 				</ul>
 			</div>
 			<div class="list-nav">
 				<h4>售后服务</h4>
 				<ul>
-					<li><%= link_to "售后政策", "#" %></li>
-					<li><%= link_to "在线保修", "#" %></li>
-					<li><%= link_to "培训信息", "#" %></li>
-					<li><%= link_to "维修站查询", "#" %></li>
-					<li><%= link_to "发票", "#" %></li>
-					<li><%= link_to "退货与换货", "#" %></li>
-					<li><%= link_to "退款", "#" %></li>
+					<% Aftermarket.all.each do |after| %>
+					<li><%= link_to after.title, aftermarket_path(after.id) %></li>
+				<% end %>
 				</ul>
 			</div>
 			<div class="list-nav">
 				<h4>项目案例</h4>
 				<ul>
-					<li><%= link_to "物流运输", "#" %></li>
-					<li><%= link_to "服务行业", "#" %></li>
-					<li><%= link_to "食品行业", "#" %></li>
-					<li><%= link_to "化工行业", "#" %></li>
-
+					<% Item.all.each do |item| %>
+					<li><%= link_to item.title, item_path(item.id) %></li>
+						<% end %>
 				</ul>
 			</div>
 

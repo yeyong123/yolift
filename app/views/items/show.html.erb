@@ -1,29 +1,29 @@
-<% provide(:title, @list.title) %>
+<% provide(:title, @item.title) %>
 <div class="edge-position">
 	<%= render 'home/nav_list' %>
 	<div class="edge-from">
 		<ul>
-			<% List.all.each do |list| %>
-				<li><%= link_to list.title, list_path(list.id) %></li>
+			<% Item.all.each do |item| %>
+				<li><%= link_to item.title, item_path(item.id) %></li>
 			<% end %>
-		</ul>
+			</ul>
+		</div>
 	</div>
-</div>
 <div class="product-index">
 	<div class="about-title">
-		<h4><%= @list.title %></h4>
+		<h4><%= @item.title %></h4>
 		<div class="breadcrumb">
 			<%= render_navigation(renderer: :breadcrumbs, join_with: '&nbsp / &nbsp') %>
 		</div>
 	</div>
 	<div class="about-content">
 		<table class="table">
-			<% @list.guides.each do |guide| %>
+			<% @item.cases.each do |ca| %>
 				<tr>
-					<td><%= link_to guide.title, guide_path(guide) %></td>
+					<td><%= image_tag(ca.image_url(:small))%></td>
+					<td><%= link_to ca.title, case_path(ca.id) %></td>
 				</tr>
 			<% end %>
-			</table>
-		</div>
-
+		</table>
+	</div>
 </div>

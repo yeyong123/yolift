@@ -1,0 +1,5 @@
+<tr>
+	<td><%= link_to payment.title, payment_path(payment) %></td>
+	<td><%= link_to "编辑", edit_payment_path(payment) %></td>
+	<td><%= link_to "删除", payment, method: :delete, confirm: "确认删除" %></td>
+</tr>
