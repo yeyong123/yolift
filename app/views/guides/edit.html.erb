@@ -5,7 +5,7 @@
 		<%= collection_select(:guide, :list_id, List.all, :id,:title) %>
 		<%= render partial: 'abouts/form', locals: {f: f} %>
 		<div class="about-action">
-			<%= f.submit "保存", class: 'btn btn-success'%>
+			<%= f.submit "更新", class: 'btn btn-success'%>
 			<%= link_to "返回", guides_path %>
 		</div>
 	<% end %>

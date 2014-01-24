@@ -1,0 +1,55 @@
+<div class="repair-form">
+	<h4>维修服务表</h4>
+	<%= form_for @repair do |f| %>
+		<%= render 'home/error_message', object: f.object %>
+		<table class="table">
+			<tr>
+				<td><%= f.label :company, "报修单位名称:" %></td>
+				<td><%= f.text_field :company %></td>
+				<td><%= f.label :name, "联系人" %></td>
+				<td><%= f.text_field :name %></td>
+			</tr>
+			<tr>
+				<td><%= f.label :address, "详细地址" %></td>
+				<td><%= f.text_field :address %></td>
+				<td><%= f.label :telephone, "联系电话" %></td>
+				<td><%= f.text_field :telephone %></td>
+			</tr>
+			<tr>
+				<td><%= f.label :head, "物料名称" %></td>
+				<td><%= f.text_field :head %></td>
+				<td><%= f.label :headnumber, "物料编号" %></td>
+				<td><%= f.text_field :headnumber %></td>
+			</tr>
+			<tr>
+				<td><%= f.label :productdate, "产品购买时间" %></td>
+				<td><%= f.text_field :productdate %></td>
+				<td><%= f.label :image, "上传照片" %></td>
+				<td><%= f.file_field :image %></td>
+			</tr>
+			<tr>
+				<td><%= f.label :repiarcontent, "需维修的内容" %></td>
+				<td colspan="3"><%= f.text_area :repaircontent %></td>
+			</tr>
+			<tr>
+				<td colspan="4" style="padding: 4px;"><span style="margin: 3px 0 3px 80px;">以上内容由客户填写，请尽可能提供问题产品的照片</span></td>
+			</tr>
+			<tr>
+				<td><%= f.label :jobtime, "实际作业时间" %></td>
+				<td colspan="3"><%= f.text_field :jobtime %><span style="margin: 5px">(填写日期：2014年00月00日)</span></td>
+				</tr>
+				<tr>
+					<td><%= f.label :remark, "特殊情况备注" %></td>
+					<td colspan="3"><%= f.text_area :remark %></td>
+				</tr>
+				<tr>
+					<td><%= f.label :say, "客户意见" %></td>
+					<td colspan="3"><%= f.text_area :say %></td>
+				</tr>
+						</table>
+						<div class="about-action">
+					<%= f.submit "提交",class: "btn btn-success" %>
+					<%= f.submit "重置", type: "reset", class: "btn btn-danger" %>
+				</div>
+	<% end %>
+</div>

@@ -3,6 +3,7 @@ class ApplicationController < ActionController::Base
   	protect_from_forgery
 	before_filter :find_cart
 
+before_filter :authenticate_admin!, only: [:create, :edit,:new, :update, :destroy]
 	protected
 		def set_local_i18n
 			if params[:locale]

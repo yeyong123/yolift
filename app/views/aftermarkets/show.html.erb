@@ -19,7 +19,9 @@
 		<div class="about-content">
 			<%= raw @aftermarket.content %>
 			<% if @aftermarket.id == 2 %>
-				准备的报修表单房子这里
+				<div class="contact-join">
+					<%= render 'repairs/form' %>
+				</div>
 			<% end %>
 		</div>
 	</div>

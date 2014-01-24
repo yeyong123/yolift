@@ -1,4 +1,6 @@
 class AffiliatesController < ApplicationController
+before_filter :authenticate_admin!, only: [:index,:show, :edit, :update, :destroy]
+
 	before_filter :find_id, only: [:show, :edit, :update, :destroy]
 	def index
 		@affiliates = Affiliate.order("created_at desc").paginate(page: params[:page], per_page: 10)
@@ -17,7 +19,7 @@ class AffiliatesController < ApplicationController
 	def create
 		@affiliate = Affiliate.new(params[:affiliate])
 		if @affiliate.save
-			redirect_to affiliates_path
+			redirect_to root_path,notice: "感谢你的申请，我们会马上回复你，请保持电话畅通！"
 		else
 			render 'new'
 		end

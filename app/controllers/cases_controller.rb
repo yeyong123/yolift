@@ -1,4 +1,5 @@
 class CasesController < ApplicationController
+
 	before_filter :find_id, only: [:show, :edit, :update, :destroy]
 
 	def index

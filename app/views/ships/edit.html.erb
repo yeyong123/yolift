@@ -1,10 +1,10 @@
 <%= render 'home/nav_list' %>
 <div class="product-index">
-	<%= form_for @aftermarket do |f| %>
+	<%= form_for @ship do |f| %>
 		<%= render partial: "abouts/form", locals: {f: f} %>
 		<div class="about-action">
-			<%= f.submit "保存", class: "btn btn-success" %>
-			<%= link_to "返回", aftermarkets_path, class: "btn btn-primary"%>
+			<%= f.submit "更新", class: "btn btn-success" %>
+			<%= link_to "返回", ship_path(@ship), class: "btn btn-primary" %>
 		</div>
 	<% end %>
 </div>

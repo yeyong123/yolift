@@ -1,4 +1,5 @@
 class AftermarketsController < ApplicationController
+
 	before_filter :find_id, only: [:show,:edit,:update, :destroy]
 
 	def index
@@ -6,6 +7,7 @@ class AftermarketsController < ApplicationController
 	end
 
 	def show
+		@repair = Repair.new
 	end
 
 	def edit

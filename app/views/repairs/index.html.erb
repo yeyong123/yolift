@@ -1,0 +1,12 @@
+<%= render 'home/nav_list' %>
+<div class="product-index">
+	<table class="table">
+		<% @repairs.each do |repair| %>
+			<tr>
+				<td><%= repair.company %></td>
+			</tr>
+		<% end %>
+	</table>
+	<%= will_paginate @repairs %>
+	<%= link_to "增加", new_repair_path %>
+</div>

@@ -904,3 +904,36 @@ width: 30px;
 .edge-from ul li a {
 	color: white;
 }
+//在线报修的表单表格
+.repair-form {
+}
+.repair-form .table td label{
+	padding:5px 0 0 15px;
+
+}
+.repair-form .table {
+	width: 780px;
+}
+.repair-form .table input {
+	width: 225px;
+	margin: 0;
+	padding: 0;
+	height: 30px;
+	}
+.repair-form .table td {
+	border: 1px solid;
+	padding: 0;
+	margin: 0;
+	width: 225px;
+}
+
+.repair-form .table textarea{
+	height: 120px;
+	width: 619px;
+	padding: 0;
+	margin: 0;
+}
+.repair-form .about-action {
+	float: right;
+	margin: 0 50px 20px 0;
+}

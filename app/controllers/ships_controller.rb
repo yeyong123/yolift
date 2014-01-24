@@ -1,4 +1,6 @@
 class ShipsController < ApplicationController
+before_filter :authenticate_admin!, only: [:create, :edit,:new, :update, :destroy]
+
 	before_filter :find_id, only: [:show, :edit, :update, :destroy]
 
 	def index

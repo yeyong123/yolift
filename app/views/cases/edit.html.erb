@@ -1,0 +1,16 @@
+<%= render 'home/nav_list' %>
+<div class="product-index">
+	<%= form_for @case do |f| %>
+		<%= f.label "选择项目分类" %>
+		<%= collection_select(:case, :item_id, Item.all, :id, :title) %>
+		<div class="field">
+			<%= f.label :image, "企业标志" %>
+			<%= f.file_field :image %>
+		</div>
+		<%= render partial: "abouts/form", locals: {f: f} %>
+		<div class="about-action">
+			<%= f.submit "更新", class: "btn btn-success" %>
+			<%= link_to "返回", case_path(@case), class: "btn btn-primary" %>
+		</div>
+	<% end %>
+</div>
