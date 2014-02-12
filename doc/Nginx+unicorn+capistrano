@@ -1,0 +1,6 @@
+在Gemfile添加
+gem 'capistrano'
+bundle install
+capify.
+
+gem install unicorn
