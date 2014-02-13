@@ -1,59 +1,39 @@
-require "bundle/capistrano"
-set :application, "yolift"
-set :repository, "git://github.com/yeyong14/yolift.git"
-set :branch, "master"
+set :application, 'yolift'
+set :repo_url, 'git@github.com:yeyong14/yolift.git'
+
+# ask :branch, proc { `git rev-parse --abbrev-ref HEAD`.chomp }
+
+set :deploy_to, "/home/ubuntu/yolift"
 set :scm, :git
-set :user, "ubuntu"
-set :deploy_to, "/home/#{user}/#{application}"
+set :scm_username, "yeyong14"
+set :scm_password, "yeyong157196212"
+set :checkout, 			"export"
+set :user, 	"ubuntu"
 set :runner, "ubuntu"
-set :deploy_via, :remote_cache
-set :git_shallow_clone, 1
+set :password, "yeyong157196212"
+set :use_sudo, false
+# set :format, :pretty
+# set :log_level, :debug
+# set :pty, true
 
-role :web, "www.yolift.com"
-role :app, "www.yolift.com"
-role :db,  "www.yolift.com", primary => true
-
-set :unicorn_path, "#{deploy_to}/current/config/unicorn.rb"
+#set :linked_files, %w{config/database.yml}
+#set :linked_dirs, %w{bin log tmp/pids tmp/cache tmp/sockets vendor/bundle public/system}
+#set :default_env, { path: "/opt/ruby/bin:$PATH" }
+#set :keep_releases, 5
+set :unicorn_config, "#{current_path}/config/unicorn.rb"
+set :unicorn_pid, "#{current_path}/tmp/pids/unicorn.pid"
 
 namespace :deploy do
-	task :start, :roles => :app do
-		run "cd #{deploy_to}/current/; RAILS_ENV=production unicorn_rails -c #{unicorn_path} -D"
+	task :start do
+		run "cd #{current_path} && RAILS_ENV=production bundle exec unicorn_rails -c #{unicorn_config} -D"
 	end
-	task :stop, :roles => :app do
-		run "kill -QUIT `cat #{deploy_to}/current/tmp/pids/unicorn.pid`"
-	end
-	desc "Restart Application"
-	task :restart, :roles => :app do
-		run "kill -USR2 `cat #{deploy_to}/current/tmp/pids/unicorn.pid`"
-	end
-end
 
-task :init_shared_path, :role => :web do
-	run "mkdir -p #{deploy_to}/shared/log"
-	run "mkdir -p #{deploy_to}/shared/pids"
-	run "mkdir -p #{deploy_to}/shared/assets"
+	task :stop  do
+		run "if [ -f #{unicorn_pid} ]; then kill -QUIT `cat #{unicorn_pid}`; fi"
+	end
+
+	task :restart do
+		# 用USR2信号来实现无缝部署重启
+		run "if [ -f #{unicorn_pid} ]; then kill -s USR2 `cat #{unicorn_pid}`; fi"
+	end
 end
-task :link_shared_files, :roles => :web do
-	run "ln -sf #{deploy_to}/shared/config/*.yml #{deploy_to}/current/config/"
-	run "ln -sf #{deploy_to}/shared/config/unicorn.rb #{deploy_to}/current/config/"
-	run "ln -s #{deploy_to}/shared/assets #{deploy_to}/current/public/assets"
-end
-task :restart_resque, :roles => :web do
-	  run "cd #{deploy_to}/current/; RAILS_ENV=production ./script/resque stop; RAILS_ENV=production ./script/resque start"
-end
-task :create_database, :roles => :web do
-	  run "cd #{deploy_to}/current/; RAILS_ENV=production bundle exec rake db:create"
-end
-task :compile_assets, :roles => :web do     
-	run "cd #{deploy_to}/current/; bundle exec rake assets:precompile"    
-end
-task :migrate_database, :roles => :web do
-	  run "cd #{deploy_to}/current/; RAILS_ENV=production bundle exec rake db:migrate"
-end
-after "deploy:finalize_update","deploy:symlink", :init_shared_path, :link_shared_files, :compile_assets, :create_database, :migrate_database
-set :default_environment, {
-	'PATH' => "/home/ubuntu/.rvm/gems/ruby-2.0.0-p247/bin:/home/ubuntu/.rvm/gems/ruby-2.0.0-p247@global/bin:/home/ubuntu/.rvm/rubies/ruby-2.0.0-p247/bin:/home/ubuntu/.rvm/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games",
-	'RUBY_VERSION' => 'ruby-2.0.0-p247',
-	'GEM_HOME' => '/home/ubuntu/.rvm/gems/ruby-2.0.0-p247',
-	'GEM_PATH' => '/home/ubuntu/.rvm/gems/ruby-2.0.0-p247:/home/ubuntu/.rvm/gems/ruby-2.0.0-p247@global'
-}

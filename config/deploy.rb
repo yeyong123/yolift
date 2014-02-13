@@ -1,59 +1,30 @@
-require "bundle/capistrano"
 set :application, "yolift"
-set :repository, "git://github.com/yeyong14/yolift.git"
-set :branch, "master"
-set :scm, :git
+set :repository,  "https://github.com/yeyong14/yolift.git"
+
+# You can set :scm explicitly or Capistrano will make an intelligent guess based on known version control directory names
+# Or: `accurev`, `bzr`, `cvs`, `darcs`, `git`, `mercurial`, `perforce`, `subversion` or `none`
 set :user, "ubuntu"
+set :use_sudo, false
 set :deploy_to, "/home/#{user}/#{application}"
-set :runner, "ubuntu"
 set :deploy_via, :remote_cache
-set :git_shallow_clone, 1
+set :scm, :git 
+set :branch, 'master'
+role :web, "122.226.100.35"                          # Your HTTP server, Apache/etc
+role :app, "122.226.100.35"                          # This may be the same as your `Web` server
+role :db,  "122.226.100.35", :primary => true # This is where Rails migrations will run
+#role :db,  "your slave db-server here"
 
-role :web, "www.yolift.com"
-role :app, "www.yolift.com"
-role :db,  "www.yolift.com", primary => true
+# if you want to clean up old releases on each deploy uncomment this:
+# after "deploy:restart", "deploy:cleanup"
 
-set :unicorn_path, "#{deploy_to}/current/config/unicorn.rb"
+# if you're still using the script/reaper helper you will need
+# these http://github.com/rails/irs_process_scripts
 
-namespace :deploy do
-	task :start, :roles => :app do
-		run "cd #{deploy_to}/current/; RAILS_ENV=production unicorn_rails -c #{unicorn_path} -D"
-	end
-	task :stop, :roles => :app do
-		run "kill -QUIT `cat #{deploy_to}/current/tmp/pids/unicorn.pid`"
-	end
-	desc "Restart Application"
-	task :restart, :roles => :app do
-		run "kill -USR2 `cat #{deploy_to}/current/tmp/pids/unicorn.pid`"
-	end
-end
-
-task :init_shared_path, :role => :web do
-	run "mkdir -p #{deploy_to}/shared/log"
-	run "mkdir -p #{deploy_to}/shared/pids"
-	run "mkdir -p #{deploy_to}/shared/assets"
-end
-task :link_shared_files, :roles => :web do
-	run "ln -sf #{deploy_to}/shared/config/*.yml #{deploy_to}/current/config/"
-	run "ln -sf #{deploy_to}/shared/config/unicorn.rb #{deploy_to}/current/config/"
-	run "ln -s #{deploy_to}/shared/assets #{deploy_to}/current/public/assets"
-end
-task :restart_resque, :roles => :web do
-	  run "cd #{deploy_to}/current/; RAILS_ENV=production ./script/resque stop; RAILS_ENV=production ./script/resque start"
-end
-task :create_database, :roles => :web do
-	  run "cd #{deploy_to}/current/; RAILS_ENV=production bundle exec rake db:create"
-end
-task :compile_assets, :roles => :web do     
-	run "cd #{deploy_to}/current/; bundle exec rake assets:precompile"    
-end
-task :migrate_database, :roles => :web do
-	  run "cd #{deploy_to}/current/; RAILS_ENV=production bundle exec rake db:migrate"
-end
-after "deploy:finalize_update","deploy:symlink", :init_shared_path, :link_shared_files, :compile_assets, :create_database, :migrate_database
-set :default_environment, {
-	'PATH' => "/home/ubuntu/.rvm/gems/ruby-2.0.0-p247/bin:/home/ubuntu/.rvm/gems/ruby-2.0.0-p247@global/bin:/home/ubuntu/.rvm/rubies/ruby-2.0.0-p247/bin:/home/ubuntu/.rvm/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games",
-	'RUBY_VERSION' => 'ruby-2.0.0-p247',
-	'GEM_HOME' => '/home/ubuntu/.rvm/gems/ruby-2.0.0-p247',
-	'GEM_PATH' => '/home/ubuntu/.rvm/gems/ruby-2.0.0-p247:/home/ubuntu/.rvm/gems/ruby-2.0.0-p247@global'
-}
+# If you are using Passenger mod_rails uncomment this:
+# namespace :deploy do
+#   task :start do ; end
+#   task :stop do ; end
+#   task :restart, :roles => :app, :except => { :no_release => true } do
+#     run "#{try_sudo} touch #{File.join(current_path,'tmp','restart.txt')}"
+#   end
+# end
