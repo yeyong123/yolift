@@ -1,12 +1,14 @@
 <% provide(:title, @about.title) %>
 <div class="edge-position">
 <%= render 'home/nav_list' %>
+<div class="hr-postion">
+</div>
 <div class="edge-from">
-	<% About.all.each do |about| %>
-		<ul>
+	<ul>
+		<% About.all.each do |about| %>
 			<li><%= link_to about.title, about_path(about.id) %></li>
-		</ul>
-	<% end %>
+		<% end %>
+	</ul>
 </div>
 </div>
 <div class="product-index">

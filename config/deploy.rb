@@ -13,7 +13,7 @@ role :web, "122.226.100.35"                          # Your HTTP server, Apache/
 role :app, "122.226.100.35"                          # This may be the same as your `Web` server
 role :db,  "122.226.100.35", :primary => true # This is where Rails migrations will run
 #role :db,  "your slave db-server here"
-
+set :unicorn_path, "#{deploy_to}/current/config/unicorn.rb"
 # if you want to clean up old releases on each deploy uncomment this:
 # after "deploy:restart", "deploy:cleanup"
 
