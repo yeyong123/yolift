@@ -12,6 +12,9 @@
 </div>
 </div>
 <div class="product-index">
+	<div class="about-image">
+		<%= image_tag(@about.image_url) if @about.image?%>
+	</div>
 	<div class="about-title">
 		<h4><%= @about.title %></h4>
 		<div class="breadcrumb">

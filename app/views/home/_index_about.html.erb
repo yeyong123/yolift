@@ -3,7 +3,9 @@
 		<li class="span4">
 		<div class="thumbnail">
 			<div class="about-title">
-				<span>关于我们 >></span>
+				<% About.limit(1).each do |about| %>
+					<span><%= link_to "关于我们 >>", about_path(about) %></span>
+				<% end %>
 			</div>
 			<img src="/assets/photo/4.jpg"/>
 		</div>
@@ -11,7 +13,9 @@
 		<li class="span4">
 		<div class="thumbnail">
 			<div class="about-title">
-				<span>新闻中心 >></span>
+				<% Server.limit(1).each do |server| %>
+					<span><%= link_to "新闻中心 >>", server_path(server) %></span>
+				<% end %>
 			</div>
 
 			<img src="/assets/photo/6.jpg"/>

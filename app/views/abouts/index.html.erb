@@ -8,11 +8,15 @@
 				<td><%= about.created_at.strftime("%Y-%m-%d") %>创建</td>
 				<td>更新:<%= about.updated_at.strftime("%Y-%m-%d:%H:%M:%S") %></td>
 				<td>阅读:<%= about.count %></td>
+				<% if admin_signed_in? %>
 				<td><%= link_to "编辑", edit_about_path(about) %></td>
 				<td><%= link_to "删除", about, method: :delete, confirm: "Are you sure?" %></td>
+			<% end %>
 				</tr>
 							<% end %>
 		</table>
 		<%= will_paginate @abouts %>
-		<%= link_to "new", new_about_path %>
+		<% if admin_signed_in? %>
+		<%= link_to "新增关于我们", new_about_path, class: "btn btn-primary" %>
+	<% end %>
 	</div>

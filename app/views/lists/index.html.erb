@@ -5,7 +5,10 @@
 		<% @lists.each do |list| %>
 		<tr>
 			<td><%= link_to list.title,list_path(list) %></td>
+			<% if admin_signed_in? %>
+			<td><%= link_to "编辑", edit_list_path(list) %></td>
 			<td><%= link_to "删除", list, method: :delete, confirm: "Are you sure" %></td>
+		<% end %>
 		</tr>
 	<% end %>
 	</table>

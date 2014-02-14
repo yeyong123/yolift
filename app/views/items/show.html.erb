@@ -1,6 +1,8 @@
 <% provide(:title, @item.title) %>
 <div class="edge-position">
 	<%= render 'home/nav_list' %>
+	<div class="hr-postion">
+	</div>
 	<div class="edge-from">
 		<ul>
 			<% Item.all.each do |item| %>
@@ -22,8 +24,13 @@
 				<tr>
 					<td><%= image_tag(ca.image_url(:small))%></td>
 					<td><%= link_to ca.title, case_path(ca.id) %></td>
-				</tr>
+					<% if admin_signed_in? %>
+						<td><%= link_to "编辑", edit_case_path(ca) %></td>
+						<td><%= link_to "删除", ca, method: :delete, confirm: "确认删除" %></td>
+					<% end %>
+			</tr>
 			<% end %>
 		</table>
+		<%= link_to "增加案例", new_case_path, class: "btn btn-primary" %>
 	</div>
 </div>

@@ -1,0 +1,13 @@
+<%= render 'home/nav_list' %>
+<div class="product-index">
+	<%= form_for @zixun do |f| %>
+		<%= f.label "选择分类"%>
+		<%= collection_select(:zixun, :server_id, Server.all, :id,:title) %>
+		<%= render partial: 'abouts/form', locals: {f: f} %>
+		<div class="about-action">
+			<%= f.submit "更新", class: 'btn btn-success'%>
+			<%= link_to "返回", zixuns_path %>
+		</div>
+	<% end %>
+</div>
+

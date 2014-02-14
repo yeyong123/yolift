@@ -53,7 +53,11 @@ SimpleNavigation::Configuration.run do |navigation|
 			end
 			home.item :servers, "新闻资讯", servers_path do |server|
 				Server.all.each do |ser|
-					server.item :server, ser.title, server_path(ser.id)
+					server.item :server, ser.title, server_path(ser.id) do |serv|
+						ser.zixuns.each do |zi|
+							serv.item :zixun, zi.title, zixun_path(zi.id)
+						end
+					end
 				end
 			end
 			home.item :centers, "服务中心", centers_path do |center|

@@ -1,6 +1,8 @@
 <% provide(:title, @server.title) %>
 <div class="edge-position">
 	<%= render 'home/nav_list'%>
+	<div class="hr-postion">
+	</div>
 	<div class="edge-from">
 		<% Server.all.each do |server| %>
 			<ul>
@@ -17,6 +19,19 @@
 	</div>
 	</div>
 	<div class="about-content">
-		<%= sanitize @server.content %>
+		<table class="table">
+		<% @server.zixuns.each do |zixun| %>
+			<tr>
+				<td><%= link_to zixun.title, zixun_path(zixun.id) %></td>
+				<% if admin_signed_in? %>
+					<td><%= link_to "编辑", edit_zixun_path(zixun) %></td>
+					<td><%= link_to "删除", zixun, method: :delete, confirm: "确认删除" %></td>
+				<% end %>
+		</tr>
+	<% end %>
+</table>
+<% if admin_signed_in? %>
+	<%= link_to "新增新闻资讯", new_zixun_path, class: "btn btn-primary" %>
+<% end %>
 	</div>
 </div>

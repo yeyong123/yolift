@@ -288,7 +288,8 @@ li.font-border a {
 	font-size: 14px;
 	color: black;
 	text-shadow: none;
-	font-family: "经典黑体简", "微软雅黑", "黑体"
+	border-radius: 0;
+	//font-family: "经典黑体简", "微软雅黑", "黑体"
 }
 .nav-list .navbar-form {
 	position: relative;
@@ -590,7 +591,7 @@ margin-bottom: 5px;
 }
 //登陆界面
 .sign-in {
-	width: 300px;
+	width: 320px;
 }
 .sign-interface h2 {
 	font-size: 18px;
@@ -613,7 +614,7 @@ margin-bottom: 5px;
 	margin-right: 20px;
 }
 .sign-interface {
-	width: 300px;
+	width: 320px;
 	border: 1px solid #989898;
 	margin:  20px;
 	float: right;
@@ -754,11 +755,30 @@ margin-bottom: 5px;
 	 margin-right: 30px;
  }
  //面包屑
+ .product-index .about-title {
+	 border: 1px solid #b2b2b2;
+	 height: 28px;
+	 margin-bottom: 5px;
+	background-image: -webkit-gradient(linear, 0 0, 0 100%, from(#eaeaea), to(#b2b2b2));
+	background-image: -moz-linear-gradient(top, #eaeaea, #b2b2b2);
+	filter:progid:DXImageTransform.Microsoft.Gradient(GradientType=0, EndColorStr='#b2b2b2', StartColorStr='#eaeaea');
+}
+.about-image {
+	height: 230px;
+}
+.about-image img {
+	width: 784px;
+	height: 231px;
+}
  .about-title h4 {
 	 float: left;
+	 margin: 5px 0 0 5px;
  }
  .breadcrumb {
 	 float: right;
+	 margin: 0 10px 0 0;
+	 padding: 3px;
+	 background: none;
  }
  .about-content {
 	 clear: both;

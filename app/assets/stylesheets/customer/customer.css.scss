@@ -9,7 +9,7 @@
 .roundabout-in-focus{border:3px solid rgba(0, 0, 0, 0.2);}
 //2014年修改
 body{
-	font-family: "Microsoft yahei",Helvetica,Arial,sans-serif,"宋体","新宋体";
+	font-family: Helvetica,Arial,sans-serif,"宋体","新宋体";
 	background: #d6dfd9;
 }
 h6 {
@@ -89,6 +89,7 @@ h6 {
 	background-image: -moz-linear-gradient(top, #eaeaea, #b2b2b2);
 	background-image: -webkit-gradient(linear, 0 0, 0 100%, from(#eaeaea), to(#b2b2b2));
 	filter:progid:DXImageTransform.Microsoft.Gradient(GradientType=0, EndColorStr='#b2b2b2', StartColorStr='#eaeaea');
+	border: 1px solid #b2b2b2;
 }
 .bs-doc-image #myTab li a {
 	color: #5d5d5d;

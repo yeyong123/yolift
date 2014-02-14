@@ -1,0 +1,19 @@
+<% provide(:title, "采购指南") %>
+<%= render 'home/nav_list' %>
+<div class="product-index">
+	<table class="table">
+		<% @zixuns.each do |zixun| %>
+			<tr>
+				<td><%= link_to zixun.title, zixun_path(zixun) %></td>
+				<% if admin_signed_in? %>
+				<td><%= link_to "编辑", edit_zixun_path(zixun) %></td>
+				<td><%= link_to "删除", zixun,method: :delete, confirm: "Are you sure?" %></td>
+			<% end %>
+				</tr>
+			<% end %>
+		</table>
+		<% if admin_signed_in? %>
+		<%= link_to "增加分类指南", new_zixun_path, class: "btn btn-primary" %>
+	<% end %>
+	</div>
+
