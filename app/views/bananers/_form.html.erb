@@ -8,7 +8,7 @@
 		<%= f.text_field :descript %>
 	</div>
 	<div class="field">
-		<%= f.label :button,"按钮" %>
+		<%= f.label :button,"链接地址" %>
 		<%= f.text_field :button %>
 	</div>
 	<div class="field"%>
@@ -18,5 +18,6 @@
 	</div>
 	<div class="action" style="float:right; margin: 0 200px 10px 0">
 		<%= f.submit "上传图片", class: "btn btn-primary btn-success"%>
+		<%= link_to "返回", bananers_path, class: "btn btn-primary" %>
 	</div>
 <% end %>
