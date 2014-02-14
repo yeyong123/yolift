@@ -12,8 +12,14 @@
 	</div>
 </div>
 <div class="product-index">
+	<div class="about-image">
+		<% List.all.each do |list| %>
+			<%= image_tag(list.image_url(:navshow)) if list.image? %>
+		<% end %>
+		</div>
+
 	<div class="about-title">
-		<h4><%= @list.title %></h4>
+			<h4><%= @list.title %></h4>
 		<div class="breadcrumb">
 			<%= render_navigation(renderer: :breadcrumbs, join_with: '&nbsp / &nbsp') %>
 		</div>

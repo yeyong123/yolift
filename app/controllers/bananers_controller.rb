@@ -25,7 +25,7 @@ class BananersController < ApplicationController
 	end
 	def update
 		@bananer = Bananer.find(params[:id])
-		if @bananer.update_attributes(params[:bananer0])
+		if @bananer.update_attributes(params[:bananer])
 			redirect_to bananers_path
 		else
 			render 'edit'

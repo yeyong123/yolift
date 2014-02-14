@@ -1,6 +1,15 @@
 <%= render 'home/nav_list' %>
 <div class="product-index">
 <%= form_for @about do |f| %>
+<div class="field">
+			<%= f.label :image, "导航图展示"%>
+			<% About.all.each do |about| %>
+				<%= image_tag(about.image_url(:small)) if about.image? %>
+			<% end %>
+
+	<%= f.file_field :image %>
+</div>
+<hr/>
 	<%= render partial: 'abouts/form', locals: {f: f} %>
 	<div class="about-action">
 		<%= f.submit "更新", class: "btn btn-success" %>

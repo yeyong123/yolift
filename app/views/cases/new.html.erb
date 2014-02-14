@@ -5,6 +5,7 @@
 		<%= collection_select(:case, :item_id, Item.all, :id, :title) %>
 		<div class="field">
 			<%= f.label :image, "企业标志" %>
+			<%= image_tag(@case.image_url(:small)) if @case.image? %>
 			<%= f.file_field :image %>
 		</div>
 		<%= render partial: "abouts/form", locals: {f: f} %>

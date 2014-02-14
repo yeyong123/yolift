@@ -764,12 +764,17 @@ margin-bottom: 5px;
 	filter:progid:DXImageTransform.Microsoft.Gradient(GradientType=0, EndColorStr='#b2b2b2', StartColorStr='#eaeaea');
 }
 .about-image {
-	height: 230px;
+	//height: 230px;
+	margin-bottom: 12px;
 }
-.about-image img {
-	width: 784px;
-	height: 231px;
+hr {
+	border: 1px solid #000;
+	margin: 3px;
 }
+//.about-image img {
+//	width: 784px;
+//	height: 231px;
+//}
  .about-title h4 {
 	 float: left;
 	 margin: 5px 0 0 5px;
