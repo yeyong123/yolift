@@ -1,14 +1,19 @@
 <% provide(:title, "导航图") %>
+<%= render 'home/nav_list' %>
+<div class="product-index">
 <table class="table">
 	<% @bananers.each do |bananer| %>
 		<tr>
 		<td><%= bananer.title %></td>
-		<td><%= image_tag(bananer.image_url) %></td>
-		<td><%= link_to "show", bananer %></td>
-		<td><%= link_to "edit", edit_bananer_path(bananer) %></td>
-		<td><%= link_to "delete", bananer, method: :delete, confirm: "Are you sure" %>
+		<td><%= image_tag(bananer.image_url(:thumb)) %></td>
+		<% if admin_signed_in? %>
+		<td><%= link_to "编辑", edit_bananer_path(bananer) %></td>
+		<td><%= link_to "删除", bananer, method: :delete, confirm: "Are you sure" %>
+		<% end %>
 	</tr>
 <%end%>
 </table>
-<%= link_to "new", new_bananer_path %>
-
+<% if admin_signed_in? %>
+	<%= link_to "新增导航图", new_bananer_path, class: "btn btn-primary" %>
+<% end %>
+</div>
