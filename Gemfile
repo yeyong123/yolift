@@ -20,6 +20,7 @@ gem 'china_region_fu'
 gem 'rails_admin'
 gem 'simple_form'
 gem 'capistrano', '2.15.0'
+gem 'unicorn'
 # Gems used only for assets and not required
 # in production environments by default.
 group :assets do
