@@ -2,7 +2,7 @@ class ProductsController < ApplicationController
 
 	def index
 		unless params[:t]
-			@products = Product.order("updated_at desc").paginate(page: params[:page], per_page: 12)
+			@products = Product.order("excellent desc").paginate(page: params[:page], per_page: 12)
 		else 
 			@products = Product.where("tag_id = ?", params[:t]).order("id desc").paginate(page: params[:page], per_page: 12)
 		end
@@ -52,7 +52,7 @@ class ProductsController < ApplicationController
 	def update
 		@product = Product.find(params[:id])
 		if @product.update_attributes(params[:product])
-			redirect_to products_path
+			redirect_to dashboard_path
 		else
 			render 'edit'
 		end
@@ -61,7 +61,7 @@ class ProductsController < ApplicationController
 	def destroy
 		@product = Product.find(params[:id])
 		@product.destroy
-		redirect_to products_path
+		redirect_to :back
 	end
 
 

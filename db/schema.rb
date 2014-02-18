@@ -11,7 +11,7 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20140214075755) do
+ActiveRecord::Schema.define(:version => 20140218045448) do
 
   create_table "abouts", :force => true do |t|
     t.string   "title"
@@ -285,11 +285,12 @@ ActiveRecord::Schema.define(:version => 20140214075755) do
     t.text     "listtext"
     t.text     "techparams"
     t.text     "detail"
-    t.datetime "created_at",  :null => false
-    t.datetime "updated_at",  :null => false
+    t.datetime "created_at",                 :null => false
+    t.datetime "updated_at",                 :null => false
     t.integer  "tag_id"
     t.text     "outline"
     t.integer  "category_id"
+    t.integer  "excellent",   :default => 0
   end
 
   create_table "provinces", :force => true do |t|

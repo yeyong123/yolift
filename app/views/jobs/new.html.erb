@@ -1,3 +1,5 @@
+<%= render 'home/nav_list' %>
+<div class="product-index">
 <%= form_for @job do |f| %>
 	<%= render partial: 'jobs/form', locals: {f: f} %>
 	<div class="about-action">
@@ -5,3 +7,4 @@
 		<%= link_to "返回", jobs_path %>
 	</div>
 <% end %>
+</div>

@@ -1,0 +1,14 @@
+zh-CN:
+  activerecord:
+    errors:
+      messages:
+        inclusion: "必须包括列表选项"
+        blank: "不能为空"
+    models:
+      affiliate: "诚邀合作"
+      product: "产品中心"
+    attributes:
+      affiliate: 
+        company: "公司名称"
+        contact: "联系人"
+        address: "dizhi"

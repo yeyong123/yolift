@@ -1,5 +1,10 @@
 <div class="top-index">
 	<div class="index-top">
+		<% if admin_signed_in? %>
+			<ul>
+				<li><span style="color: #08c">你是管理员可以直接进入</span><%= link_to "管理员控制台", dashboard_path%></li>
+			</ul>
+		<% else %>
 		<ul>
 			<li><a href="#" onclick="addfavorite()">收藏</a><span>|</span></li>
 			<% if current_user %>
@@ -19,6 +24,7 @@
 
 				</li>
 			</ul>
+		<% end %>
 		</div>
 	</div>
 	<div class="logo-index">

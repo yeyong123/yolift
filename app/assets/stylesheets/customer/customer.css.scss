@@ -26,6 +26,13 @@ h6 {
 .navbar .container {
 	width: 980px;
 }
+#error_explanation{
+	border: 1px solid;
+	margin: 5px 5px 15px 5px;
+}
+.admindash {
+	color: #08c;
+}
 #customer-index-img {
 	//width: 785px;
 	//margin-top:5px;
@@ -411,7 +418,7 @@ margin: 0;
 }
 .thumbsPanel .prev{
 	background: url(../images/sprite.gif) no-repeat;
-	background-position: 0px -317px;
+	background-position: -32px -317px;
 }
 .thumbsPanel .prev:hover{
 	background-position: -32px -317px;
@@ -422,7 +429,7 @@ margin: 0;
 }
 .thumbsPanel .next{
 	background: url(../images/sprite.gif) no-repeat;
-	background-position: -80px -317px;
+	background-position: -48px -317px;
 }
 .thumbsPanel .next:hover{
 	background-position: -48px -317px;

@@ -8,6 +8,9 @@
 		<span>选择分类</span>
 		<%= grouped_collection_select(:product, :tag_id, Category.all, :tags, :id, :id, :name) %><br />
 		</div>
+		<div class="field">
+			<%= check_box_tag 'product[excellent]', 1%>推荐展示
+		</div>
 	<div class="field">
 		<%= f.label :number, "货号" %>
 		<%= f.fields_for :productnumbers do |ph|%>

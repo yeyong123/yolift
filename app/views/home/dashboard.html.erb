@@ -7,6 +7,11 @@
 		<li class=""><a href="#four" data-toggle="tab">导航图</a></li>
 		<li class=""><a href="#five" data-toggle="tab">关于我们</a></li>
 		<li class=""><a href="#six" data-toggle="tab">招聘信息</a></li>
+		<li class=""><a href="#qi" data-toggle="tab">新闻资讯</a></li>
+		<li class=""><a href="#ba" data-toggle="tab">资讯列表</a></li>
+		<li class=""><a href="#jiu" data-toggle="tab">服务中心</a></li>
+		<li class=""><a href="#shi" data-toggle="tab">售后服务</a></li>
+		<li class=""><a href="#shiyi" data-toggle="tab">联系我们</a></li>
 	</ul>
 </div>
 <div id="myTabContent" class="tab-content">
@@ -15,7 +20,18 @@
 			<% @products.each do |product| %>
 				<tr>
 					<td><%= link_to product.title, product_path(product) %></td>
+					<% product.productnumbers.limit(1).each do |pr| %>
+						<td><%= pr.number %></td>
+					<% end %>
+					<td><%= File.basename(product.printpdf_url) if product.printpdf?%></td>
 					<td><%= image_tag(product.photos.first.image_url(:small)) %></td>
+					<td>
+						<%= form_for product do |f| %>
+							<span>推荐展示</span>
+							<%= check_box_tag('product[excellent]', 1,product.id)%>
+							<%= f.submit "更新", class: "btn btn-mini btn-success" %>
+						<% end %>
+						</td>
 					<td><%= link_to "编辑", edit_product_path(product) %></td>
 					<td><%= link_to "删除", product, method: :delete, confirm: "确认删除" %></td>
 				</tr>
@@ -58,6 +74,57 @@
 		</table>
 		<%= link_to "新增", new_bananer_path, class: "btn btn-primary" %>
 	</div>
+	<div class="tab-pane fade" id="five">
+		<table class="table">
+			<% @abouts.each do |about| %>
+				<%= render 'home/form', object: about %>
+			<% end %>
+			</table>
+		</div>
+<div class="tab-pane fade" id="six">
+		<table class="table">
+			<% @jobs.each do |job| %>
+				<%= render 'home/form', object: job %>
+			<% end %>
+			</table>
+		</div>
+<div class="tab-pane fade" id="qi">
+		<table class="table">
+			<% @servers.each do |server| %>
+				<%= render 'home/form', object: server %>
+			<% end %>
+			</table>
+		</div>
+<div class="tab-pane fade" id="ba">
+		<table class="table">
+			<% @zixuns.each do |server| %>
+				<%= render 'home/form', object: server %>
+			<% end %>
+			</table>
+		</div>
+<div class="tab-pane fade" id="jiu">
+		<table class="table">
+			<% @centers.each do |server| %>
+				<%= render 'home/form', object: server %>
+			<% end %>
+			</table>
+		</div>
+<div class="tab-pane fade" id="shi">
+		<table class="table">
+			<% @aftermarkets.each do |server| %>
+				<%= render 'home/form', object: server %>
+			<% end %>
+			</table>
+		</div>
+
+<div class="tab-pane fade" id="shiyi">
+		<table class="table">
+			<% @contact.each do |server| %>
+				<%= render 'home/form', object: server %>
+			<% end %>
+			</table>
+		</div>
+
 </div>
 
 </div>

@@ -5,16 +5,16 @@
 				<ul>
 					<% Category.all.each do |cate| %>
 						<li>
-						<h3><%= link_to category_path(cate)  do %>
+						<h3><%= link_to category_path(cate), target: "_blank"  do %>
 								<%= image_tag(cate.image_url(:micro)) %>
-							<%= cate.name %>
+								<%= cate.name%>
 							<% end %>
 							<span>></span>
 							</h3>
 						<div class="listbox hide">
 							<dl class="procate">
 								<% cate.tags.each do |tag| %>
-									<dd><%= link_to tag.name, products_path(t:tag) %>	</dd>
+									<dd><%= link_to tag.name, products_path(t:tag), target: "_blank"%>	</dd>
 								<% end %>
 							</dl>
 						</div>

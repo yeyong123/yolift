@@ -7,6 +7,7 @@ class HomeController < ApplicationController
 	end
 
 	def link
+		@models = ActiveRecord::Base.descendants
 	end
 
 	def dashboard
@@ -19,9 +20,20 @@ class HomeController < ApplicationController
 		@categories = Category.order("id desc").paginate(page: params[:page], per_page: 10)
 		@orders = Order.order("created_at desc").paginate(page: params[:page], per_page: 10)
 		@affiliates = Affiliate.order("created_at desc").paginate(page: params[:page], per_page: 10)
-	 	@abouts = About.order("id desc").paginate(page: params[:page], per_page: 10)	
+		@abouts = About.order("id desc").paginate(page: params[:page], per_page: 10)	
 		@bananers = Bananer.order("id desc").paginate(page: params[:page],per_page: 10)
 		@jobs = Job.order("id desc").paginate(page: params[:page], per_page: 10)
+		@servers = Server.order("id desc").paginate(page: params[:page], per_page: 10)
+		@zixuns = Zixun.order("id desc").paginate(page: params[:page], per_page: 10)
+		@centers = Center.order("id desc").paginate(page: params[:page], per_page: 10)
+		@aftermarkets = Aftermarket.order("id desc").paginate(page: params[:page], per_page: 10)
+		@contact = Contact.order("id desc").paginate(page: params[:page], per_page: 10)
+		#order("id desc").paginate(page: params[:page], per_page: 10)
+		#order("id desc").paginate(page: params[:page], per_page: 10)
+		#order("id desc").paginate(page: params[:page], per_page: 10)
+
+
+
 	end
 
 	def error
