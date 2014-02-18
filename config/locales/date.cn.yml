@@ -13,12 +13,10 @@ zh-CN:
       about_x_hours:
         one: "大约一小时"
         other: "大约 %{count}小时"
-  time:
-    formats:
-      default: "%Y年%b%d日 %A %H:%M:%S"
-      time: "%H:%M"
-      short: "%b%d日 %H:%M"
-      long: "%Y年%b%d日 %H:%M"
-      hour: "小时"
-      about: "大约"
-      ago: "前"
+      about_x_months:
+        one: "大约一个月"
+        other: "大约%{count}月"
+      about_x_years:
+        one: "大约一年前"
+        other: "大约%{count}年"
+ 
