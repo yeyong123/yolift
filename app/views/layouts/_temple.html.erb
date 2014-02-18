@@ -3,6 +3,8 @@
 		<% if admin_signed_in? %>
 			<ul>
 				<li><span style="color: #08c">你是管理员可以直接进入</span><%= link_to "管理员控制台", dashboard_path%></li>
+				<li><%= link_to "退出管理员", destroy_admin_session_path, method: :delete %></li>
+
 			</ul>
 		<% else %>
 		<ul>

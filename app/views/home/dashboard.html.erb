@@ -27,9 +27,13 @@
 					<td><%= image_tag(product.photos.first.image_url(:small)) %></td>
 					<td>
 						<%= form_for product do |f| %>
-							<span>推荐展示</span>
-							<%= check_box_tag('product[excellent]', 1,product.id)%>
-							<%= f.submit "更新", class: "btn btn-mini btn-success" %>
+							<% if !product.excellent?%>
+							<%= check_box_tag('product[excellent]', 1)%>
+							<%= f.submit "推荐展示", class: "btn btn-mini btn-success" %>
+						<% else %>
+							<%= check_box_tag('product[excellent]',0) %>
+							<%= f.submit "取消推荐", class: "btn btn-mini btn-success" %>
+						<% end %>
 						<% end %>
 						</td>
 					<td><%= link_to "编辑", edit_product_path(product) %></td>
@@ -80,6 +84,7 @@
 				<%= render 'home/form', object: about %>
 			<% end %>
 			</table>
+			<%= link_to "增加",new_about_path,class: "btn btn-primary" %>
 		</div>
 <div class="tab-pane fade" id="six">
 		<table class="table">
@@ -87,6 +92,8 @@
 				<%= render 'home/form', object: job %>
 			<% end %>
 			</table>
+	<%= link_to "增加",new_job_path,class: "btn btn-primary" %>
+
 		</div>
 <div class="tab-pane fade" id="qi">
 		<table class="table">
@@ -94,6 +101,8 @@
 				<%= render 'home/form', object: server %>
 			<% end %>
 			</table>
+				<%= link_to "增加",new_server_path,class: "btn btn-primary" %>
+
 		</div>
 <div class="tab-pane fade" id="ba">
 		<table class="table">
@@ -101,13 +110,17 @@
 				<%= render 'home/form', object: server %>
 			<% end %>
 			</table>
+	<%= link_to "增加",new_zixun_path,class: "btn btn-primary" %>
+
 		</div>
 <div class="tab-pane fade" id="jiu">
 		<table class="table">
 			<% @centers.each do |server| %>
 				<%= render 'home/form', object: server %>
 			<% end %>
-			</table>
+		</table>
+			<%= link_to "增加",new_center_path,class: "btn btn-primary" %>
+
 		</div>
 <div class="tab-pane fade" id="shi">
 		<table class="table">
@@ -115,6 +128,8 @@
 				<%= render 'home/form', object: server %>
 			<% end %>
 			</table>
+	<%= link_to "增加",new_aftermarket_path,class: "btn btn-primary" %>
+
 		</div>
 
 <div class="tab-pane fade" id="shiyi">
@@ -123,6 +138,8 @@
 				<%= render 'home/form', object: server %>
 			<% end %>
 			</table>
+	<%= link_to "增加",new_contact_path,class: "btn btn-primary" %>
+
 		</div>
 
 </div>
