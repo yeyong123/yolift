@@ -35,8 +35,10 @@
 			<div class="about-title">
 				<span><%= link_to "免费索取工业设备  >>", new_catelog_path %></span>
 			</div>
-			<img src="/assets/photo/5.jpg"/>
-		</div>
+			<% Catelog.all.each do |cate| %>
+				<%= image_tag(cate.image_url) if cate.image? %>	
+			<% end %>
+					</div>
 		</li>
 	</ul>
 </div>

@@ -5,7 +5,7 @@
 	<%= form_for @catelog do |f| %>
 		<% if admin_signed_in? %>
 			<div class="field">
-				<%= f.label :image, "首页展示图片" %>
+				<%= f.label :image, "首页展示图片(302x192)" %>
 				<%= image_tag(@catelog.image_url(:small)) if @catelog.image? %>
 				<%= f.file_field :image %>
 			</div>
