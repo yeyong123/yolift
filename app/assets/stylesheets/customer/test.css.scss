@@ -341,6 +341,16 @@ li.font-border a {
 	.about-zixun .table td {
 		padding: 4px;
 	}
+	.about-info {
+		//height: 206px;
+	}
+	.about-info img {
+		float: left;
+		margin-right: 5px;
+	}
+	.about-info .info-about {
+		//float: left;
+	}
 
 //单个产品展示放大镜
 .show-product {
@@ -970,6 +980,8 @@ width: 30px;
 }
 .repair-form .table {
 	width: 780px;
+	border-collapse: collapse;
+	border-spacing: 0;
 }
 .repair-form .table input {
 	width: 225px;

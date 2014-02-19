@@ -8,6 +8,14 @@
 			<% end %>
 	<%= f.file_field :image %>
 </div>
+<div class="field">
+	<%= f.label :photo, "首页展示的图片" %>
+	<%= f.file_field :photo %>
+</div>
+<div class="field">
+	<%= f.label :info, "首页介绍" %>
+	<%= f.kindeditor :info,width: 780, height: 300 %>
+</div>
 <hr/>
 <%= render partial: "abouts/form", locals: {f: f} %>
 <div class="about-action">

@@ -47,7 +47,7 @@ class ImageUploader < CarrierWave::Uploader::Base
 	   process :resize_to_fill => [50, 50]
    end
 	 version :navshow do
-		 process :resize_to_fit => [784, 230]
+		 process :resize_to_fit => [150, 150]
 	 end
 	 version :micro  do 
 		 process :resize_to_fit => [30, 30]

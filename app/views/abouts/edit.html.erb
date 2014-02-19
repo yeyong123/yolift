@@ -1,19 +1,32 @@
 <%= render 'home/nav_list' %>
 <div class="product-index">
-<%= form_for @about do |f| %>
-<div class="field">
+	<%= form_for @about do |f| %>
+		<div class="field">
 			<%= f.label :image, "导航图展示"%>
 			<% About.all.each do |about| %>
 				<%= image_tag(about.image_url(:small)) if about.image? %>
 			<% end %>
-
-	<%= f.file_field :image %>
-</div>
-<hr/>
-	<%= render partial: 'abouts/form', locals: {f: f} %>
-	<div class="about-action">
-		<%= f.submit "更新", class: "btn btn-success" %>
-		<%= link_to "返回", abouts_path %>
-	</div>
-<% end %>
+			<%= f.file_field :image %>
+		</div>
+		<div class="field">
+			<%= f.label :photo, "首页展示的图片" %>
+			<% About.all.each do |about| %>
+			<%= image_tag(about.photo_url(:small)) if about.photo? %>
+		<% end %>
+			<%= f.file_field :photo %>
+		</div>
+		<div class="field">
+			<%= f.label :info, "首页介绍" %>
+			<% About.all.each do |about| %>
+				<%=raw about.info if about.info? %>
+			<% end %>
+			<%= f.kindeditor :info,width: 780, height: 200 %>
+		</div>
+		<hr/>
+		<%= render partial: 'abouts/form', locals: {f: f} %>
+		<div class="about-action">
+			<%= f.submit "更新", class: "btn btn-success" %>
+			<%= link_to "返回", abouts_path %>
+		</div>
+	<% end %>
 </div>
