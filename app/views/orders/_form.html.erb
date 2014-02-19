@@ -1,21 +1,15 @@
 <%= render 'home/nav_list' %>
 <div class="order-form product-index2">
 	<% @order.line_items.build %>
-<%= nested_form_for(@order) do |f| %>
-	<%= render 'home/error_message', object: f.object %>
-	<table class="table number-order">
-		<% @cart.line_items.each do |line| %>
-			<tr>
-			<td><%= line.product.title %></td>
-			<td>
-				<td>物料号：</td>
-				<% line.productnumbers.each do |ph| %>
-					<%= ph.number %>
-				<% end %>
-			</td>
-			<td>
-				<%= line.quantity %>
-			</td>
+	<%= nested_form_for(@order) do |f| %>
+		<%= render 'home/error_message', object: f.object %>
+		<table class="table number-order">
+			<% @cart.line_items.each do |line| %>
+				<tr>
+					<td><%= line.product.title %></td>
+					<td>
+						<%= line.quantity %>
+					</td>
 <td>
 	<%= link_to "删除", [line.product, line], method: :delete, confirm: "Are you sure?", class: "btn btn-mini btn-danger" %>
 </td>

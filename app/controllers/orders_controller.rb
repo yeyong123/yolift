@@ -1,6 +1,6 @@
 class OrdersController < ApplicationController
 	skip_before_filter :authenticate_admin!
-	before_filter :authenticate_admin![:index, :show, :edit, :destroy]	
+	before_filter :authenticate_admin!, only: [:index, :show, :edit, :destroy]	
 	def index
 		@orders = Order.order("updated_at desc").uniq.paginate(page: params[:page], per_page: 12)
 	end

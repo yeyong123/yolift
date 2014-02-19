@@ -1,4 +1,5 @@
 class LineItemsController < ApplicationController
+	skip_before_filter :authenticate_admin!
 
 	#创建产品关联购物车
 	#首先找到显示的单个产品的ID，当用户点击加入购物车，
