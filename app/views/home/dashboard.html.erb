@@ -12,6 +12,13 @@
 		<li class=""><a href="#jiu" data-toggle="tab">服务中心</a></li>
 		<li class=""><a href="#shi" data-toggle="tab">售后服务</a></li>
 		<li class=""><a href="#shiyi" data-toggle="tab">联系我们</a></li>
+		<li class=""><a href="#shier" data-toggle="tab">采购指南</a></li>
+		<li class=""><a href="#shisan" data-toggle="tab">指南列表</a></li>
+		<li class=""><a href="#shisi" data-toggle="tab">支付方式</a></li>
+		<li class=""><a href="#shiwu" data-toggle="tab">配送服务</a></li>
+		<li class=""><a href="#shiliu" data-toggle="tab">项目案例</a></li>
+		<li class=""><a href="#shiqi" data-toggle="tab">案例行业</a></li>
+
 	</ul>
 </div>
 <div id="myTabContent" class="tab-content">
@@ -140,8 +147,55 @@
 			<% end %>
 			</table>
 	<%= link_to "增加",new_contact_path,class: "btn btn-primary" %>
-
 		</div>
+<div class="tab-pane fade" id="shier">
+		<table class="table">
+			<% @lists.each do |server| %>
+				<%= render 'home/form', object: server %>
+			<% end %>
+			</table>
+	<%= link_to "增加",new_list_path,class: "btn btn-primary" %>
+</div>
+<div class="tab-pane fade" id="shisan">
+		<table class="table">
+			<% @guides.each do |server| %>
+				<%= render 'home/form', object: server %>
+			<% end %>
+			</table>
+	<%= link_to "增加",new_guide_path,class: "btn btn-primary" %>
+</div>
+<div class="tab-pane fade" id="shisi">
+		<table class="table">
+			<% @payments.each do |server| %>
+				<%= render 'home/form', object: server %>
+			<% end %>
+			</table>
+	<%= link_to "增加",new_payment_path,class: "btn btn-primary" %>
+</div>
+<div class="tab-pane fade" id="shiwu">
+		<table class="table">
+			<% @ships.each do |server| %>
+				<%= render 'home/form', object: server %>
+			<% end %>
+			</table>
+	<%= link_to "增加",new_ship_path,class: "btn btn-primary" %>
+</div>
+<div class="tab-pane fade" id="shiliu">
+		<table class="table">
+			<% @items.each do |server| %>
+				<%= render 'home/form', object: server %>
+			<% end %>
+			</table>
+	<%= link_to "增加",new_item_path,class: "btn btn-primary" %>
+</div>
+<div class="tab-pane fade" id="shiqi">
+		<table class="table">
+			<% @cases.each do |server| %>
+				<%= render 'home/form', object: server %>
+			<% end %>
+			</table>
+	<%= link_to "增加",new_case_path,class: "btn btn-primary" %>
+</div>
 
 </div>
 

@@ -1,0 +1,53 @@
+<%= render 'home/nav_list' %>
+<div class="product-index">
+	<div class="repair-form">
+		<h4>维修服务表</h4>
+		<table class="table">
+		<tr>
+			<td>报修单位名称:</td>
+			<td><%= @repair.company %></td>
+			<td> 联系人</td>
+			<td><%= @repair.name %></td>
+		</tr>
+		<tr>
+			<td>详细地址</td>
+			<td><%= @repair.address %></td>
+			<td>联系电话</td>
+			<td><%= @repair.telephone %></td>
+		</tr>
+		<tr>
+			<td>物料名称</td>
+			<td><%= @repair.head %></td>
+			<td>物料编号</td>
+			<td><%= @repair.headnumber %></td>
+		</tr>
+		<tr>
+			<td>产品购买时间</td>
+			<td><%= @repair.productdate %></td>
+				</tr>
+		<tr>
+			<td>需维修的内容</td>
+			<td colspan="3"><%= @repair.repaircontent %></td>
+		</tr>
+		<tr>
+			<td colspan="4" style="padding: 4px;"></td>
+		</tr>
+		<tr>
+			<td>实际作业时间</td>
+			<td colspan="3"><%= @repair.jobtime %></td>
+		</tr>
+		<tr>
+			<td>特殊情况备注</td>
+			<td colspan="3"><%=  @repair.remark %></td>
+		</tr>
+		<tr>
+			<td>客户意见</td>
+			<td colspan="3"><%= @repair.say %></td>
+		</tr>
+<td>照片</td>
+			<td><%= image_tag(@repair.image_url) if @repair.image? %></td>
+
+	</table>
+</div>
+	
+				</div>

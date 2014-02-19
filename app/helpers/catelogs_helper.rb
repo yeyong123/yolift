@@ -1,0 +1,2 @@
+module CatelogsHelper
+end

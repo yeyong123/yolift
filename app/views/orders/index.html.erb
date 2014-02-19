@@ -1,7 +1,10 @@
+<%= render 'home/nav_list' %>
+<div class="product-index">
 <table class="table">
 	<tr>
 		<td>订单号</td>
 		<td>订单数量</td>
+		<td>产品名称</td>
 		<td>公司名称</td>
 		<td>地址</td>
 		<td>联系人</td>
@@ -10,10 +13,20 @@
 		<tr>
 			<td><%= link_to order.ordernumber, order_path(order) %></td>
 			<td><%= order_sum(order) %></td>
+			<td>
+				<% order.line_items.each do |line| %>
+					<%= line.product.title %>
+				<% end %>
+			</td>
 			<td><%= order.company %></td>
-			<td><%= order.address %></td>
+			<td><%= order.province.name %>
+				<%= order.city.name %>
+				<%= order.district.name %>
+			</td>
 			<td><%= order.name %></td>
 			<td><%= link_to "删除", order, method: :delete, confirm: "Are you sure?" %>
 			</tr>
 		<% end %>
-	</table>	
+</table>	
+<%= will_paginate @orders %>
+</div>

@@ -1,0 +1,10 @@
+<tr>
+	<td><%= link_to cate.company, catelog_path(cate) %></td>
+	<td><%= cate.name %></td>
+	<td><%= cate.mobel %></td>
+	<td><%= cate.province.name %><%= cate.city.name %>
+		<%= cate.district.name%>
+	</td>
+	<td><%= link_to "编辑", edit_catelog_path(cate) %></td>
+	<td><%= link_to "删除",cate, method: :delete, confirm: "确认删除" %></td>
+	</tr>

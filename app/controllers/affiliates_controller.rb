@@ -1,6 +1,7 @@
 class AffiliatesController < ApplicationController
-before_filter :authenticate_admin!, only: [:index,:show, :edit, :update, :destroy]
-
+	skip_before_filter :authenticate_admin!
+	before_filter :authenticate_admin!, only: [:index,:show, :edit, :update, :destroy]
+	
 	before_filter :find_id, only: [:show, :edit, :update, :destroy]
 	def index
 		@affiliates = Affiliate.order("created_at desc").paginate(page: params[:page], per_page: 10)

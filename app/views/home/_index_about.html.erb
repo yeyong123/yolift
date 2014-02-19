@@ -17,14 +17,23 @@
 					<span><%= link_to "新闻中心 >>", server_path(server) %></span>
 				<% end %>
 			</div>
-
-			<img src="/assets/photo/6.jpg"/>
+			<div class="about-zixun">
+				<table class="table">
+					<% @zixuns.each do |zixun| %>
+						<tr>
+							<td><%= link_to zixun.title, zixun_path(zixun) %></td>
+							<td><%= time_ago_in_words(zixun.created_at) %>前</td>
+						</tr>
+					<% end %>
+				</table>
+				<%= will_paginate @zixuns %>
+			</div>
 		</div>
 		</li>
 		<li class="span4">
 		<div class="thumbnail">
 			<div class="about-title">
-				<span>免费索取工业设备  >></span>
+				<span><%= link_to "免费索取工业设备  >>", new_catelog_path %></span>
 			</div>
 			<img src="/assets/photo/5.jpg"/>
 		</div>

@@ -1,0 +1,11 @@
+<%= render 'home/nav_list' %>
+<div class="product-index">
+	<h4>申请产品目录客户信息</h4>
+	<hr/>
+	<table class="table">
+		<% @catelogs.each do |cate| %>
+			<%= render partial: 'catelogs/index', locals: {cate: cate} %>
+		<% end %>
+	</table>
+	<%= will_paginate @catelogs %>
+</div>

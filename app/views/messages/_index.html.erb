@@ -1,0 +1,7 @@
+<tr>
+	<td><%= link_to mess.company, message_path(mess) %></td>
+	<td><%= mess.name %></td>
+	<td><%= mess.phone %></td>
+	<td><%= link_to "删除", mess, method: :delete, confirm: "确认删除" %></td>	
+</tr>
+

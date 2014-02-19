@@ -1,0 +1,59 @@
+<div class="order-form product-index2">
+	<div class="order-form1">
+		<div class="field">
+			<%= f.label :company, "公司名称:" %>
+			<%= f.text_field :company %>
+			<br />
+		</div>
+		<div class="field">
+			<%= f.label :name, "姓名:" %>
+			<%= f.text_field :name %>
+		</div>
+		<div class="field">
+			<%= f.label :address, "地址:" %>
+			<div class="field-address">
+				<%= collection_select(:catelog, :province_id, Province.all, :id, :name) %>
+				<%= grouped_collection_select(:catelog, :city_id, Province.all, :cities, :id, :id, :name) %>
+				<%= grouped_collection_select(:catelog, :district_id, City.all, :districts, :id, :id, :name) %>
+			</div>
+		</div>
+		<div class="field">
+			<%= f.label :address, "详细地址:" %>
+			<%= f.text_field :address %>
+		</div>
+		<div class="field">
+			<%= f.label :zip, "邮编:" %>
+			<%= f.text_field :zip %>
+		</div>
+		<div class="field">
+			<%= f.label :mobel, "手机:" %>
+			<%= f.text_field :mobel %>
+		</div>
+		<div class="field">
+			<%= f.label :phone, "电话:" %>
+			<%= f.text_field :phone %>
+		</div>
+		<div class="field">
+			<%= f.label :email, "邮箱:" %>
+			<%= f.text_field :email %>
+		</div>
+		<div class="field">
+			<%= f.label :scale, "公司规模:" %>
+			<%= f.select :scale, Catelog::Scale, prompt: "选择公司规模" %>
+		</div>
+		<div class="field">
+			<%= f.label :number, "索取数量" %>
+			<%= f.number_field :number,min: 1, max: 5 %>
+		</div>
+		<div class="field">
+			<%= f.label :interest, "感兴趣产品" %>
+			<%= f.text_field :interest %>
+	</div>
+	<div class="action">
+			<%= f.submit "提交申请", class: "btn btn-primary" %>
+	<%= link_to "回到产品中心", products_path, class: "btn btn-success" %>
+
+	</div>
+	</div>
+</div>
+

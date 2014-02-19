@@ -9,7 +9,7 @@
 			<div class="list-nav">
 				<h4>产品中心</h4>
 				<ul>
-					<% Category.find(1,4).each do |cate| %>
+					<% Category.all.each do |cate| %>
 						<li><%= link_to cate.name, category_path(cate.id) %></li>
 					<% end %>
 				</ul>

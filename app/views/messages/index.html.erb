@@ -1,0 +1,9 @@
+<%= render 'home/nav_list' %>
+<div class="product-index">
+	<table class="table">
+		<% @messages.each do |mess| %>
+			<%= render partial: 'messages/index', locals: {mess: mess} %>
+				<% end %>
+	</table>
+	<%= will_paginate @messages %>
+</div>

@@ -1,6 +1,7 @@
 class HomeController < ApplicationController
 	before_filter :authenticate_admin!, only: [:dashboard] 
 	def index
+		@zixuns = Zixun.order("created_at desc").paginate(page: params[:page], per_page: 5)
   end
 	
 	def sitemap
@@ -28,12 +29,14 @@ class HomeController < ApplicationController
 		@centers = Center.order("id desc").paginate(page: params[:page], per_page: 10)
 		@aftermarkets = Aftermarket.order("id desc").paginate(page: params[:page], per_page: 10)
 		@contact = Contact.order("id desc").paginate(page: params[:page], per_page: 10)
-		#order("id desc").paginate(page: params[:page], per_page: 10)
-		#order("id desc").paginate(page: params[:page], per_page: 10)
-		#order("id desc").paginate(page: params[:page], per_page: 10)
-
-
-
+		@lists = List.order("id desc").paginate(page: params[:page], per_page: 10)
+		@guides = Guide.order("id desc").paginate(page: params[:page], per_page: 10)
+		@payments = Payment.order("id desc").paginate(page: params[:page], per_page: 10)
+		@ships = Ship.order("id desc").paginate(page: params[:page], per_page: 10)
+		@items = Item.order("id desc").paginate(page: params[:page], per_page: 10)
+		@cases = Case.order("id desc").paginate(page: params[:page], per_page: 10)
+		@catelogs = Catelog.order("crated_at desc").paginate(page: params[:page], per_page: 10)
+		@messages = Message.order("created_at desc").paginate(page: params[:page], per_page: 10)
 	end
 
 	def error

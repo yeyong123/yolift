@@ -1,4 +1,6 @@
 class MessagesController < ApplicationController
+	skip_before_filter :authenticate_admin!
+	before_filter :authenticate_admin!, only: [:index, :show, :edit, :destroy]
 	before_filter :find_id, only: [:show, :edit, :update, :destroy]
 	def index
 		@messages = Message.order("created_at desc").paginate(page: params[:page], per_page: 10)
@@ -29,7 +31,7 @@ class MessagesController < ApplicationController
 
 	def destroy
 		@message.destroy
-		redirect_to root_path
+		redirect_to messages_path
 	end
 
 	private

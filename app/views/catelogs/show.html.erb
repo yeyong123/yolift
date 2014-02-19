@@ -1,0 +1,43 @@
+<%= render 'home/nav_list' %>
+<div class="product-index">
+	<div class="about-title">
+		<h4>客户详细信息</h4>
+		<div class="breadcrumb">
+		<%= link_to "编辑", edit_catelog_path(@catelog) %>
+		<%= link_to "删除", @catelog, method: :delete, confirm: "确认删除" %>
+	</div>
+</div>
+<table class="table">
+	<tr><%= @catelog.created_at %></tr>
+	<tr>
+		<td>客户公司:</td>
+		<td><%= @catelog.company %></td>
+		<td>客户姓名：</td>
+		<td><%= @catelog.name %></td>
+		<td>客户手机：</td>
+		<td><%= @catelog.mobel %></td>
+	</tr>
+	<tr>
+		<td>地址：</td>
+		<td colspan="5"><%= @catelog.province.name %>
+			<%=@catelog.city.name %>
+			<%= @catelog.district.name %>
+			<%= @catelog.address %>
+		</td>
+	</tr>
+	<tr>
+		<td>申请样册数量：</td>
+		<td><%= @catelog.number %></td>
+		<td>电话：</td>
+		<td><%= @catelog.phone %></td>
+		<td>邮编:</td>
+		<td><%= @catelog.zip %></td>
+	</tr>
+	<tr>
+		<td>感兴趣的产品：</td>
+		<td><%= @catelog.interest %></td>
+		<td>邮箱：</td>
+		<td><%= @catelog.email %></td>
+	</tr>
+</table>
+</div>

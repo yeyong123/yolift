@@ -8,6 +8,7 @@
 			<tr>
 			<td><%= line.product.title %></td>
 			<td>
+				<td>物料号：</td>
 				<% line.productnumbers.each do |ph| %>
 					<%= ph.number %>
 				<% end %>
@@ -48,7 +49,7 @@
 		<%= f.label t('.phone') %>
 		<%= f.telephone_field :phone %>
 	</div>
-	<div class="field field-address">
+	<div class="field">
 		<%= f.label t('.address') %>
 		<div class="field-address">
 		<%= collection_select(:order, :province_id, Province.all, :id, :name) %>

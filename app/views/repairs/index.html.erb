@@ -3,10 +3,15 @@
 	<table class="table">
 		<% @repairs.each do |repair| %>
 			<tr>
-				<td><%= repair.company %></td>
+				<td><%= link_to repair.company, repair_path(repair) %></td>
+				<td><%= repair.address %></td>
+				<td><%= repair.name %></td>
+				<td><%= repair.telephone %></td>
+				<td><%= repair.head %></td>
+				<td><%= link_to "编辑", edit_repair_path(repair) %></td>
+				<td><%= link_to "删除", repair, method: :delete, confirm: "确认删除"%></td>
 			</tr>
 		<% end %>
 	</table>
 	<%= will_paginate @repairs %>
-	<%= link_to "增加", new_repair_path %>
 </div>

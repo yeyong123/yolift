@@ -33,6 +33,7 @@ Yolift::Application.routes.draw do
 		resources :cases
 		resources :repairs
 		resources :zixuns
+		resources :catelogs
 		match '/search', to: "products#search"
 		match '/sitemap', to: "home#sitemap"
 		match '/link', to: "home#link"

@@ -107,6 +107,12 @@ $.fn.linkSelect = function (num){
  $('#order_city_id').linkSelect();
  $('#order_district_id').linkSelect();
 
+ //申请产品目录页面选择城市
+  $('#catelog_city_id').linkSelect();
+ $('#catelog_district_id').linkSelect();
+
+
+
  // 首页展示图的js选择active
  //
  $('.carousel-indicators li:first').addClass('active');
