@@ -3,6 +3,7 @@
 	<h4>申请产品目录</h4>
 	<hr/>
 	<%= form_for @catelog do |f| %>
+		<%= render 'home/error_message', object: f.object %> 
 		<% if admin_signed_in? %>
 			<div class="field">
 				<%= f.label :image, "首页展示图片(302x192)" %>

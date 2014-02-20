@@ -8,7 +8,9 @@ class Order < ActiveRecord::Base
 	
 	validates_presence_of :address, :company, :email, :phone
 	validates_numericality_of :phone
-	
+	validates_format_of :email, with: /\A([\w\.%\+\-]+)@([\w\-]+\.)+([\w]{2,})\z/i
+	validates_length_of :content, maximum: 140, allow_blank: true
+
 
 	def add_line_items_from_cart(cart)
 		cart.line_items.each do |item|

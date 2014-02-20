@@ -163,14 +163,14 @@ $('.drop-list-toggle .btn').click(
 				$('.drop-list-toggle .error').hide();
 			}
 	});
-$('.cart-img').click(
-function(event){
-	var count = $('.cart-items-drop').length;
-		if (count == 0)
-		{
-			event.preventDefault();
-}
-});
+//$('.cart-img').click(
+//function(event){
+//	var count = $('.cart-items-drop').length;
+//		if (count == 0)
+//		{
+//			event.preventDefault();
+//}
+//});
 
 //为了IE去除最后一个link的边框
 //
@@ -178,11 +178,30 @@ $('.lange a:last').addClass("lastitem");
 
 
 //搜索框不能为空
-$('.nav-list .navbar-form .btn').click(function(event){
+$('#search-get').click(function(event){
 	var count = $('.serach-query');
 	if (count.val() == "")
 {
 	event.preventDefault();
 	}
 });
+
+//验证购物车输入的产品数量
+//
+$('#validate-number').validate();
+	$('#line_item_quantity').validate({
+		rules: {
+			input:{
+				number: true,
+				range:[1,11]
+			}
+		},
+		messages: {
+			input:{
+				require: "只能输入数字",	
+				range: "输入值只能在1到10之间"
+			}
+		}
+	});
+
 });

@@ -4,4 +4,5 @@ class LineItem < ActiveRecord::Base
   belongs_to :cart
   has_many :productnumbers
 	belongs_to :order
+
 end
