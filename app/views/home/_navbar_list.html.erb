@@ -15,13 +15,13 @@
 				<% end %>
 					<ul class="dropdown-menu">
 						<% About.limit(5).each do |about| %>
-							<li><%= link_to about.title, about_path(about.id),target: "_blank"%></li>
+							<li><%= link_to about.title, about_path(about.id)%></li>
 						<% end %>
 					</ul>
 					</li>
 					<li class="dropdown"><%= link_to t('.products'),products_path, class: "dropdown-toggle" %>
 					<ul class="dropdown-menu">
-						<li><%= link_to t('.product'), products_path, target: "_blank"%></li>
+						<li><%= link_to t('.product'), products_path %></li>
 						<li><a href="#">视频展示</a></li>
 
 					</ul>
@@ -31,7 +31,7 @@
 					<% end %>
 					<ul class="dropdown-menu">
 						<% Server.limit(3).each do |server| %>
-							<li><%= link_to server.title, server_path(server.id), target: "_blank" %></li>
+							<li><%= link_to server.title, server_path(server.id)  %></li>
 						<% end %>
 					</ul>
 					</li>
@@ -40,9 +40,9 @@
 				<% end %>
 					<ul class="dropdown-menu">
 					<% Center.limit(3).each do |center| %>
-						<li><%= link_to center.title, center_path(center.id),target: "_blank" %></li>
+						<li><%= link_to center.title, center_path(center.id) %></li>
 					<% end %>
-						<li><%= link_to "售后服务", aftermarkets_path,target: "_blank" %></li>
+						<li><%= link_to "售后服务", aftermarkets_path %></li>
 					</ul>
 					</li>
 					<% Contact.limit(1).each do |contact| %>
@@ -50,7 +50,7 @@
 				<% end %>
 					<ul class="dropdown-menu">
 						<% Contact.limit(3).each do |contact| %>
-							<li><%= link_to contact.title, contact_path(contact), target: "_blank" %></li>
+							<li><%= link_to contact.title, contact_path(contact)  %></li>
 						<% end %>
 					</ul>
 					</li>

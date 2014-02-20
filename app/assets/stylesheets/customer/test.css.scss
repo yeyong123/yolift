@@ -342,15 +342,16 @@ li.font-border a {
 		padding: 4px;
 	}
 	.about-info {
-		//height: 206px;
+		height: 192px;
 	}
 	.about-info img {
 		float: left;
-		margin-right: 5px;
+		margin: 8px 5px 0 0;
 	}
-	.about-info .info-about {
-		//float: left;
+	.about-info span {
+		padding: 2px;
 	}
+	
 
 //单个产品展示放大镜
 .show-product {

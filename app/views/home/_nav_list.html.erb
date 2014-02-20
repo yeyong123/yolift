@@ -5,7 +5,7 @@
 				<ul>
 					<% Category.all.each do |cate| %>
 						<li>
-						<h3><%= link_to category_path(cate), target: "_blank"  do %>
+						<h3><%= link_to category_path(cate)  do %>
 								<%= image_tag(cate.image_url(:micro)) %>
 								<%= cate.name%>
 							<% end %>
