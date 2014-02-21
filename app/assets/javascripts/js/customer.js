@@ -188,20 +188,19 @@ $('#search-get').click(function(event){
 
 //验证购物车输入的产品数量
 //
-$('#validate-number').validate();
-	$('#line_item_quantity').validate({
-		rules: {
-			input:{
-				number: true,
-				range:[1,11]
-			}
-		},
-		messages: {
-			input:{
-				require: "只能输入数字",	
-				range: "输入值只能在1到10之间"
-			}
-		}
-	});
 
+$('.edit_line_item').validate({
+	rules: {
+		"line_item[quantity]": {
+			max: 5,
+			min: 1
+		}
+	},
+	messages: {
+		"line_item[quantity]": {
+			max: "最大数量10台!",
+			min: "最小是1台!"
+		}
+	}
+});
 });

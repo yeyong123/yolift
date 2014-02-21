@@ -14,9 +14,9 @@
 				</td>
 				<td id="validate-number">
 					<%= form_for [item.product, item]  do |f| %>
-					<%= f.number_field :quantity,min: 1, max: 10 %>
-					<%= f.submit "刷新", class: "btn btn-mini btn-success" %>
-				<% end %>
+						<%= f.number_field :quantity,min: 1, max: 10 %>
+						<%= f.submit "刷新", class: "btn btn-mini btn-success" %>
+					<% end %>
 				</td>
 				<td>
 					<%= link_to "删除", [item.product, item], method: :delete, confirm: "确认删除?" %>

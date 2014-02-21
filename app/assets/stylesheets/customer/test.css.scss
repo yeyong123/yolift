@@ -609,6 +609,20 @@ margin-bottom: 5px;
 	width: 81%;
 	float: left;
 }
+.edit_line_item {
+	position: relative;
+}
+.edit_line_item label {
+	background: #f8b9b7;
+	position: absolute;
+	top: 0px;
+	right: 75px;
+	padding: 4px 10px;
+}
+.edit_line_item input.error {
+	border: 1px solid #f8b9b7;
+	background: #f8b9b7;
+}
 //flash-notice 提示警告页面
 .flash-notice {
 	position: absolute;
@@ -666,7 +680,7 @@ margin-bottom: 5px;
 	margin-bottom: 0;
 }
 .cart_items-drop td {
-	padding: 10px;
+	padding: 5px;
 }
 .cart_items-drop .cart_link {
 	float: right;
@@ -675,7 +689,7 @@ margin-bottom: 5px;
 .cart_link .btn {
 }
 .cart_items-drop2 {
-	width: 220px;
+	width: 250px;
 	}
 	.cart_items-drop2 p {
 		padding: 10px;
@@ -691,7 +705,7 @@ margin-bottom: 5px;
 .product-cart .btn-mini {
 	float: none;
 	margin-top: -10px;
-	padding: 0;
+	padding: 3px;
 }
 
 //单个产品下拉菜单中css
