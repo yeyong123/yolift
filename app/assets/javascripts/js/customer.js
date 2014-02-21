@@ -192,15 +192,32 @@ $('#search-get').click(function(event){
 $('.edit_line_item').validate({
 	rules: {
 		"line_item[quantity]": {
-			max: 5,
+			number: true,
+			max: 10,
 			min: 1
 		}
 	},
 	messages: {
 		"line_item[quantity]": {
 			max: "最大数量10台!",
-			min: "最小是1台!"
+			min: "最小是1台!",
+			number: "无效的数字"
 		}
 	}
 });
+
+//调用产品控制台产品推荐的时候Ajax请求中按钮加入css
+$('.tuijian1').hover(
+		function(){$(this).find('.tuijian').addClass('tuijian22');
+},
+		function(){$(this).find('.tuijian22').removeClass('tuijian22');});
+//订单页面中更新数据
+//
+$('.getnumber').hover(
+		function(){
+			$(this).addClass('getnumber2');
+		},function(){
+			$(this).removeClass('getnumber2');
+		}
+		);
 });

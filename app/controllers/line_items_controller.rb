@@ -38,9 +38,12 @@ class LineItemsController < ApplicationController
 	def update
 		@product = Product.find(params[:product_id])
 		@line_item = @product.line_items.find(params[:id])
-		if @line_item.update_attributes(params[:line_item])
-			redirect_to :back
-		return
+		respond_to do |format|
+			if @line_item.update_attributes(params[:line_item])
+				format.html { redirect_to cart_path }
+				format.js {@line_item}
+		
+			end
 		end
 	end
 end

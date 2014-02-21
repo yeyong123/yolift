@@ -40,21 +40,25 @@ class ProductsController < ApplicationController
 		respond_to do |format|
 			if @product.save
 				format.html { redirect_to products_path, notice: '创建成功'}
-				format.json { render json: products_path, status: :created, location: @products }
+				format.js
 
 			else
-				format.html { render action: "new"}
-				format.json { render json: @product.errors, status: :unprocessable_entity}
+				format.html { render :new}
+				format.j
 			end
 		end
 	end
 
 	def update
 		@product = Product.find(params[:id])
-		if @product.update_attributes(params[:product])
-			redirect_to dashboard_path
-		else
-			render 'edit'
+		respond_to do |format|
+			if @product.update_attributes(params[:product])
+				format.html {redirect_to dashboard_path}
+				format.js{product = @product}
+			else
+				format.html {render 'edit'}
+				format.js
+			end
 		end
 	end
 

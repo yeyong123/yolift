@@ -1,0 +1,6 @@
+<div class="getnumber">
+	<%= form_for [item.product, item], remote: true do |f| %>
+		<%= f.number_field :quantity, min: 1, max: 10 %>
+		<%= f.submit "刷新", class: "btn btn-mini btn-success" %> 
+	<% end %>
+</div>
