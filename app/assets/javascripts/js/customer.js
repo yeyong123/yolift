@@ -220,4 +220,6 @@ $('.getnumber').hover(
 			$(this).removeClass('getnumber2');
 		}
 		);
+//过滤表单数据
+$('table').filterTable();
 });
