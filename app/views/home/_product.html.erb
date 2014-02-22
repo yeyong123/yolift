@@ -1,11 +1,12 @@
 <div class="tuijian">
 	<%= form_for(product, remote: true) do |f| %>
-		<% if !product.excellent? %>
-			<%= check_box_tag('product[excellent]', 1) %>
-			<%= f.submit "推荐展示", class: "btn  btn-success" %>
+		<%= render 'home/error_message', object: f.object %>
+		<% if !product.paixu? %>
+			<%= f.number_field :paixu %>
+			<%= f.submit "设定排序", class: "btn  btn-success" %>
 		<% else %>
-			<%= check_box_tag('product[excellent]', 0) %>
-			<%= f.submit "取消推荐", class: "btn btn-danger" %>
+			<%= f.number_field :paixu %>
+			<%= f.submit "更改设定", class: "btn btn-danger" %>
 		<% end %>
 	<% end %>
 </div>

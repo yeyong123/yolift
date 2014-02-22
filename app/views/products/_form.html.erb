@@ -9,12 +9,9 @@
 		<%= grouped_collection_select(:product, :tag_id, Category.all, :tags, :id, :id, :name) %><br />
 		</div>
 		<div class="field">
-			<% if !@product.excellent? %>
-				<%= check_box_tag 'product[excellent]', 1%>推荐展示
-			<% else %>
-				<%= check_box_tag 'product[excellent]',0 %>取消推荐
-			<% end %>
-		</div>
+			<%= f.label :paixu, "排序编号" %>
+			<%= f.number_field :paixu %>
+				</div>
 	<div class="field">
 		<%= f.label :number, "货号" %>
 		<%= f.fields_for :productnumbers do |ph|%>

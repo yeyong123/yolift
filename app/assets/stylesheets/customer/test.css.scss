@@ -1,3 +1,11 @@
+//2013年11月起始
+//这个名字叫测试。，但不测试的，起初是调式用的，
+//后来调式的多了，就成成品了，不要被名字骗了
+//这个css文件兼容IE7-IE9.,渐变色不支持IE10,。
+//等有时间在添加IE10的渐变色代码
+//这个要等到老板的电脑能装ie10才行，目前XP
+
+
 .position-none {
 	clear: both;
 	width: 100%;
@@ -490,6 +498,10 @@ li.font-border a {
 	background: none;
 	text-decoration: underline;
 }
+//2014-2-22产品介绍中鼠标经过颜色
+.product-info .info-title #myTab li a:hover {
+	color: #ee8301;
+}
 //产品展示的index界面css
 .product-index {
 	float: right;
@@ -529,6 +541,11 @@ li.font-border a {
 .tab-pane .thumbnail, .product-index .thumbnail {
 	width: 170px;
 	float: left;
+	//height: 280px;
+}
+.product-image h6 {
+	margin: 4px 0;
+	height: 40px;
 }
 .tab-pane .thumbnails > li{
 	margin-left: 10px;
@@ -609,7 +626,7 @@ margin-bottom: 5px;
 	width: 81%;
 	float: left;
 }
-.edit_line_item {
+.edit_line_item, .edit_product {
 	position: relative;
 }
 .edit_line_item label {
@@ -1020,4 +1037,13 @@ width: 30px;
 .repair-form .about-action {
 	float: right;
 	margin: 0 50px 20px 0;
+}
+//设定排序
+.tuijian1 #error_explanation{
+	position: absolute;
+	width: 220px;
+	left: 128px;
+}
+#product_paixu {
+	width: 45px;
 }

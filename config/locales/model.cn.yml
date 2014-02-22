@@ -11,6 +11,7 @@ zh-CN:
         too_long: "字数太长"
         too_short: "字数不够"
         not_an_integer: "不是整数"
+        taken: "的数字已经有了"
     models:
       affiliate: "诚邀合作"
       product: "产品中心"
@@ -52,3 +53,5 @@ zh-CN:
         name: "姓名"
         phone: "手机"
         question: "意见和留言内容"
+      product:
+        paixu: "排序"
