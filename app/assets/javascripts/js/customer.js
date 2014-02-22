@@ -239,5 +239,5 @@ $('.getnumber').hover(
 		}
 		);
 //过滤表单数据
-$('table').filterTable();
+$('#table').filterTable();
 });

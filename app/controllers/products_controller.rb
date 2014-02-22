@@ -2,7 +2,7 @@ class ProductsController < ApplicationController
 
 	def index
 		unless params[:t]
-			@products = Product.order("paixu desc").paginate(page: params[:page], per_page: 12)
+			@products = Product.order("paixu asc").paginate(page: params[:page], per_page: 12)
 		else 
 			@products = Product.where("tag_id = ?", params[:t]).order("excellent desc").paginate(page: params[:page], per_page: 12)
 		end
