@@ -1,0 +1,6 @@
+<%= render 'home/nav_list' %>
+<div class="product-index">
+	<% @products.each do |product| %>
+		<%= product.video if product.video? %>
+	<% end %>
+</div>
