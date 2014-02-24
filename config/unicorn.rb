@@ -1,7 +1,7 @@
 module Rails
 	class << self
 		def root
-			File.expand_path(__File__).split('/')[0..-3].join('/')
+			File.expand_path(__FILE__).split('/')[0..-3].join('/')
 		end
 	end
 end
@@ -13,8 +13,8 @@ pid "#{Rails.root}/tmp/pids/unicorn.pid"
 stderr_path "#{Rails.root}/log/unicorn.log"
 stdout_path "#{Rails.root}/log/unicorn.log"
 listen 5000, :tcp_nopush => false
-listen "/tmp/unicron.yolift.sock"
-worker_process 6
+listen "/tmp/unicorn.yolift.sock"
+worker_processes 6
 timeout 120
 if GC.respond_to?(:copy_on_write_friendly=)
 	GC.copy_on_write_friendly = true
