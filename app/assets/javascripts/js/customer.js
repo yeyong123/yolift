@@ -50,16 +50,6 @@ $('.cart_items-drop, .cart_items-drop2').mouseout(function(){
 //		);
 
 //
-var footerbottom = $('.footer-center').outerHeight(true) + 10;
-// 导航栏附加导航固定定位
-$('#myaffix').affix({
-	offset: {
-		top: 112
-	,bottom: function(){
-		return (this.bottom = $('.footer').outerHeight(true))
-	}
-	}	
-});
 
 //选择下拉菜单切换
 
@@ -240,4 +230,6 @@ $('.getnumber').hover(
 		);
 //过滤表单数据
 $('#table').filterTable();
+
+//产品展示页面的固定定位
 });

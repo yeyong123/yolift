@@ -1,4 +1,4 @@
-<div class="list-nav" data-spy="affix" data-offset-top="140">
+<div class="list-nav">
 	<div class="navbar">
 		<div class="navbar-inner">
 			<a class="btn btn-navbar" data-toggle="collapse" data-target=".nav-collapse">
@@ -9,11 +9,6 @@
 			<div class="nav-collapse collapse">
 				<ul class="nav">
 					<li class="product-menu"><span>产品目录<span>&gt&gt</span></span>
-					<% if request.path != root_path  %>
-					<div id="myaffix">
-						<%= render 'home/nav_list' %>
-					</div>
-				<% end %>
 					</li>
 					<li class="active index"><%= link_to t('.index'), root_path %></li>
 					<% About.limit(1).each do |about| %>

@@ -1,0 +1,23 @@
+<%= render 'home/nav_list' %>
+
+<div class="show-product">
+	<div class="product">
+		<span>产品标题</span>
+	</div>
+	<%= render 'home/imagezoom' %>
+	<%= render 'home/description' %>
+	<%= render 'home/product_info' %>
+</div>
+<script>
+function addfavorite() 
+{ 
+if (document.all) 
+{ 
+window.external.addFavorite('http://www.domain.com','名字'); 
+} 
+else if (window.sidebar) 
+{ 
+window.sidebar.addPanel('名字', 'www.domain.com', ""); 
+} 
+} 
+</script><a href="#" onclick="addfavorite()">加入收藏</a>

@@ -8,3 +8,11 @@
       server: "服务中心"
       contact: "联系我们"
       product: "YOLIFT产品"
+    home_navbar:
+      index: "首页"
+      about: "关于我们"
+      products: "产品中心"
+      new: "新闻资讯"
+      server: "服务中心"
+      contact: "联系我们"
+      product: "YOLIFT产品"
