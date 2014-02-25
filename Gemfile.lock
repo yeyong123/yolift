@@ -192,6 +192,8 @@ GEM
       kgio (~> 2.6)
       rack
       raindrops (~> 0.7)
+    unicorn-worker-killer (0.4.2)
+      unicorn (~> 4)
     warden (1.2.3)
       rack (>= 1.0)
     will_paginate (3.0.5)
@@ -220,4 +222,5 @@ DEPENDENCIES
   simple_form
   uglifier (>= 1.0.3)
   unicorn
+  unicorn-worker-killer
   will_paginate

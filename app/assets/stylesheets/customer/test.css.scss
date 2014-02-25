@@ -25,6 +25,10 @@
 }
 #myaffix .nav-bananer {
 	background: none;
+	height: 275px;
+}
+#myaffix .submenu {
+	height: 275px;
 }
 .affix .navbar-form {
 	margin: 4px 0 0 0;
@@ -866,6 +870,7 @@ hr {
  }
  .about-content {
 	 clear: both;
+	 margin:10px;
  }
  //
 a {
