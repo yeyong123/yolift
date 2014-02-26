@@ -17,7 +17,7 @@ $('#idHandle3').mouseout(function(){
 	//
 
 	function subindexMenu(){
-		$("#js-menu").find("li").hover(function(){
+		$(".submenulist").find("li").hover(function(){
 			$(this).css("z-index","9999");
 			$(this).find("h3 a").addClass("on");
 			$(this).find("h3 span").hide();

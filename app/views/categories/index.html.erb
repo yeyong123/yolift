@@ -3,7 +3,6 @@
 	<table class="table">
 		<% @categories.each do |cate| %>
 			<tr>
-				<td><%= image_tag(cate.image_url(:micro)) %></td>
 				<td><%= cate.name %></td>
 				<td><%= link_to "查看", category_path(cate) %></td>
 				<td><%= link_to "edit", edit_category_path(cate) %></td>

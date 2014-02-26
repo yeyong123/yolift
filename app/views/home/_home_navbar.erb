@@ -1,70 +1,27 @@
-<div class="list-nav">
-	<div class="navbar">
-		<div class="navbar-inner">
-			<a class="btn btn-navbar" data-toggle="collapse" data-target=".nav-collapse">
-				<span class="icon-bar"></span>
-				<span class="icon-bar"></span>
-				<span class="icon-bar"></span>
-			</a>
-			<div class="nav-collapse collapse">
-				<ul class="nav">
-					<li class="product-menu"><span>产品目录<span>&gt&gt</span></span>
-					</li>
-					<li class="active index"><%= link_to t('.index'), root_path %></li>
-					<% About.limit(1).each do |about| %>
-					<li class="dropdown"><%= link_to t('.about'), about_path(about.id),class: "dropdown-toggle" %>
-				<% end %>
-					<ul class="dropdown-menu">
-						<% About.limit(5).each do |about| %>
-							<li><%= link_to about.title, about_path(about.id)%></li>
-						<% end %>
-					</ul>
-					</li>
-					<li class="dropdown"><%= link_to t('.products'),products_path, class: "dropdown-toggle" %>
-					<ul class="dropdown-menu">
-						<li><%= link_to t('.product'), products_path %></li>
-						<li><a href="#">视频展示</a></li>
-
-					</ul>
-					</li>
-					<% Server.limit(1).each do |server| %>
-						<li class="dropdown"><%= link_to t('.new'), server_path(server.id), class: "dropdown-toggle" %>
+<div class="nav-list">
+	<div class="nav-bananer">
+		<div class="submenu">
+			<div id="js-menu2" class="submenulist">
+				<ul>
+					<% Category.all.each do |cate| %>
+						<li>
+						<h3><%= link_to category_path(cate)  do %>
+								<%= image_tag(cate.image_url(:micro)) if cate.image? %>
+								<%= cate.name%>
+							<% end %>
+							<span>></span>
+							</h3>
+						<div class="listbox hide">
+							<dl class="procate">
+								<% cate.tags.each do |tag| %>
+									<dd><%= link_to tag.name, products_path(t:tag), target: "_blank"%>	</dd>
+								<% end %>
+							</dl>
+						</div>
+						</li>
 					<% end %>
-					<ul class="dropdown-menu">
-						<% Server.limit(3).each do |server| %>
-							<li><%= link_to server.title, server_path(server.id)  %></li>
-						<% end %>
-					</ul>
-					</li>
-					<% Center.limit(1).each do |center| %>
-					<li class="dropdown"><%= link_to t('.server'), center_path(center.id), class: "dropdown-toggle" %>
-				<% end %>
-					<ul class="dropdown-menu">
-					<% Center.limit(3).each do |center| %>
-						<li><%= link_to center.title, center_path(center.id) %></li>
-					<% end %>
-						<li><%= link_to "售后服务", aftermarkets_path %></li>
-					</ul>
-					</li>
-					<% Contact.limit(1).each do |contact| %>
-					<li class="dropdown"><%= link_to t('.contact'), contact_path(contact.id), class: "dropdown-toggle" %>
-				<% end %>
-					<ul class="dropdown-menu">
-						<% Contact.limit(3).each do |contact| %>
-							<li><%= link_to contact.title, contact_path(contact)  %></li>
-						<% end %>
-					</ul>
-					</li>
 				</ul>
-				<form action="/search" method="get" class="navbar-form pull-right">
-					<input type="text" name="q" value="" class="serach-query" placeholder="输入产品名称或者货号">
-					<button type="submit" id="search-get" class="btn">搜索</button>
-					<span class="cart-img"><%= image_tag("logo/cart.png",alt: "购物车")%></span>
-					<span class="number-cart"><img src="/assets/number.png"/><b><%= @cart.total_items %></b>
-					</span>
-					<%= render 'carts/cart_item' %>
-				</form>
-			</div><!--/.nav-collapse -->
+			</div>
 		</div>
 	</div>
 </div>

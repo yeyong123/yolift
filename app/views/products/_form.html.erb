@@ -16,7 +16,7 @@
 		<%= f.label :number, "货号" %>
 		<%= f.fields_for :productnumbers do |ph|%>
 			<%= ph.text_field :number %>
-			<%= ph.link_to_remove "删除" %>
+			<%= ph.link_to_remove "删除",class: "btn btn-danger" %>
 		<% end %>
 		<p>
 		<%= f.link_to_add "添加货号", :productnumbers, class: "btn btn-primary" %>
