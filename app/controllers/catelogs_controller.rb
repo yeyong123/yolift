@@ -20,7 +20,7 @@ class CatelogsController < ApplicationController
 	def create
 		@catelog = Catelog.new(params[:catelog])
 		if @catelog.save
-			redirect_to root_path, notice: "感谢你的申请，我们会尽快给你邮寄相册？"
+			redirect_to root_path, notice: "感谢你的申请，我们会尽快给你邮寄样册？"
 		else
 			render 'new'
 		end

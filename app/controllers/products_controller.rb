@@ -41,10 +41,9 @@ class ProductsController < ApplicationController
 			if @product.save
 				format.html { redirect_to products_path, notice: '创建成功'}
 				format.js
-
 			else
 				format.html { render :new}
-				format.j
+				format.js
 			end
 		end
 	end
@@ -74,7 +73,7 @@ class ProductsController < ApplicationController
 			@products = Product.joins(:productnumbers).where("title like ? or productnumbers.number like ?",
 			'%'+params[:q]+'%', '%'+params[:q]+'%').uniq.order("paixu desc").paginate(page: params[:page], per_page: 12)
 			if @products.empty?
-				redirect_to products_path, notice: "没有找到相关，请重新搜索！"
+				redirect_to products_path, notice: "没有找到你想要的产品，请联系我们的客服4008 373 288！"
 			else
 				render 'index'
 			end

@@ -581,6 +581,19 @@ margin-bottom: 5px;
 		font-size: 11.5px;
 		color: #b90000;
 	}
+	.link-product {
+		margin: 0 0 2px;
+		position: relative;
+	}
+	.btnlink {
+		position: absolute;
+		top: -8px;
+		right: 0;
+	}
+	.btnlink a {
+		color: white;
+		font-size: 14px;
+	}
 .footer-link a{
 	color: #966a08;
 }

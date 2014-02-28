@@ -11,5 +11,7 @@
 			</tr>
 		<% end %>
 	</table>
+	<% if admin_signed_in? %>
 	<%= link_to "新增联系", new_contact_path, class: "btn btn-primary"%>
+<% end %>
 </div>
