@@ -39,7 +39,8 @@ RailsAdmin.config do |config|
   # config.default_items_per_page = 20
 
   # Exclude specific models (keep the others):
-  # config.excluded_models = ['Admin', 'Bananer', 'Cart', 'Category', 'City', 'Ckeditor::Asset', 'Ckeditor::AttachmentFile', 'Ckeditor::Picture', 'District', 'LineItem', 'Photo', 'Product', 'Productcolor', 'Productnumber', 'Province', 'Tag', 'User']
+  config.excluded_models = ['Ckeditor::Asset', 'Ckeditor::AttachmentFile', 'Ckeditor::Picture', 'Kindeditor::Asset',
+		'Kindeditor::File','Kindeditor::Flash','Kindeditor::Image','Kindeditor::Media']
 
   # Include specific models (exclude the others):
   # config.included_models = ['Admin', 'Bananer', 'Cart', 'Category', 'City', 'Ckeditor::Asset', 'Ckeditor::AttachmentFile', 'Ckeditor::Picture', 'District', 'LineItem', 'Photo', 'Product', 'Productcolor', 'Productnumber', 'Province', 'Tag', 'User']

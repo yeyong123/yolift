@@ -1,0 +1,6 @@
+zh-CN:
+  support:
+    array:
+      two_words_connector: "和"
+      words_connector: ","
+      last_word_connector: "以及"

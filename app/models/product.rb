@@ -15,7 +15,7 @@ class Product < ActiveRecord::Base
 	has_many :orders, through: :line_items
 
 	validates_presence_of :title, :photos, :productnumbers
-	validates_numericality_of :paixu, greater_than_equal_to: 0, less_than: 9999, allow_blank: true
+	validates_numericality_of :paixu, greater_than_or_equal_to: 0, less_than: 9999, allow_blank: true
 #	def add_product(line_item,product_id)
 #		current_item = line_items.find_by_product_id(product_id)
 #		if current_item
