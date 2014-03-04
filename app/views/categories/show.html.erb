@@ -1,6 +1,9 @@
 <% provide(:title, @category.name) %>
 <%= render 'home/nav_list' %>
 	<div class="product-index">
+		<% if admin_signed_in? %>
+			<%= render 'edit_form' %>
+		<%else %>
 		<%= render_navigation(renderer: :breadcrumbs, join_with: '&nbsp / &nbsp') %> 
 		<ul class="thumbnails">
 			<% @products.each do |product| %>
@@ -8,6 +11,7 @@
 <% end %>
 		</ul>
 
-	<%= will_paginate @products %>
+		<%= will_paginate @products %>
+	<% end %>
 	</div>
 

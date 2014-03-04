@@ -17,14 +17,14 @@ h6 {
 }
 .container {
 	background: white;
-	width: 980px;
+	width: 1135px;
 	clear: both;
 }
 .header {
 	height: 120px;
 }
 .navbar .container {
-	width: 980px;
+	width: 1135px;
 }
 #error_explanation{
 	border: 1px solid;
@@ -44,10 +44,10 @@ h6 {
 	list-style:none;
 }
 .get-image-position {
-	width: 81%;
+	width: 83%;
 	height: 357px;
 	padding: 0;
-	float: right;
+	float: left;
 	margin-top: 3px;
 }
 #myCarousel {
@@ -567,6 +567,7 @@ margin: 0;
 	position: absolute;
 	left: 0;
 	top: 0;
+	width: 980px;
 }
 .list-nav {
 	float: left;
@@ -679,6 +680,6 @@ margin-bottom: 15px;
 }
 //单个产品展示的描述
 .product-info .tab-content {
-	width: 750px;
+	//width: 750px;
 	margin: auto;
 }

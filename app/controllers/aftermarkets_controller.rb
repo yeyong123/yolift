@@ -20,7 +20,7 @@ class AftermarketsController < ApplicationController
 	def create
 		@aftermarket = Aftermarket.new(params[:aftermarket])
 		if @aftermarket.save
-			redirect_to aftermarkets_path
+			redirect_to dashboard_path
 		else
 			render 'new'
 		end
@@ -28,7 +28,7 @@ class AftermarketsController < ApplicationController
 
 	def update
 		if @aftermarket.update_attributes(params[:aftermarket])
-			redirect_to aftermarket_path(@aftermarket)
+			redirect_to dashboard_path
 		else
 			render 'edit'
 		end

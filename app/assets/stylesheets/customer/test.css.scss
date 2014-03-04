@@ -96,7 +96,7 @@
 .index-top {
 	margin: auto;
 	padding: 0;
-	width: 980px;
+	width: 1135px;
 	margin-top: -8px;
 	height: 29px;
 }
@@ -125,7 +125,7 @@ li.font-border a {
 	height: 24px;
 }
 .logo-index1 {
-	width: 980px;
+	width: 1135px;
 	height: 122px;
 	padding: 0;
 	margin: auto;
@@ -171,7 +171,7 @@ li.font-border a {
 	float: left;
 }
 .nav-bananer {
-	width: 19%;
+	//width: 19%;
 	height: 357px;
 }
 .bananer-button {
@@ -183,7 +183,7 @@ li.font-border a {
  .nav-list .list-nav {
 	 float: right;
 	margin-top: -17px;
-	width: 980px;
+	width: 1135px;
 	height: 32px;
  }
  .nav-list .list-nav .navbar {
@@ -379,8 +379,9 @@ li.font-border a {
 
 //单个产品展示放大镜
 .show-product {
-	float: right;
-	width: 80%;
+	float: left;
+	width: 940px;
+	margin-left: 5px;
 	height: auto;
 }
 .product {
@@ -403,7 +404,7 @@ li.font-border a {
 .product-description {
 	margin: 0;
 	height: 459px;
-	width: 380px;
+	width: 480px;
 	float: right;
 }
 .product-description .product-title {
@@ -488,7 +489,7 @@ li.font-border a {
 }
 .product-info .info-title {
 	height: 27px;
-	width: 786px;
+	width: 938px;
 	background-image: -webkit-gradient(linear, 0 0, 0 100%, from(#628970), to(#00452a));
 	background-image: -moz-linear-gradient(top, #628970, #00452a);
 	filter:progid:DXImageTransform.Microsoft.Gradient(GradientType=0, EndColorStr='#00452a', StartColorStr='#628970');
@@ -520,21 +521,21 @@ li.font-border a {
 }
 //产品展示的index界面css
 .product-index {
-	float: right;
-	width: 80%;
-	margin: 5px 0 0 5px;
+	float: left;
+	width: 938px;
+	margin: 5px 0 0 10px;
 }
 .product-index .span3 .thumbnail{
 	//height: 300px;
 }
 .product-image {
 	float: left;
-	width: 170px;
+	width: 215px;
 
 }
 .product-image img {
-	width: 180px;
-	height: 170px;
+	width: 215px;
+	//height: 170px;
 }
 .product-outline {
 	clear: both;
@@ -555,27 +556,27 @@ li.font-border a {
 	font-size: 11.5px;
 }
 .tab-pane .thumbnail, .product-index .thumbnail {
-	width: 170px;
+	width: 210px;
 	float: left;
-	height: 284px;
+	height: 310px;
 }
 .product-image h6 {
 	margin: 4px 0;
 	height: auto;
 }
 .tab-pane .thumbnails > li{
-	margin-left: 10px;
-margin-bottom: 5px;
+	margin-left: 16px;
+	margin-bottom: 5px;
 }
 .product-index .thumbnails > li {
 	margin-left: 20px;
 }
 .tab-pane .thumbnails .span3, .product-index .thumbnails .span3 {
-	width: 180px;
+	width: 210px;
 	float: left;
 }
 .tab-pane .thumbnails, {
-	margin-left: 0;
+	margin-left: -10px;
 	}
 	.link-product2 a{
 		font-size: 11.5px;

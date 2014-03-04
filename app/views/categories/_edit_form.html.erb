@@ -1,0 +1,32 @@
+<div class="accordion" id="accordion2">
+	<% @category.tags.each_with_index do |tag, index| %>
+	<div class="accordion-group">
+		<div class="accordion-heading">
+			<a class="accordion-toggle" data-toggle="collapse" data-parset="#accordion2" href="#collapse<%=index %>"><%= tag.name %></a>
+			<div id="collapse<%= index %>" class="accordion-body collapse">
+				<div class="accordion-inner">
+					<table class="table">
+						<% tag.products.each do |product| %>
+							<tr>
+								<td><%= link_to product.title, product_path(product) %></td>
+								<% product.productnumbers.limit(1).each do |pr| %>
+									<td><%= pr.number %></td>
+								<% end %>
+								<td><%= File.basename(product.printpdf_url) if product.printpdf?%></td>
+								<td><%= image_tag(product.photos.first.image_url(:small)) %></td>
+								<td class="tuijian1">
+									<%= render partial: 'home/product', locals: {product: product} %>
+								</td>
+								<td><%=time_ago_in_words(product.created_at) %>前</td>
+								<td><%= link_to "编辑", edit_product_path(product) %></td>
+								<td><%= link_to "删除", product, method: :delete, confirm: "确认删除" %></td>
+							</tr>
+						<% end %>
+					</table>
+				</div>
+			</div>
+		</div>
+	</div>
+<% end %>
+</div>
+

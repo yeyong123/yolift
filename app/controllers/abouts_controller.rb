@@ -19,7 +19,7 @@ class AboutsController < ApplicationController
 	def create
 		@about = About.new(params[:about])
 		if @about.save
-			redirect_to abouts_path, notice: "创建关于我们目录成功！"
+			redirect_to dashboard_path, notice: "创建关于我们目录成功！"
 		else
 			render 'new'
 		end
@@ -27,7 +27,7 @@ class AboutsController < ApplicationController
 
 	def update
 		if @about.update_attributes(params[:about])
-			redirect_to abouts_path, notice: "#{@about.title}  更新成功"
+			redirect_to dashboard_path, notice: "#{@about.title}  更新成功"
 		else
 			render 'edit'
 		end
@@ -35,7 +35,7 @@ class AboutsController < ApplicationController
 
 	def destroy
 		@about.destroy
-		redirect_to abouts_path
+		redirect_to dashboard_path
 	end
 
 	protected
