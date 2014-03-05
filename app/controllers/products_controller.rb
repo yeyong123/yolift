@@ -39,7 +39,7 @@ class ProductsController < ApplicationController
 		@product = Product.new(params[:product])
 		respond_to do |format|
 			if @product.save
-				format.html { redirect_to products_path, notice: '创建成功'}
+				format.html { redirect_to dashboard_path, notice: '创建成功'}
 				format.js
 			else
 				format.html { render :new}
@@ -52,7 +52,7 @@ class ProductsController < ApplicationController
 		@product = Product.find(params[:id])
 		respond_to do |format|
 			if @product.update_attributes(params[:product])
-				format.html {redirect_to dashboard_path}
+				format.html {redirect_to session[:return_to] ||= request.referer}
 				format.js{product = @product}
 			else
 				format.html {render 'edit'}
