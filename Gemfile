@@ -22,6 +22,7 @@ gem 'simple_form'
 gem 'capistrano', '2.15.0'
 gem 'unicorn'
 gem 'unicorn-worker-killer'
+gem 'wice_grid', '3.4.2'
 # Gems used only for assets and not required
 # in production environments by default.
 group :assets do

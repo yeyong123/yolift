@@ -9,6 +9,7 @@ class HomeController < ApplicationController
 
 	def link
 #		@models = ActiveRecord::Base.descendants
+		@products_grid = initialize_grid(Product, include: [:tag,:photos], order: 'title',per_page: 15)
 	end
 
 	def dashboard

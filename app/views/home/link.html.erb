@@ -1,2 +1,15 @@
-<%= render 'home/nav_list' %>
-<%= request.env["HTTP_USER_AGENT"] %>
+	<%= grid(@products_grid) do |g|
+		g.column name: '序号', attribute: 'id' do |product|
+			product.id
+		end
+	g.column name: "产品名称", attribute: 'title' do |product|
+		product.title
+	end
+		g.column name: "类别", attribute: 'name',model: Tag do |product|
+			product.tag.name
+		end
+		g.column attribute: 'image', model: Photo, filter: false do |product|
+			image_tag product.photos.first.image_url(:small) if product.photos.first.image?
+
+		end
+	end %>

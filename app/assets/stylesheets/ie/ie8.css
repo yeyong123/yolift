@@ -19,7 +19,7 @@
 	position: relative;
 }
 .nav-bananer .submenu {
-	position: absolute;
+/*	position: absolute; */
 	z-index: 2;
 }
 .cart-img {

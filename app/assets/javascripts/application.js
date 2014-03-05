@@ -15,6 +15,7 @@
 //= require kindeditor
 //= require jquery_nested_form
 //= require ckeditor/ckeditor
+//= require wice_grid
 //收藏页面
 //
 function addfavorite() 

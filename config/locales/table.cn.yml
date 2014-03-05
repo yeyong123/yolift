@@ -1,0 +1,10 @@
+zh-CN:
+  date: 
+    order:
+      - :year
+      - :month
+      - :day
+  wice_grid:
+    next_label: '>>'
+    previous_label: '<<'
+    show_all_records_label: "个产品"

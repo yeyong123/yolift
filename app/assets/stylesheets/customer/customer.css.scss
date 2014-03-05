@@ -389,7 +389,7 @@ margin: 0;
 	margin:0 0 10px 10px;
 }
 .data-gallery {
-	width: 380px;
+	width: 400px;
 	float: left;
 	position:relative;
 }
@@ -397,13 +397,13 @@ margin: 0;
 	max-width: none;
 }
 .data-pic {
-	height: 380px;
-	width: 380px;
+	height: 400px;
+	width: 400px;
 	border:1px solid #999;
 }
 .data-pic img {
-	width:380px;
-	height: 380px;
+	width:400px;
+	height: 400px;
 }
 .thumbsPanel{
 	height: 70px;
@@ -415,7 +415,7 @@ margin: 0;
 	float: left;
 	width: 15px;
 	height: 50px;
-	margin-top: 5px;
+	margin-top: 10px;
 }
 .thumbsPanel .prev{
 	background: url(../images/sprite.gif) no-repeat;
@@ -488,10 +488,10 @@ margin: 0;
 	height:250px; 
 }
 .izViewer2{
-	width:405px;
-	height:380px;
+	width:425px;
+	height:400px;
 	position:absolute;
-	left:380px;
+	left:400px;
 	top:0px;
 	display:none; 
 	//border:1px solid;
