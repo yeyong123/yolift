@@ -385,11 +385,8 @@ margin: 0;
 /********************
 图片放大镜
 */
-.p-data {
-	margin:0 0 10px 10px;
-}
 .data-gallery {
-	width: 400px;
+	width: 410px;
 	float: left;
 	position:relative;
 }
@@ -397,13 +394,13 @@ margin: 0;
 	max-width: none;
 }
 .data-pic {
-	height: 400px;
-	width: 400px;
+	height: 410px;
+	width: 410px;
 	border:1px solid #999;
 }
 .data-pic img {
-	width:400px;
-	height: 400px;
+	width:410px;
+	height: 410px;
 }
 .thumbsPanel{
 	height: 70px;
@@ -489,9 +486,9 @@ margin: 0;
 }
 .izViewer2{
 	width:425px;
-	height:400px;
+	height:412px;
 	position:absolute;
-	left:400px;
+	left:412px;
 	top:0px;
 	display:none; 
 	//border:1px solid;

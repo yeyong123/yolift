@@ -18,7 +18,7 @@ class PaymentsController < ApplicationController
 	def create
 		@payment = Payment.new(params[:payment])
 		if @payment.save
-			redirect_to payments_path
+			redirect_to dashboard_path
 		else
 			render 'new'
 		end
@@ -26,7 +26,7 @@ class PaymentsController < ApplicationController
 
 	def update
 		if @payment.update_attributes(params[:payment])
-			redirect_to payment_path(@payment)
+			redirect_to dashboard_path(@payment)
 		else
 			render 'edit'
 		end
@@ -34,7 +34,7 @@ class PaymentsController < ApplicationController
 
 	def destroy
 		@payment.destroy
-		redirect_to payments_path
+		redirect_to dashboard_path
 	end
 
 	private

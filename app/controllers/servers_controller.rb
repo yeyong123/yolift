@@ -18,15 +18,15 @@ class ServersController < ApplicationController
 	def create
 		@server = Server.new(params[:server])
 		if @server.save
-			redirect_to servers_path, notice: "#{@server.title}创建成功！"
+			redirect_to dashboard_path, notice: "#{@server.title}创建成功！"
 		else
 			render 'new'
 		end
 	end
 
 	def update
-		if @sever.update_attributes(params[:server])
-			redirect_to server_path, notice: "#{@server.title}更新成功！"
+		if @server.update_attributes(params[:server])
+			redirect_to dashboard_path, notice: "#{@server.title}更新成功！"
 		else
 			render 'edit'
 		end
@@ -34,7 +34,7 @@ class ServersController < ApplicationController
 
 	def destroy
 		@server.destroy
-		redirect_to servers_path
+		redirect_to dashboard_path
 	end
 
 	protected

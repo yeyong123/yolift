@@ -13,9 +13,9 @@ class ProductsController < ApplicationController
 
 	def show
 		begin
-		@product = Product.find(params[:id])
-		@line_item = @product.line_items.build
-		@productnumbers = @product.productnumbers
+			@product = Product.find(params[:id])
+			@line_item = @product.line_items.build
+			@productnumbers = @product.productnumbers
 		rescue ActiveRecord::RecordNotFound
 			logger.error "访问无效的产品页面#{params[:id]}"
 			redirect_to products_path
@@ -27,13 +27,13 @@ class ProductsController < ApplicationController
 		@product = Product.new
 		@productcolors = Productcolor.all
 		@category = Category.joins(:products).where(params[:id])
-		end
+	end
 
 	def edit
 		@product = Product.find(params[:id])
 		@productcolors = Productcolor.all
 		@categories = Category.all 
-			end
+	end
 
 	def create
 		@product = Product.new(params[:product])

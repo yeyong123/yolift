@@ -11,7 +11,7 @@ class OrdersController < ApplicationController
 
 	def new
 		if @cart.line_items.empty?
-			redirect_to error_path, notice: "还没有添加任何产品!"
+			redirect_to products_path, notice: "还没有添加任何产品!"
 		return
 		end
 	@order = Order.new	
@@ -26,7 +26,7 @@ class OrdersController < ApplicationController
 		if @order.save
 			Cart.destroy(session[:cart_id])
 			session[:cart_id] = nil
-			redirect_to orders_path, notice: "感谢你的订单，我们会马上联系你！"
+			redirect_to root_path, notice: "感谢你的订单，我们会马上联系你！"
 		else
 			render 'new'
 		end

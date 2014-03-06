@@ -20,7 +20,7 @@ class RepairsController < ApplicationController
 	def create
 		@repair = Repair.new(params[:repair])
 		if @repair.save
-			redirect_to repairs_path
+			redirect_to dashboard_path
 		else
 			render 'new'
 		end
@@ -28,7 +28,7 @@ class RepairsController < ApplicationController
 
 	def update
 		if @repair.update_attributes(params[:repair])
-			redirect_to repair_path
+			redirect_to dashboard_path
 		else
 			render 'edit'
 		end
@@ -36,7 +36,7 @@ class RepairsController < ApplicationController
 
 	def destroy
 		@repair.destroy
-		redirect_to repairs_path
+		redirect_to dashboard_path
 	end
 
 	private

@@ -18,7 +18,7 @@ class ZixunsController < ApplicationController
 	def create
 		@zixun = Zixun.new(params[:zixun])
 		if @zixun.save
-			redirect_to zixuns_path
+			redirect_to dashboard_path
 		else
 			render 'new'
 		end
@@ -26,7 +26,7 @@ class ZixunsController < ApplicationController
 
 	def update
 		if @zixun.update_attributes(params[:zixun])
-			redirect_to zixun_path(@zixun)
+			redirect_to dashboard_path
 			else
 				render 'edit'
 			end

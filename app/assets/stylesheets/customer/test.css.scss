@@ -296,8 +296,8 @@ li.font-border a {
 .nav-list .navbar-form input {
 	margin: 0;
 	padding: 0;
-	height: 25px;
-	width: 180px;
+	height: 25.5px;
+	width: 280px;
 	border-radius: 0px;
 }
 .nav-list .search-query {
@@ -397,8 +397,8 @@ li.font-border a {
 	margin-top: 10px;
 }
 .show-product .p-data {
-	width: 380px;
-	margin: 0;
+	width: 4100px;
+	margin: 0px 5px 0 10px;
 }
 //产品描述的样式
 .product-description {
@@ -436,11 +436,21 @@ li.font-border a {
 	width: 100%;
 }
 .product-description .product-item img{
-	float: right;
-	margin-right: 20px;
+	float: left;
+	width: 75px;
+	height: 90px;
+	margin-right: 30px;
 }
 .product-description .product-item img:hover {
     border: 2px solid red;
+}
+.product-phone {
+	clear: both;
+	height: 30px;
+	width: 100px;
+	float: right;
+	margin: 0 80px 5px 0;
+	//border: 1px solid;
 }
 .product-item ul {
     list-style: none;
@@ -451,12 +461,12 @@ li.font-border a {
 }
 .drop-list-toggle{
 	z-index: 222;
-    display: none;
-    position: absolute;
-    left: 35%;
-    top: 60px;
-    width: 220px;
-    background: #ffffff;
+	display: none;
+	position: absolute;
+	left: 35%;
+	top: 80px;
+	width: 220px;
+	background: #ffffff;
 }
 .drop-list-toggle li {
     text-align: left;
@@ -989,19 +999,24 @@ width: 30px;
 //开始在这里
 //控制台管理的面板的css代码
 .dashboard-form .dashboard-left {
-	width: 184px;
-	float: left;
-	height: 600px;
+	//width: 120px;
+	//float: left;
+	//height: 600px;
+	//新样式开始在这里
+	padding: 5px;
 }
 .dashboard-left ul {
-	float: none;
+	//float: none;
+	padding: 5px;
 }
 .dashboard-left ul li {
-	float: none;
+	//float: none;
+	padding: 5px;
 }
 .dashboard-form #myTabContent {
+	margin-top: 10px;
 	float: left;
-	width: 784px;
+	width: 100%;
 }
 //结束在这里
 //边栏的位置

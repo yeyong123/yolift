@@ -2,14 +2,13 @@ class HomeController < ApplicationController
 	before_filter :authenticate_admin!, only: [:dashboard] 
 	def index
 		@zixuns = Zixun.order("created_at desc").paginate(page: params[:page], per_page: 5)
-  end
-	
+	end
+
 	def sitemap
 	end
 
 	def link
-#		@models = ActiveRecord::Base.descendants
-		@products_grid = initialize_grid(Product, include: [:tag,:photos, :productnumbers, :category], order: 'title',per_page: 15)
+		#		@models = ActiveRecord::Base.descendants
 	end
 
 	def dashboard
@@ -18,7 +17,7 @@ class HomeController < ApplicationController
 		#不好集中编辑，所以这里进行了集中定义。同时进行集中定义，
 		#为了能更好的进行数据查询，想进行ajax的查询，防止网站的效能因为所有数据很影响
 		#访问速度。
-		@products = Product.order("paixu asc").paginate(page: params[:page], per_page: 10)
+		@products_grid = initialize_grid(Product, include: [:tag,:photos, :productnumbers, :category], order: 'title',per_page: 15)
 		@categories = Category.order("id desc").paginate(page: params[:page], per_page: 10)
 		@orders = Order.order("created_at desc").paginate(page: params[:page], per_page: 10)
 		@affiliates = Affiliate.order("created_at desc").paginate(page: params[:page], per_page: 10)

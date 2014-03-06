@@ -19,7 +19,7 @@ class CasesController < ApplicationController
 	def create
 		@case = Case.new(params[:case])
 		if @case.save
-			redirect_to cases_path
+			redirect_to dashboard_path
 		else
 			render 'new'
 		end
@@ -27,7 +27,7 @@ class CasesController < ApplicationController
 
 	def update
 		if @case.update_attributes(params[:case])
-			redirect_to case_path(@case)
+			redirect_to dashboard_path
 		else
 			render 'edit'
 		end
@@ -35,7 +35,7 @@ class CasesController < ApplicationController
 
 	def destroy
 		@case.destroy
-		redirect_to cases_path
+		redirect_to dashboard_path
 	end
 
 	private

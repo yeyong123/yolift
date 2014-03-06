@@ -19,7 +19,7 @@ class ContactsController < ApplicationController
 	def create
 		@contact = Contact.new(params[:contact])
 		if @contact.save
-			redirect_to contacts_path
+			redirect_to dashboard_path
 		else
 			render 'new'
 		end
@@ -27,7 +27,7 @@ class ContactsController < ApplicationController
 
 	def update
 		if @contact.update_attributes(params[:contact])
-			redirect_to contact_path
+			redirect_to dashboard_path
 		else
 			render 'edit'
 		end
@@ -35,7 +35,7 @@ class ContactsController < ApplicationController
 
 	def destroy
 		@contact.destroy
-		redirect_to contacts_path
+		redirect_to dashboard_path
 	end
 
 	private

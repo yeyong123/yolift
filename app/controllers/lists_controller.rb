@@ -18,7 +18,7 @@ class ListsController < ApplicationController
 	def create
 		@list = List.new(params[:list])
 		if @list.save
-			redirect_to lists_path
+			redirect_to dashboard_path
 		else
 			render 'new'
 		end
@@ -26,7 +26,7 @@ class ListsController < ApplicationController
 
 	def update
 		if @list.update_attributes(params[:list])
-			redirect_to list_path(@list)
+			redirect_to dashboard_path
 		else
 			render 'edit'
 		end
@@ -34,7 +34,7 @@ class ListsController < ApplicationController
 
 	def destroy
 		@list.destroy
-		redirect_to lists_path
+		redirect_to dashboard_path
 	end
 
 	private

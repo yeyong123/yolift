@@ -18,7 +18,7 @@ class BananersController < ApplicationController
 	def create
 		@bananer = Bananer.new(params[:bananer])
 		if @bananer.save
-			redirect_to bananers_path
+			redirect_to dashboard_path
 		else
 			render 'new'
 		end
@@ -26,7 +26,7 @@ class BananersController < ApplicationController
 	def update
 		@bananer = Bananer.find(params[:id])
 		if @bananer.update_attributes(params[:bananer])
-			redirect_to bananers_path
+			redirect_to dashboard_path
 		else
 			render 'edit'
 		end
@@ -34,6 +34,6 @@ class BananersController < ApplicationController
 	def destroy
 		@bananer = Bananer.find(params[:id])
 		@bananer.destroy
-		redirect_to bananers_path
+		redirect_to dashboard_path
 	end
 end

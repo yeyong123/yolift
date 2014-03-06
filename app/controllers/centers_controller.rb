@@ -19,7 +19,7 @@ class CentersController < ApplicationController
 	def create
 		@center = Center.new(params[:center])
 		if @center.save
-			redirect_to centers_path, notice: "#{@center.title}  创建成功！"
+			redirect_to dashboard_path, notice: "#{@center.title}  创建成功！"
 		else
 			render 'new'
 		end
@@ -27,7 +27,7 @@ class CentersController < ApplicationController
 
 	def update
 		if @center.update_attributes(params[:center])
-			redirect_to center_path, notice: "#{@center.title}  更新成功"
+			redirect_to dashboard_path, notice: "#{@center.title}  更新成功"
 		else
 			render 'edit'
 		end

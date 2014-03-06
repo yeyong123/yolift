@@ -12,7 +12,7 @@
 	<%= render partial: 'lists/form', locals: {f: f} %> 
 	<div class="about-action">
 		<%= f.submit "保存",class: "btn btn-success" %>
-		<%= link_to "返回", lists_path %>
+		<%= link_to "返回", :back %>
 	</div>
 <% end %>
 </div>

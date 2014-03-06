@@ -6,7 +6,7 @@
 		<%= render partial: 'abouts/form', locals: {f: f} %>
 		<div class="about-action">
 			<%= f.submit "更新", class: 'btn btn-success'%>
-			<%= link_to "返回", zixuns_path %>
+			<%= link_to "返回", :back %>
 		</div>
 	<% end %>
 </div>

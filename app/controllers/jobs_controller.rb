@@ -17,7 +17,7 @@ class JobsController < ApplicationController
 	def create
 		@job = Job.new(params[:job])
 		if @job.save
-			redirect_to jobs_path
+			redirect_to dashboard_path
 		else
 			render 'new'
 		end
@@ -25,7 +25,7 @@ class JobsController < ApplicationController
 
 	def update
 		if @job.update_attributes(params[:job])
-			redirect_to job_path
+			redirect_to dashboard_path
 		else
 			render 'edit'
 		end
@@ -33,7 +33,7 @@ class JobsController < ApplicationController
 
 	def destroy
 		@job.destroy
-		redirect_to abouts_path
+		redirect_to dashboard_path
 	end
 
 private

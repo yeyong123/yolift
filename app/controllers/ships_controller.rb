@@ -20,7 +20,7 @@ before_filter :authenticate_admin!, only: [:create, :edit,:new, :update, :destro
 	def create
 		@ship = Ship.new(params[:ship])
 		if @ship.save
-			redirect_to ships_path
+			redirect_to dashboard_path
 		else
 			render 'new'
 		end
@@ -28,7 +28,7 @@ before_filter :authenticate_admin!, only: [:create, :edit,:new, :update, :destro
 
 	def update
 		if @ship.update_attributes(params[:ship])
-			redirect_to ship_path(@ship)
+			redirect_to dashboard_path(@ship)
 		else
 			render 'edit'
 		end
@@ -36,7 +36,7 @@ before_filter :authenticate_admin!, only: [:create, :edit,:new, :update, :destro
 
 	def destroy
 		@ship.destroy
-		redirect_to ships_path
+		redirect_to dashboard_path
 	end
 
 	private

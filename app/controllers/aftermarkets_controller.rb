@@ -36,7 +36,7 @@ class AftermarketsController < ApplicationController
 
 	def destroy
 		@aftermarket.destroy
-		redirect_to aftermarkets_path
+		redirect_to dashboard_path
 	end
 
 	private

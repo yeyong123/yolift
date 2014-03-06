@@ -18,7 +18,7 @@ class GuidesController < ApplicationController
 	def create
 		@guide = Guide.new(params[:guide])
 		if @guide.save
-			redirect_to guides_path
+			redirect_to dashboard_path
 		else
 			render 'new'
 		end
@@ -26,7 +26,7 @@ class GuidesController < ApplicationController
 
 	def update
 		if @guide.update_attributes(params[:guide])
-			redirect_to guide_path(@guide)
+			redirect_to dashboard_path(@guide)
 		else
 			render 'edit'
 		end
@@ -34,7 +34,7 @@ class GuidesController < ApplicationController
 
 	def destroy
 		@guide.destroy
-		redirect_to guides_path
+		redirect_to dashboard_path
 	end
 
 	private

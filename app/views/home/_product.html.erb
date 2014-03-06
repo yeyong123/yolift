@@ -4,10 +4,10 @@
 		<%= render 'home/error_message', object: f.object %>
 		<% if !product.paixu? %>
 			<%= f.number_field :paixu %>
-			<%= f.submit "设定排序", class: "btn  btn-success" %>
+			<%= f.submit "设定", class: "btn  btn-success" %>
 		<% else %>
 			<%= f.number_field :paixu %>
-			<%= f.submit "更改设定", class: "btn btn-danger" %>
+			<%= f.submit "更改", class: "btn btn-danger" %>
 		<% end %>
 	<% end %>
 </div>
