@@ -33,7 +33,7 @@
 					<% end %>
 					<td><%= File.basename(product.printpdf_url) if product.printpdf?%></td>
 					<td><%= image_tag(product.photos.first.image_url(:small)) if product.photos.first.image? %></td>
-					<td class="tuijian1">
+					<td>
 						<%= render partial: 'home/product', locals: {product: product} %>
 					</td>
 					<td><%=time_ago_in_words(product.created_at) %>前</td>

@@ -8,3 +8,5 @@ zh-CN:
     next_label: '>>'
     previous_label: '<<'
     show_all_records_label: "个产品"
+    filter_tooltip: "筛选"
+    reset_filter_tooltip: "重置筛选"

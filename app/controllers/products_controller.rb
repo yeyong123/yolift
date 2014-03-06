@@ -52,7 +52,7 @@ class ProductsController < ApplicationController
 		@product = Product.find(params[:id])
 		respond_to do |format|
 			if @product.update_attributes(params[:product])
-				format.html {redirect_to session[:return_to] ||= request.referer}
+				format.html {redirect_to dashboard_path}
 				format.js{product = @product}
 			else
 				format.html {render 'edit'}

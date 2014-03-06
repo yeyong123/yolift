@@ -1,3 +1,4 @@
+<div class="tuijian1">
 <div class="tuijian">
 	<%= form_for(product, remote: true) do |f| %>
 		<%= render 'home/error_message', object: f.object %>
@@ -9,5 +10,6 @@
 			<%= f.submit "更改设定", class: "btn btn-danger" %>
 		<% end %>
 	<% end %>
+</div>
 </div>
 
