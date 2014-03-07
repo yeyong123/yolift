@@ -11,11 +11,16 @@
 	<div id="myTabContent" class="tab-content">
 		<div class="tab-pane fade in">
 			<ul class="thumbnails">
-				<% cate.tags.each do |tag| %>
-					<%tag.products.limit(1).each do |product| %>
+				<% if cate.tags.length > 5 %>
+					<% cate.products.sample(10).each do |product| %>
+						<%= render partial: "products/index", locals: {product: product} %>
+					<%end %>
+				<% else %>
+					<% cate.products.sample(5).each do |product| %>
 						<%= render partial: "products/index", locals: {product: product} %>
 					<% end %>
 				<% end %>
+
 			</ul>
 		</div>
 		<% cate.tags.each do |tag| %>
