@@ -1,5 +1,7 @@
 //自定修改了bootstrap的样式
 //2014年加了jquery切换的样式
+//调式
+//2014-03-10书写css阴影
 .roundabout-holder{width:600px;height:325px;margin:0 auto;}
 
 .roundabout-moveable-item{width:530px;height:325px;cursor:pointer;border:3px solid #ccc;border:3px solid rgba(0, 0, 0, 0.08);border-radius:4px;-moz-border-radius:4px;-webkit-border-radius:4px;}
@@ -20,6 +22,11 @@ h6 {
 	background: white;
 	width: 1135px;
 	clear: both;
+}
+.shadow-body .container{
+-moz-box-shadow:-8px 0px 10px #B0B0B0, 8px 2px 10px #b0b0b0; 
+-webkit-box-shadow:-8px 0px 10px #B0B0B0, 8px 2px 10px #b0b0b0;
+box-shadow:-8px 0px 10px #B0B0B0, 8px 2px 10px #b0b0b0;	
 }
 .header {
 	height: 120px;

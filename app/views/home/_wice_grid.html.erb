@@ -15,8 +15,8 @@
 			product.category.name
 		end
 
-		g.column  name: "产品图片",attribute: 'image', model: Photo, filter: false, ordering: false do |product|
-			image_tag product.photos.first.image_url(:small) if product.photos.first.image?
+		g.column  name: "缩略图",attribute: 'image', model: Photo, filter: false, ordering: false do |product|
+			image_tag product.image_url(:small) if product.image?
 		end
 
 	

@@ -1,10 +1,11 @@
 class Product < ActiveRecord::Base
-	attr_accessible :detail, :category_id,:listtext, :excellent, :paixu,:number, :printpdf, :techparams, :title,:outline, :video, :tag_id,:productcolor_ids, :productnumbers_attributes, :photos_attributes
+	attr_accessible :detail, :category_id,:listtext, :excellent, :image,:paixu,:number, :printpdf, :techparams, :title,:outline, :video, :tag_id,:productcolor_ids, :productnumbers_attributes, :photos_attributes
 	has_many :photos, dependent: :destroy
 	default_scope order("paixu desc")
 	has_many_kindeditor_assets :attachments, dependent: :destroy
 	mount_uploader :printpdf, PrintpdfUploader
 	mount_uploader :video, VideoUploader
+	mount_uploader :image, ImageUploader
 	accepts_nested_attributes_for :photos, allow_destroy: :true, update_only: true,
 		reject_if: proc{ |attrs| attrs.all? {|k, v| v.blank? }}
 	has_many :productnumbers, dependent: :destroy

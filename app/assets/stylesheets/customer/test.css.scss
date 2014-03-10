@@ -12,7 +12,7 @@
 	z-index: 999999;
 }
 .affix .navbar-inner{
-	margin: 0;
+	//margin: 0;
 }
 #myaffix {
 	display: none;
@@ -51,7 +51,10 @@
     right: 400px;
 }
 .index-about .span4 {
-	width: 312px;
+	width: 350px;
+}
+.index-about .thumbnails > li {
+	margin-left: 30px;
 }
 	
 .carousel-indicators li {
@@ -66,16 +69,17 @@
 	background: #003f0d;
 }
 .logo-index {
-	background-image: -webkit-gradient(linear, 0 0, 0 100%, from(#48874e), to(#014715));
-	background-image: -moz-linear-gradient(top, #48874e, #014715);
-	filter:progid:DXImageTransform.Microsoft.Gradient(GradientType=0, EndColorStr='#014715', StartColorStr='#48874e');
+	background-image: -webkit-gradient(linear, 0 0, 0 100%, from(#c2ceaf), to(#b1c4b6));
+	background-image: -moz-linear-gradient(top, #c2ceaf, #b1c4b6);
+	filter:progid:DXImageTransform.Microsoft.Gradient(GradientType=0, EndColorStr='#b1c4b6', StartColorStr='#c2ceaf');
 
 }
 .list-nav .navbar-inner {
-	background-image: -webkit-gradient(linear, 0 0, 0 100%, from(#145824), to(#014715));
-	background-image: -moz-linear-gradient(top, #145824, #014715);
-	filter:progid:DXImageTransform.Microsoft.Gradient(GradientType=0, EndColorStr='#014715', StartColorStr='#145824');
+	//background-image: -webkit-gradient(linear, 0 0, 0 100%, from(#145824), to(#014715));
+	//background-image: -moz-linear-gradient(top, #145824, #014715);
+	filter:progid:DXImageTransform.Microsoft.Gradient(GradientType=0, EndColorStr='#004714', StartColorStr='#004714');
 	border-style: none;
+	background: #004714;
 }
 .nav-list .nav-bananer {
 	background: #4f7951;
@@ -182,7 +186,7 @@ li.font-border a {
 //产品导航栏2013年12月25日修改
  .nav-list .list-nav {
 	 float: right;
-	margin-top: -17px;
+	//margin-top: -17px;
 	width: 1135px;
 	height: 32px;
  }
@@ -194,13 +198,13 @@ li.font-border a {
 	 padding-right: 0;
 	 background-repeat: no-repeat;
 	 min-height: 32px;
-	 background-color: #00452a;
- }
- // 产品目录
+	 background-color: #004714;
+	 font-family: "Microsoft YaHei",Helvetica, Arial,sans-serif
+ }	 // 产品目录
  .product-menu {
 	 width: 186px;
-	 height: 32px;
-	 margin-top: 3px;
+	 height: 35px;
+	 //margin-top: 3px;
 	 background:#fda100; 
 	 margin-left: -20px;
 	 padding: 0;
@@ -219,7 +223,7 @@ li.font-border a {
 		font-weight: normal;
 	}
  .nav-list .navbar .nav > li > a {
-	 padding:10px 10px 0px 10px;
+	 padding:8px 10px 0px 10px;
  }
  .nav-list .navbar .nav .index
  //.nav-list .navbar .nav .dropdown
@@ -272,6 +276,15 @@ li.font-border a {
 //.nav-list .active {
 //	height: 27px;
 //}
+.nav-list2 {
+	background: #004714;
+	height: 35px;
+	margin-top: -17px;
+	width: 100%;
+}
+.nav-list2 .container {
+	background: none;
+}
 .nav-list .nav > .active > a, .nav-list .nav > .active > a:hover {
 	background: none;
 	color: white;
@@ -306,7 +319,7 @@ li.font-border a {
 }
 .nav-list .navbar-form input[type="text"] {
 	padding: 0;
-	margin: auto;
+	margin-top: 2px;
 }
 .nav-list .navbar-form .btn {
 	margin: 2px 0 0 -5px;
@@ -540,11 +553,11 @@ li.font-border a {
 }
 .product-image {
 	float: left;
-	width: 215px;
+	width: 185px;
 
 }
 .product-image img {
-	width: 215px;
+	width: 185px;
 	//height: 170px;
 }
 .product-outline {
@@ -566,9 +579,9 @@ li.font-border a {
 	font-size: 11.5px;
 }
 .tab-pane .thumbnail, .product-index .thumbnail {
-	width: 210px;
+	width: 185px;
 	float: left;
-	height: 325px;
+	height: 300px;
 }
 .product-image h6 {
 	margin: 4px 0;
@@ -576,7 +589,7 @@ li.font-border a {
 }
 .tab-pane .thumbnails > li{
 	margin-left: 16px;
-	margin-bottom: 5px;
+	//margin-bottom: 5px;
 }
 .product-index .thumbnails > li {
 	margin-left: 20px;

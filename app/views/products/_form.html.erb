@@ -26,6 +26,13 @@
 		<%= f.label :title, "标题" %>
 		<%= f.text_field :title %>
 	</div>
+	<div class="field">
+		<%= f.label :image, "缩略图(220x220)" %>
+		<%= image_tag(@product.image_url(:small)) if @product.image? %>
+		<%= f.file_field :image %>
+	</div>
+	<br/>
+	<!--
 	<div class="field select-image">
 		<%= f.label :color, "颜色"  %>
 		<% Productcolor.all.each do |pc| %>
@@ -34,8 +41,10 @@
 		<% end %>
 		<%= hidden_field_tag 'product[productcolor_ids][]','' %>
 	</div>
+	-->
 
 	<div class="field image-position-find">
+		<%= f.label :image, "产品图片" %>
 		<%= f.fields_for :photos do |photo| %>
 			<% pho = photo.object %>
 			<%= image_tag(pho.image_url(:small)) if pho.image? %>
