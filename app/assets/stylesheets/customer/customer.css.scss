@@ -24,9 +24,11 @@ h6 {
 	clear: both;
 }
 .shadow-body .container{
--moz-box-shadow:-8px 0px 10px #B0B0B0, 8px 2px 10px #b0b0b0; 
--webkit-box-shadow:-8px 0px 10px #B0B0B0, 8px 2px 10px #b0b0b0;
-box-shadow:-8px 0px 10px #B0B0B0, 8px 2px 10px #b0b0b0;	
+	-moz-box-shadow:-8px 0px 10px #7a7f7b, 8px 2px 10px #7a7f7b; 
+	-webkit-box-shadow:-8px 0px 10px #7a7f7b, 8px 2px 10px #7a7f7b;
+	box-shadow:-8px 0px 10px #7a7f7b, 8px 2px 10px #7a7f7b;	
+	padding: 0 5px;
+	margin-top: 3px;
 }
 .header {
 	height: 120px;
@@ -56,7 +58,6 @@ box-shadow:-8px 0px 10px #B0B0B0, 8px 2px 10px #b0b0b0;
 	height: 357px;
 	padding: 0;
 	float: right;
-	margin-top: 3px;
 }
 #myCarousel {
 	height: 357px;
@@ -73,6 +74,7 @@ box-shadow:-8px 0px 10px #B0B0B0, 8px 2px 10px #b0b0b0;
 	background-image: -webkit-gradient(linear, 0 0, 0 100%, from(#4d7a51), to(#014715));
 	background-image: -moz-linear-gradient(top, #4d7a51, #014715);
 	filter:progid:DXImageTransform.Microsoft.Gradient(GradientType=0, EndColorStr='#014715', StartColorStr='#4d7a51');
+	background-image: -ms-linear-gradient(top, #4d7a51, #014715);
 
 }
 .nav  .tab-tag span{
@@ -104,7 +106,9 @@ box-shadow:-8px 0px 10px #B0B0B0, 8px 2px 10px #b0b0b0;
 	background-image: -moz-linear-gradient(top, #eaeaea, #b2b2b2);
 	background-image: -webkit-gradient(linear, 0 0, 0 100%, from(#eaeaea), to(#b2b2b2));
 	filter:progid:DXImageTransform.Microsoft.Gradient(GradientType=0, EndColorStr='#b2b2b2', StartColorStr='#eaeaea');
+	background-image: -ms-linear-gradient(top, #eaeaea, #b2b2b2);
 	border: 1px solid #b2b2b2;
+
 }
 .bs-doc-image #myTab li a {
 	color: #5d5d5d;
