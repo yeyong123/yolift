@@ -21,7 +21,7 @@
 	position: absolute;
 	display: none;
 	left: -20px;
-	top: 30px;
+	top: 35px;
 }
 #myaffix .nav-bananer {
 	background: none;
@@ -201,7 +201,7 @@ li.font-border a {
 	 font-family: "Microsoft YaHei",Helvetica, Arial,sans-serif
  }	 // 产品目录
  .product-menu {
-	 width: 186px;
+	 width: 206px;
 	 height: 35px;
 	 //margin-top: 3px;
 	 background:#fda100; 
@@ -393,7 +393,7 @@ li.font-border a {
 //单个产品展示放大镜
 .show-product {
 	float: left;
-	width: 940px;
+	width: 918px;
 	margin-left: 5px;
 	height: auto;
 }
@@ -410,7 +410,7 @@ li.font-border a {
 	margin-top: 10px;
 }
 .show-product .p-data {
-	width: 4100px;
+	width: 410px;
 	margin: 0px 5px 0 10px;
 }
 //产品描述的样式
@@ -548,7 +548,7 @@ li.font-border a {
 //产品展示的index界面css
 .product-index {
 	float: right;
-	width: 938px;
+	width: 918px;
 	margin: 5px 0 0 10px;
 }
 .product-index .span3 .thumbnail{
@@ -585,6 +585,7 @@ li.font-border a {
 	width: 185px;
 	float: left;
 	height: 300px;
+	border: 1px solid #b2b2b2;
 }
 .product-image h6 {
 	margin: 4px 0;
@@ -592,7 +593,7 @@ li.font-border a {
 }
 .tab-pane .thumbnails > li{
 	margin-left: 16px;
-	//margin-bottom: 5px;
+	margin-bottom: 10px;
 }
 .product-index .thumbnails > li {
 	margin-left: 20px;
@@ -603,6 +604,7 @@ li.font-border a {
 }
 .tab-pane .thumbnails, {
 	margin-left: -10px;
+	margin-top: 5px;
 	}
 	.link-product2 a{
 		font-size: 11.5px;
@@ -1038,7 +1040,7 @@ width: 30px;
 //结束在这里
 //边栏的位置
 .edge-position {
-	width: 182px;
+	width: 206px;
 	float: left;
 }
 .edge-position .nav-list .nav-bananer {

@@ -1,24 +1,23 @@
 class ApplicationController < ActionController::Base
- 	before_filter :set_local_i18n
-  	protect_from_forgery
+	protect_from_forgery
+	before_filter :set_local_i18n
 	before_filter :find_cart
-
-before_filter :authenticate_admin!, only: [:create, :edit,:new, :update, :destroy]
+	before_filter :authenticate_admin!, only: [:create, :edit,:new, :update, :destroy]
 	protected
-		def set_local_i18n
-			if params[:locale]
-				if I18n.available_locales.include?(params[:locale].to_sym)
-					I18n.locale = params[:locale]
-				else
-					flash.now[:notice] = "#{params[:locale]} 翻译不可用。"
-					logger.error flash.now[:notice]
-				end
+	def set_local_i18n
+		if params[:locale]
+			if I18n.available_locales.include?(params[:locale].to_sym)
+				I18n.locale = params[:locale]
+			else
+				flash.now[:notice] = "#{params[:locale]} 翻译不可用。"
+				logger.error flash.now[:notice]
 			end
 		end
-#		
-		#def default_url_options
-		#	{locale: I18n.locale}
-		#end
+	end
+	#		
+	#def default_url_options
+	#	{locale: I18n.locale}
+	#end
 
 	private
 

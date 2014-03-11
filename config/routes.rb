@@ -35,6 +35,7 @@ Yolift::Application.routes.draw do
 		resources :zixuns
 		resources :catelogs
 		match '/search', to: "products#search"
+		match '/video', to: "products#video"
 		match '/sitemap', to: "home#sitemap"
 		match '/link', to: "home#link"
 		match '/error', to: 'home#error'

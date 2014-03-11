@@ -4,10 +4,7 @@ class ProductsController < ApplicationController
 		unless params[:t]
 			@products = Product.order("paixu asc").paginate(page: params[:page], per_page: 12)
 		else 
-			@products = Product.where("tag_id = ?", params[:t]).order("excellent desc").paginate(page: params[:page], per_page: 12)
-		end
-		@products.each do |product|
-			product.photos.build
+			@products = Product.where("tag_id = ?", params[:t]).order("paixu desc").paginate(page: params[:page], per_page: 12)
 		end
 	end
 
@@ -78,6 +75,10 @@ class ProductsController < ApplicationController
 				render 'index'
 			end
 		end
+	end
+
+	def video
+		@products = Product.order("paixu desc").paginate(page: params[:page], per_page: 8)
 	end
 
 
