@@ -15,6 +15,15 @@ body{
 	background: #d6dfd9;
 	width: 100%;
 }
+#gotop {
+	display: none;
+	width: 55px;
+	height: 55px;
+	position: fixed;
+	right: 50px;
+	bottom: 50px;
+	background: url(/assets/top.png) no-repeat -70px 0px;
+}
 h6 {
 	font-size: 12.5px;
 }
