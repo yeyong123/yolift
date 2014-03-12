@@ -150,8 +150,8 @@ li.font-border a {
 .logo-index1 .phone {
 	float: left;
 	margin-left: 8px;
-	width: 331px;
-	height: 66px;
+	//width: 331px;
+	//height: 66px;
 }
 .node-text{
 	float: right;
@@ -557,7 +557,10 @@ li.font-border a {
 .product-image {
 	float: left;
 	width: 185px;
-
+	border: 1px solid #b2b2b2;
+}
+.thumbnail h6 {
+	margin: 3px;
 }
 .product-image img {
 	width: 185px;
@@ -585,7 +588,7 @@ li.font-border a {
 	width: 185px;
 	float: left;
 	height: 300px;
-	border: 1px solid #b2b2b2;
+	border-style: none;
 }
 .product-image h6 {
 	margin: 4px 0;

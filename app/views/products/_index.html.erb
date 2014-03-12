@@ -4,8 +4,8 @@
 		<%= link_to product_path(product) do%>
 			<%= image_tag(product.image_url(:narmail)) if product.image? %>
 		<% end %>
-		<h6><%= product.title %></h6>
-	</div>
+		</div>
+	<h6><%= product.title %></h6>
 	<div class="product-outline">
 		<%= sanitize(product.outline) %>
 	</div>
