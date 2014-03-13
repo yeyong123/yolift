@@ -113,6 +113,9 @@
 	font-size: 12.5px;
 	//border-right: 1px solid #fff;
 }
+.index-top .btn-danger {
+	color: white;
+}
 .index-top li span {
 	color: #004714;
 	height: 1em;
@@ -514,7 +517,7 @@ li.font-border a {
 }
 .product-info .info-title {
 	height: 27px;
-	width: 938px;
+	width: 918px;
 	background-image: -webkit-gradient(linear, 0 0, 0 100%, from(#628970), to(#00452a));
 	background-image: -moz-linear-gradient(top, #628970, #00452a);
 	filter:progid:DXImageTransform.Microsoft.Gradient(GradientType=0, EndColorStr='#00452a', StartColorStr='#628970');

@@ -103,6 +103,9 @@ $.fn.linkSelect = function (num){
 
 
 
+ $('.carousel').carousel({
+ 		interval: 5000
+ });
  // 首页展示图的js选择active
  //
  $('.carousel-indicators li:first').addClass('active');

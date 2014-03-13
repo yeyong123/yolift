@@ -15,6 +15,9 @@ body{
 	background: #d6dfd9;
 	width: 100%;
 }
+.top-index,.logo-index, .footer, .footer-tese,.footer-link, .category-list,.footer-bottom {
+	min-width: 1145px;
+}
 #gotop {
 	display: none;
 	width: 55px;
@@ -79,7 +82,7 @@ h6 {
 	clear: both;
 }
 .nav .tab-tag {
-	width: 186px;
+	width: 206px;
 	background-image: -webkit-gradient(linear, 0 0, 0 100%, from(#4d7a51), to(#014715));
 	background-image: -moz-linear-gradient(top, #4d7a51, #014715);
 	filter:progid:DXImageTransform.Microsoft.Gradient(GradientType=0, EndColorStr='#014715', StartColorStr='#4d7a51');
@@ -638,9 +641,12 @@ border-top: 1px solid;
 /*底部链接导航栏*/
 .footer-link {
 	clear: both;
-	width: 100%;
-	padding: 5px;
+	padding: 5px 0;
 	margin: 0;
+	background: #e8e8e8;
+}
+.footer-link .container {
+	background: none;
 }
 .footer-link ul {
 	list-style: none;
