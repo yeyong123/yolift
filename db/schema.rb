@@ -11,7 +11,7 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20140310045539) do
+ActiveRecord::Schema.define(:version => 20140313073500) do
 
   create_table "abouts", :force => true do |t|
     t.string   "title"
@@ -85,8 +85,9 @@ ActiveRecord::Schema.define(:version => 20140310045539) do
     t.string   "descript"
     t.string   "button"
     t.string   "title"
-    t.datetime "created_at", :null => false
-    t.datetime "updated_at", :null => false
+    t.datetime "created_at",                :null => false
+    t.datetime "updated_at",                :null => false
+    t.integer  "number",     :default => 1
   end
 
   create_table "carts", :force => true do |t|

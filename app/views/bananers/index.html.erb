@@ -4,6 +4,7 @@
 <table class="table">
 	<% @bananers.each do |bananer| %>
 		<tr>
+			<td><%= bananer.id %></td>
 		<td><%= bananer.title %></td>
 		<td><%= image_tag(bananer.image_url(:thumb)) %></td>
 		<% if admin_signed_in? %>

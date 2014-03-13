@@ -588,7 +588,7 @@ li.font-border a {
 	line-height: 15px;
 	font-size: 11.5px;
 }
-.tab-pane .thumbnail, .product-index .thumbnail {
+.tab-pane .thumbnail, .product-index .thumbnail, .product-process .thumbnail{
 	width: 185px;
 	float: left;
 	height: 300px;
@@ -598,12 +598,13 @@ li.font-border a {
 	margin: 4px 0;
 	height: auto;
 }
-.tab-pane .thumbnails > li{
+.tab-pane .thumbnails > li, .product-index .thumbnails > li {
 	margin-left: 16px;
-	margin-bottom: 10px;
+	margin-bottom: 5px;
 }
-.product-index .thumbnails > li {
-	margin-left: 20px;
+.product-process .thumbnails > li {
+	margin-left: 10px;
+	margin-bottom: 5px;
 }
 .tab-pane .thumbnails .span3, .product-index .thumbnails .span3 {
 	width: 210px;
