@@ -13,7 +13,7 @@
 	<%= render 'products/description' %>
 	<%= render 'products/product_info' %>
 	<div class="product-process">
-		<%= link_to "更多同类产品", category_path(@product.category.id), class: "btn btn-large btn-primary" %>
+		<%= link_to image_tag("product/more.png"), category_path(@product.category.id) %>
 		<ul class="thumbnails">
 			<% Category.all.each do |cate| %>
 				<% if cate.id == @product.category.id %>
