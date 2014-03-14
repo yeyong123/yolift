@@ -3,7 +3,7 @@ class CasesController < ApplicationController
 	before_filter :find_id, only: [:show, :edit, :update, :destroy]
 
 	def index
-		@cases = Case.order("id desc").paginate(page: params[:page],per_page: 10)
+		@cases = Case.order("created_at desc").paginate(page: params[:page],per_page: 10)
 	end
 
 	def show

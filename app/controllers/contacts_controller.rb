@@ -1,7 +1,7 @@
 class ContactsController < ApplicationController
 	before_filter :find_id, only: [:show, :edit, :update, :destroy]
 	def index
-		@contacts = Contact.all
+		@contacts = Contact.order("created_at desc").paginate(page: params[:page], per_page: 10)
 	end
 
 	def show

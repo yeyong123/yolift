@@ -3,7 +3,7 @@ class AftermarketsController < ApplicationController
 	before_filter :find_id, only: [:show,:edit,:update, :destroy]
 
 	def index
-		@aftermarkets = Aftermarket.order("id desc").paginate(page: params[:page],per_page: 10)
+		@aftermarkets = Aftermarket.order("created_at desc").paginate(page: params[:page],per_page: 10)
 	end
 
 	def show

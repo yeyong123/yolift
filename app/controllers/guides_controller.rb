@@ -2,7 +2,7 @@ class GuidesController < ApplicationController
 	before_filter :find_id, only: [:show, :edit, :update, :destroy]
 
 	def index
-		@guides = Guide.all
+		@guides = Guide.order("created_at desc").paginate(page: params[:page], per_page: 10)
 	end
 
 	def show

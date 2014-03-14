@@ -1,7 +1,7 @@
 class ListsController < ApplicationController
 	before_filter :find_id, only: [:show, :edit, :update, :destroy]
 	def index
-		@lists = List.all
+		@lists = List.order("created_at desc").paginate(page: params[:page], per_page: 10)
 	end
 
 	def show

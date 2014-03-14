@@ -2,7 +2,7 @@ class ZixunsController < ApplicationController
 	before_filter :find_id, only: [:show, :edit, :update, :destroy]
 
 	def index
-		@zixuns = Zixun.order("id desc").paginate(page: params[:page], per_page: 10)
+		@zixuns = Zixun.order("created_at desc").paginate(page: params[:page], per_page: 10)
 	end
 
 	def show

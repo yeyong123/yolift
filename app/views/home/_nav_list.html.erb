@@ -14,7 +14,11 @@
 						<div class="listbox hide">
 							<dl class="procate">
 								<% cate.tags.each do |tag| %>
-									<dd><%= link_to tag.name, products_path(t:tag), target: "_blank"%>	</dd>
+									<dd><%= link_to products_path(t:tag) do %>	
+										<%= image_tag(tag.image_url(:micro)) if tag.image? %>
+										<%= tag.name %>
+									<% end %>
+										</dd>
 								<% end %>
 							</dl>
 						</div>

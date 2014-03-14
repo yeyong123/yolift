@@ -4,7 +4,7 @@ before_filter :authenticate_admin!, only: [:create, :edit,:new, :update, :destro
 	before_filter :find_id, only: [:show, :edit, :update, :destroy]
 
 	def index
-		@ships = Ship.order("id desc").paginate(page: params[:page], per_page: 10)
+		@ships = Ship.order("created_at desc").paginate(page: params[:page], per_page: 10)
 	end
 
 	def show

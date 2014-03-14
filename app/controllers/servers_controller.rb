@@ -2,7 +2,7 @@ class ServersController < ApplicationController
 	before_filter :find_id, only: [:show, :edit, :update, :destroy]
 
 	def index
-		@servers = Server.order("updated_at desc").paginate(page: params[:page], per_page: 12)
+		@servers = Server.order("created_at desc").paginate(page: params[:page], per_page: 12)
 	end
 
 	def show

@@ -2,7 +2,7 @@ class ItemsController < ApplicationController
 	before_filter :find_id, only: [:show, :edit, :update, :destroy]
 
 	def index
-		@items = Item.order("id desc").paginate(page: params[:page],per_page: 10)
+		@items = Item.order("created_at desc").paginate(page: params[:page],per_page: 10)
 	end
 
 	def show

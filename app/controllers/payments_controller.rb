@@ -2,7 +2,7 @@ class PaymentsController < ApplicationController
 	before_filter :find_id, only: [:show, :edit, :update, :destroy]
 
 	def index
-		@payments = Payment.order("id desc").paginate(page: params[:page],per_page: 10)
+		@payments = Payment.order("created_at desc").paginate(page: params[:page],per_page: 10)
 	end
 
 	def show
