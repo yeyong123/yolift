@@ -30,9 +30,12 @@ body{
 .erwei {
 	width: 90px;
 	height: 90px;
-	background: url(/assets/erwei.png) no-repeat;
 	position: fixed;
 	left: 10px;
+}
+.erwei span {
+	color: rgb(228,103,19);
+	font-size: 12px;
 }
 h6 {
 	font-size: 12.5px;
@@ -196,8 +199,9 @@ border-bottom:1px solid #fff;
 }
 .submenulist li img {
 	float: left;
-	width: 30px;
+	width: 40px;
 	padding-left: 3px;
+	margin-top: -5px;
 }
 .submenulist li h3 a{
 position:relative;
@@ -228,7 +232,7 @@ overflow:hidden;
 }
 .submenulist li h3 a.on{
 background:#fff;
-width:184px;
+width:204px;
 height:33px;
 color:#f60;
 padding-top: 3px;
@@ -241,7 +245,7 @@ overflow:hidden;
 .submenu .listbox{
 position:absolute;
 top:0;
-left:184px;
+left:204px;
 width:792px;
 background:#fff;
 border:2px solid #bfd3a9;

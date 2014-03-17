@@ -455,6 +455,7 @@ li.font-border a {
 	//margin-top: 60px;
 	width: 100%;
 	margin-left: 30px;
+	margin-top: 20px;
 }
 .product-description .product-item img{
 	float: left;
@@ -463,14 +464,14 @@ li.font-border a {
 	margin-right: 30px;
 }
 .product-description .product-item img:hover {
-    border: 2px solid red;
+    border: 1px solid white;
 }
 .product-phone {
 	background-image: url(/assets/product/400.png);
 	height: 27px;
 	width: 338px;
 	float: right;
-	margin: 25px 90px 8px 0;
+	margin: 35px 90px 8px 0;
 	//border: 1px solid;
 }
 .product-item ul {
@@ -485,7 +486,7 @@ li.font-border a {
 	display: none;
 	position: absolute;
 	left: 35%;
-	top: 80px;
+	top: 60px;
 	width: 220px;
 	background: #ffffff;
 }

@@ -14,7 +14,7 @@
 							<dl class="procate">
 								<% cate.tags.each do |tag| %>
 									<dd><%= link_to products_path(t:tag)  do %>
-	<%= image_tag(tag.image_url(:micro)) if tag.image? %>
+	<%= image_tag(tag.image_url(:small)) if tag.image? %>
 										<%= tag.name %>
 									<% end %>
 										</dd>
