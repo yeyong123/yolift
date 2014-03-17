@@ -2,7 +2,7 @@
 # by acenqiu (https://github.com/acenqiu)
 # forked from https://gist.github.com/1008642
  
-en:
+zh-CN:
   errors:
     messages:
       expired: "您已过期，请重新申请"

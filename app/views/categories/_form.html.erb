@@ -16,6 +16,8 @@
 	<%= f.fields_for :tags do |tag_form| %>
 		<div class="field">
 		<%= tag_form.label :image, "图标" %>
+		<% tag = tag_form.object %>
+		<%= image_tag(tag.image_url(:small)) if tag.image? %>	
 		<%= tag_form.file_field :image %>
 		<%= tag_form.text_field :name %>
 		<%= tag_form.link_to_remove "删除" %>

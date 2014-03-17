@@ -27,8 +27,7 @@
 				<table class="table">
 					<% @zixuns.each do |zixun| %>
 						<tr>
-							<td><%= link_to zixun.title, zixun_path(zixun) %></td>
-							<td><%= time_ago_in_words(zixun.created_at) %>前</td>
+							<td><%= link_to (truncate(zixun.title,length: 30)), zixun_path(zixun) %></td>
 						</tr>
 					<% end %>
 				</table>
