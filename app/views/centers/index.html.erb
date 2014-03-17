@@ -4,14 +4,20 @@
 	<table class="table">
 		<% @centers.each do |center| %>
 			<tr>
+				<% unless center.title == "售后服务" %>
 				<td><%= link_to center.title, center_path(center) %></td>
 				<td><%= center.updated_at.strftime("%Y-%m-%d:%H:%M:%S") %></td>
+		<% end %>
 				<% if admin_signed_in? %>
 				<td><%= link_to "编辑", edit_center_path(center) %></td>
 				<td><%= link_to "删除", center, method: :delete, confirm: "Are you sure?" %></td>
 			<% end %>
+
 			</tr>
 		<% end %>
+		<tr>
+			<td><%= link_to "售后服务", aftermarkets_path %></td>
+		</tr>
 	</table>
 	<%= will_paginate @centers %>
 	<% if admin_signed_in? %>
