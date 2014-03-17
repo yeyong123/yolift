@@ -13,5 +13,7 @@
 		<% end %>
 	</table>
 	<%= will_paginate @items %>
+	<% if admin_signed_in? %>
 	<%= link_to "增加项目案例", new_item_path, class: "btn btn-primary" %>
+<% end %>
 </div>

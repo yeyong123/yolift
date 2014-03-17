@@ -13,5 +13,7 @@
 		<% end %>
 	</table>
 	<%= will_paginate @cases %>
+	<% if admin_signed_in? %>
 	<%= link_to "增加公司案例", new_case_path, class: "btn btn-primary" %>
+<% end %>
 </div>

@@ -31,6 +31,8 @@
 			</tr>
 			<% end %>
 		</table>
+		<% if admin_signed_in? %>
 		<%= link_to "增加案例", new_case_path, class: "btn btn-primary" %>
+	<% end %>
 	</div>
 </div>

@@ -12,5 +12,7 @@
 					<% end %>
 	</table>
 	<%= will_paginate @aftermarkets %>
+	<% if admin_signed_in? %>
 	<%= link_to "增加售后服务", new_aftermarket_path, class: "btn btn-primary" %>
+<% end %>
 </div>

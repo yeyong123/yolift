@@ -45,8 +45,10 @@
 					<li class="dropdown"><%= link_to t('.server'), center_path(center.id), class: "dropdown-toggle" %>
 				<% end %>
 					<ul class="dropdown-menu">
-					<% Center.limit(3).each do |center| %>
+					<% Center.limit(4).each do |center| %>
+						<% unless center.title == "售后服务" %>
 						<li><%= link_to center.title, center_path(center.id) %></li>
+					<% end %>
 					<% end %>
 						<li><%= link_to "售后服务", aftermarkets_path %></li>
 					</ul>

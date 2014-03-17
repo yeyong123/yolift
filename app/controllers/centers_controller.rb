@@ -1,5 +1,4 @@
 class CentersController < ApplicationController
-	before_filter :authenticate_admin!, only: [:destory]
 	before_filter :find_id, only: [:show, :edit, :update, :destroy]
 
 	def index
