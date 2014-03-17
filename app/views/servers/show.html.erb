@@ -20,7 +20,7 @@
 	</div>
 	<div class="about-content">
 		<table class="table">
-		<% @server.zixuns.each do |zixun| %>
+		<% @server.zixuns.order("created_at desc").each do |zixun| %>
 			<tr>
 				<td><%= link_to zixun.title, zixun_path(zixun.id) %></td>
 				<% if admin_signed_in? %>
