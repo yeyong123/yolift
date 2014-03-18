@@ -9,11 +9,12 @@
 
 # Ignore the default SQLite database.
 /db/*.sqlite3
-/config/database.yml
-
 # Ignore all logfiles and tempfiles.
-/log/*.log
-/log/*.log.*
-/tmp
+/log/*
+/tmp/*
 /public/assets/
 /public/uploads/
+/config/database.yml
+*.swp
+*~
+
