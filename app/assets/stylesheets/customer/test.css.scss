@@ -1133,3 +1133,27 @@ width: 30px;
 .filter-table .quick { margin-left: 0.5em; font-size: 0.8em; text-decoration: none; }
 .fitler-table .quick:hover { text-decoration: underline; }
 td.alt { background-color: #ffc; background-color: rgba(255, 255, 0, 0.2); }
+
+//站点地图的分类的css
+.sitemap-cate ul {
+	list-style: none;
+	margin: 8px;
+}
+.sitemap-cate ul li {
+	margin-top: 8px;
+}
+.sitemap-cate {
+	border: 1px solid #b2b2b2;
+	width: 205px;
+	float: left;
+	margin: 10px 5px;
+	height: 270px;
+	padding: 5px;
+}
+.sitemap-cate hr {
+	border-bottom: 1px solid #b2b2b2;
+}
+.cate-hr>hr{
+	border-style: none;
+	border-bottom: 1px solid #4295d1;
+}
