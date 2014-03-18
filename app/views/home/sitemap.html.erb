@@ -3,21 +3,25 @@
 	<h4>产品种类</h4>
 	<hr>
 	<% Category.all.each do |cate| %>
-	<div class="sitemap-cate">
-		<span>
-			<%= image_tag(cate.image_url(:small)) if cate.image? %>
-			<%= link_to cate.name, category_path(cate) %>
-			<hr>
-		</span>
-		<ul>
-			<% cate.tags.each do |tag| %>
-
-				<li>
-				<%= image_tag(tag.image_url(:small)) if tag.image? %>
-				<%= link_to tag.name, products_path(t:tag) %></li>
-			<% end %>
+		<div class="sitemap-cate">
+			<span>
+				<%= image_tag(cate.image_url(:small)) if cate.image? %>
+				<%= link_to cate.name, category_path(cate) %>
+				<hr>
+			</span>
+			<ul>
+				<% cate.tags.each do |tag| %>
+					<li>
+					<%= image_tag(tag.image_url(:small)) if tag.image? %>
+					<%= link_to tag.name, products_path(t:tag) %></li>
+				<% end %>
 			</ul>
-
-</div>
+		</div>
 	<% end %>
+	<div class="sitemap-cate">
+		<%= image_tag("qrcode.png") %>
+		<span>
+			扫一扫，在手机上查看产品信息
+		</span>
+	</div>
 </div>
