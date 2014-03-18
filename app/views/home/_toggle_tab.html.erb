@@ -12,11 +12,11 @@
 		<div class="tab-pane fade in">
 			<ul class="thumbnails">
 				<% if cate.tags.length > 5 %>
-					<% cate.products.order("updated_at desc").limit(10).each do |product| %>
+					<% cate.products.order("paixu desc").limit(10).each do |product| %>
 						<%= render partial: "products/index", locals: {product: product} %>
 					<%end %>
 				<% else %>
-					<% cate.products.limit(5).each do |product| %>
+					<% cate.products.order("paixu desc").limit(5).each do |product| %>
 						<%= render partial: "products/index", locals: {product: product} %>
 					<% end %>
 				<% end %>
@@ -26,7 +26,7 @@
 			<div class="tab-pane fade in" id="<%= tag.name %>">
 				<ul class="thumbnails">
 					<li class="pending link-product"><%= link_to "查看更多 >>", products_path(t:tag) %></li>
-					<% tag.products.limit(5).each do |product| %>
+					<% tag.products.order("paixu desc").limit(5).each do |product| %>
 						<%= render partial: "products/index", locals: {product: product} %>
 					<% end %>
 				</ul>

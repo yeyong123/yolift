@@ -2,7 +2,7 @@
 	<% @category.tags.each_with_index do |tag, index| %>
 	<div class="accordion-group">
 		<div class="accordion-heading">
-			<a class="accordion-toggle" data-toggle="collapse" data-parset="#accordion2" href="#collapse<%=index %>"><%= tag.name %></a>
+			<h5><a class="accordion-toggle" data-toggle="collapse" data-parset="#accordion2" href="#collapse<%=index %>"><%= tag.name %></a></h5>
 			<div id="collapse<%= index %>" class="accordion-body collapse">
 				<div class="accordion-inner">
 					<table class="table">
