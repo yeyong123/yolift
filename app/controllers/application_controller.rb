@@ -4,23 +4,13 @@ class ApplicationController < ActionController::Base
 	before_filter :find_cart
 	before_filter :authenticate_admin!, only: [:create, :edit,:new, :update, :destroy]
 
-	def render_404
-		render_optional_error_file(404)
-	end
+	
+	unless Rails.application.config.consider_all_requests_local
+		rescue_from Exception, with: lambda { |exception| render_error 500, exception }
+		rescue_from ActionController::RoutingError, ActionController::UnknownController, ::AbstractController::ActionNotFound, ActiveRecord::RecordNotFound, with: lambda { |exception| render_error 404, exception }
+	end	 		
 
-	def render_403
-		render_optional_error_file(403)
-	end
-
-	def render_optional_error_file(status_code)
-		status = status_code.to_s
-		if ["404","403", "422", "500"].include?(status)
-			render template: "/errors/#{status}",format: [:html],handler: [:erb], status: status, :layout => "application"
-		else
-			render template: "/errors/unknown", format: [:html], handler: [:erb], status: status, :layouts => "application"
-		end
-	end
-
+	
 	protected
 	def set_local_i18n
 		if params[:locale]
@@ -33,9 +23,9 @@ class ApplicationController < ActionController::Base
 		end
 	end
 	#		
-	#def default_url_options
-	#	{locale: I18n.locale}
-	#end
+	def default_url_options
+		{locale: I18n.locale}
+	end
 
 	private
 
@@ -60,6 +50,13 @@ class ApplicationController < ActionController::Base
 			end
 		else
 			@cart = current_cart
+		end
+	end
+
+	def render_error(status, exception)
+		respond_to do |format|
+			format.html { render template: "errors/#{status}", layout: 'layouts/application', status: status }
+			format.all { render nothing: true, status: status }
 		end
 	end
 end

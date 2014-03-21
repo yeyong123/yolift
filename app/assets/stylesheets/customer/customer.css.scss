@@ -32,10 +32,15 @@ body{
 	height: 90px;
 	position: fixed;
 	left: 10px;
+	z-index: 99999;
 }
 .erwei span {
 	color: rgb(228,103,19);
 	font-size: 12px;
+}
+.no-null {
+	color: red;
+	font-size: 9px;
 }
 h6 {
 	font-size: 12.5px;
@@ -142,6 +147,9 @@ h6 {
 	font-size: 12.5px;
 	border-style: none;
 }
+.bs-doc-image #myTab .tab-tag a:hover {
+	color: white;
+}
 .bs-doc-image #myTab li.active a {
 	color: #ee8301;
 	text-decoration: underline;
@@ -202,9 +210,8 @@ border-bottom:1px solid #fff;
 }
 .submenulist li img {
 	float: left;
-	width: 40px;
+	width: 30px;
 	padding-left: 3px;
-	margin-top: -5px;
 }
 .submenulist li h3 a{
 position:relative;
@@ -266,6 +273,10 @@ z-index: 9999;
 .submenu .listbox dt{
 font-weight:700;
 margin-bottom:5px;
+}
+.submenu .listbox img {
+	width: 40px;
+	margin-top: -5px;
 }
 .submenu .listbox dd{
 float:left;

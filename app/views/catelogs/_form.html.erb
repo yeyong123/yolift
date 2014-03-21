@@ -3,12 +3,16 @@
 		<div class="field">
 			<%= f.label :company, "公司名称:" %>
 			<%= f.text_field :company %>
+<span class="no-null">*(必填)</span>
+
 			<br />
 		</div>
 		<div class="field">
 			<%= f.label :name, "姓名:" %>
-			<%= f.text_field :name %>
-		</div>
+			<%= f.text_field :name%>
+			<span class="no-null">*(必填)</span>
+				</div>
+
 		<div class="field">
 			<%= f.label :address, "地址:" %>
 			<div class="field-address">
@@ -28,6 +32,8 @@
 		<div class="field">
 			<%= f.label :mobel, "手机:" %>
 			<%= f.text_field :mobel %>
+	<span class="no-null">*(必填)</span>
+
 		</div>
 		<div class="field">
 			<%= f.label :phone, "电话:" %>

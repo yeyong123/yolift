@@ -1,12 +1,6 @@
 Yolift::Application.routes.draw do
   mount RailsAdmin::Engine => '/managers', :as => 'rails_admin'
-
-  mount Ckeditor::Engine => '/ckeditor'
-
-  
-
-	#scope '(:locale)' do
-		
+	scope '(:locale)' do
 		devise_for :admins
 		devise_for :users
 		mount Ckeditor::Engine => '/ckeditor'
@@ -41,7 +35,7 @@ Yolift::Application.routes.draw do
 		match '/error', to: 'home#error'
 		match '/dashboard', to: "home#dashboard"
 		root to: 'home#index'
-	#end
+	end
 	# first created -> highest priority.
 
 	# Sample of regular route:
@@ -97,4 +91,6 @@ Yolift::Application.routes.draw do
   # This is a legacy wild controller route that's not recommended for RESTful applications.
   # Note: This route will make all actions in every controller accessible via GET requests.
   #match ':controller(/:action(/:id))(.:format)'
+	#
+	match '*not_found', to: "errors#error_404"
 	end
