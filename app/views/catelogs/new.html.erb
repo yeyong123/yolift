@@ -2,22 +2,11 @@
 <div class="product-index">
 	<h4>申请产品目录</h4>
 	<hr/>
-	<%= form_for @catelog do |f| %>
-		<%= render 'home/error_message', object: f.object %> 
-		<% if admin_signed_in? %>
-			<div class="field">
-				<%= f.label :image, "首页展示图片(302x192)" %>
-				<%= image_tag(@catelog.image_url(:small)) if @catelog.image? %>
-				<%= f.file_field :image %>
-			</div>
-			<div class="action">
-				<%= f.submit "上传", class: "btn btn-primary" %>
-			</div>
-		<% else %>
+		<%= form_for @catelog do |f| %>
+			<%= render 'home/error_message', object: f.object %> 
 			<div class="catelog-image">
 				<%= image_tag(@catelog.image_url) if @catelog.image? %>
 			</div>
 			<%= render partial: 'catelogs/form', locals: {f: f} %>
 		<% end %>
-	<% end %>
 </div>

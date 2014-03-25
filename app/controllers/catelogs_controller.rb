@@ -36,7 +36,7 @@ class CatelogsController < ApplicationController
 	
 	def destroy
 		@catelog.destroy
-		redirect_to catelogs_path
+		redirect_to dashboard_path
 	end
 
 	private

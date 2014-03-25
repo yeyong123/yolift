@@ -14,7 +14,7 @@
 <div class="product-index">
 	<div class="about-image">
 		<% About.all.each do |about| %>
-			<%= image_tag(about.image_url(:navshow)) if about.image?%>
+			<%= image_tag(about.image_url) if about.image?%>
 		<% end %>
 	</div>
 	<div class="about-title">

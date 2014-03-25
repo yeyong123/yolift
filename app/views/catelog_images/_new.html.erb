@@ -1,0 +1,11 @@
+<%= form_for @catelog_image do |f| %>
+	<%= render 'home/error_message', object: f.object %>
+	<div class="field">
+	<%= f.label :image, "首页展示图片(302x192)" %>
+	<%= image_tag(@catelog_image.image_url(:small)) if @catelog_image.image? %>
+	<%= f.file_field :image %>
+</div>
+<div class="action">
+	<%= f.submit "上传", class: "btn btn-primary" %>
+</div>
+<% end %>

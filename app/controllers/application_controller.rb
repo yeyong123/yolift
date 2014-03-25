@@ -10,7 +10,7 @@ class ApplicationController < ActionController::Base
 		rescue_from ActionController::RoutingError, ActionController::UnknownController, ::AbstractController::ActionNotFound, ActiveRecord::RecordNotFound, with: lambda { |exception| render_error 404, exception }
 	end	 		
 
-	
+
 	protected
 	def set_local_i18n
 		if params[:locale]

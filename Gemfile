@@ -6,7 +6,7 @@ gem 'rails', '3.2.13'
 # gem 'rails', :git => 'git://github.com/rails/rails.git'
 
 gem 'mysql2'
-gem 'rails_kindeditor'
+gem 'rails_kindeditor','0.4.5'
 gem 'carrierwave'
 gem 'mini_magick'
 gem 'nested_form'

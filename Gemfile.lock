@@ -218,7 +218,7 @@ DEPENDENCIES
   nested_form
   rails (= 3.2.13)
   rails_admin
-  rails_kindeditor
+  rails_kindeditor (= 0.4.5)
   sass-rails (~> 3.2.3)
   simple-navigation
   simple_form
