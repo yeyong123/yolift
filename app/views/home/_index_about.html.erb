@@ -39,7 +39,7 @@
 					<% end %>
 					</span>
 			</div>
-			<% CatelogImage.all.each do |cate| %>
+			<% CatelogImage.limit(1).each do |cate| %>
 				<% if admin_signed_in? %>
 					<%= link_to edit_catelog_image_path(cate)  do %>
 						<%= image_tag(cate.image_url) if cate.image? %>
