@@ -1,0 +1,11 @@
+<div id="index-zixun">
+	<table class="table">
+		<% @zixuns.each do |zixun| %>
+			<tr>
+				<td><%= link_to (truncate(zixun.title,length: 30)), zixun_path(zixun) %></td>
+			</tr>
+		<% end %>
+	</table>
+	<%= will_paginate @zixuns%>
+
+</div>

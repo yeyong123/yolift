@@ -1,0 +1,15 @@
+<%= render 'home/nav_list' %>
+<div class="product-index">
+	<div class="video-paginate">
+			<% @videos.each do |video| %>
+				<div class="video-index">
+					<%= link_to video_path(video) do %>
+						<%= image_tag(video.product.image_url(:narmail)) %>
+						<span><%= video.product.title %></span>
+					<% end %>
+				</div>
+			<% end %>
+	<%= will_paginate @videos %>
+
+	</div>
+</div>

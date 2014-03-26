@@ -63,7 +63,14 @@
 	</div>
 	<div class="field position-form">
 		<%= f.label :video, "上传视频" %>
-		<%= f.file_field :video %>
+		<%= f.fields_for :videos do |video| %>
+			<% vi = video.object %>
+			<%= File.basename(vi.video_url) if vi.video? %>
+			<%= video.file_field :video %>
+		<% end %>
+		<p>
+		<%= f.link_to_add "添加视频", :videos, class: "btn btn-primary" %>
+		</p>
 	</div>
 			<div class="field" style="clear:both">
 		<%= f.label :outline,"概述"%>

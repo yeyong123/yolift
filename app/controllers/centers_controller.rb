@@ -6,6 +6,7 @@ class CentersController < ApplicationController
 	end
 	
 	def show
+		@products = Product.order("paixu desc").paginate(page: params[:page], per_page: 8)
 	end
 
 	def edit

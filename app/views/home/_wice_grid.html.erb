@@ -15,7 +15,7 @@
 			product.category.name
 		end
 
-		g.column  name: "缩略图",attribute: 'image', model: Photo, filter: false, ordering: false do |product|
+		g.column  name: "缩略图",attribute: 'image', filter: false, ordering: false do |product|
 			image_tag product.image_url(:small) if product.image?
 		end
 
@@ -27,11 +27,7 @@
 			product.printpdf? ? File.basename(product.printpdf_url) : "无" 
 		end
 
-		g.column name: "视频", attribute: 'video', filter: false  do |product|
-			product.video? ? "有" : "无" 
-		end
-
-		g.column do |product|
+			g.column do |product|
 			link_to("编辑",edit_product_path(product))
 		end
 	end %>

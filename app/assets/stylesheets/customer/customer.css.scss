@@ -18,6 +18,32 @@ body{
 .top-index,.logo-index, .footer, .footer-tese,.footer-link, .category-list,.footer-bottom {
 	min-width: 1145px;
 }
+//视频播放的css
+.video {
+	z-index: 0;
+}
+.show-video {
+	width: 600px;
+	margin: auto auto 10px;
+}
+//视频展示
+.video-index {
+	width: 193px;
+	float: left;
+	border: 1px solid;
+	margin-right: 15px;
+	padding: 5px;
+}
+.video-index img {
+	margin-bottom: 5px;
+}
+.video-index span {
+	padding: 15px;
+}
+.video-paginate .pagination {
+	clear: both;	
+}
+//视频结束
 #gotop {
 	display: none;
 	width: 55px;
@@ -277,6 +303,7 @@ margin-bottom:5px;
 .submenu .listbox img {
 	width: 40px;
 	margin-top: -5px;
+	margin-bottom: 15px;
 }
 .submenu .listbox dd{
 float:left;
@@ -725,7 +752,7 @@ margin-bottom: 15px;
 .pending{
 	position: absolute;
 	right: 15px;
-	margin-top: -25px;
+	margin-top: -30px;
 }
 //单个产品展示的描述
 .product-info .tab-content {
