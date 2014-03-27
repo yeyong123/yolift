@@ -3,7 +3,7 @@
 	<ul id="myTab" class="nav nav-tabs">
 		<li class="active"><a href="#home" data-toggle="tab">技术参数</a><span></span></li>
 		<li class=""><a href="#profile" data-toggle="tab">更多细节</a><span></span></li>
-		<li class=""><a href="#video" data-toggle="tab">视频展示</a></li>
+		<!--<li class=""><a href="#video" data-toggle="tab">视频展示</a></li> -->
 		</ul>
 </div>
 	<div id="myTabContent" class="tab-content">
@@ -15,16 +15,7 @@
 			</div>
 		<div class="tab-pane fade" id="video">
 	<div class="video">
-		<% @product.videos.each do |video| %>
-	<object class id="clsid:D27CDB6E-AE6D-11cf-96B8-444553540000" codebase="http://download.macromedia.com/pub/shockwave/cabs/flash/swflash.cab#version=7,0,19,0" width="600" height="540">
-		<param name="movie" value="/assets/video/flvplayer.swf">
-		<param name="quality" value="high">
-		<param name="allowFullScreen" value="true">
-		<param name="FlashVars" value="vcastr_file=<%= video.video_url %>">
-		<embed src="/assets/video/flvplayer.swf" allowfullscreen="true" flashvars="vcastr_file=<%= video.video_url %>" quality="high" pluginspage="http://www.macromedia.com/go/getflashplayer" type="application/x-shockwave-flash" width="600" height="540"></embed>
-	</object>
-<% end %>
-</div>
+	</div>
 
 		
 		</div>

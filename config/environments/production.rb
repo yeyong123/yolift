@@ -52,7 +52,7 @@ Yolift::Application.configure do
 															'js/bootstrap.min.js','ie/bootstrap-ie.js',
 															'zoom/imagezoom.js','zoom/zoom.min.js',
 															'js/customer.js', 'js/jquery.validate.min.js', 
-															'js/jquery.filtertable.js']
+															'js/jquery.filtertable.js','ckeditor/config.js']
 
   # Disable delivery errors, bad email addresses will be ignored
   # config.action_mailer.raise_delivery_errors = false

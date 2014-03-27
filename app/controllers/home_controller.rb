@@ -39,6 +39,7 @@ class HomeController < ApplicationController
 		@cases = Case.order("id desc").paginate(page: params[:page], per_page: 10)
 		@catelogs = Catelog.order("crated_at desc").paginate(page: params[:page], per_page: 10)
 		@messages = Message.order("created_at desc").paginate(page: params[:page], per_page: 10)
+		@product_images = ProductImage.order("created_at desc").paginate(page: params[:page], per_page: 8)
 	end
 
 	def error

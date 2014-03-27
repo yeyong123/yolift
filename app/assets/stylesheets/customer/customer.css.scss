@@ -759,3 +759,9 @@ margin-bottom: 15px;
 	//width: 750px;
 	margin: auto;
 }
+//产品展示图的css，重新改写首页的数据
+.link-product #myCarousel, 
+.link-product .carousel-inner, 
+.link-product .item {
+	height: auto;
+}

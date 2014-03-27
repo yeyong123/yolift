@@ -1,8 +1,6 @@
 Yolift::Application.routes.draw do
 
-  mount Ckeditor::Engine => '/ckeditor'
 
-	scope '(:locale)' do
   mount RailsAdmin::Engine => '/managers', :as => 'rails_admin'
 		devise_for :admins
 		devise_for :users
@@ -33,6 +31,7 @@ Yolift::Application.routes.draw do
 		resources :catelogs
 		resources :catelog_images
 		resources :videos
+		resources :product_images
 		match '/search', to: "products#search"
 		match '/sitemap', to: "home#sitemap"
 		match '/link', to: "home#link"
@@ -94,7 +93,5 @@ Yolift::Application.routes.draw do
   # This is a legacy wild controller route that's not recommended for RESTful applications.
   # Note: This route will make all actions in every controller accessible via GET requests.
   #match ':controller(/:action(/:id))(.:format)'
-	#
-		#match '*not_found', to: "errors#error_404"
-	end
+	#match '*not_found', to: "rescue_errors#error_404"
 end

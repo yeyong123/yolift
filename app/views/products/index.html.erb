@@ -2,6 +2,9 @@
 <%= render 'products/nav_list' %>
 <div class="product-index">
 	<%= render_navigation(renderer: :breadcrumbs, join_with: '&nbsp / &nbsp') %>
+	<div class="link-product">
+		<%= render 'product_images/link_product' %>
+		</div>
 	<ul class="thumbnails">
 		<% @products.each do |product| %>
 			<%= render partial: 'products/index', locals: {product: product} %>
