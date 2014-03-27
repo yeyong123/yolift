@@ -67,6 +67,8 @@
 			<% vi = video.object %>
 			<%= File.basename(vi.video_url) if vi.video? %>
 			<%= video.file_field :video %>
+	<%= video.link_to_remove "删除", class: 'btn btn-mini btn-success' %>
+
 		<% end %>
 		<p>
 		<%= f.link_to_add "添加视频", :videos, class: "btn btn-primary" %>

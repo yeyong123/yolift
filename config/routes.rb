@@ -1,4 +1,7 @@
 Yolift::Application.routes.draw do
+
+  mount Ckeditor::Engine => '/ckeditor'
+
 	scope '(:locale)' do
   mount RailsAdmin::Engine => '/managers', :as => 'rails_admin'
 		devise_for :admins
