@@ -1172,3 +1172,25 @@ td.alt { background-color: #ffc; background-color: rgba(255, 255, 0, 0.2); }
 .page-two, .page-one {
 	padding: 5px;
 }
+//单个产品展示页面的需求沟通和电话表单
+.demand1 {
+	background: url(/assets/demand1.png) no-repeat;
+}
+.demand .table td {
+	vertical-align: middle;
+	padding: 12px;
+}
+td.demand1, td.demand2,td.demand3 {
+	width: 58px;
+	height: 50px;
+}
+.demand2 {
+	background: url(/assets/demand2.png) no-repeat;
+}
+td.demand3 {
+	background: url(/assets/demand3.png) no-repeat;
+}
+.demand .demand-text span {
+	color: red;
+	font-size: 16px;
+}

@@ -2,6 +2,30 @@
 //2014年加了jquery切换的样式
 //调式
 //2014-03-10书写css阴影
+//qq的漂浮窗
+#qq-float {
+	background: url(/assets/qq/qq.png) no-repeat;
+	z-index: 99999999;
+	position: fixed;
+	top: 40%;
+	left: 40%;
+	width: 327px;
+	height: 174px;
+}
+#qq-button-one, #qq-button-two {
+	width: 74px;
+	height: 20px;
+	position: absolute;
+	bottom: 10%;
+}
+#qq-button-one {
+	right: 30%;
+}
+#qq-button-two {
+	right: 5%;
+}
+
+
 .roundabout-holder{width:600px;height:325px;margin:0 auto;}
 
 .roundabout-moveable-item{width:530px;height:325px;cursor:pointer;border:3px solid #ccc;border:3px solid rgba(0, 0, 0, 0.08);border-radius:4px;-moz-border-radius:4px;-webkit-border-radius:4px;}

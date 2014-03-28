@@ -1,0 +1,2 @@
+module ContactImagesHelper
+end

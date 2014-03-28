@@ -263,4 +263,10 @@ $(function(){
 	goTop();//实现回到顶部元素的渐显与渐隐
 });
 
+//qq的漂浮框js
+$('#qq-float').show();
+$('#qq-button-one').click(function(e){
+	$('#qq-float').slideToggle();
+		e.preventDefault();
+});
 });

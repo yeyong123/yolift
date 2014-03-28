@@ -19,6 +19,10 @@
 		<li class=""><a href="#shiliu" data-toggle="tab">项目案例</a></li>
 		<li class=""><a href="#shiqi" data-toggle="tab">案例行业</a></li>
 		<li class=""><a href="#shiba" data-toggle="tab">产品展示图</a></li>
+		<li class=""><a href="#shijiu" data-toggle="tab">新闻咨询展示图</a></li>
+		<li class=""><a href="#ershi" data-toggle="tab">服务中心展示图</a></li>
+		<li class=""><a href="#ershiyi" data-toggle="tab">联系我们展示图</a></li>
+
 	</ul>
 </div>
 <hr style="clear: both">
@@ -187,6 +191,54 @@
 			</table>
 	<%= link_to "增加",new_product_image_path,class: "btn btn-primary" %>
 </div>
+<div class="tab-pane fade" id="shijiu">
+		<table class="table">
+			<% @server_images.each do |server| %>
+				<tr>
+					<td><%= link_to server.url,edit_server_image_path(server) %></td>
+					<td><%= link_to edit_server_image_path(server) do %>
+							<%= image_tag(server.image_url(:small)) if server.image? %>
+						<% end %>
+						</td>
+					<td><%= link_to "删除", server, method: :delete, confirm: "确认删除" %></td>
+				</tr>
+			<% end %>
+			</table>
+	<%= link_to "增加",new_server_image_path,class: "btn btn-primary" %>
+</div>
+<div class="tab-pane fade" id="ershi">
+		<table class="table">
+			<% @center_images.each do |image| %>
+				<tr>
+					<td><%= link_to image.url,edit_center_image_path(image) %></td>
+					<td><%= link_to edit_center_image_path(image) do %>
+							<%= image_tag(image.image_url(:small)) if image.image? %>
+						<% end %>
+						</td>
+					<td><%= link_to "删除", image, method: :delete, confirm: "确认删除" %></td>
+				</tr>
+			<% end %>
+			</table>
+	<%= link_to "增加",new_center_image_path,class: "btn btn-primary" %>
+</div>
+
+<div class="tab-pane fade" id="ershiyi">
+		<table class="table">
+			<% @contact_images.each do |image| %>
+				<tr>
+					<td><%= link_to image.url,edit_contact_image_path(image) %></td>
+					<td><%= link_to edit_contact_image_path(image) do %>
+							<%= image_tag(image.image_url(:small)) if image.image? %>
+						<% end %>
+						</td>
+					<td><%= link_to "删除", image, method: :delete, confirm: "确认删除" %></td>
+				</tr>
+			<% end %>
+			</table>
+	<%= link_to "增加",new_contact_image_path,class: "btn btn-primary" %>
+</div>
+
+
 
 
 </div>

@@ -11,7 +11,7 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20140327063424) do
+ActiveRecord::Schema.define(:version => 20140328084340) do
 
   create_table "abouts", :force => true do |t|
     t.string   "title"
@@ -138,6 +138,13 @@ ActiveRecord::Schema.define(:version => 20140327063424) do
     t.string   "image"
   end
 
+  create_table "center_images", :force => true do |t|
+    t.string   "image"
+    t.string   "url"
+    t.datetime "created_at", :null => false
+    t.datetime "updated_at", :null => false
+  end
+
   create_table "centers", :force => true do |t|
     t.string   "title"
     t.text     "content"
@@ -178,6 +185,13 @@ ActiveRecord::Schema.define(:version => 20140327063424) do
 
   add_index "ckeditor_assets", ["assetable_type", "assetable_id"], :name => "idx_ckeditor_assetable"
   add_index "ckeditor_assets", ["assetable_type", "type", "assetable_id"], :name => "idx_ckeditor_assetable_type"
+
+  create_table "contact_images", :force => true do |t|
+    t.string   "image"
+    t.string   "url"
+    t.datetime "created_at", :null => false
+    t.datetime "updated_at", :null => false
+  end
 
   create_table "contacts", :force => true do |t|
     t.string   "title"
@@ -368,6 +382,13 @@ ActiveRecord::Schema.define(:version => 20140327063424) do
     t.text     "say"
     t.datetime "created_at",    :null => false
     t.datetime "updated_at",    :null => false
+  end
+
+  create_table "server_images", :force => true do |t|
+    t.string   "image"
+    t.string   "url"
+    t.datetime "created_at", :null => false
+    t.datetime "updated_at", :null => false
   end
 
   create_table "servers", :force => true do |t|

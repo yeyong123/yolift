@@ -1,0 +1,15 @@
+	<div id="myCarousel" class="carousel slide">
+			<ol class="carousel-indicators">
+				<% ServerImage.all.each_with_index do |bananer,index| %>
+					<li data-target="#myCarousel" data-slide-to='<%= index %>'></li>
+				<% end %>
+			</ol>
+			<div class="carousel-inner">
+				<% ServerImage.all.each do |bananer| %>
+					<div class="item">
+						<%= link_to image_tag(bananer.image_url), bananer.url %>
+					</div>	
+				<% end %>
+			</div>
+		</div>
+

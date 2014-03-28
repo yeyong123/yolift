@@ -1,19 +1,14 @@
-<%= render 'home/nav_list' %>
-<div class="product-index">
-	<%= form_for @product_image do |f| %>
-		<%= render 'home/error_message', object: f.object %>
-		<div class="field">
+			<div class="field">
 			<%= f.label :url, "链接地址" %>
 			<%= f.text_field :url %>
 		</div>
 		<div class="field">
 			<%= f.label :image, "上传产品页展示" %>
-			<%= image_tag(@product_image.image_url(:small)) if @product_image.image? %>
+			<%= image_tag(object.image_url(:small)) if object.image? %>
 			<%= f.file_field :image %>
 		</div>
 		<div class="action">
 			<%= f.submit "上传", class: "btn btn-primary btn-success" %>
 			<%= link_to "返回", dashboard_path, class: " btn btn-primary" %>
 		</div>
-	<% end %>
-</div>
+
