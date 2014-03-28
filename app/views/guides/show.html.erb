@@ -16,4 +16,12 @@
 		<div class="about-content">
 			<%= raw @guide.content %>
 		</div>
+		<div class="zixun-page">	
+			<span class="page-one">上一篇
+				<%= link_to @guide.previous.title, guide_path(@guide.previous.id) unless @guide.previous.nil? %>
+			</span>
+			<span class="page-two">下一篇
+				<%= link_to @guide.next.title, guide_path(@guide.next.id) unless @guide.next.nil? %>
+			</span>
+		</div>
 	</div>

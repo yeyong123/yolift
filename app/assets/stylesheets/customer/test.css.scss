@@ -1157,3 +1157,18 @@ td.alt { background-color: #ffc; background-color: rgba(255, 255, 0, 0.2); }
 	border-style: none;
 	border-bottom: 1px solid #4295d1;
 }
+//上一篇和下一篇
+.zixun-page {
+	border: 1px solid #d9d9d9;
+	margin: 5px;
+	clear: both;
+}
+.zixun-page .page-two {
+	float: right;
+}
+.zixun-page .page-one {
+	float: left;
+}
+.page-two, .page-one {
+	padding: 5px;
+}

@@ -12,6 +12,7 @@
 				</tr>
 			<% end %>
 		</table>
+		<%= will_paginate @zixuns %>
 		<% if admin_signed_in? %>
 		<%= link_to "增加分类指南", new_zixun_path, class: "btn btn-primary" %>
 	<% end %>

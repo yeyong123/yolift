@@ -26,4 +26,12 @@
 				</div>
 			<% end %>
 		</div>
+		<div class="zixun-page">
+			<span class="page-one">上一篇
+				<%= link_to @aftermarket.previous.title, aftermarket_path(@aftermarket.previous.id) unless @aftermarket.previous.nil? %>
+			</span>
+			<span class="page-two">下一篇
+				<%= link_to @aftermarket.next.title, aftermarket_path(@aftermarket.next.id) unless @aftermarket.next.nil? %>
+			</span>
+		</div>
 	</div>

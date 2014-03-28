@@ -1,3 +1,10 @@
+GIT
+  remote: git://github.com/radar/by_star
+  revision: d1848c6b01341ce6fc4d5859e8a8f199518a8c6a
+  specs:
+    by_star (2.2.0.rc1)
+      activesupport
+
 GEM
   remote: http://ruby.taobao.org/
   specs:
@@ -205,6 +212,7 @@ PLATFORMS
 
 DEPENDENCIES
   bootstrap-will_paginate
+  by_star!
   capistrano (= 2.15.0)
   carrierwave
   china_region_fu

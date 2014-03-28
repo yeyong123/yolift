@@ -10,4 +10,12 @@
 		<div class="about-content">
 			<%= raw @zixun.content %>
 		</div>
+		<div class="zixun-page">
+			<span class="page-one">上一篇
+				<%= link_to @zixun.previous.title, zixun_path(@zixun.previous.id) unless @zixun.previous.nil? %>	
+			</span>
+			<span class="page-two">下一篇
+		<%= link_to @zixun.next.title, zixun_path(@zixun.next.id)  unless  @zixun.next.nil?%>
+	</span>
+	</div>
 	</div>
