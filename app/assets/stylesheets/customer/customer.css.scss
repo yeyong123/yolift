@@ -11,6 +11,7 @@
 	left: 40%;
 	width: 327px;
 	height: 174px;
+	display: none;
 }
 #qq-button-one, #qq-button-two {
 	width: 74px;
@@ -35,8 +36,9 @@
 .roundabout-in-focus{border:3px solid rgba(0, 0, 0, 0.2);}
 //2014年修改
 body{
-	font-family: Helvetica,Arial,sans-serif,"宋体","新宋体";
+	font-family: "monospace", "Microsoft YaHei";
 	background: #d6dfd9;
+	font-size: 12px;
 	width: 100%;
 }
 .top-index,.logo-index, .footer, .footer-tese,.footer-link, .category-list,.footer-bottom {
@@ -73,8 +75,8 @@ body{
 	width: 55px;
 	height: 55px;
 	position: fixed;
-	right: 50px;
-	bottom: 50px;
+	right: 0px;
+	bottom: 280px;
 	background: url(/assets/top.png) no-repeat -70px 0px;
 }
 .erwei {
@@ -93,7 +95,7 @@ body{
 	font-size: 9px;
 }
 h6 {
-	font-size: 12.5px;
+	font-size: 12px;
 }
 .container {
 	background: white;

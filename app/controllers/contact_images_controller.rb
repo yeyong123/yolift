@@ -33,7 +33,7 @@ class ContactImagesController < ApplicationController
 	private
 	
 	def find_id
-		@contact_image = ContactImage.find(params[:contact_image])
+		@contact_image = ContactImage.find(params[:id])
 	end
 
 end
