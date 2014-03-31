@@ -1,3 +1,21 @@
 <div id="gotop">
+	<div class="select-category">
+		<form>
+			<select name="catgory" onChange="window.open(this.value)">
+				<option value="">分类菜单导航</option>
+				<% Category.limit(7).each do |cate| %>
+					<option value="/categories/<%= cate.id %>"><%= cate.name %></option>
+				<% end %>
+			</select>
+	</form>
+	</div>
+	<div class="footer-phone">
+	</div>
+	<div id="top">
+	</div>
+		<a href="#" onclick="addfavorite()">
+	<div class="save-website">
+	</div>
+</a>
 </div>
 
