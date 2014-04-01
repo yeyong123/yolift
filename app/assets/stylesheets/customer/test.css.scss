@@ -1175,13 +1175,15 @@ td.alt { background-color: #ffc; background-color: rgba(255, 255, 0, 0.2); }
 .demand1 {
 	background: url(/assets/demand1.png) no-repeat;
 }
+.demand {
+	margin-top: 15px;
+}
 .demand .table td {
 	vertical-align: middle;
-	padding: 12px;
 }
 td.demand1, td.demand2,td.demand3 {
-	width: 58px;
-	height: 50px;
+	width: 40px;
+	height: 40px;
 }
 .demand2 {
 	background: url(/assets/demand2.png) no-repeat;

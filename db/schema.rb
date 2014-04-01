@@ -11,7 +11,7 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20140313073500) do
+ActiveRecord::Schema.define(:version => 20140328084340) do
 
   create_table "abouts", :force => true do |t|
     t.string   "title"
@@ -328,9 +328,7 @@ ActiveRecord::Schema.define(:version => 20140313073500) do
 
   create_table "products", :force => true do |t|
     t.string   "title"
-    t.string   "number"
     t.string   "printpdf"
-    t.string   "video"
     t.text     "listtext"
     t.text     "techparams"
     t.text     "detail"
@@ -412,6 +410,7 @@ ActiveRecord::Schema.define(:version => 20140313073500) do
     t.integer  "category_id"
     t.datetime "created_at",  :null => false
     t.datetime "updated_at",  :null => false
+    t.string   "image"
   end
 
   create_table "users", :force => true do |t|

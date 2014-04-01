@@ -10,7 +10,8 @@ class HomeController < ApplicationController
 	end
 
 	def link
-		#		@models = ActiveRecord::Base.descendants
+		@models = ActiveRecord::Base.subclasses
+		@table = @models[1]
 	end
 
 	def dashboard
