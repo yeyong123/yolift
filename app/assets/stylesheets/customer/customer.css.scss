@@ -71,12 +71,10 @@ body{
 }
 //视频结束
 #gotop {
+	display: none;
 	width: 1145px;
-	margin: auto;
-}
-#gotop .container{
+	margin: -5px;
 	height: 35px;
-	padding: 0 5px;
 	position: fixed;
 	bottom: 0px;
 	opacity: 0.8;
