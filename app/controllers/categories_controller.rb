@@ -7,7 +7,7 @@ class CategoriesController < ApplicationController
 
 	def show
 		@category = Category.find(params[:id])
-		@products = @category.products.order("paixu asc").paginate(page: params[:page], per_page: 8)
+		@products = @category.products.order("paixu desc").paginate(page: params[:page], per_page: 8)
 	end
 		
 	def new

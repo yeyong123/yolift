@@ -258,7 +258,7 @@ $(function(){
 });
 
 //qq的漂浮框js
-setTimeout("$('#qq-float').show()", 10000);
+setTimeout("$('#qq-float').show()", 25000);
 $('#qq-button-one').click(function(e){
 	$('#qq-float').slideToggle();
 		e.preventDefault();
