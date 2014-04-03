@@ -2,7 +2,7 @@ class ProductsController < ApplicationController
 
 	def index
 		unless params[:t]
-			@products = Product.order("paixu asc").paginate(page: params[:page], per_page: 12)
+			@products = Product.order("paixu desc").paginate(page: params[:page], per_page: 12)
 		else 
 			@products = Product.where("tag_id = ?", params[:t]).order("paixu desc").paginate(page: params[:page], per_page: 12)
 		end
@@ -11,13 +11,14 @@ class ProductsController < ApplicationController
 	def show
 		begin
 			@product = Product.find(params[:id])
+		@view_counts = Product.order('view_count desc')
+			@product.increment!(:view_count)
 			@line_item = @product.line_items.build
 			@productnumbers = @product.productnumbers
 		rescue ActiveRecord::RecordNotFound
 			logger.error "访问无效的产品页面#{params[:id]}"
 			redirect_to products_path
 		end
-
 	end
 
 	def new

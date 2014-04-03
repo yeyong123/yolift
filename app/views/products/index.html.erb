@@ -1,11 +1,18 @@
 <% provide(:title, "产品中心")%>
+<div class="edge-position">
 <%= render 'products/nav_list' %>
+<div class="hr-postion">
+</div>
+<div class="edge-from edge-from1">
+	<%= render 'tag' %>
+</div>
+</div>
 <div class="product-index">
 	<%= render_navigation(renderer: :breadcrumbs, join_with: '&nbsp / &nbsp') %>
 	<div class="link-product">
 		<%= render 'product_images/link_product' %>
 		</div>
-	<ul class="thumbnails">
+		<ul class="thumbnails">
 		<% @products.each do |product| %>
 			<%= render partial: 'products/index', locals: {product: product} %>
 		<% end %>

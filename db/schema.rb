@@ -11,7 +11,7 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20140328084340) do
+ActiveRecord::Schema.define(:version => 20140402010151) do
 
   create_table "abouts", :force => true do |t|
     t.string   "title"
@@ -340,6 +340,7 @@ ActiveRecord::Schema.define(:version => 20140328084340) do
     t.integer  "excellent",   :default => 0
     t.integer  "paixu",       :default => 0
     t.string   "image"
+    t.integer  "view_count",  :default => 0
   end
 
   create_table "provinces", :force => true do |t|

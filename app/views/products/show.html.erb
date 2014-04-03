@@ -1,5 +1,15 @@
 <% provide(:title, @product.title) %>
+<div class="bian_count">
 <%= render 'home/nav_list' %>
+<div class="view_count">
+	<div class="view_font">
+	<span>你可能感兴趣的产品</span>
+</div>
+		<% @view_counts.limit(4).each do |product| %>
+			<%= render partial: 'products/index', locals: {product: product} %>
+	<% end %>
+</div>
+</div>
 <div class="show-product">
 	<div class="product">
 		<%= render_navigation(renderer: :breadcrumbs, join_with: '&nbsp / &nbsp') %>

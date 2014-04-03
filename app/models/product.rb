@@ -1,7 +1,6 @@
 class Product < ActiveRecord::Base
-	attr_accessible :detail, :category_id,:listtext, :excellent, :image,:paixu,:number, :printpdf, :techparams, :title,:outline, :tag_id,:productcolor_ids, :productnumbers_attributes, :photos_attributes,:videos_attributes
+	attr_accessible :detail, :category_id,:listtext,:view_count, :excellent, :image,:paixu,:number, :printpdf, :techparams, :title,:outline, :tag_id,:productcolor_ids, :productnumbers_attributes, :photos_attributes,:videos_attributes
 	has_many :photos, dependent: :destroy
-	default_scope order("paixu desc")
 	has_many_kindeditor_assets :attachments, dependent: :destroy
 	mount_uploader :printpdf, PrintpdfUploader
 	mount_uploader :image, ImageUploader

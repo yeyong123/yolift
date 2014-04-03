@@ -1,0 +1,17 @@
+	<% if params[:t] %>
+			<% @products.limit(1).each do |product| %>
+				<% Category.all.each do |cate| %>
+					<% if cate.id == product.category.id %>
+						<ul>
+						<% cate.tags.each do |tag| %>
+							<li>
+							<%= image_tag(tag.image_url(:micro)) if tag.image? %>
+							<%= link_to tag.name, products_path(t:tag) %>
+							</li>
+						<% end %>
+					</ul>
+					<% end %>
+				<% end %>
+			<%end %>
+		<%end %>
+

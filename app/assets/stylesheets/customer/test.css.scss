@@ -402,6 +402,7 @@ li.font-border a {
 	width: 918px;
 	margin-left: 5px;
 	height: auto;
+	min-height: 1560px;
 }
 .product {
 	margin-bottom: 15px;
@@ -1197,4 +1198,34 @@ td.demand3 {
 .demand .demand-text span {
 	color: red;
 	font-size: 16px;
+}
+//访问最多的产品显示
+.bian_count {
+	position: relative;
+}
+.bian_count .nav-list .nav-bananer{
+	clear: both;
+}
+.view_count {
+	width: 203px;
+	position: absolute;
+	top: 360px;
+}
+.view_count .span3 {
+	width: 203px;
+	margin-top: 3px;
+	margin-left: 0;
+}
+.view_count .view_font{
+	border:1px solid #d9d9d9;
+	padding: 4px;
+	margin: 3px;
+	background: #fda100;
+}
+.view_font span {
+	text-indent: 20px;
+	font-size: 15px;
+	font-weight: bold;
+	padding-left: 12px;
+	color: black;
 }
