@@ -1,0 +1,17 @@
+<%= render 'home/nav_list' %>
+<div class="product-index">
+	<table class="table">
+			<%@demands.each do |demand| %>
+		<tr>
+				<td><%= demand.name %></td>
+				<td><%= demand.company %></td>
+				<td><%= demand.phone %></td>
+				<td><%= demand.telphone %></td>
+				<td><%= demand.email %></td>
+				<td><%= demand.question %></td>
+				<td><%= link_to "删除", demand, method: :delete, confirm: "确认删除"  %>
+			</tr>
+			
+				<% end %>
+	</table>
+</div>

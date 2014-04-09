@@ -2,20 +2,39 @@
 <html lang="en">
 	<head>
 		<meta charset="utf-8">
-		<title>Yolift</title>
+		<title><%= full_title(yield(:title)) %></title>
+		<meta name="keywords" content="高空作业平台,电动搬运车,电动堆高车,升降平台">
+		<meta name="description" content="力形(上海)自动化科技有限公司产品及服务从高空作业设备、物料搬运设备、升降设备到环保节能设备、仓储物流设备,共7大类产品线,超过5000个工业品种,我们以专业的生产线,为客户提供专业的解决方案">
 		<!--<meta name="viewport" content="width=device-width, initial-scale=1.0">
 		<link href="/assets/responsive/bootstrap-responsive.min.css" rel="stylesheet">-->
-		<%= stylesheet_link_tag  "bootstrap/bootstrap.min","customer/customer","customer/test" %>
-		<%= javascript_include_tag "application", "js/bootstrap.min" %>
+		<%= stylesheet_link_tag  "bootstrap/bootstrap.min","customer/customer","customer/test","wice_grid"%>
 		<%= csrf_meta_tags %>
 		<%= render 'layouts/shim' %>	
 	</head>
 	<body>
+
 		<%= render 'layouts/temple' %>
-		<div class="container">
+	<div class="shadow-body">
+		<div class="erwei">
+			<%= image_tag("erwei.png") %>
+			<span>扫一扫,在手机上查看产品</span>
+		</div>
+			<div class="container">
+	<% unless notice.nil? && alert.nil? %>
+		<div class="alert">
+			<a href="#" class="close" data-dismiss="alert">&times;</a>
+			<p><%= notice %> <%= alert %></p>
+		</div>
+			<% end %>
 			<%= yield %>
 		</div>
-		<%= render 'layouts/footer' %>
+				</div>
+			<%= render 'layouts/footer' %>
+			<%= render 'layouts/qq' %>
+			<%= render 'layouts/goto' %>
 	</body>
+<%= javascript_include_tag "application", "ckeditor/config","js/bootstrap.min", "js/customer", 
+			"js/jquery.validate.min"%>
 	<%= render 'layouts/javascript_shim' %>	
+	<%= render 'layouts/google' %>
 	 </html>

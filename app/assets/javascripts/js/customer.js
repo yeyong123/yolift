@@ -217,6 +217,34 @@ $('.edit_product').validate({
 		}
 	}
 });
+//在线需求表单
+$('#new_demand').validate({
+	rules: {
+		"demand[name]":{
+			required: true
+		},
+		"demand[company]":{
+			required: true
+		},
+		"demand[phone]": {
+			required: true
+		}
+	},
+	messages: {
+		"demand[name]":{
+			required: "名字不能为空"
+		},
+		"demand[company]": {
+			required: "公司名不能为空"
+		},
+		"demand[phone]":{
+			required: "手机或电话不能为空"
+		},
+		"demand[email]": {
+			email: "请输入有效的邮箱地址"
+		}
+	}
+});
 //调用产品控制台产品推荐的时候Ajax请求中按钮加入css
 $('.tuijian1').hover(
 		function(){$(this).find('.tuijian').addClass('tuijian22');
@@ -232,7 +260,7 @@ $('.getnumber').hover(
 		}
 		);
 //过滤表单数据
-$('#table').filterTable();
+
 
 //产品展示页面的固定定位
 //
@@ -257,10 +285,12 @@ $(function(){
 	goTop();//实现回到顶部元素的渐显与渐隐
 });
 
-//qq的漂浮框js
-setTimeout("$('#qq-float').show()", 25000);
-$('#qq-button-one').click(function(e){
-	$('#qq-float').slideToggle();
-		e.preventDefault();
+$('#demand').click(function(e) {
+	$('#demand-form').show();
+	e.preventDefault();
+});
+$('.demand-close').click(function(e) {
+	$('#demand-form').hide();
+	e.preventDefault();
 });
 });

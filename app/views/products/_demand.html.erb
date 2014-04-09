@@ -6,12 +6,20 @@
 		</tr>
 		<tr>
 			<td class="demand2"></td>
-			<td class="demand-text">与力形客户服务代表<a target="_blank" href="http://qiao.baidu.com/?module=default&controller=webim&action=index&siteid=4554097"><span>在线沟通</span></a></td>
+			<td class="demand-text">与力形客户服务代表<a target="_blank" href="http://qiao.baidu.com/v3/?module=default&controller=webim&action=index&siteid=4554097"><span>在线沟通</span></a></td>
 		</tr>
 	<tr>
 			<td class="demand3"></td>
-			<td class="demand-text">在线正确填写<a href="#"><span>产品需求表单</span></a></td>
+			<td class="demand-text">在线正确填写<a href="#"><span id="demand">产品需求表单</span></a></td>
 		</tr>
-
 	</table>
+	<div id="demand-form">
+		<a href="#" class="demand-close">
+			&times;</a>
+		<%= form_for @demand do |f| %>
+			<div class="message-form">
+		<%= render partial: 'messages/message_form', locals: {f: f} %>
+	</div>
+	<% end %>
+	</div>
 </div>

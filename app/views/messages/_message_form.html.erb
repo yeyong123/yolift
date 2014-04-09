@@ -1,0 +1,29 @@
+	<div class="field">
+		<%= f.label :name, "姓名:" %>
+		<%= f.text_field :name %>
+	</div>
+	<div class="field">
+		<%= f.label :company, "公司名称:" %>
+		<%= f.text_field :company %>
+	</div>
+	<div class="field">
+		<%= f.label :email, "邮件地址:" %>
+		<%= f.email_field :email %>
+	</div>
+	<div class="field">
+		<%= f.label :telphone, "电话:" %>
+		<%= f.text_field :telphone %>
+	</div>
+	<div class="field">
+		<%= f.label :phone, "手机号码:" %>
+		<%= f.text_field :phone %>
+	</div>
+	<div class="field iss">
+		<%= f.label :question, "意见和留言内容:" %>
+		<%= f.text_area :question%>
+	</div>
+	<div class="action">
+		<%= f.submit "提交", class: "btn btn-primary" %>
+		<%= f.submit "重置", type: "reset", class: "btn btn-danger" %>
+	</div>
+

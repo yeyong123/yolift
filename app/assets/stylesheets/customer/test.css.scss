@@ -1152,7 +1152,7 @@ td.alt { background-color: #ffc; background-color: rgba(255, 255, 0, 0.2); }
 	width: 205px;
 	float: left;
 	margin: 10px 5px;
-	height: 270px;
+	//height: 270px;
 	padding: 5px;
 }
 .sitemap-cate hr {
@@ -1233,4 +1233,29 @@ td.demand3 {
 	font-weight: bold;
 	padding-left: 12px;
 	color: black;
+}
+.demand {
+	position: relative;
+}
+#demand-form {
+	border: 1px solid #d9d9d9;
+	width: 58%;
+	position: absolute;
+	background: #d9d9d9;
+	top: 0px;
+	left: 50px;
+	display: none;
+}
+.demand-close{
+	float: right;
+	font-size: 25px;
+	background: red;
+	padding: 2px;
+	margin: 3px 12px;
+}
+#demand-form label.error {
+	color: red;
+	position: absolute;
+	right: 20px;
+	float: left;
 }

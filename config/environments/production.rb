@@ -46,13 +46,10 @@ Yolift::Application.configure do
   # config.action_controller.asset_host = "http://assets.example.com"
 
   # Precompile additional assets (application.js, application.css, and all non-JS/CSS are already added)
-	config.assets.precompile +=['bootstrap/bootstrap.min.css', 'customer/customer.css','wice_grid.css',
-															'customer/zoom.css','ie/bootstrap-ie6.css',
+	config.assets.precompile +=['bootstrap/bootstrap.min.css', 'customer/customer.css','wice_grid.css','ie/bootstrap-ie6.css',
 															'customer/test.css','ie/ie.css','ie/ie8.css',
-															'js/bootstrap.min.js','ie/bootstrap-ie.js',
-															'zoom/imagezoom.js','zoom/zoom.min.js',
-															'js/customer.js', 'js/jquery.validate.min.js', 
-															'js/jquery.filtertable.js','ckeditor/config.js']
+															'js/bootstrap.min.js','ie/bootstrap-ie.js', 'zoom/imagezoom.js', 'zoom/zoom.min.js',
+															'js/customer.js', 'js/jquery.validate.min.js']
 
   # Disable delivery errors, bad email addresses will be ignored
   # config.action_mailer.raise_delivery_errors = false

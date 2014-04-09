@@ -11,7 +11,8 @@ class ProductsController < ApplicationController
 	def show
 		begin
 			@product = Product.find(params[:id])
-		@view_counts = Product.order('view_count desc')
+			@view_counts = Product.order('view_count desc')
+			@demand = Demand.new
 			@product.increment!(:view_count)
 			@line_item = @product.line_items.build
 			@productnumbers = @product.productnumbers

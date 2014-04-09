@@ -35,6 +35,7 @@ Yolift::Application.routes.draw do
 		resources :contact_images
 		resources :server_images
 		resources :product_images
+		resources :demands
 		match '/search', to: "products#search"
 		match '/sitemap', to: "home#sitemap"
 		match '/link', to: "home#link"
