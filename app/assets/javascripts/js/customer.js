@@ -270,7 +270,7 @@ function goTop()
 {
 	$(window).scroll(function(e) {
 		//若滚动条离顶部大于100元素
-		if($(window).scrollTop()>500)
+		if($(window).scrollTop()>100)
 		$("#gotop").fadeIn(1000);//以1秒的间隔渐显id=gotop的元素
 		else
 		$("#gotop").fadeOut(1000);//以1秒的间隔渐隐id=gotop的元素

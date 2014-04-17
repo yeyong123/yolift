@@ -94,6 +94,9 @@
 						<span><%= link_to tag.name, products_path(t:tag) %></span>
 					<% end %>
 				<% end %>
+				<% Siah.all.each do |siah| %>
+					<span><a href="<%= siah.desc%>"><%= siah.name %></a></span>
+					<% end %>
 			</div>
 		</div>
 	</div>

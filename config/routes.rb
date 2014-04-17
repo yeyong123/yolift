@@ -1,10 +1,8 @@
 Yolift::Application.routes.draw do
 
 
-  mount RailsAdmin::Engine => '/managers', :as => 'rails_admin'
 		devise_for :admins
 		devise_for :users
-		mount Ckeditor::Engine => '/ckeditor'
 		resources :bananers
 		resources :products do 
 			resources :line_items
