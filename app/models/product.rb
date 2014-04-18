@@ -14,13 +14,23 @@ class Product < ActiveRecord::Base
 	has_many :orders, through: :line_items
 	belongs_to :tag
 	belongs_to :category
+	before_destroy :referenced_by_any_destroy
 	has_many :videos, dependent: :destroy
 	accepts_nested_attributes_for :videos, allow_destroy: :true,
 		reject_if: proc{ |attrs| attrs.all? {|k, v| v.blank? }}
 
 	validates_presence_of :title, :photos, :productnumbers
 	validates_numericality_of :paixu, greater_than_or_equal_to: 0, less_than: 9999, allow_blank: true
-#	def add_product(line_item,product_id)
+
+	def referenced_by_any_destroy
+		if line_items.empty?
+			return true
+		else
+			errors.add(:base, "产品有关联")
+			return false
+		end
+	end
+	#	def add_product(line_item,product_id)
 #		current_item = line_items.find_by_product_id(product_id)
 #		if current_item
 #			current_item.quantity += 1

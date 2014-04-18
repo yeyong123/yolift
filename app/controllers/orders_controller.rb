@@ -18,6 +18,7 @@ class OrdersController < ApplicationController
 	end
 
 	def edit
+		@order = Order.find(params[:id])
 	end
 
 	def create
@@ -33,6 +34,12 @@ class OrdersController < ApplicationController
 	end
 
 	def update
+		@order = Order.find(params[:id])
+		if @order.update_attributes(params[:order])
+			redirect_to :back
+		else
+			render 'edit'
+		end
 	end
 
 	def destroy

@@ -1,0 +1,8 @@
+<%= form_for cate do |f| %>
+	<% if !cate.deal? %>
+		<%= check_box_tag('catelog[deal]', 1,cate.id) %>
+		<%= f.submit "处理", confirm: "提交办理", class: "btn btn-mini btn-primary" %>
+	<% else %>
+		<span class="deal-color">已处理</span>	
+	<% end %>
+<% end %>

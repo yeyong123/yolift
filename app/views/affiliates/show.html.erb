@@ -1,3 +1,35 @@
 <%= render 'home/nav_list' %>
 <div class="product-index">
+	<div class="about-title">
+		<h4>申请客户详细信息</h4>
+	</div>
+	<table class="table">
+		<tr>
+			<td>申请时间:<%= @affiliate.created_at.strftime("%Y-%m-%d:%H:%M") %></td>
+			<td>公司名称:<%= @affiliate.company%></td>	
+			<td>
+				<% if !@affiliate.deal? %>
+					<%= form_for @affiliate do |f| %>
+						<%= check_box_tag('affiliate[deal]', 1, @affiliate.id) %>
+						<%= f.submit "处理", class: "btn btn-primary" %>
+					<% end %>
+					<%else%>
+						<span class="deal-color">已处理</span>
+					<% end %>
+				</td>
+			</tr>
+			<tr>
+				<td>法人: <%= @affiliate.person %></td>
+				<td>地址: <%= @affiliate.address %></td>
+				<td>公司性质: <%= @affiliate.ownship %></td>
+			</tr>	
+			<tr>
+				<td>联系人:<%= @affiliate.contact %></td>
+				<td>邮箱: <%= @affiliate.email %></td>
+				<td>联系电话: <%= @affiliate.telephone %></td>
+				<td>注册资本: <%= @affiliate.capital %></td>
+				<td>成立时间: <%= @affiliate.founded %></td>
+				<td>员工人数: <%= @affiliate.employees %></td>
+			</tr>
+	</table>
 </div>

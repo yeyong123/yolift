@@ -39,6 +39,7 @@
 					<% end %>
 					</span>
 			</div>
+			<div class="catelog-image">
 			<% CatelogImage.limit(1).each do |cate| %>
 				<% if admin_signed_in? %>
 					<%= link_to edit_catelog_image_path(cate)  do %>
@@ -50,6 +51,7 @@
 					<% end %>
 				<% end %>
 			<% end %>
+			</div>
 					</div>
 		</li>
 	</ul>

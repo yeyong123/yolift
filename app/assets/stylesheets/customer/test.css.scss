@@ -817,6 +817,10 @@ li.font-border a {
  }
  .order-form1 .action input {
 	 float: none;
+	 margin-left: 40px;
+	 margin-right: 90px;
+ }
+ .order-form1 .action a {
  }
  .order-form1 .field label {
 	 //margin-right: 10px;
@@ -824,6 +828,11 @@ li.font-border a {
 .order-form1 .field label {
 	float: left;
 	margin-left: 80px;
+}
+.deal-color {
+	border: 1px solid #d9d9d9;
+	padding: 2px 8px;
+	background: #d9d9d9;
 }
 .ordernumber {
 	margin-top: 10px;
@@ -1261,3 +1270,7 @@ td.demand3 {
 	right: 20px;
 	float: left;
 }
+.catelog-image {
+	padding: 3px;
+}
+

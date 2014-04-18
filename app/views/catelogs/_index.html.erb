@@ -1,10 +1,15 @@
 <tr>
+	<td><%= cate.created_at.strftime("%Y-%m-%d:%H:%M")%></td>
 	<td><%= link_to cate.company, catelog_path(cate) %></td>
 	<td><%= cate.name %></td>
 	<td><%= cate.mobel %></td>
 	<td><%= cate.province.name %><%= cate.city.name %>
 		<%= cate.district.name%>
 	</td>
-	<td><%= link_to "编辑", edit_catelog_path(cate) %></td>
-	<td><%= link_to "删除",cate, method: :delete, confirm: "确认删除" %></td>
+	<td>
+		<% if !cate.deal? %>
+			<%= link_to "待处理", catelog_path(cate.id), class: "btn btn-mini btn-danger" %>
+		<% else %>
+			<span class="deal-color">已处理</span>
+		<% end %>
 	</tr>

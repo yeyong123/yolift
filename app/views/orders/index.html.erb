@@ -24,7 +24,13 @@
 				<%= order.district.name %>
 			</td>
 			<td><%= order.name %></td>
-			<td><%= link_to "删除", order, method: :delete, confirm: "Are you sure?" %>
+			<td>
+				<% if !order.deal? %>
+					<%= link_to "待处理", order_path(order.id), class: "btn btn-mini btn-danger" %>
+				<% else %>
+					<span class="deal-color">已处理</span>
+				<% end %>
+			</td>
 			</tr>
 		<% end %>
 </table>	

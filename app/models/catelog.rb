@@ -1,5 +1,5 @@
 class Catelog < ActiveRecord::Base
-  attr_accessible :address, :city_id, :company, :district_id, :image,:email, :interest, :mobel, :name, :number, :phone, :province_id, :scale, :zip
+  attr_accessible :address, :deal,:city_id, :company, :district_id, :image,:email, :interest, :mobel, :name, :number, :phone, :province_id, :scale, :zip
 	belongs_to :province
 	belongs_to :city
 	belongs_to :district

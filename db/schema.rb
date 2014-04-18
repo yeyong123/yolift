@@ -11,7 +11,7 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20140416080029) do
+ActiveRecord::Schema.define(:version => 20140418033546) do
 
   create_table "abouts", :force => true do |t|
     t.string   "title"
@@ -68,9 +68,10 @@ ActiveRecord::Schema.define(:version => 20140416080029) do
     t.string   "affiliated"
     t.text     "currently"
     t.string   "intention"
-    t.datetime "created_at",   :null => false
-    t.datetime "updated_at",   :null => false
+    t.datetime "created_at",                      :null => false
+    t.datetime "updated_at",                      :null => false
     t.string   "person"
+    t.boolean  "deal",         :default => false
   end
 
   create_table "aftermarkets", :force => true do |t|
@@ -133,9 +134,10 @@ ActiveRecord::Schema.define(:version => 20140416080029) do
     t.integer  "province_id"
     t.integer  "city_id"
     t.integer  "district_id"
-    t.datetime "created_at",  :null => false
-    t.datetime "updated_at",  :null => false
+    t.datetime "created_at",                     :null => false
+    t.datetime "updated_at",                     :null => false
     t.string   "image"
+    t.boolean  "deal",        :default => false
   end
 
   create_table "center_images", :force => true do |t|
@@ -207,8 +209,9 @@ ActiveRecord::Schema.define(:version => 20140416080029) do
     t.string   "phone"
     t.string   "telphone"
     t.text     "question"
-    t.datetime "created_at", :null => false
-    t.datetime "updated_at", :null => false
+    t.datetime "created_at",                    :null => false
+    t.datetime "updated_at",                    :null => false
+    t.boolean  "deal",       :default => false
   end
 
   create_table "districts", :force => true do |t|
@@ -293,11 +296,12 @@ ActiveRecord::Schema.define(:version => 20140416080029) do
     t.string   "name"
     t.text     "content"
     t.string   "ordernumber"
-    t.datetime "created_at",  :null => false
-    t.datetime "updated_at",  :null => false
+    t.datetime "created_at",                     :null => false
+    t.datetime "updated_at",                     :null => false
     t.integer  "city_id"
     t.integer  "province_id"
     t.integer  "district_id"
+    t.boolean  "deal",        :default => false
   end
 
   create_table "payments", :force => true do |t|
@@ -392,8 +396,9 @@ ActiveRecord::Schema.define(:version => 20140416080029) do
     t.string   "jobtime"
     t.text     "remark"
     t.text     "say"
-    t.datetime "created_at",    :null => false
-    t.datetime "updated_at",    :null => false
+    t.datetime "created_at",                       :null => false
+    t.datetime "updated_at",                       :null => false
+    t.boolean  "deal",          :default => false
   end
 
   create_table "server_images", :force => true do |t|

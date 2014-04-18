@@ -1,5 +1,5 @@
 class Order < ActiveRecord::Base
-	attr_accessible :address, :company, :content, :email, :name, :ordernumber, :phone, :city_id, :province_id, :district_id
+	attr_accessible :address, :company, :deal,:content, :email, :name, :ordernumber, :phone, :city_id, :province_id, :district_id
 	has_many :line_items, dependent: :destroy
 	belongs_to :province
 	belongs_to :city

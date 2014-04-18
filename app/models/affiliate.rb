@@ -1,5 +1,5 @@
 class Affiliate < ActiveRecord::Base
-  attr_accessible :address, :affiliated, :apply,:person, :business, :capital, :commitsales, :company, :contact, :currently, :distribution, :email, :employees, :founded, :intention, :owned, :ownship, :rented, :sales, :salesstaff, :servicestaff, :store, :telephone, :warehouse
+  attr_accessible :address, :deal,:affiliated, :apply,:person, :business, :capital, :commitsales, :company, :contact, :currently, :distribution, :email, :employees, :founded, :intention, :owned, :ownship, :rented, :sales, :salesstaff, :servicestaff, :store, :telephone, :warehouse
 	
 	validates_presence_of :company, :contact, :telephone, :email, :address
 	validates_uniqueness_of :company, :address, :telephone, :email
