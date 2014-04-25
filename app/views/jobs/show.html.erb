@@ -1,11 +1,6 @@
 <%= render 'home/nav_list' %>
 <div class="product-index">
 	<h4>职位详细信息</h4>
-	<% if admin_signed_in? %>
-	<%= link_to edit_job_path(@job), class: "btn product-link" do %>
-		编辑<I class="icon-pencil"></i>
-	<% end %>
-<% end %>
 	<div class="job-title">
 		<%= @job.title %>
 	</div>

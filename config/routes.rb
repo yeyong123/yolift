@@ -1,8 +1,6 @@
 Yolift::Application.routes.draw do
 
 
-		devise_for :admins
-		devise_for :users
 		resources :bananers
 		resources :products do 
 			resources :line_items
@@ -40,7 +38,15 @@ Yolift::Application.routes.draw do
 		match '/error', to: 'home#error'
 		match '/dashboard', to: "home#dashboard"
 		root to: 'home#index'
-	# first created -> highest priority.
+		
+		
+		devise_for :users
+		#devise_for :admins
+
+		devise_for :admin_users, ActiveAdmin::Devise.config
+		ActiveAdmin.routes(self)
+
+		# first created -> highest priority.
 
 	# Sample of regular route:
 	#   match 'products/:id' => 'catalog#view'

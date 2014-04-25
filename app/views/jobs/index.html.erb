@@ -1,7 +1,5 @@
 <%= render 'home/nav_list' %>
 <div class="product-index">
 <%= render 'index' %>
-<% if admin_signed_in? %>
-<%= link_to "新增招聘信息", new_job_path, class: "btn btn-primary" %>
 <% end %>
 </div>

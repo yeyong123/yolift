@@ -8,17 +8,22 @@
 </div>
 </div>
 <div class="product-index">
-	<%= render_navigation(renderer: :breadcrumbs, join_with: '&nbsp / &nbsp') %>
 	<div class="link-product">
+		<% unless params[:t] %>
 		<%= render 'product_images/link_product' %>
+	<% else %>
+		<%= render 'products/tag_image' %>
+	<% end %>
+		</div>
+		<div class="about-title">
+			<div class="breadrcumb">
+			<%= render_navigation(renderer: :breadcrumbs, join_with: '&nbsp / &nbsp') %>
+		</div>
 		</div>
 		<ul class="thumbnails">
 		<% @products.each do |product| %>
 			<%= render partial: 'products/index', locals: {product: product} %>
 		<% end %>
 			</ul>
-			<% if admin_signed_in? %>
-	<%= link_to '新增产品',new_product_path, class: "btn btn-primary" %>
-<% end %>
 	<%= will_paginate @products, class: "pagination pagination-centered"%>
 </div>

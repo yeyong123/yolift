@@ -1,0 +1,91 @@
+<div class="form-form">
+	<%= nested_form_for [:admin,@product], html: { multipart: true} do |f| %>
+	<%= render 'home/error_message', object: f.object %>
+	<div class="select-cate">
+		<span>选择大类</span>
+		<%=collection_select(:product, :category_id, Category.all, :id, :name)%><br />
+
+		<span>选择分类</span>
+		<%= grouped_collection_select(:product, :tag_id, Category.all, :tags, :id, :id, :name) %><br />
+		</div>
+		<div class="field">
+			<%= f.label :paixu, "排序编号" %>
+			<%= f.number_field :paixu %>
+				</div>
+	<div class="field">
+		<%= f.label :number, "货号" %>
+		<%= f.fields_for :productnumbers do |ph|%>
+			<%= ph.text_field :number %>
+			<%= ph.link_to_remove "删除",class: "btn btn-danger" %>
+		<% end %>
+		<p>
+		<%= f.link_to_add "添加货号", :productnumbers, class: "btn btn-primary" %>
+		</p>
+	</div>
+	<div class="field">
+		<%= f.label :title, "标题" %>
+		<%= f.text_field :title %>
+	</div>
+	<div class="field">
+		<%= f.label :image, "缩略图(220x220)" %>
+		<%= image_tag(@product.image_url(:small)) if @product.image? %>
+		<%= f.file_field :image %>
+	</div>
+	<br/>
+
+	<div class="field image-position-find">
+		<%= f.label :image, "产品图片" %>
+		<%= f.fields_for :photos do |photo| %>
+			<% pho = photo.object %>
+			<%= image_tag(pho.image_url(:small)) if pho.image? %>
+			<%= photo.file_field :image %>
+			<br />
+			<%= photo.link_to_remove "删除", class: 'btn btn-mini btn-success' %>
+		<% end %>
+		<p><%= f.link_to_add "增加图片", :photos, class: 'btn btn-primary' %></p>
+
+		<div class="image-position">
+		</div>
+	</div>
+	<div class="field position-form">
+		<%= f.label :printpdf, "上传PDF" %>
+		<%= f.file_field :printpdf %>
+	</div>
+	<div class="field position-form">
+		<%= f.label :video, "上传视频" %>
+		<%= f.fields_for :videos do |video| %>
+			<% vi = video.object %>
+			<%= File.basename(vi.video_url) if vi.video? %>
+			<%= video.file_field :video %>
+	<%= video.link_to_remove "删除", class: 'btn btn-mini btn-success' %>
+
+		<% end %>
+		<p>
+		<%= f.link_to_add "添加视频", :videos, class: "btn btn-primary" %>
+		</p>
+	</div>
+			<div class="field" style="clear:both">
+		<%= f.label :outline,"概述"%>
+		<%= f.kindeditor :outline, width: 900, height: 300 %>
+	</div>
+	
+	<div class="field">
+		<%= f.label :listtext, "列表描述" %>
+		<%= f.kindeditor :listtext,width: 900, height: 300 %>
+	</div>
+
+	<div class="field">
+		<%= f.label :detail,"更多细节"%>
+		<%= f.kindeditor :detail, width: 900, height: 300 %>
+	</div>
+	<div class="field">
+		<%= f.label :techparams, "技术参数" %>
+		<%= f.kindeditor :techparams, width: 900, height: 300 %>
+		
+	</div>
+	<div class="action">
+		<%= f.submit "保存",class: "btn btn-large btn-success"%>
+	</div>
+<% end %>
+</div>
+

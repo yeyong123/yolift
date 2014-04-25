@@ -11,12 +11,7 @@
 				<% Bananer.all.each do |bananer| %>
 					<div class="item">
 						<%= link_to image_tag(bananer.image_url), bananer.button %>
-						<div class="bananer-button">
-							<% if admin_signed_in? %>
-								<%= link_to "编辑", edit_bananer_path(bananer), class: "btn btn-primary" %>
-							<% end %>
 						</div>
-					</div>	
 				<% end %>
 			</div>
 		</div>

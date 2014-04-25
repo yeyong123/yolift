@@ -8,10 +8,6 @@
 				<td><%= link_to center.title, center_path(center) %></td>
 				<td><%= center.updated_at.strftime("%Y-%m-%d:%H:%M:%S") %></td>
 		<% end %>
-				<% if admin_signed_in? %>
-				<td><%= link_to "编辑", edit_center_path(center) %></td>
-				<td><%= link_to "删除", center, method: :delete, confirm: "Are you sure?" %></td>
-			<% end %>
 
 			</tr>
 		<% end %>
@@ -20,8 +16,5 @@
 		</tr>
 	</table>
 	<%= will_paginate @centers %>
-	<% if admin_signed_in? %>
-	<%= link_to "新增服务", new_center_path, class: "btn btn-primary" %>
-<% end %>
 </div>
 

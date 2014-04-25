@@ -1,4 +1,13 @@
 zh-CN:
-  abouts: "关于我们"
-  admins: "管理员"
-  affiliates: "诚邀合作"
+  active_admin:
+    comments: "评论"
+    comments:
+      resource_type: "来源模型"
+      author_type: "用户"
+  views:
+    pagination:
+      truncate: "..."
+      first: "起始页"
+      previous: "前一页"
+      next: "后一页"
+      last: "最后一页"

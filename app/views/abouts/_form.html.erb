@@ -4,5 +4,10 @@
 </div>
 <div class="field">
 	<%= f.label :content, "内容" %>
-	<%= f.kindeditor :content %>
+	<%= f.kindeditor :content, width: 900, height: 300%>
 </div>
+	<div class="about-action">
+			<%= f.submit '保存', class: "btn btn-success" %>
+			<%= link_to "返回", :back, class: "btn btn-primary" %>
+		</div>
+

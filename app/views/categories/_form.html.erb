@@ -1,6 +1,5 @@
-<%= render 'home/nav_list' %>
 <div class="product-index">
-<%= nested_form_for @category do |f| %>
+<%= nested_form_for [:admin, @category] do |f| %>
 	<%= render 'home/error_message', object: f.object %>
 	<div class="field">
 		<%= f.label :name,"大类名称" %>
@@ -20,7 +19,7 @@
 		<%= image_tag(tag.image_url(:small)) if tag.image? %>	
 		<%= tag_form.file_field :image %>
 		<%= tag_form.text_field :name %>
-		<%= tag_form.link_to_remove "删除" %>
+		<%= tag_form.link_to_remove "删除", class: "btn btn-danger"%>
 	</div>
 	<% end %>
 	<p>
@@ -29,7 +28,6 @@
 </div>
 	<div class="action">
 		<%= f.submit "保存", class: "btn btn-success"%>
-		<%= link_to "返回", dashboard_path, class: "btn btn-primary" %>
 	</div>
 <% end %>
 </div>

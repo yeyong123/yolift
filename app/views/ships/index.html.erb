@@ -4,16 +4,9 @@
 		<% @ships.each do |ship| %>
 			<tr>
 				<td><%= link_to ship.title, ship_path(ship) %></td>
-				<% if admin_signed_in? %>
-				<td><%= link_to "编辑", edit_ship_path(ship) %></td>
-				<td><%= link_to "删除", ship, method: :delete, confirm: "确认删除" %></td>
-			<% end %>
 			</tr>
 					<% end %>
 	</table>
 	<%= will_paginate @ships %>
-	<% if admin_signed_in? %>
-	<%= link_to "新增配送服务", new_ship_path, class: "btn btn-primary" %>
-<% end %>
 </div>
 			

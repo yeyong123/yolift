@@ -1,6 +1,6 @@
 class MessagesController < ApplicationController
-	skip_before_filter :authenticate_admin!
-	before_filter :authenticate_admin!, only: [:index, :show, :edit, :destroy]
+	skip_before_filter :authenticate_admin_user!
+	before_filter :authenticate_admin_user!, only: [:index, :show, :edit, :destroy]
 	before_filter :find_id, only: [:show, :edit, :update, :destroy]
 	def index
 		@messages = Message.order("created_at desc").paginate(page: params[:page], per_page: 10)

@@ -6,7 +6,4 @@
 		<% end %>
 	</table>
 	<%= will_paginate @payments %>
-	<% if admin_signed_in? %>
-	<%= link_to '新增支付方式', new_payment_path, class: "btn btn-primary" %>
-<% end %>
 </div>

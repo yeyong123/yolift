@@ -25,4 +25,8 @@ zh-CN:
       about_x_years:
         one: "大约一年前"
         other: "大约%{count}年"
+  time:
+    am: "上午"
+    formats:
+      long: '%Y-%m-%d'
  

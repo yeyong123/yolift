@@ -1,17 +1,5 @@
 <div class="top-index">
 	<div class="index-top">
-		<% if admin_signed_in? %>
-			<ul>
-				<li><span style="color: #08c">你是管理员可以直接进入</span><%= link_to "管理员控制台", dashboard_path%></li>
-			<li><%= link_to "订单信息", orders_path %></li>
-			<li><%= link_to "申请样册客户列表", catelogs_path %></li>
-			<li><%= link_to "合作信息",affiliates_path %></li>
-			<li><%= link_to "报修单", repairs_path %></li>
-			<li><%= link_to "留言信息", messages_path %></li>
-			<li><%= link_to "用户需求表单", demands_path %></li>
-				<li><%= link_to "退出管理员", destroy_admin_session_path, method: :delete, class: "btn btn-danger btn-mini"%></li>
-			</ul>
-		<% else %>
 		<ul>
 			<li><a href="#" onclick="addfavorite()">收藏</a><span>|</span></li>
 			<% if current_user %>
@@ -20,7 +8,6 @@
 			<% else %>
 				<li><%= link_to "登录", new_session_path(:user) %><span>|</span></li>
 				<li class="font-border"><%= link_to "注册", new_registration_path(:user) %></li>
-			<% end %>
 			<li class="lange">
 			<div class="set_locale">
 				<%= link_to "中文", controller: controller.controller_name,

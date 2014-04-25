@@ -2,7 +2,7 @@ class ApplicationController < ActionController::Base
 	protect_from_forgery
 	before_filter :set_local_i18n
 	before_filter :find_cart
-	before_filter :authenticate_admin!, only: [:create, :edit,:new, :update, :destroy]
+	before_filter :authenticate_admin_user!, only: [:create, :edit,:new, :update, :destroy]
 
 	
 	unless Rails.application.config.consider_all_requests_local

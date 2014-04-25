@@ -1,0 +1,6 @@
+<div class="product-index">
+	<%= form_for [:admin, @tag_image] do |f| %>
+		<%= render 'home/error_message', object: f.object %>
+		<%= render partial: "product_images/new", locals: {f: f, object: @tag_image} %>
+	<% end %>
+</div>	

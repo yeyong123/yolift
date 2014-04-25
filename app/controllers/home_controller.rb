@@ -1,5 +1,5 @@
 class HomeController < ApplicationController
-	before_filter :authenticate_admin!, only: [:dashboard] 
+	before_filter :authenticate_admin_user!, only: [:dashboard] 
 	def index
 		@zixuns = Zixun.order("created_at desc").paginate(page: params[:page], per_page: 5)
 		

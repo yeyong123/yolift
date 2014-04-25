@@ -1,0 +1,87 @@
+// SASS variable overrides must be declared before loading up Active Admin's styles.
+//
+// To view the variables that Active Admin provides, take a look at
+// `app/assets/stylesheets/active_admin/mixins/_variables.css.scss` in the
+// Active Admin source.
+//
+// For example, to change the sidebar width:
+// $sidebar-width: 242px;
+
+// Active Admin's got SASS!
+@import "active_admin/mixins";
+@import "active_admin/base";
+@import "customer/test";
+@import "bootstrap/bootstrap.min";
+
+// Overriding any non-variable SASS must be done after the fact.
+// For example, to change the default status-tag color:
+//
+//   body.active_admin {
+//      .status_tag { background: #6090DB; }
+//   }
+//
+// Notice that Active Admin CSS rules are nested within a
+// 'body.active_admin' selector to prevent conflicts with
+// other pages in the app. It is best to wrap your changes in a 
+// namespace so they are properly recognized. You have options
+// if you e.g. want different styles for different namespaces:
+//
+// .active_admin       applies to any Active Admin namespace
+// .admin_namespace    applies to the admin namespace (eg: /admin)
+// .other_namespace    applies to a custom namespace named other (eg: /other)
+.form-form, .edit_category{
+	a, a:link, a:visited {
+	color: white;
+	text-decoration: none;
+}
+}
+.breadcrumb {
+	float: none;
+	background: none;
+}
+table {
+	border-collapse: separate;
+	border-spacing: 1px;
+	vertical-align: middle;
+}
+#index_footer .pagination {
+	margin: 0;
+	margin-left: 10px;
+}
+#sidebar, #login{
+	.label, .badge {
+		background: none;
+		color: black;
+	}
+	form.filter_form .filter_form_field.select_and_search select {
+		width: 80px;
+	}
+	form.filter_form .filter_form_field.select_and_search input[type=text] {
+		width: 130px;
+		margin-left: 5px;
+		margin-top: 5px;
+		padding: 5px;
+	}
+}
+.blank_slate_container {
+	border: 1px solid #d9d9d9;
+	float: left;
+	ul {
+		list-style: none;
+		margin: 5px;
+		li {
+			width: auto;
+			padding: 10px;
+			margin: 5px;
+			height: auto;
+			border: 1px solid #eaeaea;
+			float: left;
+			a {
+				vertical-align: middle;
+				color: white;
+				text-decoration: none;
+			}
+		}
+	}
+}
+

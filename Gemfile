@@ -19,9 +19,12 @@ gem 'kaminari','0.14.1'
 gem 'china_region_fu'
 #gem 'rails_admin'
 gem 'simple_form'
+gem 'activeadmin'
+gem 'meta_search'
 gem 'capistrano', '2.15.0'
 gem 'unicorn'
 gem 'unicorn-worker-killer'
+gem 'jquery-ui-rails'
 gem 'wice_grid', '3.4.2'
 gem 'by_star', :git => "git://github.com/radar/by_star"
 # Gems used only for assets and not required
@@ -36,7 +39,7 @@ group :assets do
   gem 'uglifier', '>= 1.0.3'
 end
 
-gem 'jquery-rails'
+gem 'jquery-rails','< 3.0.0'
 
 # To use ActiveModel has_secure_password
 # gem 'bcrypt-ruby', '~> 3.0.0'

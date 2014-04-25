@@ -10,13 +10,7 @@
 		<%= sanitize(product.outline) %>
 	</div>
 	<div class="link-product2">
-	<% if admin_signed_in? %>
-		<div class="btnlink">
-			<%= link_to "删除", product, method: :delete, confirm: "确认删除", class: "btn btn-danger" %>
-		</div>
-	<% else %>
-		<%= link_to "更多详情 >>", product_path(product.id) %>
-	<% end %>
+			<%= link_to "更多详情 >>", product_path(product.id) %>
 	</div>
 </div>
 </li>

@@ -5,15 +5,8 @@
 			<tr>
 				<td><%= link_to server.title, server_path(server) %></td>
 				<td><%= server.updated_at.strftime("%Y-%m-%d:%H:%M:%S") %></td>
-				<% if admin_signed_in? %>
-				<td><%= link_to "编辑", edit_server_path(server) %></td>
-				<td><%= link_to "删除", server, method: :delete, confirm: "Are you sure?"%></td>
-			<% end %>
 			</tr>
 		<% end %>
 	</table>
 	<%= will_paginate @servers %>
-	<% if admin_signed_in? %>
-	<%= link_to "创建新条目", new_server_path, class: "btn btn-primary" %>
-<% end %>
 </div>

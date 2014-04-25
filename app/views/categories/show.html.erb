@@ -18,10 +18,14 @@
 	</div>
 </div>
 	<div class="product-index">
-		<% if admin_signed_in? %>
-			<%= render 'edit_form' %>
-		<%else %>
+		<div class="link-product">
+			<%= render 'categories/category_image' %>
+		</div>
+		<div class="about-title">
+			<div class="breadrcumb">
 		<%= render_navigation(renderer: :breadcrumbs, join_with: '&nbsp / &nbsp') %> 
+	</div>
+	</div>
 		<ul class="thumbnails">
 			<% @products.each do |product| %>
 				<%= render partial: 'products/index', locals:{product: product} %>
@@ -29,6 +33,5 @@
 		</ul>
 
 		<%= will_paginate @products, class: "pagination pagination-centered"%>
-	<% end %>
 	</div>
 

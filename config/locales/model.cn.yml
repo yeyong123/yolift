@@ -22,6 +22,12 @@ zh-CN:
       message: "在线留言"
       about: "关于我们"
       admin: "管理员"
+      comment: "代办事项"
+      admin_user: "用户"
+      category_image: "大类图片"
+      tag_image: "二级分类图片"
+      product_image: "产品导航图"
+      catelog_image: "样册目录图片"
       aftermarket: "售后服务"
       bananer: "导航图"
       cart: "购物车"
@@ -45,7 +51,9 @@ zh-CN:
       ship: "运输方式"
       tag: "二级类"
       user: "用户会员"
-      zixun: "资讯"
+      zixun: "资讯详细"
+      about_image: "关于我们导航图"
+      about_index: "首页关于我们"
     attributes:
       affiliate: 
         company: "公司名称"
@@ -97,3 +105,6 @@ zh-CN:
         question: "意见和留言内容"
       product:
         paixu: "排序"
+      admin_user:
+        email: "邮箱"
+        password: "密码"

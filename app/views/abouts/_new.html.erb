@@ -1,0 +1,6 @@
+<div class="product-index">
+<%= form_for [:admin, @about] do |f| %>
+	<%= render 'home/error_message', object: f.object %>
+	<%= render partial: 'abouts/form', locals: {f: f} %>
+<% end %>
+</div>
