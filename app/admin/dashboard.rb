@@ -19,6 +19,8 @@ ActiveAdmin.register_page "Dashboard" do
 				li link_to "服务中心", admin_centers_path, :class => "btn btn-primary btn-large"
 				li link_to "联系我们", admin_contacts_path, :class => "btn btn-success btn-large" 
 				li link_to "售后服务", admin_aftermarkets_path, :class => "btn btn-primary btn-large"
+				li link_to "在线留言", admin_messages_path, :class => "btn btn-large btn-danger"
+				li link_to "支付方式", admin_payments_path, :class => "btn btn-large btn-info"
 
         #small I18n.t("active_admin.dashboard_welcome.call_to_action")
       end
@@ -28,7 +30,7 @@ ActiveAdmin.register_page "Dashboard" do
     #
     columns do
      column do
-        panel "样册申请列表" do
+        panel link_to "样册申请列表", admin_catelogs_path do
           ul do
             Catelog.limit(10).each do |catelog|
               li link_to(catelog.name, admin_catelog_path(catelog))

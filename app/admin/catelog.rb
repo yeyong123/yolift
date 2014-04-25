@@ -1,5 +1,6 @@
 ActiveAdmin.register Catelog do
-	actions :all, :except => [:edit, :new]
+	config.batch_actions = false
+	actions :all, :except => [:edit,:new]
 	filter :province, label: "地区"
 	filter :deal, label: "是否处理", as: :check_boxes
 	filter :mobel, label: "手机号"
@@ -26,7 +27,17 @@ ActiveAdmin.register Catelog do
 			cate.city.name
 		end
 		column "处理" do |cate|
-			 render partial: 'catelogs/deal', locals: {cate: cate}
+			if !cate.deal?
+				link_to "待处理", admin_catelog_path(cate.id), :class => "btn btn-mini btn-danger"
+			else
+				span :class => "deal-color" do
+				 	"已处理"
+				end
+			end
 		end	
+	end
+
+	show do
+		render 'catelogs/show'
 	end
 end

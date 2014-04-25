@@ -1,6 +1,4 @@
-<div class="tuijian1">
-<div class="tuijian">
-	<%= form_for(product, remote: true) do |f| %>
+	<%= form_for product, remote: true do |f| %>
 		<%= render 'home/error_message', object: f.object %>
 		<% if !product.paixu? %>
 			<%= f.number_field :paixu %>
@@ -10,6 +8,4 @@
 			<%= f.submit "更改", class: "btn btn-danger" %>
 		<% end %>
 	<% end %>
-</div>
-</div>
 

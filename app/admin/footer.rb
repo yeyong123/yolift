@@ -4,7 +4,7 @@ module ActiveAdmin
 			def build
 				super :id => "footer"
 				div do
-					span "Copyright &right; #{Date.today.year} Yolift"
+					span "Copyright &copy; #{Date.today.year} Yolift"
 				end
 			end
 		end

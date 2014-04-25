@@ -30,7 +30,7 @@ active_admin:
     contains: "包含"
     equals: "等于"
     starts_with: "开头"
-    ends_with: "完与"
+    ends_with: "结尾"
     greater_than: "大于"
     less_than: "小于"
   main_content: "请执行 %{model}#main_content 来显示内容."
