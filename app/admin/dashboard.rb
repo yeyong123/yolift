@@ -31,19 +31,39 @@ ActiveAdmin.register_page "Dashboard" do
     columns do
      column do
         panel link_to "样册申请列表", admin_catelogs_path do
-          ul do
-            Catelog.limit(10).each do |catelog|
-              li link_to(catelog.name, admin_catelog_path(catelog))
-            end
+					table :class => "table" do
+         		Catelog.order("created_at desc").limit(10).each do |catelog|
+          		tr do
+								td catelog.created_at.strftime("%Y-%m-%d")
+              	td link_to(catelog.name, admin_catelog_path(catelog))
+								td do
+									if !catelog.deal?
+										link_to "未处理", admin_catelog_path(catelog)
+									else
+										span :class => "deal-color" do
+											"已处理"
+										end
+									end
+								end
+            	end
+						end
           end
         end
       end
 
-    #   column do
-    #     panel "Info" do
-    #       para "Welcome to ActiveAdmin."
-    #     end
-    #   end
+     column do
+        panel link_to "订单详情", admin_orders_path do
+					table :class => "table" do
+          	Order.order("created_at desc").limit(10).each do |order|
+							tr do
+								td order.created_at.strftime("%Y-%m-%d")
+								td link_to order.name, admin_order_path(order)
+								td order.company
+							end
+						end
+					end
+        end
+      end
      end
   end # content
 end
