@@ -23,11 +23,12 @@
 	</div>
 	<div class="about-content">
 		<table class="table">
-		<% @server.zixuns.order("created_at desc").each do |zixun| %>
+		<% @zixuns.each do |zixun| %>
 			<tr>
 				<td><%= link_to zixun.title, zixun_path(zixun.id) %></td>
 		</tr>
 	<% end %>
 </table>
+<%= will_paginate @zixuns %>
 	</div>
 </div>
