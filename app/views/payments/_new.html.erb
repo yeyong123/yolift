@@ -1,5 +1,5 @@
 <div class="product-index">
-	<%= form_for @payment do |f| %>
+	<%= form_for [:admin,@payment] do |f| %>
 		<%= render partial: "abouts/form", locals: {f: f} %>
 	<% end %>
 </div>

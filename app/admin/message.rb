@@ -2,6 +2,7 @@ ActiveAdmin.register Message do
 	menu false
 	actions :all, :except => [:edit,:new]
 	filter :created_at, label: "时间"
+	filter :deal, label: "处理", as: :check_boxes
 
 	index do
 		selectable_column
@@ -19,6 +20,15 @@ ActiveAdmin.register Message do
 		end
 		column "电话" do |mess|
 			mess.phone
+		end
+		column "处理" do |mess|
+			if !mess.deal?
+				link_to "未处理",admin_message_path(mess)
+			else
+				span :class => "deal-color" do
+					"已处理"
+				end
+			end
 		end
 	end
 

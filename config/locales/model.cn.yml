@@ -51,9 +51,10 @@ zh-CN:
       ship: "运输方式"
       tag: "二级类"
       user: "用户会员"
-      zixun: "资讯详细"
+      zixun: "新闻资讯列表"
       about_image: "关于我们导航图"
       about_index: "首页关于我们"
+      demand: "用户需求"
     attributes:
       affiliate: 
         company: "公司名称"
@@ -108,3 +109,14 @@ zh-CN:
       admin_user:
         email: "邮箱"
         password: "密码"
+        current_sign_in_at: "当前登录时间"
+        last_sign_in_at: "最好登录时间"
+        sign_in_count: "登录次数"
+        encrypted_password: "密码"
+        reset_password_token: "重置密码权标"
+        reset_password_sent_at: "激活时间"
+        remember_created_at: "记住密码时间"
+        current_sign_in_ip: "当前登录IP"
+        last_sign_in_ip: "最后登录IP"
+        created_at: "创建时间"
+        updated_at: "更新时间"

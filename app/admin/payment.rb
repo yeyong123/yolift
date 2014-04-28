@@ -11,6 +11,7 @@ ActiveAdmin.register Payment do
 		column "标题" do |pay|
 			link_to pay.title, admin_payment_path(pay)
 		end
+		default_actions
 	end
 
 	show do

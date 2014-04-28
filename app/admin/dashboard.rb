@@ -21,6 +21,11 @@ ActiveAdmin.register_page "Dashboard" do
 				li link_to "售后服务", admin_aftermarkets_path, :class => "btn btn-primary btn-large"
 				li link_to "在线留言", admin_messages_path, :class => "btn btn-large btn-danger"
 				li link_to "支付方式", admin_payments_path, :class => "btn btn-large btn-info"
+				li link_to "案例", admin_cases_path, :class => "btn btn-primary btn-large"
+				li link_to "采购指南", admin_guides_path, :class => "btn btn-info btn-large"
+				li link_to "配送服务", admin_ships_path, :class => "btn btn-danger btn-large"
+				li link_to "项目案例类别", admin_items_path, :class => "btn btn-success btn-large"
+				li link_to "工作机会", admin_jobs_path, :class => "btn btn-primary btn-large"
 
         #small I18n.t("active_admin.dashboard_welcome.call_to_action")
       end
@@ -59,11 +64,68 @@ ActiveAdmin.register_page "Dashboard" do
 								td order.created_at.strftime("%Y-%m-%d")
 								td link_to order.name, admin_order_path(order)
 								td order.company
+								td do
+									if !order.deal?
+										link_to "未处理", admin_order_path(order)
+									else
+										span :class => "deal-color" do
+											"已处理"
+										end
+									end
+								end
 							end
 						end
 					end
         end
       end
      end
+ columns do
+     column do
+        panel link_to "在线留言", admin_messages_path do
+					table :class => "table" do
+         		Message.order("created_at desc").limit(10).each do |message|
+          		tr do
+								td message.created_at.strftime("%Y-%m-%d")
+              	td link_to(message.name, admin_message_path(message))
+								td message.phone
+								td do
+									if !message.deal?
+										link_to "未处理",admin_message_path(message)
+									else
+										span :class => "deal-color" do
+											"已处理"
+										end
+									end
+								end
+            	end
+						end
+          end
+        end
+      end
+
+     column do
+        panel link_to "用户需求", admin_demands_path do
+					table :class => "table" do
+          	Demand.order("created_at desc").limit(10).each do |demand|
+							tr do
+								td demand.created_at.strftime("%Y-%m-%d")
+								td link_to demand.name, admin_demand_path(demand)
+								td demand.company
+								td do
+									if !demand.deal?
+										link_to "未处理", admin_demand_path(demand)
+									else
+										span :class => "deal-color" do
+											"已处理"
+										end
+									end
+								end
+							end
+						end
+					end
+        end
+      end
+     end
+
   end # content
 end

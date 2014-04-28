@@ -1,4 +1,5 @@
 ActiveAdmin.register Bananer do
+	menu false
 	filter false
 
 	index do

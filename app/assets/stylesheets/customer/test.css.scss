@@ -6,6 +6,15 @@
 //这个要等到老板的电脑能装ie10才行，目前XP
 
 //
+.product-index .pagination ul > .active > a{
+	background: #004714;
+}
+.product-index .pagination ul > li >a  {
+	background: #fda100;
+}
+.product-index .pagination ul >li >a:hover {
+	background: yellow;
+}
 .breadrcumb {
 	vertical-align: middle;
 	margin: 5px 10px;

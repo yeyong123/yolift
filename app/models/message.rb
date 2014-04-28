@@ -1,5 +1,5 @@
 class Message < ActiveRecord::Base
-  attr_accessible :company, :email, :name, :phone, :question, :telphone
+  attr_accessible :company, :email, :name, :deal,:phone, :question, :telphone
 	validates_presence_of  :name, :phone
 	validates_numericality_of :phone
 	validates_format_of :email, with: /\A([\w\.%\+\-]+)@([\w\-]+\.)+([\w]{2,})\z/i, allow_blank: true

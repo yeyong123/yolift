@@ -1,8 +1,8 @@
 <div class="product-index">
-	<%= form_for [:admin,@zixun] do |f| %>
+	<%= form_for [:admin,@guide] do |f| %>
 		<%= f.label "选择分类"%>
-		<%= collection_select(:zixun, :server_id, Server.all, :id,:title) %>
+		<%= collection_select(:guide, :list_id, List.all, :id,:title) %>
 		<%= render partial: 'abouts/form', locals: {f: f} %>
-	<% end %>
+		<% end %>
 </div>
 

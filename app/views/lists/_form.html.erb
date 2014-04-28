@@ -1,4 +1,8 @@
 <div class="field">
 	<%= f.label :title, "标题" %>
 	<%= f.text_field :title %>
+	<div class="about-action">
+		<%= f.submit "保存" %>
+		<%= link_to "返回", :back, class: "btn btn-primary" %>
+	</div>
 </div>

@@ -11,7 +11,7 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20140425040059) do
+ActiveRecord::Schema.define(:version => 20140428035838) do
 
   create_table "about_images", :force => true do |t|
     t.string   "image"
@@ -338,8 +338,9 @@ ActiveRecord::Schema.define(:version => 20140425040059) do
     t.string   "telphone"
     t.string   "phone"
     t.text     "question"
-    t.datetime "created_at", :null => false
-    t.datetime "updated_at", :null => false
+    t.datetime "created_at",                    :null => false
+    t.datetime "updated_at",                    :null => false
+    t.boolean  "deal",       :default => false
   end
 
   create_table "orders", :force => true do |t|

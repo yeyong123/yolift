@@ -1,0 +1,9 @@
+<div class="product-index">
+<%= form_for [:admin,@job] do |f| %>
+	<%= render partial: 'jobs/form', locals: {f: f} %>
+	<div class="about-action">
+		<%= f.submit "发布职位", class: "btn btn-success" %>
+		<%= link_to "返回", :back %>
+	</div>
+<% end %>
+</div>
