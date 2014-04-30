@@ -1,11 +1,11 @@
 <div id="myCarousel" class="carousel slide">
 			<ol class="carousel-indicators">
-				<% CategoryImage.limit(4).each_with_index do |cate,index| %>
+				<% @category.category_images.limit(4).each_with_index do |cate,index| %>
 					<li data-target="#myCarousel" data-slide-to='<%= index %>'></li>
-				<% end %>
+			<% end %>
 			</ol>
 			<div class="carousel-inner">
-				<% CategoryImage.limit(4).each do |cate| %>
+				<% @category.category_images.limit(4).each do |cate| %>
 					<div class="item">
 						<%= link_to image_tag(cate.image_url), cate.url %>
 					</div>	

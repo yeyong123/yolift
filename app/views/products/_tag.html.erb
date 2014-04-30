@@ -1,6 +1,6 @@
 <% if params[:t] %>
 	<% @products.limit(1).each do |product| %>
-		<% Category.all.each do |cate| %>
+		<% Category.limit(7).each do |cate| %>
 			<% if cate.id == product.category.id %>
 				<div class="view_font">
 					<span>更多分类产品</span>
