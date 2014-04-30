@@ -60,8 +60,8 @@
 //修改bootstrap的图片轮播的中的分页圆点的位置
 .carousel-indicators {
     bottom: 15px;
-    top: 340px;
-    right: 400px;
+    top: 336px;
+    right: 100px;
 }
 .index-about .span4 {
 	width: 350px;
@@ -69,12 +69,22 @@
 .index-about .thumbnails > li {
 	margin-left: 30px;
 }
-	
+.carousel-indicators .active, .carousel-indicators li:hover{
+	background-color: #004714;
+}	
 .carousel-indicators li {
-    width: 12px;
-    height: 12px;
-    border-radius: 6px;
-    margin-left: 6px;
+    width: 20px;
+		cursor: pointer;
+    height: 20px;
+    border-radius: 0;
+    margin-left: 3px;
+		text-indent: 0;
+		text-align: center;
+		line-height: 20px;
+		background: #fda100;
+		color: white;
+}
+.image-index span{
 }
 //首页上面头部和logo颜色的部分
 

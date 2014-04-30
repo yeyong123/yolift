@@ -4,7 +4,7 @@
 		<div id="myCarousel" class="carousel slide">
 			<ol class="carousel-indicators">
 				<% Bananer.limit(8).each_with_index do |bananer,index| %>
-					<li data-target="#myCarousel" data-slide-to='<%= index %>'></li>
+					<li data-target="#myCarousel" data-slide-to='<%= index %>'><%= index + 1 %></li>
 				<% end %>
 			</ol>
 			<div class="carousel-inner">
