@@ -3,7 +3,7 @@ set -e
 
 # Feel free to change any of the following variables for your app:
 TIMEOUT=${TIMEOUT-60}
-APP_ROOT=/home/ubuntu/yolift/current
+APP_ROOT=/home/ubuntu/yolift/
 APP_USER=ubuntu
 PID=$APP_ROOT/tmp/pids/unicorn.pid
 ENV=production

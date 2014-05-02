@@ -13,7 +13,7 @@
 </div>
 <div class="product-index">
 	<div class="about-image">
-		<% About.limit(1).each do |about| %>
+		<% AboutImage.limit(1).each do |about| %>
 			<%= image_tag(about.image_url) if about.image?%>
 		<% end %>
 	</div>

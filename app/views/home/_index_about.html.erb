@@ -8,8 +8,8 @@
 				<% end %>
 			</div>
 			<div class="about-info">
-			<% About.limit(1).each do |about| %>
-				<span><%= image_tag(about.photo_url(:navshow)) if about.photo? %></span>
+			<% AboutIndex.limit(1).each do |about| %>
+				<span><%= image_tag(about.image_url(:navshow)) if about.image? %></span>
 				<span class="info-about"><%= raw (truncate(about.info, length: 280))%></span>
 			<% end %>
 				<%= link_to "了解更多>>", abouts_path %>
