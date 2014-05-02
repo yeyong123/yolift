@@ -53,5 +53,10 @@ gem 'jquery-rails','< 3.0.0'
 # Deploy with Capistrano
 # gem 'capistrano'
 
+group :development do
+  gem 'annotator'
+  gem 'guard-livereload'
+  gem 'rack-livereload'
+end
 # To use debugger
 # gem 'debugger'

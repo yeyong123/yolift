@@ -1,3 +1,8 @@
+# Attributes:
+# * id [integer, primary, not null, limit=4] - primary key
+# * created_at [datetime, not null] - creation time
+# * updated_at [datetime, not null] - last update time
+# * user_id [integer, limit=4] - belongs to :user
 class Cart < ActiveRecord::Base
   # attr_accessible :title, :body
 	#

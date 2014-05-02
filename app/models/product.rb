@@ -1,3 +1,19 @@
+# Attributes:
+# * id [integer, primary, not null, limit=4] - primary key
+# * category_id [integer, limit=4] - belongs to :category
+# * created_at [datetime, not null] - creation time
+# * detail [text] - TODO: document me
+# * excellent [integer, default=0, limit=4] - TODO: document me
+# * image [string] - TODO: document me
+# * listtext [text] - TODO: document me
+# * outline [text] - TODO: document me
+# * paixu [integer, default=0, limit=4] - TODO: document me
+# * printpdf [string] - TODO: document me
+# * tag_id [integer, limit=4] - belongs to :tag
+# * techparams [text] - TODO: document me
+# * title [string]
+# * updated_at [datetime, not null] - last update time
+# * view_count [integer, default=0, limit=4] - TODO: document me
 class Product < ActiveRecord::Base
 	attr_accessible :detail, :category_id,:listtext,:view_count, :excellent, :image,:paixu,:number, :printpdf, :techparams, :title,:outline, :tag_id,:productcolor_ids, :productnumbers_attributes, :photos_attributes,:videos_attributes
 	has_many :photos, dependent: :destroy
@@ -20,7 +36,7 @@ class Product < ActiveRecord::Base
 		reject_if: proc{ |attrs| attrs.all? {|k, v| v.blank? }}
 
 	validates_presence_of :title, :photos, :productnumbers
-	validates_numericality_of :paixu, greater_than_or_equal_to: 0, less_than: 9999, allow_blank: true
+	validates_numericality_of :paixu, greater_than_or_equal_to: 0, less_than: 9999, allow_blank: true, uniqueness: true
 
 	def referenced_by_any_destroy
 		if line_items.empty?

@@ -1,5 +1,5 @@
 <div class="bs-doc-image nav-collapse collapse">
-	<% Category.find(1,4,5).each do |cate| %>
+	<% Category.where(id:[1,2,5]).each do |cate| %>
 		<ul id="myTab" class="nav nav-tabs">
 			<li class="tab-tag"><span><%= link_to cate.name, category_path(cate.id) %> <span>>></span></span></li>
 			<% cate.tags.each do |tag| %>
