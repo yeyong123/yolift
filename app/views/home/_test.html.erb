@@ -1,0 +1,3 @@
+<% tag.limit(5).each do |product| %>
+	<%= render partial: 'products/index',locals: {product: product} %>
+<% end %>

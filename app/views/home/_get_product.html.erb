@@ -1,0 +1,19 @@
+<div class="get-product-init">
+	<div id="find-product">
+		<% @categories.where(id: [1,4,5]).each do |category| %>
+			<ul class="group-category-tag">
+				<span class="group-category"><%= link_to "#{category.name} >>", category_path(category)%> </span>
+				<% category.tags.each do |tag| %>
+					<li class="group-tag">	<%= link_to tag.name, products_path(t:tag), remote: true %></li>
+				<% end %>
+			</ul>
+			<div class="tag_<%= category.id%>">
+				<div class="find-info">
+					<% category.products.order('paixu desc').limit(5).each do |product| %>
+						<%= render partial: 'products/index', locals: {product: product} %>
+					<% end %>
+				</div>
+			</div>
+		<% end %>
+	</div>
+</div>

@@ -5,6 +5,10 @@ class ProductsController < ApplicationController
 			@products = Product.order("paixu desc").paginate(page: params[:page], per_page: 12)
 		else 
 			@products = Product.where("tag_id = ?", params[:t]).order("paixu desc").paginate(page: params[:page], per_page: 12)
+			respond_to do |format|
+				format.html
+				format.js{tag = @products}
+			end
 		end
 	end
 

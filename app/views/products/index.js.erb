@@ -1,0 +1,3 @@
+<% @products.each do |product| %>
+$('.tag_<%= product.category.id %> .find-info').html("<%= j render partial: 'home/test', locals: {tag: @products} %>")
+<% end %>

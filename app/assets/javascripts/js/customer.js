@@ -293,4 +293,10 @@ $('.demand-close').click(function(e) {
 	$('#demand-form').hide();
 	e.preventDefault();
 });
+//首页ajax请求的js
+$('.group-tag').click(function(){
+	var $this = $(this);
+	$this.parents('.group-category-tag').find('.active').removeClass('active');
+	$this.addClass('active').blur();
+});
 });

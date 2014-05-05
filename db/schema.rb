@@ -50,7 +50,6 @@ ActiveRecord::Schema.define(:version => 20140502074335) do
   end
 
   add_index "active_admin_comments", ["author_type", "author_id"], :name => "index_active_admin_comments_on_author_type_and_author_id"
-  add_index "active_admin_comments", ["author_type", "author_id"], :name => "index_admin_notes_on_admin_user_type_and_admin_user_id"
   add_index "active_admin_comments", ["namespace"], :name => "index_active_admin_comments_on_namespace"
   add_index "active_admin_comments", ["resource_type", "resource_id"], :name => "index_admin_notes_on_resource_type_and_resource_id"
 
@@ -360,7 +359,6 @@ ActiveRecord::Schema.define(:version => 20140502074335) do
     t.integer  "city_id"
     t.integer  "province_id"
     t.integer  "district_id"
-    t.integer  "product_id"
     t.boolean  "deal",        :default => false
   end
 
@@ -395,9 +393,10 @@ ActiveRecord::Schema.define(:version => 20140502074335) do
   create_table "productnumbers", :force => true do |t|
     t.string   "number"
     t.integer  "product_id"
-    t.datetime "created_at",   :null => false
-    t.datetime "updated_at",   :null => false
+    t.datetime "created_at",                  :null => false
+    t.datetime "updated_at",                  :null => false
     t.integer  "line_item_id"
+    t.integer  "quantity",     :default => 1
   end
 
   create_table "products", :force => true do |t|
@@ -418,7 +417,7 @@ ActiveRecord::Schema.define(:version => 20140502074335) do
   end
 
   add_index "products", ["image"], :name => "index_products_on_image"
-  add_index "products", ["paixu"], :name => "index_products_on_paixu", :unique => true
+  add_index "products", ["paixu"], :name => "index_products_on_paixu"
   add_index "products", ["title"], :name => "index_products_on_title"
 
   create_table "provinces", :force => true do |t|

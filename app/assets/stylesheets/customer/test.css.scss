@@ -70,7 +70,7 @@
 	margin-left: 30px;
 }
 #customer-index-img .carousel-indicators .active, #customer-index-img .carousel-indicators li:hover{
-	background-color: #004714;
+	background-color: #fda100;
 }	
 .carousel-indicators li {
     width: 20px;
@@ -81,7 +81,7 @@
 		text-indent: 0;
 		text-align: center;
 		line-height: 20px;
-		background: #fda100;
+		background: #b5b5b2;
 		color: white;
 }
 .image-index span{
@@ -1295,5 +1295,56 @@ td.demand3 {
 }
 .catelog-image {
 	padding: 3px;
+}
+
+
+//调试ajax用的
+.get-product-init {
+	ul {
+		list-style: none;
+		border: 1px solid #d9d9d9;
+		width: 99%;
+		float: left;
+		background-image: -webkit-gradient(linear, 0 0, 0 100%, from(#eaeaea), to(#b2b2b2));
+		margin: 5px 0;
+		.active {
+			background: #fda100;
+		}
+		li {
+			float: left;
+			margin-left: 5px 0;
+			padding: 5px 8px 5px 5px;
+			border-right: 1px solid #999;
+			&:hover {
+				background: #fda100;
+			}
+			a {
+				text-decoration: none;
+				&:hover {
+					color: black;
+				}
+			}
+		}
+		.group-category {
+			background: #004714;
+			padding: 5px;
+			width: 15%;
+			margin: 0;
+			float: left;
+			a {
+				margin-left: 35px;
+				font-size: 14px;
+				letter-spacing: 2px; 
+				color: white;
+			}
+		}
+		.find-info {
+			clear: both;
+		}
+	}
+	.span3 {
+		width: 205px;
+	}
+
 }
 

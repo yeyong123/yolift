@@ -5,7 +5,7 @@ Yolift::Application.routes.draw do
 		resources :products do 
 			resources :line_items
 		end
-		resources :categories
+		resources :categories, only:[:show, :index]
 		resource :cart
 		resources :orders
 		resources :abouts
@@ -36,7 +36,7 @@ Yolift::Application.routes.draw do
 		match '/sitemap', to: "home#sitemap"
 		match '/link', to: "home#link"
 		match '/error', to: 'home#error'
-		match '/dashboard', to: "home#dashboard"
+		#match '/dashboard', to: "home#dashboard"
 		root to: 'home#index'
 		
 		
