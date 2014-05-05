@@ -15,11 +15,12 @@
 # * updated_at [datetime, not null] - last update time
 # * view_count [integer, default=0, limit=4] - TODO: document me
 class Product < ActiveRecord::Base
-	attr_accessible :detail, :category_id,:listtext,:view_count, :excellent, :image,:paixu,:number, :printpdf, :techparams, :title,:outline, :tag_id,:productcolor_ids, :productnumbers_attributes, :photos_attributes,:videos_attributes
+	attr_accessible :detail, :category_id,:listtext,:view_count, :excellent, :image,:paixu,:number, :printpdf, :techparams, :title,:outline, :tag_id,:productcolor_ids, :picture, :document,:productnumbers_attributes, :photos_attributes,:videos_attributes
 	has_many :photos, dependent: :destroy
 	has_many_kindeditor_assets :attachments, dependent: :destroy
 	mount_uploader :printpdf, PrintpdfUploader
 	mount_uploader :image, ImageUploader
+	mount_uploader :picture, PictureUploader
 	accepts_nested_attributes_for :photos, allow_destroy: :true, update_only: true,
 		reject_if: proc{ |attrs| attrs.all? {|k, v| v.blank? }}
 	has_many :productnumbers, dependent: :destroy

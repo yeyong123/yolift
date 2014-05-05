@@ -42,6 +42,7 @@ $('.cart_items-drop, .cart_items-drop2').mouseout(function(){
 	$('.cart_items-drop, .cart_items-drop2').hide();
 });
 
+
 //
 //
 //$('.dropdown-toggle, .dropdown-menu').hover(
@@ -299,4 +300,10 @@ $('.group-tag').click(function(){
 	$this.parents('.group-category-tag').find('.active').removeClass('active');
 	$this.addClass('active').blur();
 });
+$('.picture-to-index').hide();
+$('.add-picture-to-index span').click(function(){
+	$('.picture-to-index').toggle(500);
+});
+
+
 });

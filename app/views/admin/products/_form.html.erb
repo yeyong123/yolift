@@ -12,6 +12,19 @@
 			<%= f.label :paixu, "排序编号" %>
 			<%= f.number_field :paixu %>
 				</div>
+				<div class="add-picture-to-index">
+					<span>点击添加首页展示</span>
+				</div>
+				<div class="picture-to-index">
+					<div class="field">
+						<%= f.label "首页展示的图片" %>
+						<%= f.file_field :picture %>
+					</div>
+					<div class="field">
+						<%= f.label "首页产品标题" %>
+						<%= f.text_field :document %>
+					</div>
+				</div>
 	<div class="field">
 		<%= f.label :number, "货号" %>
 		<%= f.fields_for :productnumbers do |ph|%>

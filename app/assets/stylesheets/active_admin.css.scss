@@ -87,5 +87,19 @@ table {
 #main_content .product-index {
 	float: left;
 	width: 98%;
+	margin: 5px;
 }
+.add-picture-to-index {
+	border: 1px solid;
+	background: #004714;
+	span {
+		color: white;
+	}
+}
+.picture-to-index {
+
+	border: 1px solid #d9d99d;
+	padding: 5px;
+}
+
 

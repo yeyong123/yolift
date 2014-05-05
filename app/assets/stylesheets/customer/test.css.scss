@@ -1306,6 +1306,9 @@ td.demand3 {
 		width: 99%;
 		float: left;
 		background-image: -webkit-gradient(linear, 0 0, 0 100%, from(#eaeaea), to(#b2b2b2));
+		background-image: -moz-linear-gradient(top, #eaeaea, #b2b2b2);
+		filter:progid:DXImageTransform.Microsoft.Gradient(GradientType=0, EndColorStr='#b2b2b2', StartColorStr='#eaeaea');
+		background-image: -ms-linear-gradient(top, #eaeaea, #b2b2b2);
 		margin: 5px 0;
 		.active {
 			background: #fda100;
@@ -1345,6 +1348,9 @@ td.demand3 {
 	.span3 {
 		width: 205px;
 	}
-
 }
+.view_count .span3 {
+	list-style: none;
+}
+
 

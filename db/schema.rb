@@ -11,7 +11,7 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20140502074335) do
+ActiveRecord::Schema.define(:version => 20140505060644) do
 
   create_table "about_images", :force => true do |t|
     t.string   "image"
@@ -414,8 +414,11 @@ ActiveRecord::Schema.define(:version => 20140502074335) do
     t.integer  "paixu",       :default => 0
     t.string   "image"
     t.integer  "view_count",  :default => 0
+    t.string   "picture"
+    t.string   "document"
   end
 
+  add_index "products", ["document"], :name => "index_products_on_document", :unique => true
   add_index "products", ["image"], :name => "index_products_on_image"
   add_index "products", ["paixu"], :name => "index_products_on_paixu"
   add_index "products", ["title"], :name => "index_products_on_title"
