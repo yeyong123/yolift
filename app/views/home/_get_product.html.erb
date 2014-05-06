@@ -4,7 +4,9 @@
 			<ul class="group-category-tag">
 				<span class="group-category"><%= link_to "#{category.name} >>", category_path(category)%> </span>
 				<% category.tags.each do |tag| %>
-					<li class="group-tag">	<%= link_to tag.name, products_path(t:tag), remote: true %></li>
+					<%= link_to products_path(t:tag), remote: true do %>
+					<li class="group-tag">	<%= tag.name %></li>
+				<% end %>
 				<% end %>
 			</ul>
 			<div class="tag_<%= category.id%>">

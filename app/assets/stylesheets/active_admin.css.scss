@@ -94,11 +94,16 @@ table {
 	background: #004714;
 	span {
 		color: white;
+		cursor: pointer;
 	}
 }
 .picture-to-index {
-
 	border: 1px solid #d9d99d;
+	padding: 5px;
+}
+.index-profile {
+	border: 1px solid #d9d9d9;
+	margin: 5px;
 	padding: 5px;
 }
 

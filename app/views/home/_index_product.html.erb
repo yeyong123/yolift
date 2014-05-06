@@ -1,0 +1,14 @@
+<li class="span3">
+<div class="thumbnail">
+	<div class="product-image">
+		<%= link_to product_path(product) do%>
+			<%= image_tag(product.picture_url(:narmail)) if product.picture?  %>
+		<% end %>
+		</div>
+	<h6><%= product.document %></h6>
+	<div class="link-product2">
+			<%= link_to "更多详情 >>", product_path(product.id) %>
+	</div>
+</div>
+</li>
+

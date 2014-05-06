@@ -2,7 +2,11 @@
 <div class="thumbnail">
 	<div class="product-image">
 		<%= link_to product_path(product) do%>
-			<%= image_tag(product.image_url(:narmail)) if product.image? %>
+			<% if product.picture? %>
+				<%= image_tag(product.picture_url(:narmail)) %>
+			<% else %>
+			<%= image_tag(product.image_url(:narmail)) if product.image?  %>
+		<% end %>
 		<% end %>
 		</div>
 	<h6><%= product.title %></h6>

@@ -20,6 +20,10 @@ ActiveAdmin.register Product do
 		column "图片" do |product|
 			image_tag(product.image_url(:small))
 		end
+		column "首页图片" do |product|
+			image_tag(product.picture_url(:small)) if product.picture?
+		end
+
 		column "序号" do |product|
 			render partial: "home/product", locals: {product: product}
 		end
@@ -29,6 +33,16 @@ ActiveAdmin.register Product do
 		h2 product.title
 		product.productnumbers.each do |ph|
 			h4 ph.number
+		end
+
+		div :class => "index-profile" do
+		h3 "首页条目:"
+			span do 
+			image_tag(product.picture_url) if product.picture?
+			end
+			div do
+				"首页的标题: #{product.document}"
+			end
 		end
 		div do
 			raw product.outline
