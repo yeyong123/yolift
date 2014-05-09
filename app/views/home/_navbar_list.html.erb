@@ -15,35 +15,29 @@
 					</div>
 				<% end %>
 					</li>
-					<li class="active index"><%= link_to t('.index'), root_path %></li>
-					<% About.limit(1).each do |about| %>
-					<li class="dropdown"><%= link_to t('.about'), about_path(about.id),class: "dropdown-toggle" %>
-				<% end %>
+					<li class="active index"><%= link_to "首页", root_path %></li>
+					<li class="dropdown"><%= link_to "关于我们", about_path(About.first),class: "dropdown-toggle" %>
 					<ul class="dropdown-menu">
 						<% About.limit(5).each do |about| %>
 							<li><%= link_to about.title, about_path(about.id)%></li>
 						<% end %>
 					</ul>
 					</li>
-					<li class="dropdown"><%= link_to t('.products'),products_path, class: "dropdown-toggle" %>
+					<li class="dropdown"><%= link_to "产品中心", products_path, class: "dropdown-toggle" %>
 					<ul class="dropdown-menu">
 						<% Category.limit(7).each do |cate| %>
 						<li><%= link_to cate.name, category_path(cate.id) %></li>
 					<% end %>
 					</ul>
 					</li>
-					<% Server.limit(1).each do |server| %>
-						<li class="dropdown"><%= link_to t('.new'), server_path(server.id), class: "dropdown-toggle" %>
-					<% end %>
+						<li class="dropdown"><%= link_to "新闻资讯", server_path(Server.first), class: "dropdown-toggle" %>
 					<ul class="dropdown-menu">
 						<% Server.limit(3).each do |server| %>
 							<li><%= link_to server.title, server_path(server.id)  %></li>
 						<% end %>
 					</ul>
 					</li>
-					<% Center.limit(1).each do |center| %>
-					<li class="dropdown"><%= link_to t('.server'), center_path(center.id), class: "dropdown-toggle" %>
-				<% end %>
+					<li class="dropdown"><%= link_to "服务中心", center_path(Center.first), class: "dropdown-toggle" %>
 					<ul class="dropdown-menu">
 					<% Center.limit(4).each do |center| %>
 						<% unless center.title == "售后服务" %>
@@ -53,9 +47,7 @@
 						<li><%= link_to "售后服务", aftermarkets_path %></li>
 					</ul>
 					</li>
-					<% Contact.limit(1).each do |contact| %>
-					<li class="dropdown"><%= link_to t('.contact'), contact_path(contact.id), class: "dropdown-toggle" %>
-				<% end %>
+					<li class="dropdown"><%= link_to t('.contact'), contact_path(Contact.first), class: "dropdown-toggle" %>
 					<ul class="dropdown-menu">
 						<% Contact.limit(3).each do |contact| %>
 							<li><%= link_to contact.title, contact_path(contact)  %></li>
