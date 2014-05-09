@@ -1,4 +1,4 @@
-//2013年11月起始
+//2013年11月起
 //这个名字叫测试。，但不测试的，起初是调式用的，
 //后来调式的多了，就成成品了，不要被名字骗了
 //这个css文件兼容IE7-IE9.,渐变色不支持IE10,。
@@ -63,8 +63,11 @@
     top: 336px;
     right: 100px;
 }
+.index-about {
+	clear: both;
+}
 .index-about .span4 {
-	width: 350px;
+	width: 315px;
 }
 .index-about .thumbnails > li {
 	margin-left: 30px;
@@ -122,7 +125,7 @@
 .index-top {
 	margin: auto;
 	padding: 0;
-	width: 1135px;
+	width: 1024px;
 	margin-top: -8px;
 	height: 29px;
 }
@@ -154,7 +157,7 @@ li.font-border a {
 	height: 24px;
 }
 .logo-index1 {
-	width: 1135px;
+	width: 1024px;
 	height: 122px;
 	padding: 0;
 	margin: auto;
@@ -212,7 +215,7 @@ li.font-border a {
  .nav-list .list-nav {
 	 float: right;
 	//margin-top: -17px;
-	width: 1135px;
+	width: 1024px;
 	height: 32px;
  }
  .nav-list .list-nav .navbar {
@@ -227,7 +230,7 @@ li.font-border a {
 	 font-family: "Microsoft YaHei",Helvetica, Arial,sans-serif
  }	 // 产品目录
  .product-menu {
-	 width: 206px;
+	 width: 180px;
 	 height: 35px;
 	 //margin-top: 3px;
 	 background:#fda100; 
@@ -335,7 +338,7 @@ li.font-border a {
 	margin: 0;
 	padding: 0;
 	height: 25.5px;
-	width: 280px;
+	width: 230px;
 	border-radius: 0px;
 }
 .nav-list .search-query {
@@ -421,9 +424,9 @@ li.font-border a {
 
 //单个产品展示放大镜
 .show-product {
-	float: left;
-	width: 918px;
-	margin-left: 5px;
+	float: right;
+	width: 835px;
+	margin-left: 2px;
 	height: auto;
 	min-height: 1600px;
 }
@@ -440,14 +443,14 @@ li.font-border a {
 	margin-top: 10px;
 }
 .show-product .p-data {
-	width: 410px;
-	margin: 0px 5px 0 10px;
+	width: 380px;
+	margin: 0px 2px 0 10px;
 }
 //产品描述的样式
 .product-description {
 	margin: 0;
 	height: 459px;
-	width: 480px;
+	width: 430px;
 	float: right;
 }
 .product-description .product-title {
@@ -546,7 +549,7 @@ li.font-border a {
 }
 .product-info .info-title {
 	height: 27px;
-	width: 918px;
+	width: 840px;
 //	background-image: -webkit-gradient(linear, 0 0, 0 100%, from(#628970), to(#00452a));
 //	background-image: -moz-linear-gradient(top, #628970, #00452a);
 //	filter:progid:DXImageTransform.Microsoft.Gradient(GradientType=0, EndColorStr='#00452a', StartColorStr='#628970');
@@ -581,8 +584,8 @@ li.font-border a {
 //产品展示的index界面css
 .product-index {
 	float: right;
-	width: 918px;
-	margin: 5px 0 0 10px;
+	width: 840px;
+	margin: 3px 0 0 3px;
 }
 .product-index .span3 .thumbnail{
 	//height: 300px;
@@ -591,7 +594,7 @@ li.font-border a {
 	float: left;
 	width: 185px;
 	border: 1px solid #b2b2b2;
-	padding: 3px;
+	padding: 1px;
 }
 .thumbnail h6 {
 	margin: 3px 0;
@@ -628,15 +631,18 @@ li.font-border a {
 	height: auto;
 }
 .tab-pane .thumbnails > li, .product-index .thumbnails > li {
-	margin-left: 16px;
+	margin-left: 22px;
 	margin-bottom: 5px;
+}
+.product-process .span3 {
+	width: 200px;
 }
 .product-process .thumbnails > li {
 	margin-left: 10px;
 	margin-bottom: 5px;
 }
 .tab-pane .thumbnails .span3, .product-index .thumbnails .span3 {
-	width: 210px;
+	width: 190px;
 	float: left;
 }
 .tab-pane .thumbnails, {
@@ -1086,7 +1092,7 @@ width: 30px;
 //结束在这里
 //边栏的位置
 .edge-position {
-	width: 206px;
+	width: 180px;
 	float: left;
 }
 .edge-position .nav-list .nav-bananer {
@@ -1113,11 +1119,11 @@ width: 30px;
 
 }
 .edge-from1 ul li{
-	text-indent: 30px;
+	text-indent: 10px;
 }
 .edge-from ul li a {
 	color: black;
-	font-size: 14px;
+	font-size: 12px;
 }
 //在线报修的表单表格
 .repair-form {
@@ -1243,14 +1249,25 @@ td.demand3 {
 	clear: both;
 }
 .view_count {
-	width: 203px;
+	width: 180px;
 	position: absolute;
 	top: 360px;
 }
 .view_count .span3 {
-	width: 203px;
+	width: 180px;
 	margin-top: 3px;
 	margin-left: 0;
+	.thumbnail {
+		padding: 4px 0;
+		border-style: none;
+	}
+	.product-image {
+		width: 178px;
+		padding: 3px 0;
+	}
+	img {
+		width: 178px;
+	}
 }
 .edge-from .view_font {
 	margin: 3px 0;
@@ -1300,6 +1317,9 @@ td.demand3 {
 
 //调试ajax用的
 .get-product-init {
+	clear: both;
+	margin-bottom: 5px;
+	float: left;
 	ul {
 		list-style: none;
 		border: 1px solid #d9d9d9;
@@ -1345,8 +1365,11 @@ td.demand3 {
 		}
 	}
 	.span3 {
-		width: 205px;
+		width: 192px;
 		list-style: none;
+		margin-right: 12.5px;
+		margin-left: 0px;
+		margin-bottom: 5px;
 		.thumbnail {
 			border-style: none;
 		}

@@ -42,7 +42,7 @@ body{
 	width: 100%;
 }
 .top-index,.logo-index, .footer, .footer-tese,.footer-link, .category-list,.footer-bottom {
-	min-width: 1145px;
+	//min-width: 1145px;
 }
 //视频播放的css
 .video {
@@ -72,7 +72,7 @@ body{
 //视频结束
 #gotop {
 	display: none;
-	width: 1145px;
+	width: 1034px;
 	margin-left: -5px;
 	height: 35px;
 	position: fixed;
@@ -138,7 +138,7 @@ h6 {
 }
 .container {
 	background: white;
-	width: 1135px;
+	width: 1024px;
 	clear: both;
 }
 .shadow-body .container{
@@ -152,7 +152,7 @@ h6 {
 	height: 120px;
 }
 .navbar .container {
-	width: 1135px;
+	width: 1024px;
 }
 #error_explanation{
 	border: 1px solid;
@@ -171,24 +171,26 @@ h6 {
 #customer-index-img ul {
 	list-style:none;
 }
+.carousel {
+	margin-bottom: 5px;
+}
 .get-image-position {
-	width: 81%;
-	height: 357px;
-	padding: 0;
-	float: right;
-}
-#myCarousel {
-	height: 357px;
-}
-.carousel-inner,.item {
-	height: 357px;
+	width: 82%;
+	//height: 357px;
+	padding-left: 4px;
+	float: left;
+	.carousel-inner {
+		img {
+			height: 357px;
+		}
+	}
 }
 .bs-doc-image {
 	//border: 1px solid;
 	clear: both;
 }
 .nav .tab-tag {
-	width: 206px;
+	width: 180px;
 	//background-image: -webkit-gradient(linear, 0 0, 0 100%, from(#4d7a51), to(#014715));
 	//background-image: -moz-linear-gradient(top, #4d7a51, #014715);
 	//filter:progid:DXImageTransform.Microsoft.Gradient(GradientType=0, EndColorStr='#014715', StartColorStr='#4d7a51');
@@ -265,7 +267,7 @@ h6 {
 
 /* submenu */
 .submenu{
-width: 206px;
+width: 180px;
 height: 351px;
 border-top: none;
 float: left;
@@ -334,7 +336,7 @@ overflow:hidden;
 }
 .submenulist li h3 a.on{
 background:#fff;
-width:204px;
+width:180px;
 height:33px;
 color:#f60;
 padding-top: 3px;
@@ -347,7 +349,7 @@ overflow:hidden;
 .submenu .listbox{
 position:absolute;
 top:0;
-left:204px;
+left:180px;
 width:792px;
 background:#fff;
 border:2px solid #bfd3a9;
@@ -527,7 +529,7 @@ margin: 0;
 图片放大镜
 */
 .data-gallery {
-	width: 410px;
+	width: 380px;
 	float: left;
 	position:relative;
 }
@@ -535,13 +537,13 @@ margin: 0;
 	max-width: none;
 }
 .data-pic {
-	height: 410px;
-	width: 410px;
+	height: 380px;
+	width: 380px;
 	border:1px solid #999;
 }
 .data-pic img {
-	width:410px;
-	height: 410px;
+	width:380px;
+	height: 380px;
 }
 .thumbsPanel{
 	height: 70px;
@@ -626,10 +628,10 @@ margin: 0;
 	height:250px; 
 }
 .izViewer2{
-	width:425px;
-	height:412px;
+	width:410px;
+	height:382px;
 	position:absolute;
-	left:412px;
+	left:382px;
 	top:0px;
 	display:none; 
 	//border:1px solid;
@@ -706,7 +708,7 @@ margin: 0;
 	position: absolute;
 	left: 0;
 	top: 0;
-	width: 980px;
+	width: 900px;
 }
 .list-nav {
 	float: left;
