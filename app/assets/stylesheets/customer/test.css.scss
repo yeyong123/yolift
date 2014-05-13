@@ -1243,15 +1243,13 @@ td.demand3 {
 }
 //访问最多的产品显示
 .bian_count {
-	position: relative;
-}
-.bian_count .nav-list .nav-bananer{
-	clear: both;
+	width: 180px;
+	float: left;
 }
 .view_count {
+	margin-top: 10px;
 	width: 180px;
-	position: absolute;
-	top: 360px;
+	float: left;
 }
 .view_count .span3 {
 	width: 180px;
