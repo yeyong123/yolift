@@ -3,7 +3,7 @@
 		<div class="submenu">
 			<div id="js-menu" class="submenulist">
 				<ul>
-					<% Category.limit(7).each do |cate| %>
+					<% Category.limit(8).each do |cate| %>
 						<li>
 						<h3><%= link_to category_path(cate)  do %>
 								<%= image_tag(cate.image_url(:micro)) if cate.image? %>

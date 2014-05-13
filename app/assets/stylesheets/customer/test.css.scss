@@ -60,7 +60,7 @@
 //修改bootstrap的图片轮播的中的分页圆点的位置
 .carousel-indicators {
     bottom: 15px;
-    top: 336px;
+    top: 306px;
     right: 100px;
 }
 .index-about {
@@ -202,9 +202,9 @@ li.font-border a {
 .nav-list .nav-bananer, .nav-list .list-nav {
 	float: left;
 }
-.nav-bananer {
+.index-yolift .nav-bananer {
 	//width: 19%;
-	height: 357px;
+	height: 326px;
 }
 .bananer-button {
 	position: absolute;
@@ -1097,7 +1097,7 @@ width: 30px;
 }
 .edge-position .nav-list .nav-bananer {
 	background: none;
-	height: 275px;
+	//height: 275px;
 }
 .hr-postion {
 	clear: both;
