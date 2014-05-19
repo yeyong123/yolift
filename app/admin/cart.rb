@@ -1,7 +1,7 @@
 ActiveAdmin.register Cart do
 	actions :all, except: [:new, :edit]
 
-	filter :line_items_product_id, label: "关联的产品", as: :select, collection: LineItem.all.collect {|line| [line.product_id, line.product_id]}
+	#filter :line_items_product_id, label: "关联的产品", as: :select, collection: LineItem.all.collect {|line| [line.product_id, line.product_id]}
 	filter :user_id, label: "用户", as: :select
 
 	index do 

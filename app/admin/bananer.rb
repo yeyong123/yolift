@@ -5,7 +5,7 @@ ActiveAdmin.register Bananer do
 	index do
 		selectable_column
 		column "序号" do |banan|
-			banan.id
+			banan.number
 		end
 		column "图片" do |banan|
 			link_to image_tag(banan.image_url(:small)), admin_bananer_path(banan)
@@ -13,6 +13,7 @@ ActiveAdmin.register Bananer do
 		column "链接地址" do |banan|
 			banan.button
 		end
+		default_actions
 	end
 
 	show do 
@@ -25,4 +26,6 @@ ActiveAdmin.register Bananer do
 		end
 	end
 
+	form partial: 'bananers/form'
 end
+

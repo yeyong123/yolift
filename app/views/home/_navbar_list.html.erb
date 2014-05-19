@@ -49,7 +49,7 @@
 					</li>
 					<li class="dropdown"><%= link_to t('.contact'), contact_path(Contact.first), class: "dropdown-toggle" %>
 					<ul class="dropdown-menu">
-						<% Contact.limit(3).each do |contact| %>
+						<% Contact.limit(5).each do |contact| %>
 							<li><%= link_to contact.title, contact_path(contact)  %></li>
 						<% end %>
 					</ul>

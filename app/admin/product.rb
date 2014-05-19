@@ -4,7 +4,7 @@ ActiveAdmin.register Product do
 	config.per_page = 10
 	filter :title, label: "产品名称"
 	filter :tag, label: "二级分类"
-	filter :productnumbers_number, label: "货号", as: :string, collection: Productnumber.all.collect {|ph| [ph.number, ph.number]}
+	#filter :productnumbers_number, label: "货号", as: :string, collection: Productnumber.all.collect {|ph| [ph.number, ph.number]}
 
 	
 	index do 
