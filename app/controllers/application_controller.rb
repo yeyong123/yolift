@@ -3,6 +3,7 @@ class ApplicationController < ActionController::Base
 	before_filter :find_cart
 	before_filter :authenticate_admin_user!, only: [:create, :edit,:new, :update, :destroy]
 	has_mobile_fu
+	before_filter :mobile
 
 	
 	unless Rails.application.config.consider_all_requests_local
@@ -28,6 +29,12 @@ class ApplicationController < ActionController::Base
 #	end
 
 	private
+
+	def mobile
+		if is_mobile_device?
+			self.class.layout "layouts/application"
+		end
+	end
 
 	def current_cart
 		if user_signed_in? && current_user

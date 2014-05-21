@@ -1,7 +1,10 @@
 <div class="flexslider">
 <ul class="slides">
 			<% Bananer.all.each do |bananer| %>
-				<li><%= image_tag(bananer.image_url) if bananer.image?%></li>
+				<li>
+				<%= link_to bananer.button do %>
+				<%= image_tag(bananer.image_url) if bananer.image?%></li>
+			<%end %>
 			<% end %>
 			</ul>
 	</div>

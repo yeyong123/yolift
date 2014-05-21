@@ -1,19 +1,30 @@
 .mobile-group {
 	list-style: none;
 	width: 100%;
-	position: relative;
+	position: fixed;
+	background: #d1d1d1;
+	top: 0;
 	margin: 0;
+	z-index: 99999;
+	padding: 0.3em;
 	li {
 		margin: 0.1em;
+		float: left;
 	}
+}
+.content-page {
+	clear: both;
+	margin-top: 2.8em;
+	margin-bottom:2.8em;
 }
 .mobile-phone {
 	width: 100%;
 	position: fixed;
 	bottom: 0;
 	margin: auto;
-	background: #004714;
+	background: #d1d1d1;
 	padding: 0.5em;
+	z-index: 9999;
 	span {
 		font-size: 1.2em;
 	}
@@ -44,6 +55,7 @@
 .mobile-product {
 	clear: both;
 	list-style: none;
+	width: 100%;
 	.span3 {
 		width: 45%;
 		margin: 0.5em;
@@ -59,5 +71,16 @@
 	h6 {
 		overflow: hidden;
 		font-size: 0.6em;
+	}
+}
+.bottom-paginate {
+	clear:both;
+	width: 100%;
+	ul {
+		li {
+			a {
+				padding: 0;
+			}
+		}
 	}
 }
