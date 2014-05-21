@@ -1,0 +1,32 @@
+<div class="flexslider">
+<ul class="slides">
+			<% Bananer.all.each do |bananer| %>
+				<li><%= image_tag(bananer.image_url) if bananer.image?%></li>
+			<% end %>
+			</ul>
+	</div>
+<div class="mobile-cate">
+<ul>
+<% Category.limit(8).each do |cate| %>
+	<li><%= link_to category_path(cate) do %>
+	<%= image_tag(cate.image_url(:micro)) %>
+	<%= cate.name %>
+<% end %>
+</li>
+<% end %>
+</ul>
+</div>
+<div class="mobile-product">
+<% Product.order("paixu desc").limit(8).each do |product| %>
+	<li class="span3">
+	<div class="thumbnail">
+	<%= link_to product_path(product) do %>
+		<%= image_tag(product.image_url) %>
+	<% end %>
+	<h6><%= product.title %></h6>
+	</div>
+	</li>
+<% end %>
+	</div>
+
+

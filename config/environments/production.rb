@@ -49,7 +49,8 @@ Yolift::Application.configure do
 	config.assets.precompile +=['bootstrap/bootstrap.min.css', 'customer/customer.css','wice_grid.css','ie/bootstrap-ie6.css',
 															'customer/test.css','ie/ie.css','ie/ie8.css',
 															'js/bootstrap.min.js','ie/bootstrap-ie.js', 'zoom/imagezoom.js', 'zoom/zoom.min.js',
-															'js/customer.js', 'js/jquery.validate.min.js']
+															'js/customer.js', 'js/jquery.validate.min.js', 'mobile/mobile_yolift.css', 'mobile/mobile_yolift.js',
+																'mobile/flexslider', 'mobile/jquery.flexslider-min']
 
   # Disable delivery errors, bad email addresses will be ignored
   # config.action_mailer.raise_delivery_errors = false

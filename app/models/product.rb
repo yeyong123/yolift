@@ -57,5 +57,4 @@ class Product < ActiveRecord::Base
 #		end
 #			current_item
 #	end
-		
 end

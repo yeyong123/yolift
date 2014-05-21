@@ -2,6 +2,7 @@ class ApplicationController < ActionController::Base
 	protect_from_forgery
 	before_filter :find_cart
 	before_filter :authenticate_admin_user!, only: [:create, :edit,:new, :update, :destroy]
+	has_mobile_fu
 
 	
 	unless Rails.application.config.consider_all_requests_local

@@ -12,9 +12,6 @@
 //
 //= require jquery
 //= require jquery_ujs
-//= require kindeditor
-//= require jquery_nested_form
-//= require wice_grid
 //收藏页面
 //
 function addfavorite() 

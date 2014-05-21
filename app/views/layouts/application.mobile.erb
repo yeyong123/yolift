@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-with, initial-scale=1"/>
+		<title>力形科技</title>
+		<%= stylesheet_link_tag "mobile/mobile_yolift", "bootstrap/bootstrap.min", "mobile/flexslider"%>
+		<%= javascript_include_tag "application","js/bootstrap.min","mobile/mobile_yolift","mobile/jquery.flexslider-min" %>
+		<%= csrf_meta_tags %>
+</head>
+<body>
+<ul class="mobile-group">
+	<%if request.path != root_path %>
+		<li><%= link_to "返回", :back, class: "btn btn-primary"%></li>
+		<li><%= link_to "首页", root_path, class: "btn btn-success" %></li>
+	<% end %>
+		<li><%= link_to "产品中心", "#", class: "btn btn-info"%></li>
+</ul>
+	<%= yield %>
+
+<footer>
+	<div class="mobile-phone">
+		<span class="mobile-text">电话咨询: <span class="phone">4008373288</span></span>
+	</div>
+</footer>
+
+
+</body>
+</html>
+

@@ -13,3 +13,4 @@ end
 			alias_method :total_count, :count
 		end
 	end
+WillPaginate::ViewHelpers.pagination_options[:inner_window] = 1
