@@ -50,7 +50,7 @@ Yolift::Application.configure do
 															'customer/test.css','ie/ie.css','ie/ie8.css',
 															'js/bootstrap.min.js','ie/bootstrap-ie.js', 'zoom/imagezoom.js', 'zoom/zoom.min.js',
 															'js/customer.js', 'js/jquery.validate.min.js', 'mobile/mobile_yolift.css', 'mobile/mobile_yolift.js',
-																'mobile/flexslider', 'mobile/jquery.flexslider-min']
+																'mobile/flexslider.css', 'mobile/jquery.flexslider-min.js']
 
   # Disable delivery errors, bad email addresses will be ignored
   # config.action_mailer.raise_delivery_errors = false
