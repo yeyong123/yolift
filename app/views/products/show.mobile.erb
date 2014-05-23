@@ -1,1 +1,14 @@
-现在还没有建立
+<div class="flexslider-show">
+<ul class="slides">
+<% @product.photos.each do |pho| %>
+	<li data-thumb="<%= pho.image_url(:navshow)%>">
+	<%= image_tag(pho.image_url(:thumb)) %>
+	</li>
+<% end %>
+</ul>
+</div>
+<div class="mobile-product-show">
+<%=  sanitize @product.techparams %>
+</div>
+
+

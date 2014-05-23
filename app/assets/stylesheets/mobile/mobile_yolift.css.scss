@@ -14,7 +14,7 @@
 }
 .content-page {
 	clear: both;
-	margin-top: 4.5em;
+	margin-top: 2.5em;
 	margin-bottom:2.8em;
 }
 .mobile-phone {
@@ -85,9 +85,17 @@
 	}
 }
 .search-form {
+	width: 60%;
+	float: right;
 }
 .pull-right {
+	padding: 0;
 	margin: 0;
 	input {
+		width: 50%;
 	}
+	button {
+		margin: 0;
+	}
+
 }
