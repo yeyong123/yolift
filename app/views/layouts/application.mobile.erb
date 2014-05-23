@@ -15,6 +15,13 @@
 		<li><%= link_to "首页", root_path, class: "btn btn-success" %></li>
 	<% end %>
 		<li><%= link_to "产品中心", products_path, class: "btn btn-info"%></li>
+		<li class="search-form">
+				<form action="/search" method="get" class="pull-right">
+				<input type="text" name="q" value="" class="search-query" placeholder="输入名称和货号">
+			<button type="submit" class="btn">搜索</button>
+																										 </form>
+																														</li>
+
 </ul>
 		 <div class="content-page">
 														<%= yield %>

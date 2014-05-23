@@ -5,7 +5,7 @@ ActiveAdmin.register Product do
 	filter :title, label: "产品名称"
 	filter :tag, label: "二级分类"
 	filter :paixu, label: "按序号检索"
-	#filter :productnumbers_number, label: "货号", as: :string, collection: Productnumber.all.collect {|ph| [ph.number, ph.number]}
+	filter :productnumbers_number, label: "货号", as: :string, collection: Productnumber.all.collect {|ph| [ph.number, ph.number]}
 
 	
 	index do 
