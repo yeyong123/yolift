@@ -47,7 +47,7 @@
 				</ul>
 			</div>
 			<div class="list-nav">
-				<h4>项目案例</h4>
+				<h4> <%= link_to "项目案例", cases_path %></h4>
 				<ul>
 					<% Item.all.each do |item| %>
 					<li><%= link_to item.title, item_path(item.id) %></li>
