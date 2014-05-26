@@ -21,7 +21,7 @@ Yolift::Application.routes.draw do
 		resources :items
 		resources :ships
 		resources :aftermarkets
-		resources :cases
+		resources :case_items
 		resources :repairs
 		resources :zixuns
 		resources :catelogs

@@ -1,33 +1,22 @@
-<% provide(:title, @item.title) %>
+<% provide(:title, @case_item.title) %>
 <div class="edge-position">
 	<%= render 'home/nav_list' %>
-	<div class="hr-postion">
-	</div>
 	<div class="edge-from">
 		<ul>
 			<% Item.all.each do |item| %>
 				<li><%= link_to item.title, item_path(item.id) %></li>
 			<% end %>
-			</ul>
-		</div>
+		</ul>
 	</div>
+</div>
 <div class="product-index">
 	<div class="about-title">
-		<h4><%= @item.title %></h4>
+		<h4><%= @case_item.title %></h4>
 		<div class="breadcrumb">
 			<%= render_navigation(renderer: :breadcrumbs, join_with: '&nbsp / &nbsp') %>
 		</div>
 	</div>
 	<div class="about-content">
-		<table class="table">
-			<% @item.case_items.each do |ca| %>
-				<tr>
-				<td><%= link_to case_item_path(ca) do %>
-			 <%= 	image_tag(ca.image_url(:small)) if ca.image?%></td>
-	 <% end %>
-					<td><%= link_to ca.title, case_item_path(ca.id) %></td>
-			</tr>
-			<% end %>
-		</table>
+		<%= raw @case_item.content %>
 	</div>
 </div>

@@ -5,5 +5,5 @@
 # * updated_at [datetime, not null] - last update time
 class Item < ActiveRecord::Base
   attr_accessible :title
-	has_many :cases
+	has_many :case_items
 end

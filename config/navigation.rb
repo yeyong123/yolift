@@ -80,8 +80,8 @@ SimpleNavigation::Configuration.run do |navigation|
 				end
 			end
 			home.item :items, "项目案例", items_path do |it|
-				Case.all.each do |cas|
-					it.item :case, cas.title, case_path(cas.id)
+				CaseItem.all.each do |cas|
+					it.item :case, cas.title, case_item_path(cas.id)
 				end
 			end
 			home.item :payments, "支付方式", payments_path do |pay|

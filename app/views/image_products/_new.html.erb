@@ -1,0 +1,24 @@
+<div class="form-form">
+	<%= nested_form_for [:admin, @image_product], html: {multipart: true} do |f| %>
+		<%= render 'home/error_message', object: f.object %>
+		<div class="field image_position-find">
+			<%= f.label "导航图图片" %>
+			<%= f.fields_for :product_images do |product| %>
+				<div class="field">
+				<%= product.label "链接" %>
+				<%= product.text_field :url %>
+			</div>
+				<% pro = product.object %>
+				<%= image_tag(pro.image_url(:small)) if pro.image? %>
+				<%= product.file_field :image %>
+				<br />
+				<%= product.link_to_remove "删除", class: "btn btn-mini btn-success" %>
+			<% end %>
+			<p><%= f.link_to_add "添加图片", :product_images, class: "btn btn-primary" %>
+		</p>
+			<div class="action">
+		<%= f.submit "保存",class: "btn btn-large btn-success"%>
+		<%= link_to "返回", admin_image_products_path, class: "btn btn-primary" %>
+	</div>
+<% end %>	
+</div>

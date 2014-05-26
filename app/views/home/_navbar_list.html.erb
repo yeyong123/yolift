@@ -49,11 +49,12 @@
 					</li>
 					<li class="dropdown"><%= link_to t('.contact'), contact_path(Contact.first), class: "dropdown-toggle" %>
 					<ul class="dropdown-menu">
-						<% Contact.limit(5).each do |contact| %>
+						<% Contact.limit(4).each do |contact| %>
 							<li><%= link_to contact.title, contact_path(contact)  %></li>
 						<% end %>
 					</ul>
 					</li>
+					<li class="chuxiao"><%= link_to Contact.last.title, contact_path(Contact.last) %></li>
 				</ul>
 				<form action="/search" method="get" class="navbar-form pull-right">
 					<input type="text" name="q" value="" class="serach-query" placeholder="输入产品名称或者货号">

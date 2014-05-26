@@ -1,0 +1,11 @@
+<div class="product-index">
+	<%= form_for [:admin, @case_item] do |f| %>
+		<%= f.label "选择项目" %>
+		<%= collection_select(:case_item, :item_id, Item.all, :id, :title) %>
+		<div class="field">
+			<%= f.label :image, "企业标志" %>
+			<%= f.file_field :image %>
+		</div>
+		<%= render partial: "abouts/form", locals: {f: f} %>
+	<% end %>
+</div>

@@ -1,0 +1,15 @@
+<%= render 'home/nav_list' %>
+<div class="product-index">
+	<table class="table">
+		<% @case_items.each do |ca| %>
+			<tr>
+				<td><%= link_to case_item_path(ca) do %>
+					<%= image_tag(ca.image_url(:small)) if ca.image? %>
+				<% end %>
+			</td>
+			<td><%= link_to ca.title, case_item_path(ca) %></td>
+		</tr>
+	<% end %>
+</table>
+<%= will_paginate @case_items %>
+</div>

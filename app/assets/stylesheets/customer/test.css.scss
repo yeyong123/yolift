@@ -6,6 +6,12 @@
 //这个要等到老板的电脑能装ie10才行，目前XP
 
 //
+
+//产品中心导航图
+//
+.link-product .flexslider {
+	margin: 0 0 10px;
+}
 .product-index .pagination ul > .active > a{
 	background: #004714;
 }
@@ -251,7 +257,7 @@ li.font-border a {
 		font-weight: normal;
 	}
  .nav-list .navbar .nav > li > a {
-	 padding:8px 10px 0px 10px;
+	 padding:8px;
  }
  .nav-list .navbar .nav .index
  //.nav-list .navbar .nav .dropdown
@@ -266,6 +272,23 @@ li.font-border a {
 	 color: white;
 	 border-style: none;
  }
+ .chuxiao {
+	 background: #fda100;
+	 padding: 0 8px;
+	 margin-left: 3px;
+	 a {
+		 letter-spacing: 5px;
+	 }
+ }
+ .nav-list .navbar .nav > .chuxiao > a {
+	 padding: 7.8px 5px;
+	 color: black;
+	 &:hover {
+		 color: white;
+		 text-decoration: none;
+	 }
+ }
+
  
 //2014年1月10日修改
 .dropdown:hover >.dropdown-menu {

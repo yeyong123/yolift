@@ -5,6 +5,7 @@
 # * updated_at [datetime, not null] - last update time
 # * url [string] - TODO: document me
 class ProductImage < ActiveRecord::Base
-  attr_accessible :image, :url
+  attr_accessible :image, :url, :image_product_id
 	mount_uploader :image, ImageUploader
+	belongs_to :image_product
 end
