@@ -15,28 +15,23 @@
 .content-page {
 	clear: both;
 	margin-top: 2.5em;
-	margin-bottom:2.8em;
+	margin-bottom:3em;
 }
 .mobile-phone {
 	width: 100%;
 	position: fixed;
 	bottom: 0;
-	margin: auto;
 	background: #d1d1d1;
 	padding: 0.5em;
 	z-index: 9999;
-	span {
+	a{
 		font-size: 1.2em;
 	}
-	.mobile-text {
-		color: white;
-		letter-spacing: 0.1em;
-	}
-	.phone {
-		margin-right: 1em;
+	.phone{
 		float: right;
+		margin-right: 1em;
 	}
-}
+	}
 .mobile-cate {
 	width: 90%;
 	margin: auto;
@@ -70,7 +65,8 @@
 	}
 	h6 {
 		overflow: hidden;
-		font-size: 0.6em;
+		font-size: 0.8em;
+		height: 1.5em;
 	}
 }
 .bottom-paginate {
