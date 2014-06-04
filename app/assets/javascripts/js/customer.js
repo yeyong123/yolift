@@ -308,15 +308,11 @@ $('.add-picture-to-index span').click(function(){
 $('.flexslider').flexslider({
 	animation: "slide",
 	itemWidth: 210,
-	itemMargin: 5,
 	minItems: 2,
 	maxItems:	4, 
 	directionNav: false,
 	controlNav: false,
-	slideshowSpeed: 7000,
-	animationSpeed: 500,
-	randomize: true,
-	easing: "linear"
+	animationLoop: false
 });
 
 });

@@ -1,15 +1,7 @@
 <div class="mobile-product">
-<% @products.each do |product| %>
-	<li class="span3">
-	<div class="thumbnail">
-	<%= link_to product_path(product) do %>
-		<%= image_tag(product.image_url) %>
-		<% end %>
-		<h6><%= product.title %></h6>
-		</div>
-		</li>
-	<% end %>
-	</div>
-	<div class="bottom-paginate">
-	<%= will_paginate @products%>
+<ul class="tag-link">
+<% @category.tags.each do |tag| %>
+	<li><%= link_to tag.name, products_path(t:tag) %></li>
+<% end %>
+</ul>
 	</div>
