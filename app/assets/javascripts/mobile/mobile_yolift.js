@@ -1,7 +1,8 @@
 $(document).ready(function(){
 	$('.flexslider').flexslider({
 		animation: "slide",
-		directionNav: false
+		directionNav: false,
+		controlNav: false
 	});
 	$('.flexslider-show').flexslider({
 		animation: "slide",

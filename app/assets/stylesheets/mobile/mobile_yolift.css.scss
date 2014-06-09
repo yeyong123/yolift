@@ -10,28 +10,74 @@
 	li {
 		margin: 0.1em;
 		float: left;
+		a {
+			color: black;
+		}
 	}
+		.search-form {
+			width: 40%;
+			margin: 0 0.5em 0 0;
+			float: right;
+			padding: 0;
+			.pull-right{
+				margin: 0;
+				padding: 0;
+			}
+			form {
+				margin: 0;
+				padding: 0;
+				input {
+					margin: 0;
+					width: 80%;
+				}
+			}
+		}
+		.dropdown {
+			.btn {
+				margin: 0;
+			}
+			.dropdown-menu {
+				left: -3em;
+				li {
+					margin-top: 0;
+					padding: 0.2em;
+					float: none;
+					text-align: center;
+					border-top: 0.1em solid #d9d9d9;
+				}
+			}	
+		}
 }
 .content-page {
 	clear: both;
 	margin-top: 2.5em;
 	margin-bottom:3em;
+	.flexslider {
+		margin-bottom: 0;
+
+	}
 }
-.mobile-phone {
+footer {
 	width: 100%;
+	border: 0.1em solid #d9d9d9;
+	clear: both;
 	position: fixed;
-	bottom: 0;
 	background: #d1d1d1;
-	padding: 0.5em;
-	z-index: 9999;
-	a{
-		font-size: 1.2em;
+	bottom: 0;
+	.mobile-phone {
+		list-style: none;
+		margin: 0;
+		li {
+			float: left;
+			width: 24%;
+			text-align: center;
+			padding: 1em 0.1em;
+			border-left: 0.1em solid #e8e8e8;
+			color: black;
+		}
 	}
-	.phone{
-		float: right;
-		margin-right: 1em;
-	}
-	}
+
+}
 .mobile-cate {
 	width: 90%;
 	margin: auto;
@@ -47,13 +93,22 @@
 		}
 	}
 }
+.footer-phone {
+	width: 100%;
+	clear:both;
+	height: 3em;
+}
+.tag-products {
+	margin-left: 1em;
+	float: left;
+}
 .mobile-product {
 	clear: both;
 	list-style: none;
-	width: 100%;
+	width: 98%;
 	.span3 {
 		width: 45%;
-		margin: 0.5em;
+		margin: 0.6em;
 		.thumbnail {
 			width: 100%;
 			margin:0;
@@ -68,6 +123,9 @@
 		font-size: 0.8em;
 		height: 1.5em;
 	}
+	.pagination {
+		margin: 0;
+	}
 }
 .bottom-paginate {
 	clear:both;
@@ -80,27 +138,16 @@
 		}
 	}
 }
-.search-form {
-	width: 60%;
-	float: right;
-}
-.pull-right {
-	padding: 0;
-	margin: 0;
-	input {
-		width: 50%;
-	}
-	button {
-		margin: 0;
-	}
-}
 .tag-link {
 	margin-top: 0.5em;
 	margin-left: 0;
 	list-style: none;
 	li {
-		padding: 1em;
-		border: 0.1em solid #d9d9d9;
+		padding: 0.5em;
+		border-top: 0.1em solid #d9d9d9;
+		a {
+			color: black;
+		}
 	}
 }
 .mobile-product{
@@ -125,8 +172,31 @@
 	}
 }
 .product-show {
-	margin-top: 3em;
 	margin-bottom: 0.2em;
 	padding: 0.5em;
-	border: 0.1em solid;
+	border-bottom: 0.1em solid;
+	float: left;
+	width: 95%;
+	.show-font {
+		float: left;
+		width: 65%;
+	}
+	.product-cart {
+		float: right;
+		margin: 0;
+		.button_to {
+			padding-top: 1em;
+			input {
+				border: 0.1em solid #d9d9d9;
+				padding: 1em 0.5em;
+				background: #ff8c00;
+				font-weight: bold;
+			}
+		}
+	}
+}
+.product-image {
+	clear: both;
+	width: 95%;
+	margin: auto;
 }

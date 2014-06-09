@@ -4,19 +4,38 @@
 	<meta charset="utf-8">
 	<meta name="viewport" content="width=device-with, initial-scale=1"/>
 		<title>力形科技</title>
-		<%= stylesheet_link_tag "mobile/mobile_yolift", "bootstrap/bootstrap.min", "mobile/flexslider"%>
-		<%= javascript_include_tag "application","js/bootstrap.min","mobile/mobile_yolift","mobile/jquery.flexslider-min" %>
+		<%= stylesheet_link_tag "mobile"%>
+		<%= javascript_include_tag "mobile"%>
 		<%= csrf_meta_tags %>
 </head>
 <body>
 <ul class="mobile-group">
-<li><%= link_to "首页", root_path, class: "btn btn-primary" %></li>
-<li><%= link_to "导航", products_path, class: "btn btn-success" %></li>
+<% if request.path != root_path %>
+	<li class="btn"><%= link_to :back do %>
+	<i class="icon-chevron-left"></i>
+	返回
+<% end %>
+	</li>
+<% else %>	
+	<li><b class="btn">力形科技</b>
+	</li>
+	<% end %>
+		<li class="dropdown">
+		<a href="#" class="btn dropdown-toggle" data-toggle="dropdown"><i class="icon-th-large"></i><b>分类</b></a>
+		<ul class="dropdown-menu">
+		 <% Category.all.each do |cate| %>
+			 <li>
+			 <%= link_to category_path(cate) do  %>
+				<%= cate.name %>
+			<% end %>
+			 </li>
+															<% end %>
+																			 </ul>
+		 </li>
 
 <li class="search-form">
 <form action="/search" method="get" class="pull-right">
 <input type="text" name="q" value="" class="search-query" placeholder="输入名称和货号">
-<button type="submit" class="btn">搜索</button>
 </form>
 </li>
 
@@ -24,14 +43,19 @@
 		 <div class="content-page">
 														<%= yield %>
 																				</div>
-<br/>
-<br/>
+																				<p class="footer-phone">
+																				</p>
 <footer>
-	<div class="mobile-phone">
-	<a class="phone btn btn-danger" href="tel: 400-837-3288">电话咨询</a>
-<a class="btn btn-info" target= "_blank" href="http://webim.qiao.baidu.com/mobilewebim/webim.html?siteid=4554097&siteidstr=258ce2c169d214905ef32e5c177564af&mainid=120454609&csNameType=2&csName=在线客服&userName=sh力形&groupName=在线咨询">在线咨询</a>
-
-	</div>
+<ul class="mobile-phone">
+<%= link_to root_path do %>
+	<li>		<i class="icon-home"></i>首页</li>
+	<% end %>
+	<a href="tel: 400-837-3288"><li><i class="icon-signal"></i>电话咨询</li></a>
+	<a target= "_blank" href="http://webim.qiao.baidu.com/mobilewebim/webim.html?siteid=4554097&siteidstr=258ce2c169d214905ef32e5c177564af&mainid=120454609&csNameType=2&csName=在线客服&userName=sh力形&groupName=在线咨询"><li><i class="icon-user"></i>在线咨询</li></a>
+<%= link_to cart_path do %>
+	<li><i class="icon-shopping-cart"></i>购物车<%= @cart.total_items %></li>
+<% end %> 
+</ul>
 </footer>
 
 </body>

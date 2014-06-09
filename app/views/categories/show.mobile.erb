@@ -1,7 +1,11 @@
 <div class="mobile-product">
 <ul class="tag-link">
 <% @category.tags.each do |tag| %>
-	<li><%= link_to tag.name, products_path(t:tag) %></li>
+	<li><%= link_to products_path(t:tag) do %>
+				<%= image_tag(tag.image_url(:small)) if tag.image? %>
+				<%= tag.name %>
+			<% end %>
+	</li>
 <% end %>
 </ul>
 	</div>

@@ -1,10 +1,16 @@
 <div class="product-show">
+<div class="show-font">
 <span>产品名称: <b><%= @product.title %></b></span><br/>
  <span>货号：</span>
 <% @product.productnumbers.each do |ph| %>
 	<span><%= ph.number %>,</span>
 <% end %>
 </div>
+<div class="product-cart">
+<%= button_to "加入购物车",product_line_items_path(line_item: {productnumber_ids: [@productnumbers.first, ""], cart_id: @cart.id},product_id: @product)%>
+</div>
+</div>
+<div class="product-image">
 <div class="flexslider-show">
 <ul class="slides">
 <% @product.photos.each do |pho| %>
@@ -16,6 +22,7 @@
 </div>
 <div class="mobile-product-show">
 <%=  sanitize @product.techparams %>
+</div>
 </div>
 
 

@@ -1,0 +1,24 @@
+<div class="mobile-cart">
+	<table class="table">
+	<% @cart.line_items.each do |item| %>
+		<tr>
+			<td>
+			<% item.productnumbers.each do |ph| %>
+				<%= link_to ph.number, product_path(item.product.id) %>
+			<% end %>
+			</td>
+			<td><%= item.quantity %></td>
+			<td>
+			<%= link_to truncate(item.product.title, length: 10), product_path(item.product.id) %>
+			</td>
+			<td>
+			<%= link_to "删除", [item.product, item], method: :delete, confirm: "确认删除!" %>
+			</td>
+			</tr>
+		<% end %>
+		</table>
+		</div>
+			
+			
+
+</div>
