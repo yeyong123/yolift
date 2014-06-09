@@ -12,6 +12,12 @@
 //
 //= require jquery
 //= require jquery_ujs
+//= require js/customer
+//= require zoom/zoom.min
+//= require zoom/imagezoom
+//= require js/bootstrap.min
+//= require js/jquery.validate.min
+//= require mobile/jquery.flexslider-min
 //收藏页面
 //
 function addfavorite() 
