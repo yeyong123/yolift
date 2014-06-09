@@ -1,1 +1,23 @@
-
+<ul class="mobile-group">
+<% if request.path != root_path %>
+	<li class="btn"><%= link_to :back do %>
+	<i class="icon-chevron-left"></i>
+	返回
+<% end %>
+	</li>
+<% else %>	
+	<li><b class="btn">力形科技</b>
+	</li>
+	<% end %>
+		<li class="dropdown">
+		<a href="#" class="btn dropdown-toggle" data-toggle="dropdown"><i class="icon-th-large"></i><b>分类</b></a>
+		<ul class="dropdown-menu">
+		 <% Category.all.each do |cate| %>
+			 <li>
+			 <%= link_to category_path(cate) do  %>
+				<%= cate.name %>
+			<% end %>
+			 </li>
+															<% end %>
+																			 </ul>
+																			 </li>
