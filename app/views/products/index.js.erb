@@ -3,7 +3,7 @@ $('.tag_<%= product.category.id %> .find-info').html("<%= j render partial: 'hom
 <% end %>
 $("#mobile_products").append("<%= j render("mobile_index.mobile") %>");
 <% if @products.total_pages == @products.current_page %>
-	$(".show_more").hide();
+	$("#show_more").hide();
 <% else %>
 	$("#show_more").attr("href","<%= products_path(page: @products.current_page + 1)%>");
 <% end %>
