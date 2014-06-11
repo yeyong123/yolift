@@ -8,6 +8,17 @@
 			<% end %>
 			</ul>
 	</div>
+	<ul class="mobile_tags">
+	<li><%= link_to products_path do %>
+	<i class="icon-tags"></i>产品中心
+<% end %>
+<li>
+<%= link_to new_catelog_path do %>
+	<i class="icon-book"></i>
+	申请样册
+<% end %>
+</li>
+</ul>
 <div class="mobile-cate">
 <b>产品分类:</b>
 <ul>
@@ -20,13 +31,4 @@
 <% end %>
 </ul>
 </div>
-<div class="mobile-product">
-<b>免费申请产品手册:</b>
-<ul>
-<% CatelogImage.limit(1).each do |cate| %>
-	<li><%= link_to image_tag(cate.image_url), new_catelog_path %></li>
-<% end %>
-	</ul>
-	</div>
-
 
