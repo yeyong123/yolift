@@ -2,7 +2,7 @@
 <div id="mobile_products">
 <%= render partial: 'mobile_index' %>
 </div>
-<% if @products.total_pages > 1 %>
+<% unless @products.total_pages < 2 %>
 	<% unless params[:t] %>
 		<%= link_to products_path(page: @products.current_page + 1), remote: true, id: "show_more" do %>
 			<li><span>加载更多...</span></li>

@@ -5,5 +5,9 @@ $("#mobile_products").append("<%= j render("mobile_index.mobile") %>");
 <% if @products.total_pages == @products.current_page %>
 	$("#show_more").hide();
 <% else %>
-	$("#show_more").attr("href","<%= products_path(page: @products.current_page + 1)%>");
+	<% if params[:t] %>
+			$("#show_more").attr("href","<%= products_path(t: params[:t],page: @products.current_page + 1)%>");
+	<% else %>
+		$("#show_more").attr("href","<%= products_path(page: @products.current_page + 1)%>");
+	<% end %>
 <% end %>
