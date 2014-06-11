@@ -1,13 +1,14 @@
 <div class="mobile-product tag-products">
-<% @products.each do |product| %>
-	<li class="span3">
-	<div class="thumbnail">
-	<%= link_to product_path(product) do %>
-		<%= image_tag(product.image_url) %>
+<div id="mobile_products">
+<%= render partial: 'mobile_index' %>
+</div>
+<div class="show_more">
+<% if @products.total_pages > 1 %>
+	<% unless params[:t] %>
+		<%= link_to "加载更多...", products_path(page: @products.current_page + 1), remote: true, id: "show_more" %>
+	<% else %>
+		<%= link_to "加载更多...", products_path(t: params[:t], page: @products.current_page + 1), remote: true, id: "show_more" %>
 	<% end %>
-	<h6><%= product.title %></h6>
-	</div>
-	</li>
-<%end %>
-<%= will_paginate @products %>
+<% end %>
+</div>
 </div>

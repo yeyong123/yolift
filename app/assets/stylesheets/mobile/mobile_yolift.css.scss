@@ -200,3 +200,17 @@ footer {
 	width: 95%;
 	margin: auto;
 }
+.show_more {
+	clear: both;
+	width: 96%;
+	margin-left: 0.7em;
+	text-align: center;
+	padding: 0.8em 0;
+	border-radius: 0.5em;
+	border: 0.1em solid #d9d9d9;
+	background: #f5f5dc;
+	#show_more {
+		color: black;
+		font-size: 1.2em;
+	}
+}

@@ -7,6 +7,7 @@ class ProductsController < ApplicationController
 			@products = Product.where("tag_id = ?", params[:t]).order("paixu desc").paginate(page: params[:page], per_page: 12)
 			respond_to do |format|
 				format.html
+				format.mobile
 				format.js{tag = @products}
 			end
 		end
