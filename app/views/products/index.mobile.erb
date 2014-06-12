@@ -3,6 +3,8 @@
 <%= render partial: 'mobile_index' %>
 </div>
 <% unless @products.total_pages < 2 %>
+	<div class="load">
+	<li id="dataload" style="display: none"><span>正在加载<i class="icon-refresh"></i></span></li>
 	<% unless params[:t] %>
 		<%= link_to products_path(page: @products.current_page + 1), remote: true, id: "show_more" do %>
 			<li><span>加载更多...</span></li>
@@ -14,3 +16,11 @@
 	<% end %>
 <% end %>
 </div>
+<script type="text/javascript">
+$(document).ajaxStart(function(){
+		$('#dataload').show();
+	});
+$(document).ajaxComplete(function(){
+		$('#dataload').hide();
+	});
+</script>

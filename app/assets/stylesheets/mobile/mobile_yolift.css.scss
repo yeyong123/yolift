@@ -260,3 +260,17 @@ footer {
 		padding: 1em 0;
 	}
 }
+.load {
+	clear: both;
+	position: relative;
+}
+#dataload {
+	position: absolute;
+	text-align: center;
+	background: #f5f5dc;
+	width: 98.5%;
+	border: 0.1em solid #d9d9d9;
+	border-radius: 0.4em;
+	padding: 1em 0;
+	margin: 0 0 0.5em 0.4em;
+}
