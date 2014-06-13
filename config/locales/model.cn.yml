@@ -56,6 +56,9 @@ zh-CN:
       about_image: "关于我们导航图"
       about_index: "首页关于我们"
       demand: "用户需求"
+      contact_image: "联系我们大图"
+      center_image: "服务中心大图"
+      server_image: "新闻资讯大图"
     attributes:
       affiliate: 
         company: "公司名称"
