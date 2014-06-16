@@ -20,15 +20,17 @@
 //= require mobile/jquery.flexslider-min
 //收藏页面
 //
-function addfavorite() 
-{ 
-if (document.all) 
-{ 
-window.external.addFavorite('http://www.yolift.com','力形科技'); 
-} 
-else if (window.sidebar) 
-{ 
-window.sidebar.addPanel('力形科技', 'www.yolift.com', ""); 
-} 
+function addfavorite() {
+	try{ 
+		window.external.addFavorite('http://www.yolift.com','力形科技'); 
+	} 
+	catch(e){
+		try{ 
+			window.sidebar.addPanel('力形科技', 'www.yolift.com', ""); 
+		} 
+		catch(e){
+			alert("抱歉，您所使用的浏览器无法完成此操作。\n\n加入收藏失败，请使用Ctrl+D进行添加");
+		}
+	}
 }
 
