@@ -1,7 +1,7 @@
 <div class="top-index">
 	<div class="index-top">
 		<ul>
-			<li><a href="javascript:void(0);" onclick="addfavorite()">收藏</a><span>|</span></li>
+			<li><a href="javascript:void(0);" onclick="addfavorite('力形科技', location.href)">收藏</a><span>|</span></li>
 			<% if current_user %>
 				<li><%= link_to "注销", destroy_user_session_path, method: :delete %><span>|</span></li>
 				<li><%= link_to current_user.email, "#" %></li>

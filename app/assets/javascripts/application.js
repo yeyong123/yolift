@@ -20,13 +20,13 @@
 //= require mobile/jquery.flexslider-min
 //收藏页面
 //
-function addfavorite() {
+function addfavorite(title,url) {
 	try{ 
-		window.external.addFavorite('http://www.yolift.com','力形科技'); 
+		window.external.addFavorite(url,title); 
 	} 
 	catch(e){
 		try{ 
-			window.sidebar.addPanel('力形科技', 'www.yolift.com', ""); 
+			window.sidebar.addPanel(title, url, ""); 
 		} 
 		catch(e){
 			alert("抱歉，您所使用的浏览器无法完成此操作。\n\n加入收藏失败，请使用Ctrl+D进行添加");
