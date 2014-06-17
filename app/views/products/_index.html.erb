@@ -9,7 +9,7 @@
 		<% end %>
 		<% end %>
 		</div>
-	<h6><%= product.title %></h6>
+	<h6><%= link_to product.title, product_path(product) %></h6>
 	<div class="product-outline">
 		<%= sanitize(product.outline) %>
 	</div>
