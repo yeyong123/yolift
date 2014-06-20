@@ -8,13 +8,13 @@
 			</a>
 			<div class="nav-collapse collapse">
 				<ul class="nav">
-					<li class="product-menu"><span>产品目录<span>&gt&gt</span></span>
+					<li class="product-menu"><span><%= link_to "产品目录", products_path %><span>&gt&gt</span></span>
 					<% if request.path != root_path %>
 					<div id="myaffix">
 						<%= render 'home/nav_list' %>
 					</div>
 				<% end %>
-					</li>
+				</li>
 					<li class="active index"><%= link_to "首页", root_path %></li>
 					<li class="dropdown"><%= link_to "关于我们", about_path(About.first),class: "dropdown-toggle" %>
 					<ul class="dropdown-menu">
