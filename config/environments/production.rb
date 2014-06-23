@@ -46,7 +46,7 @@ Yolift::Application.configure do
   # config.action_controller.asset_host = "http://assets.example.com"
 
   # Precompile additional assets (application.js, application.css, and all non-JS/CSS are already added)
-	config.assets.precompile +=['application.js', 'application.css', 'mobile.js', 'mobile.css', 'ie/ie.css', 'ie/bootstrap-ie6.css', 'ie/ie8.css', 'ie/bootstrap-ie.js',]
+	config.assets.precompile +=['application.js', 'application.css', 'mobile.js', 'mobile.css', 'ie/ie.css', 'ie/bootstrap-ie6.css', 'htmlshiv.js','ie/ie8.css', 'ie/bootstrap-ie.js']
 
   # Disable delivery errors, bad email addresses will be ignored
   # config.action_mailer.raise_delivery_errors = false
