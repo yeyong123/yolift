@@ -18,7 +18,9 @@
 				<h4>采购指南</h4>
 				<ul>
 					<% List.all.each do |list| %>
+						<% unless list.id == 14 %>
 						<li><%= link_to list.title, list_path(list) %></li>
+					<% end %>
 					<% end %>
 					</ul>
 				</div>
@@ -44,6 +46,8 @@
 					<% Aftermarket.all.each do |after| %>
 					<li><%= link_to after.title, aftermarket_path(after.id) %></li>
 				<% end %>
+				<li><%= link_to "常见问题", list_path(14) %></li>
+
 				</ul>
 			</div>
 			<div class="list-nav">
