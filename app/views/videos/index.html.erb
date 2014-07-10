@@ -1,5 +1,10 @@
 <%= render 'home/nav_list' %>
 <div class="product-index">
+	<div class="video-title">
+		<h4>视频列表
+			<span>共有<%= Video.count %>个视频可播放</span>
+		</h4>
+	</div>
 	<div class="video-paginate">
 			<% @videos.each do |video| %>
 				<div class="video-index">
