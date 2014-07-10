@@ -47,7 +47,9 @@
 	<td colspan="5">
 		<%= @order.province.name %>
 		<%= @order.city.name %>
-		<%= @order.district.name%>
+		<% if @order.district %>
+		<%= @order.district.name %>
+	<% end %>
 		<%= @order.address %>
 	</td>
 </tr>
