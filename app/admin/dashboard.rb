@@ -15,6 +15,7 @@ ActiveAdmin.register_page "Dashboard" do
 				li link_to "服务中心大图", admin_center_images_path, :class => "btn btn-primary btn-large"
 				li link_to "新闻资讯大图", admin_server_images_path, :class => "btn btn-success btn-large"
 				li link_to "联系我们大图", admin_contact_images_path, :class => "btn btn-danger btn-large"
+				li link_to "样册图片", admin_catelog_images_path, :class => "btn btn-large btn-primary"
 				li link_to "关于我们", admin_abouts_path, :class => "btn btn-info btn-large"
 				li link_to "新闻资讯大类", admin_servers_path, :class => "btn btn-primary btn-large"
 				li link_to "新闻资讯列表", admin_zixuns_path, :class => "btn btn-success btn-large"
