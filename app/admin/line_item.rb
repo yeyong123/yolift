@@ -3,6 +3,7 @@ ActiveAdmin.register LineItem do
 	filter :cart_id, label: "购物车", as: :select
 	filter :order, label: "订单"
 	filter :quantity, label: "数量"
+	filter :product_title, label: "产品名称", as: :string
 
 	index do 
 		selectable_column 
