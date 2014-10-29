@@ -6,7 +6,6 @@
 	top: 0;
 	margin: 0;
 	z-index: 99999;
-	padding: 0.2em;
 	li {
 		margin: 0.1em;
 		float: left;
@@ -15,6 +14,7 @@
 		}
 	}
 		.search-form {
+			position: relative;
 			width: 40%;
 			margin: 0 0.5em 0 0;
 			float: right;
@@ -101,18 +101,18 @@
 	padding: 0.5em;
 }
 footer {
-	width: 100%;
 	border: 0.1em solid #d9d9d9;
 	clear: both;
-	position: fixed;
+	float: left;
 	background: #d1d1d1;
+	width: 100%;
 	bottom: 0;
 	.mobile-phone {
 		list-style: none;
 		margin: 0;
 		li {
 			float: left;
-			width: 24%;
+			width: 22%;
 			text-align: center;
 			padding: 1em 0.1em;
 			border-left: 0.1em solid #e8e8e8;
@@ -130,7 +130,7 @@ footer {
 		margin: 0;
 		li {
 			float: left;
-			width: 46%;
+			width: 43%;
 			border: 0.1em solid #d9d9d9;
 			border-radius: 0.4em;
 			text-align: center;
@@ -152,9 +152,9 @@ footer {
 .mobile-product {
 	clear: both;
 	list-style: none;
-	width: 98%;
+	width: 99%;
 	.span3 {
-		width: 45%;
+		width: 43%;
 		margin: 0.6em;
 		.thumbnail {
 			width: 100%;

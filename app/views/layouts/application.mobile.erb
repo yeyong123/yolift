@@ -40,8 +40,17 @@
 </li>
 
 </ul>
-		 <div class="content-page">
-														<%= yield %>
+
+<div class="content-page">
+<% unless notice.nil? && alert.nil? %>
+	<div class="alert">
+	<a href="#" class="close" data-dismiss="alert">&times;</a>
+	<p><%= notice %> <%= alert %></p>
+	</div>
+<% end %>
+
+<%= yield %>
+</div>
 <div class="copy_right">
 <span>
 &copy; 力形(上海)自动化科技公司 版权所有
@@ -50,12 +59,6 @@
 法律通告,隐私条款 沪ICP备14027882号
 </span>
 </div>
-
-																				</div>
-<p>
-</p>
-<p>
-</p>
 <footer>
 <ul class="mobile-phone">
 <%= link_to root_path do %>
