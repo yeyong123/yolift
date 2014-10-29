@@ -229,6 +229,8 @@ li.font-border a {
 background-image: -webkit-gradient(linear, 0 0, 0 30%, from(#96a98b),to(#264225));
 	background-image: -moz-linear-gradient(top, #96a98b, #264225);
 	filter:progid:DXImageTransform.Microsoft.Gradient(GradientType=0,EndColorStr='#264225', StartColorStr='#96a98b');
+	background-image: -ms-linear-gradient(top, #96a98b, #264225 30%);
+
 
 	 //background-color: #456250;
 	 font-family: "Microsoft YaHei",Helvetica, Arial,sans-serif
@@ -327,8 +329,12 @@ background-image: -webkit-gradient(linear, 0 0, 0 30%, from(#96a98b),to(#264225)
 //}
 .nav-list2 {
 	background-image: -webkit-gradient(linear, 0 0, 0 30%, from(#96a98b),to(#264225));
-	background-image: -moz-linear-gradient(top, #96a98b, #264225);
-	filter:progid:DXImageTransform.Microsoft.Gradient(GradientType=0, EndColorStr='#c2ceaf', StartColorStr=white);
+	background-image: -moz-linear-gradient(top, #96a98b, #264225 30%);
+	filter:progid:DXImageTransform.Microsoft.Gradient(GradientType=0,
+	EndColorStr='#264225', StartColorStr=#96a98b);
+	background-image: -ms-linear-gradient(top, #96a98b, #264225 30%);
+
+	
 
 	//background: #456250;
 	height: 35px;
