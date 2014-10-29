@@ -103,17 +103,18 @@
 	background-image: -webkit-gradient(linear, 0 0, 0 100%, from(#fff), to(#c2ceaf));
 	background-image: -moz-linear-gradient(top, #fff, #c2ceaf);
 	filter:progid:DXImageTransform.Microsoft.Gradient(GradientType=0, EndColorStr='#c2ceaf', StartColorStr=white);
-	background-image: -ms-linear-gradient(top, #fff, #c2ceaf);
 }
 .list-nav .navbar-inner {
-	//background-image: -webkit-gradient(linear, 0 0, 0 100%, from(#145824), to(#014715));
-	//background-image: -moz-linear-gradient(top, #145824, #014715);
-	filter:progid:DXImageTransform.Microsoft.Gradient(GradientType=0, EndColorStr='#456250', StartColorStr='#456250');
 	border-style: none;
-	background: #456250;
+	background-image: -webkit-gradient(linear, 0 0, 0 100%, from(#96a98b),to(#264225));
+	background-image: -moz-linear-gradient(top, #96a98b, #264225);
+	filter:progid:DXImageTransform.Microsoft.Gradient(GradientType=0,EndColorStr='#264225', StartColorStr='#96a98b');
+
+
+//	background: #456250;
 }
 .nav-list .nav-bananer {
-	background: #456250;
+	background: white;
 
 }
 //最上面的头部
@@ -231,7 +232,11 @@ li.font-border a {
 	 padding-right: 0;
 	 background-repeat: no-repeat;
 	 min-height: 32px;
-	 background-color: #456250;
+background-image: -webkit-gradient(linear, 0 0, 0 100%, from(#96a98b),to(#264225));
+	background-image: -moz-linear-gradient(top, #96a98b, #264225);
+	filter:progid:DXImageTransform.Microsoft.Gradient(GradientType=0,EndColorStr='#264225', StartColorStr='#96a98b');
+
+	 //background-color: #456250;
 	 font-family: "Microsoft YaHei",Helvetica, Arial,sans-serif
  }	 // 产品目录
  .product-menu {
@@ -327,7 +332,12 @@ li.font-border a {
 //	height: 27px;
 //}
 .nav-list2 {
-	background: #456250;
+	background-image: -webkit-gradient(linear, 0 0, 0 100%, from(#96a98b),to(#264225));
+	background-image: -moz-linear-gradient(top, #96a98b, #264225);
+	filter:progid:DXImageTransform.Microsoft.Gradient(GradientType=0, EndColorStr='#c2ceaf', StartColorStr=white);
+	background-image: -ms-linear-gradient(top, #96a98b, #264225);
+
+	//background: #456250;
 	height: 35px;
 	margin-top: -17px;
 	width: 100%;
@@ -1367,7 +1377,7 @@ td.demand3 {
 			}
 		}
 		.group-category {
-			background: #456250;
+			background: #fda100;
 			padding: 5px;
 			width: 17.5%;
 			margin: 0;
@@ -1376,7 +1386,7 @@ td.demand3 {
 				margin-left: 35px;
 				font-size: 14px;
 				letter-spacing: 2px; 
-				color: white;
+				color: black;
 			}
 		}
 		.find-info {
